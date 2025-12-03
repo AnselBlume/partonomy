@@ -1,0 +1,175 @@
+2025-03-08 02:53:31,969 INFO    StreamThr :1267682 [internal.py:wandb_internal():86] W&B internal server running at pid: 1267682, started at: 2025-03-08 02:53:31.968797
+2025-03-08 02:53:31,970 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: status
+2025-03-08 02:53:31,971 INFO    WriterThread:1267682 [datastore.py:open_for_write():85] open: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/run-sqvbj2uh.wandb
+2025-03-08 02:53:31,972 DEBUG   SenderThread:1267682 [sender.py:send():380] send: header
+2025-03-08 02:53:31,981 DEBUG   SenderThread:1267682 [sender.py:send():380] send: run
+2025-03-08 02:53:32,149 INFO    SenderThread:1267682 [dir_watcher.py:__init__():211] watching files in: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files
+2025-03-08 02:53:32,149 INFO    SenderThread:1267682 [sender.py:_start_run_threads():1124] run started: sqvbj2uh with start time 1741424011.969475
+2025-03-08 02:53:32,155 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: check_version
+2025-03-08 02:53:32,155 DEBUG   SenderThread:1267682 [sender.py:send_request():407] send_request: check_version
+2025-03-08 02:53:32,242 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: run_start
+2025-03-08 02:53:32,345 DEBUG   HandlerThread:1267682 [system_info.py:__init__():32] System info init
+2025-03-08 02:53:32,345 DEBUG   HandlerThread:1267682 [system_info.py:__init__():47] System info init done
+2025-03-08 02:53:32,345 INFO    HandlerThread:1267682 [system_monitor.py:start():194] Starting system monitor
+2025-03-08 02:53:32,345 INFO    SystemMonitor:1267682 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-03-08 02:53:32,345 INFO    HandlerThread:1267682 [system_monitor.py:probe():214] Collecting system info
+2025-03-08 02:53:32,345 INFO    SystemMonitor:1267682 [interfaces.py:start():190] Started cpu monitoring
+2025-03-08 02:53:32,346 INFO    SystemMonitor:1267682 [interfaces.py:start():190] Started disk monitoring
+2025-03-08 02:53:32,346 INFO    SystemMonitor:1267682 [interfaces.py:start():190] Started gpu monitoring
+2025-03-08 02:53:32,347 INFO    SystemMonitor:1267682 [interfaces.py:start():190] Started memory monitoring
+2025-03-08 02:53:32,347 INFO    SystemMonitor:1267682 [interfaces.py:start():190] Started network monitoring
+2025-03-08 02:53:32,580 DEBUG   HandlerThread:1267682 [system_info.py:probe():196] Probing system
+2025-03-08 02:53:32,582 DEBUG   HandlerThread:1267682 [system_info.py:_probe_git():181] Probing git
+2025-03-08 02:53:32,591 DEBUG   HandlerThread:1267682 [system_info.py:_probe_git():189] Probing git done
+2025-03-08 02:53:32,591 DEBUG   HandlerThread:1267682 [system_info.py:probe():244] Probing system done
+2025-03-08 02:53:32,591 DEBUG   HandlerThread:1267682 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-130-generic-x86_64-with-glibc2.35', 'python': '3.10.13', 'heartbeatAt': '2025-03-08T08:53:32.580631', 'startedAt': '2025-03-08T08:53:31.927476', 'docker': None, 'cuda': None, 'args': ('--local_rank=0', '--version=liuhaotian/llava-llama-2-13b-chat-lightning-preview', '--dataset_dir=/shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset', '--vision_pretrained=/shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/weights/sam_vit_h_4b8939.pth', '--dataset=sem_seg||refer_seg||vqa||reason_seg', '--sample_rates=9,3,3,1', '--batch_size=4', '--grad_accumulation_steps', '10', '--ce_loss_weight=1.0', '--dice_loss_weight=2', '--bce_loss_weight=2.0', '--kld_loss_weight=0.5', '--seg_cls_loss_weight=0.5', '--exp_name=plum-13b_kld_0.5_dice_2', '--use_teacher_ref', '--precision=bf16', '--model_max_length', '512', '--dice_scale_factor', '1.0', '--epoch', '50'), 'state': 'running', 'program': '/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py', 'codePathLocal': 'plum_train_ds.py', 'codePath': 'src/models/PLUM/plum_train_ds.py', 'git': {'remote': 'https://github.com/AnselBlume/partonomy_private.git', 'commit': '27e648e28dcd2e6e09c16861d5edfc9cc9d4bc11'}, 'email': 'jeonghwankim123@gmail.com', 'root': '/shared/nas2/jk100/partonomy_private', 'host': 'blender15.cs.illinois.edu', 'username': 'jk100', 'executable': '/shared/nas/data/m1/jk100/.conda/envs/llava/bin/python', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 2216.5241171875005, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2963.161, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2997.277, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2993.962, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 428.1472702026367, 'used': 405.7706756591797}}, 'gpu': 'NVIDIA H100 80GB HBM3', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}], 'memory': {'total': 1007.3801879882812}}
+2025-03-08 02:53:32,591 INFO    HandlerThread:1267682 [system_monitor.py:probe():224] Finished collecting system info
+2025-03-08 02:53:32,591 INFO    HandlerThread:1267682 [system_monitor.py:probe():227] Publishing system info
+2025-03-08 02:53:32,591 DEBUG   HandlerThread:1267682 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2025-03-08 02:53:32,592 DEBUG   HandlerThread:1267682 [system_info.py:_save_pip():68] Saving pip packages done
+2025-03-08 02:53:32,593 DEBUG   HandlerThread:1267682 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2025-03-08 02:53:33,151 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/requirements.txt
+2025-03-08 02:53:33,151 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/conda-environment.yaml
+2025-03-08 02:53:36,652 DEBUG   HandlerThread:1267682 [system_info.py:_save_conda():87] Saving conda packages done
+2025-03-08 02:53:36,653 INFO    HandlerThread:1267682 [system_monitor.py:probe():229] Finished publishing system info
+2025-03-08 02:53:36,659 DEBUG   SenderThread:1267682 [sender.py:send():380] send: files
+2025-03-08 02:53:36,659 INFO    SenderThread:1267682 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2025-03-08 02:53:36,665 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: stop_status
+2025-03-08 02:53:36,665 DEBUG   SenderThread:1267682 [sender.py:send_request():407] send_request: stop_status
+2025-03-08 02:53:36,667 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:53:36,779 DEBUG   SenderThread:1267682 [sender.py:send():380] send: telemetry
+2025-03-08 02:53:36,901 INFO    wandb-upload_0:1267682 [upload_job.py:push():131] Uploaded file /tmp/tmp9jomspxswandb/m5523487-wandb-metadata.json
+2025-03-08 02:53:37,153 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/conda-environment.yaml
+2025-03-08 02:53:37,153 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/wandb-metadata.json
+2025-03-08 02:53:37,154 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/output.log
+2025-03-08 02:53:37,412 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: status_report
+2025-03-08 02:53:39,154 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/output.log
+2025-03-08 02:53:42,413 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: status_report
+2025-03-08 02:53:45,158 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/output.log
+2025-03-08 02:53:47,637 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: status_report
+2025-03-08 02:53:50,825 ERROR   FileStreamThread:1267682 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/uiucnlp/plum-training/sqvbj2uh/file_stream
+NoneType: None
+2025-03-08 02:53:51,162 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/output.log
+2025-03-08 02:53:51,665 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: stop_status
+2025-03-08 02:53:51,666 DEBUG   SenderThread:1267682 [sender.py:send_request():407] send_request: stop_status
+2025-03-08 02:53:51,666 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:53:52,828 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: status_report
+2025-03-08 02:53:54,832 ERROR   FileStreamThread:1267682 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/uiucnlp/plum-training/sqvbj2uh/file_stream
+NoneType: None
+2025-03-08 02:53:55,165 INFO    Thread-12 :1267682 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/files/output.log
+2025-03-08 02:53:58,803 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: status_report
+2025-03-08 02:54:03,807 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: status_report
+2025-03-08 02:54:03,839 ERROR   SenderThread:1267682 [internal_api.py:execute():370] 409 response executing GraphQL.
+2025-03-08 02:54:03,839 ERROR   SenderThread:1267682 [internal_api.py:execute():371] {"errors":[{"message":"run sqvbj2uh was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2025-03-08 02:54:05,123 ERROR   SenderThread:1267682 [internal_api.py:execute():370] 409 response executing GraphQL.
+2025-03-08 02:54:05,123 ERROR   SenderThread:1267682 [internal_api.py:execute():371] {"errors":[{"message":"run sqvbj2uh was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2025-03-08 02:54:06,666 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: stop_status
+2025-03-08 02:54:06,666 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:54:07,188 ERROR   SenderThread:1267682 [internal_api.py:execute():370] 409 response executing GraphQL.
+2025-03-08 02:54:07,188 ERROR   SenderThread:1267682 [internal_api.py:execute():371] {"errors":[{"message":"run sqvbj2uh was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2025-03-08 02:54:07,188 INFO    SenderThread:1267682 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: https://api.wandb.ai/graphql
+2025-03-08 02:54:11,666 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:54:12,481 ERROR   SenderThread:1267682 [internal_api.py:execute():370] 409 response executing GraphQL.
+2025-03-08 02:54:12,481 ERROR   SenderThread:1267682 [internal_api.py:execute():371] {"errors":[{"message":"run sqvbj2uh was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2025-03-08 02:54:16,667 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:54:21,268 ERROR   SenderThread:1267682 [internal_api.py:execute():370] 409 response executing GraphQL.
+2025-03-08 02:54:21,268 ERROR   SenderThread:1267682 [internal_api.py:execute():371] {"errors":[{"message":"run sqvbj2uh was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2025-03-08 02:54:21,666 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:54:26,668 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:54:31,671 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:54:32,347 DEBUG   SystemMonitor:1267682 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-03-08 02:54:37,140 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:54:37,140 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:54:39,604 ERROR   SenderThread:1267682 [internal_api.py:execute():370] 409 response executing GraphQL.
+2025-03-08 02:54:39,604 ERROR   SenderThread:1267682 [internal_api.py:execute():371] {"errors":[{"message":"run sqvbj2uh was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2025-03-08 02:54:44,611 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:54:51,210 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:54:52,171 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:54:57,987 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:55:03,656 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:55:07,146 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:55:12,780 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:55:17,781 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:55:19,120 ERROR   SenderThread:1267682 [internal_api.py:execute():370] 409 response executing GraphQL.
+2025-03-08 02:55:19,120 ERROR   SenderThread:1267682 [internal_api.py:execute():371] {"errors":[{"message":"run sqvbj2uh was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2025-03-08 02:55:22,146 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:55:27,786 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:55:32,787 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:55:37,146 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:55:42,790 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:55:47,791 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:55:52,146 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:55:59,406 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:56:05,756 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:56:07,146 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: internal_messages
+2025-03-08 02:56:12,757 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:56:17,240 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: poll_exit
+2025-03-08 02:56:22,241 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:56:27,243 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:56:32,244 DEBUG   HandlerThread:1267682 [handler.py:handle_request():146] handle_request: keepalive
+2025-03-08 02:56:32,487 ERROR   SenderThread:1267682 [internal_api.py:execute():370] 409 response executing GraphQL.
+2025-03-08 02:56:32,487 ERROR   SenderThread:1267682 [internal_api.py:execute():371] {"errors":[{"message":"run sqvbj2uh was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2025-03-08 02:56:33,357 INFO    HandlerThread:1267682 [handler.py:finish():866] shutting down handler
+2025-03-08 02:56:33,357 INFO    HandlerThread:1267682 [system_monitor.py:finish():203] Stopping system monitor
+2025-03-08 02:56:33,358 DEBUG   SystemMonitor:1267682 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-03-08 02:56:33,358 INFO    HandlerThread:1267682 [interfaces.py:finish():202] Joined cpu monitor
+2025-03-08 02:56:33,358 INFO    WriterThread:1267682 [datastore.py:close():294] close: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250308_025331-sqvbj2uh/run-sqvbj2uh.wandb
+2025-03-08 02:56:33,358 DEBUG   SystemMonitor:1267682 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-03-08 02:56:33,359 INFO    HandlerThread:1267682 [interfaces.py:finish():202] Joined disk monitor
+2025-03-08 02:56:35,900 INFO    HandlerThread:1267682 [interfaces.py:finish():202] Joined gpu monitor
+2025-03-08 02:56:35,900 INFO    HandlerThread:1267682 [interfaces.py:finish():202] Joined memory monitor
+2025-03-08 02:56:35,900 INFO    HandlerThread:1267682 [interfaces.py:finish():202] Joined network monitor
+2025-03-08 02:56:35,900 ERROR   StreamThr :1267682 [internal.py:wandb_internal():174] Thread SenderThread:
+Traceback (most recent call last):
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2008, in upsert_run
+    response = self.gql(
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 338, in gql
+    ret = self._retry_gql(
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 49, in run
+    self._run()
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 93, in _run
+    self._debounce()
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 334, in _debounce
+    self._sm.debounce()
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 538, in debounce
+    self._maybe_update_config(always=final)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 515, in _maybe_update_config
+    self._debounce_config()
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/internal/sender.py", line 544, in _debounce_config
+    self._api.upsert_run(
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: run sqvbj2uh was previously created and deleted; try a new run name (Error 409: Conflict)

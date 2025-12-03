@@ -1,0 +1,8 @@
+
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/transformer.py:306: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:17<00:00,  5.84s/it]
+Some weights of PLUMForCausalLM were not initialized from the model checkpoint at liuhaotian/llava-llama-2-13b-chat-lightning-preview and are newly initialized: ['bio_encoder.encoder.layers.0.norm1.bias', 'bio_encoder.encoder.layers.0.norm2.weight', 'bio_encoder.encoder.layers.0.linear2.bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.bias', 'bio_encoder.encoder.layers.0.linear1.bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.weight', 'bio_encoder.encoder.layers.0.norm2.bias', 'bio_encoder.encoder.layers.0.self_attn.in_proj_bias', 'bio_encoder.encoder.layers.0.self_attn.in_proj_weight', 'bio_encoder.encoder.layers.0.linear1.weight', 'bio_encoder.encoder.layers.0.norm1.weight', 'bio_encoder.encoder.layers.0.linear2.weight']

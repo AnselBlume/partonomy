@@ -1,0 +1,35 @@
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/transformer.py:306: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:15<00:00,  5.05s/it]
+Some weights of PLUMForCausalLM were not initialized from the model checkpoint at liuhaotian/llava-llama-2-13b-chat-lightning-preview and are newly initialized: ['bio_encoder.encoder.layers.0.linear1.bias', 'bio_encoder.encoder.layers.0.linear2.weight', 'bio_encoder.encoder.layers.0.norm1.weight', 'bio_encoder.encoder.layers.0.self_attn.in_proj_weight', 'bio_encoder.encoder.layers.0.linear1.weight', 'bio_encoder.encoder.layers.0.self_attn.in_proj_bias', 'bio_encoder.encoder.layers.0.norm1.bias', 'bio_encoder.encoder.layers.0.linear2.bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.bias', 'bio_encoder.encoder.layers.0.norm2.bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.weight', 'bio_encoder.encoder.layers.0.norm2.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+trainable params: 6,553,600 || all params: 14,151,578,931 || trainable%: 0.0463100268313092
+Traceback (most recent call last):
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/peft/peft_model.py", line 408, in __getattr__
+    return super().__getattr__(name)  # defer to nn.Module's logic
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1709, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'PeftModelForCausalLM' object has no attribute 'train_mask_prompt_encoder'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/peft/tuners/lora.py", line 382, in __getattr__
+    return super().__getattr__(name)  # defer to nn.Module's logic
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1709, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'LoraModel' object has no attribute 'train_mask_prompt_encoder'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 829, in <module>
+    main(sys.argv[1:])
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 306, in main
+    if model.train_mask_prompt_encoder:
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/peft/peft_model.py", line 410, in __getattr__
+    return getattr(self.base_model, name)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/peft/tuners/lora.py", line 384, in __getattr__
+    return getattr(self.model, name)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1709, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'PLUMForCausalLM' object has no attribute 'train_mask_prompt_encoder'

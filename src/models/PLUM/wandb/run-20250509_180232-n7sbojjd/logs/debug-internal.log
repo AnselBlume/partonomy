@@ -1,0 +1,353 @@
+2025-05-09 18:02:32,855 INFO    StreamThr :3684244 [internal.py:wandb_internal():86] W&B internal server running at pid: 3684244, started at: 2025-05-09 18:02:32.855241
+2025-05-09 18:02:32,856 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status
+2025-05-09 18:02:32,857 INFO    WriterThread:3684244 [datastore.py:open_for_write():85] open: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/run-n7sbojjd.wandb
+2025-05-09 18:02:32,859 DEBUG   SenderThread:3684244 [sender.py:send():380] send: header
+2025-05-09 18:02:32,952 DEBUG   SenderThread:3684244 [sender.py:send():380] send: run
+2025-05-09 18:02:33,183 INFO    SenderThread:3684244 [dir_watcher.py:__init__():211] watching files in: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files
+2025-05-09 18:02:33,183 INFO    SenderThread:3684244 [sender.py:_start_run_threads():1124] run started: n7sbojjd with start time 1746831752.855626
+2025-05-09 18:02:33,188 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: check_version
+2025-05-09 18:02:33,188 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: check_version
+2025-05-09 18:02:33,266 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: run_start
+2025-05-09 18:02:33,353 DEBUG   HandlerThread:3684244 [system_info.py:__init__():32] System info init
+2025-05-09 18:02:33,353 DEBUG   HandlerThread:3684244 [system_info.py:__init__():47] System info init done
+2025-05-09 18:02:33,353 INFO    HandlerThread:3684244 [system_monitor.py:start():194] Starting system monitor
+2025-05-09 18:02:33,353 INFO    SystemMonitor:3684244 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-05-09 18:02:33,354 INFO    HandlerThread:3684244 [system_monitor.py:probe():214] Collecting system info
+2025-05-09 18:02:33,354 INFO    SystemMonitor:3684244 [interfaces.py:start():190] Started cpu monitoring
+2025-05-09 18:02:33,355 INFO    SystemMonitor:3684244 [interfaces.py:start():190] Started disk monitoring
+2025-05-09 18:02:33,355 INFO    SystemMonitor:3684244 [interfaces.py:start():190] Started gpu monitoring
+2025-05-09 18:02:33,355 INFO    SystemMonitor:3684244 [interfaces.py:start():190] Started memory monitoring
+2025-05-09 18:02:33,356 INFO    SystemMonitor:3684244 [interfaces.py:start():190] Started network monitoring
+2025-05-09 18:02:33,448 DEBUG   HandlerThread:3684244 [system_info.py:probe():196] Probing system
+2025-05-09 18:02:33,450 DEBUG   HandlerThread:3684244 [system_info.py:_probe_git():181] Probing git
+2025-05-09 18:02:33,460 DEBUG   HandlerThread:3684244 [system_info.py:_probe_git():189] Probing git done
+2025-05-09 18:02:33,460 DEBUG   HandlerThread:3684244 [system_info.py:probe():244] Probing system done
+2025-05-09 18:02:33,460 DEBUG   HandlerThread:3684244 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-130-generic-x86_64-with-glibc2.35', 'python': '3.10.13', 'heartbeatAt': '2025-05-09T23:02:33.448509', 'startedAt': '2025-05-09T23:02:32.830847', 'docker': None, 'cuda': None, 'args': ('--local_rank=0', '--version=liuhaotian/llava-llama-2-13b-chat-lightning-preview', '--dataset_dir=/shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset', '--vision_pretrained=/shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/weights/sam_vit_h_4b8939.pth', '--zero_shot_ckpt_path=runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model', '--dataset=explanatory_seg', '--explanatory_seg_data', '--partonomy_dataset_split=partimagenet', '--sample_one_question_per_image', '--random_seed=42', '--sample_rates=1', '--batch_size=6', '--grad_accumulation_steps', '10', '--ce_loss_weight=1.0', '--dice_type=focal_tversky', '--dice_loss_weight=8', '--bce_loss_weight=2.0', '--kld_loss_weight=0.1', '--seg_cls_loss_weight=2', '--exp_name=plum-13b_kld_0.1_focal_tversky_8_v1_partonomy_ft', '--precision=bf16', '--model_max_length', '512', '--dice_scale_factor', '1000.0', '--epochs', '20', '--train_mask_prompt_encoder', '--use_bidir_bio', '--focal_tversky_alpha=0.7', '--focal_tversky_beta=0.3', '--bidir_dim_feedforward', '2048', '--lr', '3e-4', '--use_feedback_loop', '--auto_resume'), 'state': 'running', 'program': '/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py', 'codePathLocal': 'plum_train_ds.py', 'codePath': 'src/models/PLUM/plum_train_ds.py', 'git': {'remote': 'https://github.com/AnselBlume/partonomy_private.git', 'commit': '803bca9401deab7c9b870c6a5bd0c6e83d9743f0'}, 'email': 'jeonghwankim123@gmail.com', 'root': '/shared/nas2/jk100/partonomy_private', 'host': 'blender15.cs.illinois.edu', 'username': 'jk100', 'executable': '/shared/nas/data/m1/jk100/.conda/envs/llava/bin/python', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 2155.944046875, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2999.258, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2995.613, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2999.885, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.001, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 428.1472702026367, 'used': 117.48514175415039}}, 'gpu': 'NVIDIA H100 80GB HBM3', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}, {'name': 'NVIDIA H100 80GB HBM3', 'memory_total': 85520809984}], 'memory': {'total': 1007.3801879882812}}
+2025-05-09 18:02:33,460 INFO    HandlerThread:3684244 [system_monitor.py:probe():224] Finished collecting system info
+2025-05-09 18:02:33,460 INFO    HandlerThread:3684244 [system_monitor.py:probe():227] Publishing system info
+2025-05-09 18:02:33,460 DEBUG   HandlerThread:3684244 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2025-05-09 18:02:33,461 DEBUG   HandlerThread:3684244 [system_info.py:_save_pip():68] Saving pip packages done
+2025-05-09 18:02:33,461 DEBUG   HandlerThread:3684244 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2025-05-09 18:02:34,185 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/requirements.txt
+2025-05-09 18:02:34,185 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/conda-environment.yaml
+2025-05-09 18:02:37,811 DEBUG   HandlerThread:3684244 [system_info.py:_save_conda():87] Saving conda packages done
+2025-05-09 18:02:37,812 INFO    HandlerThread:3684244 [system_monitor.py:probe():229] Finished publishing system info
+2025-05-09 18:02:37,819 DEBUG   SenderThread:3684244 [sender.py:send():380] send: files
+2025-05-09 18:02:37,819 INFO    SenderThread:3684244 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2025-05-09 18:02:37,824 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:02:37,825 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:02:37,826 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:02:37,962 DEBUG   SenderThread:3684244 [sender.py:send():380] send: telemetry
+2025-05-09 18:02:37,962 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:02:38,169 INFO    wandb-upload_0:3684244 [upload_job.py:push():131] Uploaded file /shared/nas2/jk100/tmp0drdwamwwandb/0qu7dqay-wandb-metadata.json
+2025-05-09 18:02:38,187 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/conda-environment.yaml
+2025-05-09 18:02:38,187 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:02:38,187 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/wandb-metadata.json
+2025-05-09 18:02:40,188 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:02:42,963 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:02:47,964 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:02:52,825 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:02:52,826 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:02:52,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:02:53,915 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:02:58,915 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:03,919 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:04,200 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/config.yaml
+2025-05-09 18:03:07,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:03:07,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:03:07,862 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:03:09,930 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:14,930 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:19,931 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:22,826 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:03:22,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:03:22,862 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:03:24,948 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:29,949 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:33,356 DEBUG   SystemMonitor:3684244 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-05-09 18:03:33,359 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:03:35,360 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:37,826 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:03:37,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:03:37,862 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:03:41,013 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:46,014 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:51,014 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:03:52,826 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:03:52,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:03:52,862 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:03:56,961 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:01,962 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:03,361 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:04:07,362 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:07,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:04:07,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:04:07,862 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:04:12,942 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:17,944 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:22,826 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:04:22,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:04:22,862 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:04:23,943 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:28,944 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:33,363 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:04:34,364 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:37,826 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:04:37,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:04:37,863 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:04:39,993 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:44,994 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:49,994 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:04:52,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:04:52,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:04:52,863 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:04:55,003 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:00,003 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:03,365 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:05:05,366 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:07,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:05:07,862 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:05:07,863 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:05:11,001 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:16,002 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:21,003 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:22,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:05:22,863 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:05:22,863 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:05:26,109 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:26,266 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:05:28,267 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:05:31,298 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:33,367 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:05:34,271 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:05:36,369 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:37,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:05:37,863 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:05:37,863 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:05:40,274 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:05:42,216 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:44,276 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:05:47,971 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:52,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:05:52,863 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:05:52,863 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:05:53,962 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:05:58,963 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:03,370 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:06:04,371 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:07,827 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:06:07,863 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:06:07,863 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:06:09,407 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:11,290 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:06:14,408 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:20,241 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:21,295 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:06:24,846 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:06:24,846 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:06:24,890 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:06:25,283 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:27,297 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:06:30,331 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:33,371 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:06:35,301 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:06:35,373 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:40,373 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:41,296 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:06:41,297 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:06:41,332 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:06:43,305 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:06:45,306 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:06:45,696 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:50,697 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:55,882 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:06:56,286 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:06:56,286 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:06:56,287 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:06:56,313 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:06:57,314 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:06:59,315 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:07:00,967 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:01,316 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:07:03,373 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:07:06,374 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:11,287 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:07:11,287 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:07:11,288 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:07:11,428 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:16,429 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:21,430 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:26,285 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:07:26,286 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:07:26,286 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:07:26,730 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:27,328 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:07:29,329 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:07:31,731 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:33,375 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:07:37,376 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:41,286 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:07:41,287 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:07:41,287 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:07:42,382 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:47,383 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:53,007 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:07:53,340 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:07:56,287 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:07:56,287 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:07:56,288 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:07:58,419 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:08:01,344 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:08:03,377 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:08:03,536 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:08:05,346 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:08:06,347 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:08:08,348 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:08:08,653 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:08:10,367 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:08:11,287 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-09 18:08:11,287 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:08:11,287 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: stop_status
+2025-05-09 18:08:14,376 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:08:19,377 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:08:21,410 DEBUG   SenderThread:3684244 [sender.py:send():380] send: exit
+2025-05-09 18:08:21,411 INFO    SenderThread:3684244 [sender.py:send_exit():585] handling exit code: 1
+2025-05-09 18:08:21,411 INFO    SenderThread:3684244 [sender.py:send_exit():587] handling runtime: 348
+2025-05-09 18:08:21,418 INFO    SenderThread:3684244 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2025-05-09 18:08:21,419 INFO    SenderThread:3684244 [sender.py:send_exit():593] send defer
+2025-05-09 18:08:21,419 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:21,419 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 0
+2025-05-09 18:08:21,419 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:21,419 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 0
+2025-05-09 18:08:21,419 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 1
+2025-05-09 18:08:21,419 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:21,419 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 1
+2025-05-09 18:08:21,420 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:21,420 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 1
+2025-05-09 18:08:21,420 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 2
+2025-05-09 18:08:21,420 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:21,420 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 2
+2025-05-09 18:08:21,420 INFO    HandlerThread:3684244 [system_monitor.py:finish():203] Stopping system monitor
+2025-05-09 18:08:21,421 INFO    HandlerThread:3684244 [interfaces.py:finish():202] Joined cpu monitor
+2025-05-09 18:08:21,421 INFO    HandlerThread:3684244 [interfaces.py:finish():202] Joined disk monitor
+2025-05-09 18:08:21,421 DEBUG   SystemMonitor:3684244 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-05-09 18:08:21,421 DEBUG   SystemMonitor:3684244 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-05-09 18:08:22,373 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:08:22,373 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/wandb-summary.json
+2025-05-09 18:08:23,381 INFO    HandlerThread:3684244 [interfaces.py:finish():202] Joined gpu monitor
+2025-05-09 18:08:23,382 INFO    HandlerThread:3684244 [interfaces.py:finish():202] Joined memory monitor
+2025-05-09 18:08:23,382 INFO    HandlerThread:3684244 [interfaces.py:finish():202] Joined network monitor
+2025-05-09 18:08:23,382 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: poll_exit
+2025-05-09 18:08:23,383 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:23,383 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 2
+2025-05-09 18:08:23,383 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 3
+2025-05-09 18:08:23,383 DEBUG   SenderThread:3684244 [sender.py:send():380] send: stats
+2025-05-09 18:08:23,384 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: poll_exit
+2025-05-09 18:08:23,385 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:23,385 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 3
+2025-05-09 18:08:23,385 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:23,385 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 3
+2025-05-09 18:08:23,385 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 4
+2025-05-09 18:08:23,385 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:23,385 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 4
+2025-05-09 18:08:23,386 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:23,386 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 4
+2025-05-09 18:08:23,386 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 5
+2025-05-09 18:08:23,386 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:23,386 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 5
+2025-05-09 18:08:23,386 DEBUG   SenderThread:3684244 [sender.py:send():380] send: summary
+2025-05-09 18:08:23,387 INFO    SenderThread:3684244 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2025-05-09 18:08:23,387 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:23,387 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 5
+2025-05-09 18:08:23,387 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 6
+2025-05-09 18:08:23,387 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:23,387 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 6
+2025-05-09 18:08:23,388 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:23,388 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 6
+2025-05-09 18:08:23,388 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 7
+2025-05-09 18:08:23,388 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: status_report
+2025-05-09 18:08:23,388 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:23,388 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 7
+2025-05-09 18:08:23,388 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:23,388 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 7
+2025-05-09 18:08:23,411 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: poll_exit
+2025-05-09 18:08:24,374 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/wandb-summary.json
+2025-05-09 18:08:24,727 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 8
+2025-05-09 18:08:24,727 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: poll_exit
+2025-05-09 18:08:24,728 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:24,728 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 8
+2025-05-09 18:08:24,728 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:24,728 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 8
+2025-05-09 18:08:24,728 INFO    SenderThread:3684244 [job_builder.py:build():298] Attempting to build job artifact
+2025-05-09 18:08:24,729 INFO    SenderThread:3684244 [job_builder.py:_get_source_type():428] is repo sourced job
+2025-05-09 18:08:24,764 INFO    SenderThread:3684244 [job_builder.py:build():404] adding wandb-job metadata file
+2025-05-09 18:08:24,777 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 9
+2025-05-09 18:08:24,777 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:24,777 DEBUG   SenderThread:3684244 [sender.py:send():380] send: artifact
+2025-05-09 18:08:24,777 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 9
+2025-05-09 18:08:25,068 INFO    SenderThread:3684244 [sender.py:send_artifact():1458] sent artifact job-https___github.com_AnselBlume_partonomy_private.git_src_models_PLUM_plum_train_ds.py - {'id': 'QXJ0aWZhY3Q6MTcyMTgyMDcyNQ==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU2ODczNTExNA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTcyMTgyMDcyNQ==', 'versionIndex': 48}}}
+2025-05-09 18:08:25,068 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:25,068 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 9
+2025-05-09 18:08:25,068 INFO    SenderThread:3684244 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-05-09 18:08:25,375 INFO    Thread-12 :3684244 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:08:25,375 INFO    SenderThread:3684244 [dir_watcher.py:finish():388] scan: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files
+2025-05-09 18:08:25,375 INFO    SenderThread:3684244 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/conda-environment.yaml conda-environment.yaml
+2025-05-09 18:08:25,376 INFO    SenderThread:3684244 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/wandb-metadata.json wandb-metadata.json
+2025-05-09 18:08:25,376 INFO    SenderThread:3684244 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/wandb-summary.json wandb-summary.json
+2025-05-09 18:08:25,376 INFO    SenderThread:3684244 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/config.yaml config.yaml
+2025-05-09 18:08:25,377 INFO    SenderThread:3684244 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/requirements.txt requirements.txt
+2025-05-09 18:08:25,377 INFO    SenderThread:3684244 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log output.log
+2025-05-09 18:08:25,377 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 10
+2025-05-09 18:08:25,378 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:25,378 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 10
+2025-05-09 18:08:25,378 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:25,378 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 10
+2025-05-09 18:08:25,378 INFO    SenderThread:3684244 [file_pusher.py:finish():175] shutting down file pusher
+2025-05-09 18:08:25,692 INFO    wandb-upload_0:3684244 [upload_job.py:push():131] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/conda-environment.yaml
+2025-05-09 18:08:25,703 INFO    wandb-upload_1:3684244 [upload_job.py:push():131] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/wandb-summary.json
+2025-05-09 18:08:25,785 INFO    wandb-upload_3:3684244 [upload_job.py:push():131] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/requirements.txt
+2025-05-09 18:08:25,825 INFO    wandb-upload_4:3684244 [upload_job.py:push():131] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/output.log
+2025-05-09 18:08:25,859 INFO    wandb-upload_2:3684244 [upload_job.py:push():131] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/files/config.yaml
+2025-05-09 18:08:26,059 INFO    Thread-11 (_thread_body):3684244 [sender.py:transition_state():613] send defer: 11
+2025-05-09 18:08:26,060 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:26,060 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 11
+2025-05-09 18:08:26,060 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:26,060 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 11
+2025-05-09 18:08:26,060 INFO    SenderThread:3684244 [file_pusher.py:join():181] waiting for file pusher
+2025-05-09 18:08:26,060 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 12
+2025-05-09 18:08:26,060 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:26,060 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 12
+2025-05-09 18:08:26,060 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:26,061 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 12
+2025-05-09 18:08:26,061 INFO    SenderThread:3684244 [file_stream.py:finish():595] file stream finish called
+2025-05-09 18:08:26,257 INFO    SenderThread:3684244 [file_stream.py:finish():599] file stream finish is done
+2025-05-09 18:08:26,257 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 13
+2025-05-09 18:08:26,257 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:26,258 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 13
+2025-05-09 18:08:26,258 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:26,258 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 13
+2025-05-09 18:08:26,258 INFO    SenderThread:3684244 [sender.py:transition_state():613] send defer: 14
+2025-05-09 18:08:26,258 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: defer
+2025-05-09 18:08:26,258 INFO    HandlerThread:3684244 [handler.py:handle_request_defer():172] handle defer: 14
+2025-05-09 18:08:26,258 DEBUG   SenderThread:3684244 [sender.py:send():380] send: final
+2025-05-09 18:08:26,258 DEBUG   SenderThread:3684244 [sender.py:send():380] send: footer
+2025-05-09 18:08:26,258 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: defer
+2025-05-09 18:08:26,258 INFO    SenderThread:3684244 [sender.py:send_request_defer():609] handle sender defer: 14
+2025-05-09 18:08:26,259 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: poll_exit
+2025-05-09 18:08:26,259 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: poll_exit
+2025-05-09 18:08:26,259 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: server_info
+2025-05-09 18:08:26,259 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: server_info
+2025-05-09 18:08:26,261 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: get_summary
+2025-05-09 18:08:26,261 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: sampled_history
+2025-05-09 18:08:26,261 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-09 18:08:26,261 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: job_info
+2025-05-09 18:08:26,324 DEBUG   SenderThread:3684244 [sender.py:send_request():407] send_request: job_info
+2025-05-09 18:08:26,324 INFO    MainThread:3684244 [wandb_run.py:_footer_history_summary_info():3760] rendering history
+2025-05-09 18:08:26,324 INFO    MainThread:3684244 [wandb_run.py:_footer_history_summary_info():3792] rendering summary
+2025-05-09 18:08:26,324 INFO    MainThread:3684244 [wandb_run.py:_footer_sync_info():3719] logging synced files
+2025-05-09 18:08:26,324 DEBUG   HandlerThread:3684244 [handler.py:handle_request():146] handle_request: shutdown
+2025-05-09 18:08:26,325 INFO    HandlerThread:3684244 [handler.py:finish():866] shutting down handler
+2025-05-09 18:08:27,262 INFO    WriterThread:3684244 [datastore.py:close():294] close: /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250509_180232-n7sbojjd/run-n7sbojjd.wandb
+2025-05-09 18:08:27,324 INFO    SenderThread:3684244 [sender.py:finish():1536] shutting down sender
+2025-05-09 18:08:27,324 INFO    SenderThread:3684244 [file_pusher.py:finish():175] shutting down file pusher
+2025-05-09 18:08:27,324 INFO    SenderThread:3684244 [file_pusher.py:join():181] waiting for file pusher

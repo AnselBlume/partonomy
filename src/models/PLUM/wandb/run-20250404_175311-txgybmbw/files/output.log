@@ -1,0 +1,2476 @@
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/transformer.py:306: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.40s/it]
+Some weights of PLUMForCausalLM were not initialized from the model checkpoint at /shared/nas2/jk100/partonomy_private/weights/liuhaotian/llava-llama-2-7b-chat-lightning-lora-preview and are newly initialized: ['bio_encoder.encoder.layers.0.norm1.weight', 'bio_encoder.encoder.layers.0.linear1.weight', 'bio_encoder.encoder.layers.0.self_attn.in_proj_weight', 'bio_encoder.encoder.layers.0.norm1.bias', 'bio_encoder.encoder.layers.0.norm2.weight', 'bio_encoder.encoder.layers.0.linear2.weight', 'bio_encoder.encoder.layers.0.norm2.bias', 'bio_encoder.encoder.layers.0.linear1.bias', 'bio_encoder.encoder.layers.0.self_attn.in_proj_bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.bias', 'bio_encoder.encoder.layers.0.linear2.bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+trainable params: 4,194,304 || all params: 7,809,627,443 || trainable%: 0.05370683852223295
+n:  base_model.model.model.embed_tokens.weight p.shape:  torch.Size([32002, 4096])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_token.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.mask_tokens.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.weight p.shape:  torch.Size([256, 64, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.weight p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.weight p.shape:  torch.Size([64, 32, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.text_hidden_fcs.0.0.weight p.shape:  torch.Size([4096, 4096])
+n:  base_model.model.model.text_hidden_fcs.0.0.bias p.shape:  torch.Size([4096])
+n:  base_model.model.model.text_hidden_fcs.0.2.weight p.shape:  torch.Size([256, 4096])
+n:  base_model.model.model.text_hidden_fcs.0.2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.token_to_mask_fcs.0.0.weight p.shape:  torch.Size([4096, 4096])
+n:  base_model.model.model.token_to_mask_fcs.0.0.bias p.shape:  torch.Size([4096])
+n:  base_model.model.model.token_to_mask_fcs.0.2.weight p.shape:  torch.Size([3, 4096])
+n:  base_model.model.model.token_to_mask_fcs.0.2.bias p.shape:  torch.Size([3])
+n:  base_model.model.lm_head.weight p.shape:  torch.Size([32002, 4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_weight p.shape:  torch.Size([12288, 4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_bias p.shape:  torch.Size([12288])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([4096, 4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.weight p.shape:  torch.Size([2048, 4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.weight p.shape:  torch.Size([4096, 2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.bias p.shape:  torch.Size([4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.weight p.shape:  torch.Size([4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.bias p.shape:  torch.Size([4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.weight p.shape:  torch.Size([4096])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.bias p.shape:  torch.Size([4096])
+ade20k:  20210
+cocostuff:  118287
+loading annotations into memory...
+Done (t=0.55s)
+creating index...
+index created!
+pascal_part:  4366
+loading annotations into memory...
+Done (t=7.43s)
+creating index...
+index created!
+paco_lvis:  45790
+mapillary:  18000
+loading dataset refclef into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refclef/refs(unc).p
+creating index...
+index created.
+DONE (t=2.79s)
+dataset refclef (refs unc) (train split) has 17978 images and 99523 annotations.
+loading dataset refcoco into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco/refs(unc).p
+creating index...
+index created.
+DONE (t=4.98s)
+dataset refcoco (refs unc) (train split) has 16994 images and 196771 annotations.
+loading dataset refcoco+ into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco+/refs(unc).p
+creating index...
+index created.
+DONE (t=5.82s)
+dataset refcoco+ (refs unc) (train split) has 16992 images and 196737 annotations.
+loading dataset refcocog into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcocog/refs(umd).p
+creating index...
+index created.
+DONE (t=3.36s)
+dataset refcocog (refs umd) (train split) has 21899 images and 208960 annotations.
+vqa_data:  157712
+number of reason_seg samples:  239
+len(self.img_to_explanation):  239
+Training with 10000 examples and validating with 200 examples.
+[2025-04-04 17:54:25,899] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.9.5, git-hash=unknown, git-branch=unknown
+[2025-04-04 17:54:25,900] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2025-04-04 17:54:25,900] [INFO] [comm.py:594:init_distributed] cdb=None
+[2025-04-04 17:54:25,900] [INFO] [comm.py:625:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Using /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+[2025-04-04 17:54:37,162] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+Time to load fused_adam op: 0.9201390743255615 seconds
+[2025-04-04 17:54:38,409] [INFO] [logging.py:96:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+Detected CUDA files, patching ldflags
+Emitting ninja build file /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118/fused_adam/build.ninja...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/utils/cpp_extension.py:1967: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation.
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Building extension module fused_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module fused_adam...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/ops/adam/fused_adam.py:96: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/tensor/python_tensor.cpp:78.)
+  self._dummy_overflow_buf = get_accelerator().IntTensor([0])
+[2025-04-04 17:54:38,577] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = FusedAdam
+[2025-04-04 17:54:38,577] [INFO] [utils.py:54:is_zero_supported_optimizer] Checking ZeRO support for optimizer=FusedAdam type=<class 'deepspeed.ops.adam.fused_adam.FusedAdam'>
+[2025-04-04 17:54:38,577] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 2 optimizer
+[2025-04-04 17:54:38,577] [INFO] [stage_1_and_2.py:133:__init__] Reduce bucket size 500000000
+[2025-04-04 17:54:38,577] [INFO] [stage_1_and_2.py:134:__init__] Allgather bucket size 500000000
+[2025-04-04 17:54:38,578] [INFO] [stage_1_and_2.py:135:__init__] CPU Offload: False
+[2025-04-04 17:54:38,578] [INFO] [stage_1_and_2.py:136:__init__] Round robin gradient partitioning: False
+Rank: 0 partition count [1] and sizes[(388961768, False)]
+[2025-04-04 17:54:43,292] [INFO] [utils.py:785:see_memory_usage] Before initializing optimizer states
+[2025-04-04 17:54:43,293] [INFO] [utils.py:786:see_memory_usage] MA 16.03 GB         Max_MA 16.75 GB         CA 17.12 GB         Max_CA 17 GB
+[2025-04-04 17:54:43,293] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 160.78 GB, percent = 16.0%
+[2025-04-04 17:54:46,863] [INFO] [utils.py:785:see_memory_usage] After initializing optimizer states
+[2025-04-04 17:54:46,864] [INFO] [utils.py:786:see_memory_usage] MA 18.93 GB         Max_MA 20.38 GB         CA 21.47 GB         Max_CA 21 GB
+[2025-04-04 17:54:46,864] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 160.72 GB, percent = 16.0%
+[2025-04-04 17:54:46,864] [INFO] [stage_1_and_2.py:488:__init__] optimizer state initialized
+[2025-04-04 17:54:50,020] [INFO] [utils.py:785:see_memory_usage] After initializing ZeRO optimizer
+[2025-04-04 17:54:50,021] [INFO] [utils.py:786:see_memory_usage] MA 18.93 GB         Max_MA 18.93 GB         CA 21.47 GB         Max_CA 21 GB
+[2025-04-04 17:54:50,024] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 160.72 GB, percent = 16.0%
+[2025-04-04 17:54:50,031] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = adamw
+[2025-04-04 17:54:50,031] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2025-04-04 17:54:50,031] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x7fe96c0de3b0>
+[2025-04-04 17:54:50,031] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0003], mom=[(0.9, 0.95)]
+[2025-04-04 17:54:50,034] [INFO] [config.py:960:print] DeepSpeedEngine configuration:
+[2025-04-04 17:54:50,034] [INFO] [config.py:964:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2025-04-04 17:54:50,034] [INFO] [config.py:964:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-04-04 17:54:50,034] [INFO] [config.py:964:print]   amp_enabled .................. False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   amp_params ................... False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   bfloat16_enabled ............. True
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   checkpoint_parallel_write_pipeline  False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   checkpoint_tag_validation_enabled  True
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   checkpoint_tag_validation_fail  False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7fe72336f580>
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   communication_data_type ...... None
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   curriculum_enabled_legacy .... False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   curriculum_params_legacy ..... False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   data_efficiency_enabled ...... False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   dataloader_drop_last ......... False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   disable_allgather ............ False
+[2025-04-04 17:54:50,035] [INFO] [config.py:964:print]   dump_state ................... False
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   dynamic_loss_scale_args ...... None
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   eigenvalue_enabled ........... False
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   eigenvalue_gas_boundary_resolution  1
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   eigenvalue_layer_num ......... 0
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   eigenvalue_max_iter .......... 100
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   eigenvalue_stability ......... 1e-06
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   eigenvalue_tol ............... 0.01
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   eigenvalue_verbose ........... False
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   elasticity_enabled ........... False
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   fp16_auto_cast ............... None
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   fp16_enabled ................. False
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   fp16_master_weights_and_gradients  False
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   global_rank .................. 0
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   grad_accum_dtype ............. None
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   gradient_accumulation_steps .. 10
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   gradient_clipping ............ 1.0
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   gradient_predivide_factor .... 1.0
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-04-04 17:54:50,036] [INFO] [config.py:964:print]   initial_dynamic_scale ........ 1
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   load_universal_checkpoint .... False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   loss_scale ................... 1.0
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   memory_breakdown ............. False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   mics_hierarchial_params_gather  False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   mics_shard_size .............. -1
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   optimizer_legacy_fusion ...... False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   optimizer_name ............... adamw
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   optimizer_params ............. {'lr': 0.0003, 'weight_decay': 0.0, 'betas': (0.9, 0.95)}
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   pld_enabled .................. False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   pld_params ................... False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   prescale_gradients ........... False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   scheduler_name ............... WarmupDecayLR
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   scheduler_params ............. {'total_num_steps': 25000, 'warmup_min_lr': 0, 'warmup_max_lr': 0.0003, 'warmup_num_steps': 100, 'warmup_type': 'linear'}
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   sparse_attention ............. None
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   sparse_gradients_enabled ..... False
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   steps_per_print .............. 10
+[2025-04-04 17:54:50,037] [INFO] [config.py:964:print]   train_batch_size ............. 20
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   train_micro_batch_size_per_gpu  2
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   use_node_local_storage ....... False
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   wall_clock_breakdown ......... False
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   world_size ................... 1
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   zero_allow_untested_optimizer  False
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   zero_enabled ................. True
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   zero_force_ds_cpu_optimizer .. True
+[2025-04-04 17:54:50,038] [INFO] [config.py:964:print]   zero_optimization_stage ...... 2
+[2025-04-04 17:54:50,038] [INFO] [config.py:950:print_user_config]   json = {
+    "train_micro_batch_size_per_gpu": 2,
+    "gradient_accumulation_steps": 10,
+    "optimizer": {
+        "type": "AdamW",
+        "params": {
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "betas": [0.9, 0.95]
+        }
+    },
+    "scheduler": {
+        "type": "WarmupDecayLR",
+        "params": {
+            "total_num_steps": 2.500000e+04,
+            "warmup_min_lr": 0,
+            "warmup_max_lr": 0.0003,
+            "warmup_num_steps": 100,
+            "warmup_type": "linear"
+        }
+    },
+    "fp16": {
+        "enabled": false
+    },
+    "bf16": {
+        "enabled": true
+    },
+    "gradient_clipping": 1.0,
+    "zero_optimization": {
+        "stage": 2,
+        "contiguous_gradients": true,
+        "overlap_comm": true,
+        "reduce_scatter": true,
+        "reduce_bucket_size": 5.000000e+08,
+        "allgather_bucket_size": 5.000000e+08
+    }
+}
+(train) >> AFTER DEEPSPEED
+>> (train) Auto-resume from:  ./runs/plum-7b_kld_0_dice_0_v1_partonomy/plum-7b_kld_0_dice_0_v1_partonomy_accum_10_maxlen512_epochs50_segloss_0_bce_loss_2_kld_loss_0_dice_loss_0_bidir_bio_ckpt_model
+>> (train) resume exists:  False
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:84.)
+  return F.conv2d(input, weight, bias, self.stride,
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 427, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [346], [349], [347], [346], [346]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2304, 3456]) | end - start: 5
+mask_positions_in_input_ids:  [[], [346], [349], [347], [346], [346]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 512, 683]) | end - start: 5
+mask_positions_in_input_ids:  [[324], [318], [320], [320], [317], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([1, 360, 480]) | end - start: 1
+mask_positions_in_input_ids:  [[324], [318], [320], [320], [317], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [338], [341], [341], [341], [339]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2592, 3888]) | end - start: 5
+mask_positions_in_input_ids:  [[], [338], [341], [341], [341], [339]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 2848, 4288]) | end - start: 2
+mask_positions_in_input_ids:  [[363], [356], [322], [318], [317], [323], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2848, 4288])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2848, 4288])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[363], [356], [322], [318], [317], [323], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 491, 700]) | end - start: 5
+mask_positions_in_input_ids:  [[354], [345], [354], [350], [354], [322], [318], [316], [324], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 491, 700])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 491, 700])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 491, 700])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 491, 700])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 491, 700])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[354], [345], [354], [350], [354], [322], [318], [316], [324], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1080, 1920]) | end - start: 5
+mask_positions_in_input_ids:  [[340], [344], [339], [339], [340], [348], [344], [340], [346], [340]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1080, 1920])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1080, 1920])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1080, 1920])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1080, 1920])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1080, 1920])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[340], [344], [339], [339], [340], [348], [344], [340], [346], [340]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 500, 375]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [320], [317], [322], [321], [324], [323], [317], [], [316]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1440, 2560]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [320], [317], [322], [321], [324], [323], [317], [], [316]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1440, 2560])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1440, 2560])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1440, 2560])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1440, 2560])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1440, 2560])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [324], [319], [323], [322], [], [], [], [], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 3264, 4912]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [324], [319], [323], [322], [], [], [], [], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[345], [347], [345], [344], [343], [320], [320], [317], [318], [316]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 432, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[345], [347], [345], [344], [343], [320], [320], [317], [318], [316]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 432, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 432, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 432, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 432, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 432, 640])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 381, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[326], [324], [330], [324], [322], [324], [327], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 381, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 381, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 381, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 381, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 381, 640])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 375, 500]) | end - start: 3
+mask_positions_in_input_ids:  [[326], [324], [330], [324], [322], [324], [327], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+Epoch: [0][  1/500]	Time 16.429 (16.429)	Loss 0.3051 (0.2615)	CeLoss 0.2080 (0.1617)	SegCLSLoss 0.1104 (0.1090)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1271 (0.1345)	MaskBCELoss 0.0486 (0.0499)	MaskDICELoss 0.0785 (0.0846)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 800, 533]) | end - start: 5
+mask_positions_in_input_ids:  [[357], [356], [349], [338], [353], [], [], [], [], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 533])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 533])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 533])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 533])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 533])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 2592, 3888]) | end - start: 5
+mask_positions_in_input_ids:  [[357], [356], [349], [338], [353], [], [], [], [], []]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 427, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [348], [351], [337], [346], [350]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2953, 4429]) | end - start: 5
+mask_positions_in_input_ids:  [[], [348], [351], [337], [346], [350]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2953, 4429])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2953, 4429])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2953, 4429])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2953, 4429])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2953, 4429])
+>> offset:  tensor([0, 5, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[333], [336], [], [347], [341], [], [], [], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([0, 5, 9], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 1296, 968]) | end - start: 4
+mask_positions_in_input_ids:  [[333], [336], [], [347], [341], [], [], [], []]
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 332, 500]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 640, 427]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2160, 2880]) | end - start: 5
+mask_positions_in_input_ids:  [[361], [350], [345], [352], [345], [355], [363], [370], [365], [364]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3264, 2448]) | end - start: 5
+mask_positions_in_input_ids:  [[361], [350], [345], [352], [345], [355], [363], [370], [365], [364]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1000, 750]) | end - start: 5
+mask_positions_in_input_ids:  [[355], [349], [358], [355], [358], [323], [321], [319], [324], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 509]) | end - start: 5
+mask_positions_in_input_ids:  [[355], [349], [358], [355], [358], [323], [321], [319], [324], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 509])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 509])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 509])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 509])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 509])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2731, 4100]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [349], [355], [356], [337], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2731, 4100])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2731, 4100])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2731, 4100])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2731, 4100])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2731, 4100])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[349], [349], [355], [356], [337], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1062, 806]) | end - start: 5
+mask_positions_in_input_ids:  [[353], [343], [355], [357], [355], [317], [322], [325], [325], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1968, 2624]) | end - start: 5
+mask_positions_in_input_ids:  [[353], [343], [355], [357], [355], [317], [322], [325], [325], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1968, 2624])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1968, 2624])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1968, 2624])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1968, 2624])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1968, 2624])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1920, 1280]) | end - start: 5
+mask_positions_in_input_ids:  [[356], [341], [354], [343], [354], [], [344], [354], [354], [352]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1920, 1280])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1920, 1280])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1920, 1280])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1920, 1280])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1920, 1280])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2736, 3648]) | end - start: 5
+mask_positions_in_input_ids:  [[356], [341], [354], [343], [354], [], [344], [354], [354], [352]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 640, 480]) | end - start: 1
+mask_positions_in_input_ids:  [[], [325], [320], [321], [323], [324]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 500, 375]) | end - start: 5
+mask_positions_in_input_ids:  [[], [325], [320], [321], [323], [324]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+Epoch: [0][  2/500]	Time 12.187 (12.187)	Loss 0.1696 (0.2371)	CeLoss 0.1504 (0.1195)	SegCLSLoss 0.1025 (0.0975)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1093 (0.1450)	MaskBCELoss 0.0094 (0.0587)	MaskDICELoss 0.0999 (0.0863)
+>> offset:  tensor([0, 5, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[325], [320], [325], [320], [320], [323], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([0, 5, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 360, 480]) | end - start: 2
+mask_positions_in_input_ids:  [[325], [320], [325], [320], [320], [323], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 375, 500]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 428, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 370, 284]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [316], [318], [320], [318], [318], [326], [323], [321], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 370, 284])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 370, 284])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 370, 284])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 370, 284])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 370, 284])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [316], [318], [320], [318], [318], [326], [323], [321], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 394, 640]) | end - start: 2
+mask_positions_in_input_ids:  [[323], [326], [323], [316], [320], [321], [317]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 394, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 394, 640])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[323], [326], [323], [316], [320], [321], [317]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 685, 1024]) | end - start: 5
+mask_positions_in_input_ids:  [[342], [345], [346], [340], [346], [352], [356], [359], [359], [355]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 240, 320]) | end - start: 5
+mask_positions_in_input_ids:  [[342], [345], [346], [340], [346], [352], [356], [359], [359], [355]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 240, 320])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 240, 320])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 240, 320])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 240, 320])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 240, 320])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[348], [347], [338], [346], [351], [345], [341], [343], [338], [341]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3456, 2592]) | end - start: 5
+mask_positions_in_input_ids:  [[348], [347], [338], [346], [351], [345], [341], [343], [338], [341]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [323], [322], [320], [322], [319], [324], [324], [322], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 428, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [323], [322], [320], [322], [319], [324], [324], [322], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 428, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 428, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 428, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 428, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 428, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 612, 612]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [320], [316], [317], [317], [356], [339], [342], [340], [340]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2304, 3456]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [320], [316], [317], [317], [356], [339], [342], [340], [340]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 612, 612]) | end - start: 5
+mask_positions_in_input_ids:  [[348], [350], [346], [349], [347], [362], [363], [359], [348], [364]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3776, 2520]) | end - start: 5
+mask_positions_in_input_ids:  [[348], [350], [346], [349], [347], [362], [363], [359], [348], [364]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3268, 2172]) | end - start: 5
+mask_positions_in_input_ids:  [[342], [341], [344], [339], [341], [318], [321], [323], [320], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3268, 2172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3268, 2172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3268, 2172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3268, 2172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3268, 2172])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[342], [341], [344], [339], [341], [318], [321], [323], [320], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+Epoch: [0][  3/500]	Time 12.066 (12.066)	Loss 0.1950 (0.2880)	CeLoss 0.1055 (0.1744)	SegCLSLoss 0.1084 (0.0986)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1433 (0.1365)	MaskBCELoss 0.0448 (0.0568)	MaskDICELoss 0.0986 (0.0797)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 603]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [320], [320], [316], [316], [355], [349], [349], [337], [335]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 603])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 603])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 603])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 603])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 603])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 612, 612]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [320], [320], [316], [316], [355], [349], [349], [337], [335]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 481]) | end - start: 5
+mask_positions_in_input_ids:  [[325], [321], [325], [320], [317], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 481])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 481])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 481])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 481])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 481])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([1, 640, 424]) | end - start: 1
+mask_positions_in_input_ids:  [[325], [321], [325], [320], [317], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 424])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 500, 333]) | end - start: 5
+mask_positions_in_input_ids:  [[327], [320], [325], [324], [319], [323], [321], [324], [322], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[327], [320], [325], [324], [319], [323], [321], [324], [322], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 359, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [322], [321], [326], [323], [331], [], [328], [328], [328]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 960, 686]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [322], [321], [326], [323], [331], [], [328], [328], [328]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 686])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 686])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 686])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 686])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 686])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1200, 1600]) | end - start: 5
+mask_positions_in_input_ids:  [[], [357], [358], [360], [353], [364], [361], [357], [362], [348]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3776, 2520]) | end - start: 5
+mask_positions_in_input_ids:  [[], [357], [358], [360], [353], [364], [361], [357], [362], [348]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3776, 2520])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([1, 640, 480]) | end - start: 1
+mask_positions_in_input_ids:  [[319], [335], [337], [336], [333], [334]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2592, 3888]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [335], [337], [336], [333], [334]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2592, 3888])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 229, 304]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [319], [318], [317], [322], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 229, 304])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 229, 304])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 229, 304])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 229, 304])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 229, 304])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 427, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[320], [319], [318], [317], [322], []]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [322], [319], [322], [321], [322]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 302, 448]) | end - start: 5
+mask_positions_in_input_ids:  [[], [322], [319], [322], [321], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 302, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 302, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 302, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 302, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 302, 448])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[325], [325], [319], [322], [323], [321], [318], [319], [322], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[325], [325], [319], [322], [323], [321], [318], [319], [322], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3456, 2592]) | end - start: 5
+mask_positions_in_input_ids:  [[341], [341], [341], [343], [337], [317], [324], [322], [322], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2160, 3840]) | end - start: 5
+mask_positions_in_input_ids:  [[341], [341], [341], [343], [337], [317], [324], [322], [322], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 3840])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 3840])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 3840])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 3840])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 3840])
+Epoch: [0][  4/500]	Time 12.218 (12.218)	Loss 0.2478 (0.2691)	CeLoss 0.1309 (0.1735)	SegCLSLoss 0.1118 (0.1095)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1383 (0.1381)	MaskBCELoss 0.0583 (0.0477)	MaskDICELoss 0.0800 (0.0904)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [324], [318], [320], [317], [356], [357], [359], [349], [362]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1000, 750]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [324], [318], [320], [317], [356], [357], [359], [349], [362]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1000, 750])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 500, 375]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [318], [318], [319], [321], [321], [318], [320], [321], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 320, 240]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [318], [318], [319], [321], [321], [318], [320], [321], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 240])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 240])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 240])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 240])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 240])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 500, 460]) | end - start: 2
+mask_positions_in_input_ids:  [[326], [322], [319], [321], [320], [317], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 460])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 460])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3096, 4128]) | end - start: 5
+mask_positions_in_input_ids:  [[326], [322], [319], [321], [320], [317], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2988, 3984]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [325], [], [319], [318], [324], [319], [325], [323], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 333, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [325], [], [319], [318], [324], [319], [325], [323], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 512, 768]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [319], [322], [317], [323], [324], [320], [319], [323], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 768])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 768])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 768])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 768])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 768])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 360, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [319], [322], [317], [323], [324], [320], [319], [323], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3456, 4608]) | end - start: 5
+mask_positions_in_input_ids:  [[345], [341], [345], [344], [344], [317], [319], [319], [318], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 256, 256]) | end - start: 5
+mask_positions_in_input_ids:  [[345], [341], [345], [344], [344], [317], [319], [319], [318], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 256, 256])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 256, 256])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 256, 256])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 256, 256])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 256, 256])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1536, 2048]) | end - start: 5
+mask_positions_in_input_ids:  [[347], [344], [352], [346], [347], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 425, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[347], [344], [352], [346], [347], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 2736, 3648]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [], [], [], [], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 1280, 900]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [], [], [], [], []]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 376, 500]) | end - start: 1
+mask_positions_in_input_ids:  [[], [323], [323], [318], [], [321]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2449, 3265]) | end - start: 5
+mask_positions_in_input_ids:  [[], [323], [323], [318], [], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2449, 3265])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2449, 3265])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2449, 3265])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2449, 3265])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2449, 3265])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 800, 1200]) | end - start: 5
+mask_positions_in_input_ids:  [[345], [340], [340], [341], [348], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 1200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 1200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 1200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 1200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 1200])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[345], [340], [340], [341], [348], []]
+Epoch: [0][  5/500]	Time 12.100 (12.100)	Loss 0.2314 (0.2968)	CeLoss 0.1187 (0.1914)	SegCLSLoss 0.1108 (0.0978)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1555 (0.1364)	MaskBCELoss 0.0563 (0.0528)	MaskDICELoss 0.0992 (0.0837)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 512, 683]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [317], [320], [319], [321], [321], [317], [322], [316], [316]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 512, 683]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [317], [320], [319], [321], [321], [317], [322], [316], [316]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 692, 1024]) | end - start: 5
+mask_positions_in_input_ids:  [[], [349], [350], [346], [354], [327], [323], [323], [327], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 692, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 692, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 692, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 692, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 692, 1024])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[], [349], [350], [346], [354], [327], [323], [323], [327], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[323], [323], [325], [318], [320], [342], [340], [344], [343], [341]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1936, 2592]) | end - start: 5
+mask_positions_in_input_ids:  [[323], [323], [325], [318], [320], [342], [340], [344], [343], [341]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1936, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1936, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1936, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1936, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1936, 2592])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [320], [318], [320], [322], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 363, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[319], [320], [318], [320], [322], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 1200, 1600]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [319], [323], [317], [320], [320]]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 512, 730]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [319], [323], [317], [320], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 730])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 730])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 730])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 730])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 730])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [324], [326], [], [328], [347], [343], [354], [345], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3072, 4608]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [324], [326], [], [328], [347], [343], [354], [345], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4608])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3024, 4032]) | end - start: 5
+mask_positions_in_input_ids:  [[324], [324], [319], [317], [318], [341], [342], [345], [351], [347]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[324], [324], [319], [317], [318], [341], [342], [345], [351], [347]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 908, 1362]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [347], [349], [349], [345], [343], [343], [339], [342], [338]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 908, 1362])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 908, 1362])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 908, 1362])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 908, 1362])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 908, 1362])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 4000, 3000]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [347], [349], [349], [345], [343], [343], [339], [342], [338]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4000, 3000])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4000, 3000])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4000, 3000])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4000, 3000])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4000, 3000])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [320], [318], [317], [319], [351], [349], [353], [351], [353]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 612, 612]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [320], [318], [317], [319], [351], [349], [353], [351], [353]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 360]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [319], [320], [321], [319], [344], [346], [342], [347], [345]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 360])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 360])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 360])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 360])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 360])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3456, 5184]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [319], [320], [321], [319], [344], [346], [342], [347], [345]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 5184])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 5184])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 5184])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 5184])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 5184])
+Epoch: [0][  6/500]	Time 13.248 (13.248)	Loss 0.2169 (0.2419)	CeLoss 0.1387 (0.1546)	SegCLSLoss 0.1094 (0.1090)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1152 (0.1327)	MaskBCELoss 0.0389 (0.0437)	MaskDICELoss 0.0763 (0.0891)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [322], [323], [323], [317], [325], [323], [323], [323], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [322], [323], [323], [317], [325], [323], [323], [323], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([0, 1, 3], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [335], [326]]
+>> offset:  tensor([0, 1, 3], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 477, 640]) | end - start: 2
+mask_positions_in_input_ids:  [[], [335], [326]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 477, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 477, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [323], [321], [322], [319], [316], [321], [321], [322], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3024, 4032]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [323], [321], [322], [319], [316], [321], [321], [322], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [318], [319], [322], [328], [320], [320], [320], [323], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 380, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [318], [319], [322], [328], [320], [320], [320], [323], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 380, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 380, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 380, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 380, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 380, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [324], [320], [323], [324], [345], [341], [335], [336], [336]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 892, 1172]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [324], [320], [323], [324], [345], [341], [335], [336], [336]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> offset:  tensor([0, 4, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 1296, 968]) | end - start: 4
+mask_positions_in_input_ids:  [[359], [357], [361], [349], [347], [355], [359], [358], [355]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1296, 968])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1296, 968])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1296, 968])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1296, 968])
+>> offset:  tensor([0, 4, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1062, 806]) | end - start: 5
+mask_positions_in_input_ids:  [[359], [357], [361], [349], [347], [355], [359], [358], [355]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1062, 806])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [319], [324], [322], [323], [358], [362], [338], [], [356]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 530, 800]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [319], [324], [322], [323], [358], [362], [338], [], [356]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> offset:  tensor([0, 4, 5], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 442, 334]) | end - start: 4
+mask_positions_in_input_ids:  [[321], [317], [321], [317], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 442, 334])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 442, 334])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 442, 334])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 442, 334])
+>> offset:  tensor([0, 4, 5], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 375, 500]) | end - start: 1
+mask_positions_in_input_ids:  [[321], [317], [321], [317], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3456, 4608]) | end - start: 5
+mask_positions_in_input_ids:  [[326], [319], [319], [324], [323], [347], [359], [355], [360], [353]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 4608])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3744, 5616]) | end - start: 5
+mask_positions_in_input_ids:  [[326], [319], [319], [324], [323], [347], [359], [355], [360], [353]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[324], [323], [321], [], [], [348], [349], [355], [352], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 800, 535]) | end - start: 5
+mask_positions_in_input_ids:  [[324], [323], [321], [], [], [348], [349], [355], [352], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 535])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 535])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 535])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 535])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 800, 535])
+Epoch: [0][  7/500]	Time 14.362 (14.362)	Loss 0.1920 (0.2645)	CeLoss 0.1250 (0.1677)	SegCLSLoss 0.1084 (0.1086)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1307 (0.1443)	MaskBCELoss 0.0335 (0.0483)	MaskDICELoss 0.0972 (0.0960)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 360, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [323], [332], [322], [324], [352], [], [355], [347], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3696]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [323], [332], [322], [324], [352], [], [355], [347], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3696])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3696])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3696])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3696])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3696])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3264, 2448]) | end - start: 5
+mask_positions_in_input_ids:  [[342], [345], [347], [345], [346], [351], [336], [355]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 1536, 2048]) | end - start: 3
+mask_positions_in_input_ids:  [[342], [345], [347], [345], [346], [351], [336], [355]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3125, 4696]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [358], [348], [351], [347], [318], [322], [323], [323], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3125, 4696])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3125, 4696])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3125, 4696])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3125, 4696])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3125, 4696])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 533, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [358], [348], [351], [347], [318], [322], [323], [323], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 533, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 533, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 533, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 533, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 533, 640])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [319], [], [320], [324], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[320], [319], [], [320], [324], []]
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 375, 500]) | end - start: 2
+mask_positions_in_input_ids:  [[324], [323], [321], [321], [320], [323], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 363, 249]) | end - start: 5
+mask_positions_in_input_ids:  [[324], [323], [321], [321], [320], [323], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 249])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 249])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 249])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 249])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 249])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 479, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [320], [320], [324], [322], [321]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[], [320], [320], [324], [322], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3840, 5760]) | end - start: 5
+mask_positions_in_input_ids:  [[346], [], [348], [347], [348], [320], [318], [318], [320], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3840, 5760])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3840, 5760])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3840, 5760])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3840, 5760])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3840, 5760])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 334, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[346], [], [348], [347], [348], [320], [318], [318], [320], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 334, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 334, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 334, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 334, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 334, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 525, 200]) | end - start: 5
+mask_positions_in_input_ids:  [[346], [348], [353], [352], [354], [325], [322], [323], [321], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 525, 200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 525, 200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 525, 200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 525, 200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 525, 200])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[346], [348], [353], [352], [354], [325], [322], [323], [321], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 768, 1024]) | end - start: 5
+mask_positions_in_input_ids:  [[344], [342], [340], [346], [342], [319], [324], [320], [322], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 458]) | end - start: 5
+mask_positions_in_input_ids:  [[344], [342], [340], [346], [342], [319], [324], [320], [322], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 458])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 458])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 458])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 458])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 458])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 612, 612]) | end - start: 5
+mask_positions_in_input_ids:  [[335], [348], [355], [337], [355], [316], [322], [321], [319], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 612, 612])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[335], [348], [355], [337], [355], [316], [322], [321], [319], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+Epoch: [0][  8/500]	Time 13.707 (13.707)	Loss 0.2717 (0.2160)	CeLoss 0.1582 (0.1434)	SegCLSLoss 0.1108 (0.1101)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1488 (0.1282)	MaskBCELoss 0.0569 (0.0363)	MaskDICELoss 0.0919 (0.0918)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [350], [348], [345], [354], [320], [325], [321], [321], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [350], [348], [345], [354], [320], [325], [321], [321], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 3456, 2592]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], []]
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 427, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [], [], [], [], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 2304, 3456]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [323], [325], [319], [322], [320]]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 333, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [323], [325], [319], [322], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 333, 500])
+>> offset:  tensor([0, 4, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 481, 589]) | end - start: 4
+mask_positions_in_input_ids:  [[348], [334], [336], [337], [321], [319], [319], [323], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 589])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 589])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 589])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 589])
+>> offset:  tensor([0, 4, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 512, 683]) | end - start: 5
+mask_positions_in_input_ids:  [[348], [334], [336], [337], [321], [319], [319], [323], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 500, 375]) | end - start: 2
+mask_positions_in_input_ids:  [[323], [317], [349], [344], [349], [352], [342]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 375])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1728, 3072]) | end - start: 5
+mask_positions_in_input_ids:  [[323], [317], [349], [344], [349], [352], [342]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1728, 3072])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1728, 3072])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1728, 3072])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1728, 3072])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1728, 3072])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[326], [320], [323], [320], [322], [319], [318], [325], [318], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 500, 333]) | end - start: 5
+mask_positions_in_input_ids:  [[326], [320], [323], [320], [322], [319], [318], [325], [318], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> offset:  tensor([0, 4, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 480, 640]) | end - start: 4
+mask_positions_in_input_ids:  [[335], [329], [325], [326], [319], [323], [321], [322], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([0, 4, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3096, 4128]) | end - start: 5
+mask_positions_in_input_ids:  [[335], [329], [325], [326], [319], [323], [321], [322], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3096, 4128])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1036, 1197]) | end - start: 5
+mask_positions_in_input_ids:  [[359], [358], [361], [364], [], [316], [319], [319], [319], [317]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1036, 1197])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1036, 1197])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1036, 1197])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1036, 1197])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1036, 1197])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 512, 683]) | end - start: 5
+mask_positions_in_input_ids:  [[359], [358], [361], [364], [], [316], [319], [319], [319], [317]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 427, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [364], [363], [357], [359], [361]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1001, 1500]) | end - start: 5
+mask_positions_in_input_ids:  [[], [364], [363], [357], [359], [361]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1001, 1500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1001, 1500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1001, 1500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1001, 1500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1001, 1500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [319], [319], [321], [320], [325], [318], [316], [320], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3024, 4032]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [319], [319], [321], [320], [325], [318], [316], [320], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+Epoch: [0][  9/500]	Time 12.119 (12.119)	Loss 0.4303 (0.2826)	CeLoss 0.3320 (0.1661)	SegCLSLoss 0.1104 (0.0980)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1410 (0.1432)	MaskBCELoss 0.0495 (0.0583)	MaskDICELoss 0.0915 (0.0849)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [321], [326], [335], [318], [344], [], [333], [335], [334]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 481, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[320], [321], [326], [335], [318], [344], [], [333], [335], [334]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 481, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3024, 4032]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [], [317], [325], [321], [340], [337], [343], [345], [341]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3024, 4032])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3456, 2592]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [], [317], [325], [321], [340], [337], [343], [345], [341]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3456, 2592])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 640, 427]) | end - start: 2
+mask_positions_in_input_ids:  [[327], [327], [342], [341], [357], [347], [346]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 427])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 427])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1424, 2144]) | end - start: 5
+mask_positions_in_input_ids:  [[327], [327], [342], [341], [357], [347], [346]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 4075, 6113]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [347], [350], [344], [342], [345], [340], [346], [349], [347]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3888, 2592]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [347], [350], [344], [342], [345], [340], [346], [349], [347]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3888, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3888, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3888, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3888, 2592])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3888, 2592])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[324], [321], [320], [317], [319], [344], [342], [344], [346], [350]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2304, 3456]) | end - start: 5
+mask_positions_in_input_ids:  [[324], [321], [320], [317], [319], [344], [342], [344], [346], [350]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 750, 1000]) | end - start: 5
+mask_positions_in_input_ids:  [[362], [366], [361], [360], [358], [324], [], [320], [320], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 750, 1000])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 750, 1000])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 750, 1000])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 750, 1000])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 750, 1000])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[362], [366], [361], [360], [358], [324], [], [320], [320], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 427, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 426, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [318], [322], [320], [317], [323]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[], [318], [322], [320], [317], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1200, 1600]) | end - start: 5
+mask_positions_in_input_ids:  [[333], [345], [334], [346], [345], [316], [318], [321], [322], [317]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 356, 475]) | end - start: 5
+mask_positions_in_input_ids:  [[333], [345], [334], [346], [345], [316], [318], [321], [322], [317]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 356, 475])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 356, 475])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 356, 475])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 356, 475])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 356, 475])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[323], [322], [327], [328], [317], [327], [323], [322], [323], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 359, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[323], [322], [327], [328], [317], [327], [323], [322], [323], [323]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 359, 640])
+Epoch: [0][ 10/500]	Time 13.960 (13.960)	Loss 0.3284 (0.2455)	CeLoss 0.2363 (0.1541)	SegCLSLoss 0.1118 (0.0988)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1439 (0.1273)	MaskBCELoss 0.0462 (0.0458)	MaskDICELoss 0.0977 (0.0815)
+>> offset:  tensor([0, 5, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 523, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [316], [320], [318], [319], [364], [362], [366], [367]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 523, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 523, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 523, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 523, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 523, 640])
+>> offset:  tensor([0, 5, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 1200, 1600]) | end - start: 4
+mask_positions_in_input_ids:  [[321], [316], [320], [318], [319], [364], [362], [366], [367]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1200, 1600])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 414]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [341], [343], [344], [339], [344]]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 960, 1239]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [341], [343], [344], [339], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1239])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1239])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1239])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1239])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1239])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 530, 800]) | end - start: 5
+mask_positions_in_input_ids:  [[358], [356], [362], [], [358], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 530, 800])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 427, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[358], [356], [362], [], [358], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [319], [318], [317], [317], [352], [350], [], [350], [349]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2304, 3456]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [319], [318], [317], [317], [352], [350], [], [350], [349]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3456])
+>> offset:  tensor([0, 5, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 500, 333]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [319], [318], [320], [324], [319], [325], [332], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 333])
+>> offset:  tensor([0, 5, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 320, 480]) | end - start: 4
+mask_positions_in_input_ids:  [[321], [319], [318], [320], [324], [319], [325], [332], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 320, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2227, 3336]) | end - start: 5
+mask_positions_in_input_ids:  [[342], [351], [350], [351], [349], [345], [348], [346], [345], [345]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2227, 3336])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2227, 3336])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2227, 3336])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2227, 3336])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2227, 3336])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 960, 1280]) | end - start: 5
+mask_positions_in_input_ids:  [[342], [351], [350], [351], [349], [345], [348], [346], [345], [345]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1280])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1280])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1280])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1280])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 960, 1280])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3778, 2586]) | end - start: 5
+mask_positions_in_input_ids:  [[359], [356], [357], [356], [349], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3778, 2586])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3778, 2586])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3778, 2586])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3778, 2586])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3778, 2586])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[359], [356], [357], [356], [349], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 332, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [324], [322], [325], [322], [325], [326], [320], [321], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 309, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[318], [324], [322], [325], [322], [325], [326], [320], [321], [322]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 309, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 309, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 309, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 309, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 309, 500])
+>> offset:  tensor([0, 4, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 360, 640]) | end - start: 4
+mask_positions_in_input_ids:  [[317], [324], [327], [324], [336], [324]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 640])
+>> offset:  tensor([0, 4, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 640, 494]) | end - start: 2
+mask_positions_in_input_ids:  [[317], [324], [327], [324], [336], [324]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 494])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 494])
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 440, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+Epoch: [0][ 11/500]	Time 12.014 (12.014)	Loss 0.1477 (0.2272)	CeLoss 0.1475 (0.1481)	SegCLSLoss 0.0000 (0.0983)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0000 (0.1268)	MaskBCELoss 0.0000 (0.0395)	MaskDICELoss 0.0000 (0.0873)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 480, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[330], [330], [329], [320], [326], [324], [319], [322], [323], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[330], [330], [329], [320], [326], [324], [319], [322], [323], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 486, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [], [], [], [], []]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 768, 1024]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], []]
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 512, 683]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [317], [319], [318], [319], [322], [323], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 683])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 480, 640]) | end - start: 3
+mask_positions_in_input_ids:  [[319], [317], [319], [318], [319], [322], [323], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 480, 640])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 360, 480]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [323], [326], [324], [319], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 375, 500]) | end - start: 1
+mask_positions_in_input_ids:  [[322], [323], [326], [324], [319], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [321], [320], [319], [320], [319], [323], [321], [319], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [321], [320], [319], [320], [319], [323], [321], [319], [320]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 771, 512]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [317], [323], [321], [319], [341], [346], [342], [345], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 771, 512])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 771, 512])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 771, 512])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 771, 512])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 771, 512])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3264, 2448]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [317], [323], [321], [319], [341], [346], [342], [345], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> offset:  tensor([0, 4, 5], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 500, 427]) | end - start: 4
+mask_positions_in_input_ids:  [[319], [322], [322], [320], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 427])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 427])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 427])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 427])
+>> offset:  tensor([0, 4, 5], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 428, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[319], [322], [322], [320], []]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2160, 2880]) | end - start: 5
+mask_positions_in_input_ids:  [[355], [357], [365], [349], [353], [319], [321], [321], [321], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2160, 2880])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 363, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[355], [357], [365], [349], [353], [319], [321], [321], [321], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 363, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 355, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [317], [320], [326], [321], [347], [354], [351], [], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 355, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 355, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 355, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 355, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 355, 500])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 4752, 3168]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [317], [320], [326], [321], [347], [354], [351], [], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> offset:  tensor([0, 5, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2048, 2048]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [], [317], [321], [321], [347], [346]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2048, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2048, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2048, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2048, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2048, 2048])
+>> offset:  tensor([0, 5, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 3072, 4608]) | end - start: 2
+mask_positions_in_input_ids:  [[322], [], [317], [321], [321], [347], [346]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4608])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4608])
+Epoch: [0][ 12/500]	Time 13.878 (13.878)	Loss 0.2052 (0.2359)	CeLoss 0.1221 (0.1574)	SegCLSLoss 0.1064 (0.0978)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1409 (0.1278)	MaskBCELoss 0.0417 (0.0393)	MaskDICELoss 0.0993 (0.0885)
+>> offset:  tensor([0, 4, 5], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 640, 480]) | end - start: 4
+mask_positions_in_input_ids:  [[322], [318], [322], [320], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([0, 4, 5], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 640, 561]) | end - start: 1
+mask_positions_in_input_ids:  [[322], [318], [322], [320], []]
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([0, 1, 2], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], []]
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 332, 500]) | end - start: 2
+mask_positions_in_input_ids:  [[322], [326], [352], [350], [350], [353], [352]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [326], [352], [350], [350], [353], [352]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([0, 3, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 426, 640]) | end - start: 3
+mask_positions_in_input_ids:  [[324], [320], [321], [322], [320], [322], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 426, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 426, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 426, 640])
+>> offset:  tensor([0, 3, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 640, 480]) | end - start: 4
+mask_positions_in_input_ids:  [[324], [320], [321], [322], [320], [322], [319]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 480])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [316], [317], [319], [322], [322], [325], [316], [], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2988, 3984]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [316], [317], [319], [322], [322], [325], [316], [], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 427, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [341], [344], [351], [], [341]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 4752, 3168]) | end - start: 5
+mask_positions_in_input_ids:  [[], [341], [344], [351], [], [341]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4752, 3168])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 427, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [321], [318], [326], [322], [348], [348], [359], [356], [359]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3000, 2400]) | end - start: 5
+mask_positions_in_input_ids:  [[321], [321], [318], [326], [322], [348], [348], [359], [356], [359]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3000, 2400])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3000, 2400])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3000, 2400])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3000, 2400])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3000, 2400])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2848, 4288]) | end - start: 5
+mask_positions_in_input_ids:  [[357], [345], [358], [355], [357], [345], [354], [341], [343], [358]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2848, 4288])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2848, 4288])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2848, 4288])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2848, 4288])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2848, 4288])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2304, 3072]) | end - start: 5
+mask_positions_in_input_ids:  [[357], [345], [358], [355], [357], [345], [354], [341], [343], [358]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3072])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3072])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3072])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3072])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2304, 3072])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 3072, 4608]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [354], [357], [362], [367], [361]]
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 5472, 3648]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [], [354], [357], [362], [367], [361]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 5472, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 5472, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 5472, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 5472, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 5472, 3648])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 640, 427]) | end - start: 1
+mask_positions_in_input_ids:  [[], [357], [347], [340], [350], [347]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1424, 2144]) | end - start: 5
+mask_positions_in_input_ids:  [[], [357], [347], [340], [350], [347]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+Epoch: [0][ 13/500]	Time 11.795 (11.795)	Loss 0.1782 (0.2098)	CeLoss 0.1182 (0.1492)	SegCLSLoss 0.1143 (0.0992)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1280 (0.1177)	MaskBCELoss 0.0301 (0.0303)	MaskDICELoss 0.0979 (0.0873)
+>> offset:  tensor([0, 4, 9], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 1536, 2048]) | end - start: 4
+mask_positions_in_input_ids:  [[], [], [], [], [360], [345], [354], [356], [352]]
+>> offset:  tensor([0, 4, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1800, 1200]) | end - start: 5
+mask_positions_in_input_ids:  [[], [], [], [], [360], [345], [354], [356], [352]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1800, 1200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1800, 1200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1800, 1200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1800, 1200])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1800, 1200])
+>> offset:  tensor([0, 4, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 311, 448]) | end - start: 4
+mask_positions_in_input_ids:  [[343], [346], [339], [340], [318], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 448])
+>> offset:  tensor([0, 4, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 300, 400]) | end - start: 2
+mask_positions_in_input_ids:  [[343], [346], [339], [340], [318], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 300, 400])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 300, 400])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 500, 500]) | end - start: 1
+mask_positions_in_input_ids:  [[], [319], [322], [320], [318], [324]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 500, 328]) | end - start: 5
+mask_positions_in_input_ids:  [[], [319], [322], [320], [318], [324]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 328])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 328])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 328])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 328])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 328])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3744, 5616]) | end - start: 5
+mask_positions_in_input_ids:  [[341], [343], [341], [345], [341], [323], [324], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3744, 5616])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 471, 640]) | end - start: 3
+mask_positions_in_input_ids:  [[341], [343], [341], [345], [341], [323], [324], [318]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 471, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 471, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 471, 640])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1536, 2048]) | end - start: 5
+mask_positions_in_input_ids:  [[319], [325], [321], [327], [317], [322], [321], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 512, 752]) | end - start: 3
+mask_positions_in_input_ids:  [[319], [325], [321], [327], [317], [322], [321], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 752])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 752])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 512, 752])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 360, 480]) | end - start: 2
+mask_positions_in_input_ids:  [[322], [317], [320], [321], [317], [322], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 360, 480])
+>> offset:  tensor([0, 2, 7], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 425, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [317], [320], [321], [317], [322], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 425, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 425, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 425, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 425, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 425, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 892, 1172]) | end - start: 5
+mask_positions_in_input_ids:  [[339], [347], [339], [338], [345], [346], [333], [345], [348], [349]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 892, 1172])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1365, 2048]) | end - start: 5
+mask_positions_in_input_ids:  [[339], [347], [339], [338], [345], [346], [333], [345], [348], [349]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1365, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1365, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1365, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1365, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1365, 2048])
+>> offset:  tensor([0, 2, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 332, 500]) | end - start: 2
+mask_positions_in_input_ids:  [[323], [320], [341], [342], [336], [337]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 332, 500])
+>> offset:  tensor([0, 2, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 311, 448]) | end - start: 4
+mask_positions_in_input_ids:  [[323], [320], [341], [342], [336], [337]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 448])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 685, 1024]) | end - start: 5
+mask_positions_in_input_ids:  [[341], [347], [342], [346], [346], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 685, 1024])
+>> offset:  tensor([0, 5, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[341], [347], [342], [346], [346], []]
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3072, 4664]) | end - start: 5
+mask_positions_in_input_ids:  [[358], [353], [369], [346], [347], [351], [336], [355]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4664])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4664])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4664])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4664])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3072, 4664])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 1536, 2048]) | end - start: 3
+mask_positions_in_input_ids:  [[358], [353], [369], [346], [347], [351], [336], [355]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+Epoch: [0][ 14/500]	Time 11.097 (11.097)	Loss 0.2461 (0.2854)	CeLoss 0.0928 (0.1477)	SegCLSLoss 0.1084 (0.1099)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1706 (0.1643)	MaskBCELoss 0.0766 (0.0689)	MaskDICELoss 0.0940 (0.0954)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2736, 3648]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [351], [346], [344], [352], [321], [319], [], [321], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2736, 3648])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2988, 3984]) | end - start: 5
+mask_positions_in_input_ids:  [[349], [351], [346], [344], [352], [321], [319], [], [321], []]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2988, 3984])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 3264, 2448]) | end - start: 5
+mask_positions_in_input_ids:  [[361], [367], [365], [367], [367], [327], [324], [320], [320], [327]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 3264, 2448])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 640, 383]) | end - start: 5
+mask_positions_in_input_ids:  [[361], [367], [365], [367], [367], [327], [324], [320], [320], [327]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 383])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 383])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 383])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 383])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 640, 383])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 500, 377]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [321], [321], [318], [321], [326], [318], [320], [322], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 377])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 377])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 377])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 377])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 500, 377])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 375, 500]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [321], [321], [318], [321], [326], [318], [320], [322], [325]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 375, 500])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 480, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [340], [337], [342], [340], [339]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 768, 1024]) | end - start: 5
+mask_positions_in_input_ids:  [[], [340], [337], [342], [340], [339]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1024])
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: False | masks_list[batch_idx].shape: torch.Size([0, 587, 640]) | end - start: 1
+mask_positions_in_input_ids:  [[], [319], [], [], [326], [324]]
+>> offset:  tensor([0, 1, 6], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 2448, 3264]) | end - start: 5
+mask_positions_in_input_ids:  [[], [319], [], [], [326], [324]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 502, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[317], [322], [324], [322], [319], [357], [358], [357]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 502, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 502, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 502, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 502, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 502, 640])
+>> offset:  tensor([0, 5, 8], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 2448, 3264]) | end - start: 3
+mask_positions_in_input_ids:  [[317], [322], [324], [322], [319], [357], [358], [357]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 2448, 3264])
+>> offset:  tensor([0, 3, 5], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([3, 1536, 2048]) | end - start: 3
+mask_positions_in_input_ids:  [[355], [340], [359], [324], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1536, 2048])
+>> offset:  tensor([0, 3, 5], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([2, 426, 640]) | end - start: 2
+mask_positions_in_input_ids:  [[355], [340], [359], [324], [321]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 426, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 426, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 311, 640]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [323], [322], [318], [320], [345], [341], [342], [342], [345]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 311, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1300, 2440]) | end - start: 5
+mask_positions_in_input_ids:  [[322], [323], [322], [318], [320], [345], [341], [342], [342], [345]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> offset:  tensor([0, 5, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 4075, 6113]) | end - start: 5
+mask_positions_in_input_ids:  [[342], [348], [348], [342], [351], [325], [329], [319], [326]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 4075, 6113])
+>> offset:  tensor([0, 5, 9], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([4, 427, 640]) | end - start: 4
+mask_positions_in_input_ids:  [[342], [348], [348], [342], [351], [325], [329], [319], [326]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 427, 640])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1300, 2440]) | end - start: 5
+mask_positions_in_input_ids:  [[338], [342], [338], [340], [342], [353], [349], [344], [361], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1300, 2440])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 1424, 2144]) | end - start: 5
+mask_positions_in_input_ids:  [[338], [342], [338], [340], [342], [353], [349], [344], [361], [344]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 1424, 2144])
+Epoch: [0][ 15/500]	Time 11.962 (11.962)	Loss 0.1380 (0.2080)	CeLoss 0.1055 (0.1340)	SegCLSLoss 0.1118 (0.1101)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1151 (0.1348)	MaskBCELoss 0.0163 (0.0370)	MaskDICELoss 0.0989 (0.0978)
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 768, 1172]) | end - start: 5
+mask_positions_in_input_ids:  [[338], [336], [339], [340], [340], [336], [339], [351], [341], [339]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1172])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 768, 1172])
+>> offset:  tensor([ 0,  5, 10], device='cuda:0')
+>> is_mask_per_conv: True | masks_list[batch_idx].shape: torch.Size([5, 540, 800]) | end - start: 5
+mask_positions_in_input_ids:  [[338], [336], [339], [340], [340], [336], [339], [351], [341], [339]]
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 540, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 540, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 540, 800])
+>> (is_mask_per_conv) gt_mask.shape:  torch.Size([1, 540, 800])

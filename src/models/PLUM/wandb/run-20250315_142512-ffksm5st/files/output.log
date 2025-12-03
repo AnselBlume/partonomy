@@ -1,0 +1,11 @@
+config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.00k/1.00k [00:00<00:00, 3.38MB/s]
+Traceback (most recent call last):
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 683, in <module>
+    main(sys.argv[1:])
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 145, in main
+    tokenizer = transformers.AutoTokenizer.from_pretrained(
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 718, in from_pretrained
+    tokenizer_class_py, tokenizer_class_fast = TOKENIZER_MAPPING[type(config)]
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 663, in __getitem__
+    model_type = self._reverse_config_mapping[key.__name__]
+KeyError: 'LlavaConfig'

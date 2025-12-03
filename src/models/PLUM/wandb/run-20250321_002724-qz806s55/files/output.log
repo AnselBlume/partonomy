@@ -1,0 +1,19 @@
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/transformer.py:306: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+Traceback (most recent call last):
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 719, in <module>
+    main(sys.argv[1:])
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 207, in main
+    model = PLUMForCausalLM.from_pretrained(
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2700, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/PLUM.py", line 314, in __init__
+    self.bio_encoder = BidirectionalEncoderBlock(
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/PLUM.py", line 175, in __init__
+    self._init_weights()
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/PLUM.py", line 178, in _init_weights
+    for name, param in self.encoder.name_parameters():
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1709, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'TransformerEncoder' object has no attribute 'name_parameters'

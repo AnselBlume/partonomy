@@ -1,0 +1,39 @@
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_setup.py:_flush():76] Current SDK version is 0.16.0
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_setup.py:_flush():76] Configure stats pid to 616870
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_setup.py:_flush():76] Loading settings from /home/jk100/.config/wandb/settings
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_setup.py:_flush():76] Loading settings from /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/settings
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'src/models/PLUM/plum_train_ds.py', 'program_abspath': '/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py', 'program': '/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py'}
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_init.py:_log_setup():524] Logging user logs to /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250303_000102-u5cuof1i/logs/debug.log
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_init.py:_log_setup():525] Logging internal logs to /shared/nas2/jk100/partonomy_private/src/models/PLUM/wandb/run-20250303_000102-u5cuof1i/logs/debug-internal.log
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_init.py:init():564] calling init triggers
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'local_rank': 0, 'version': 'liuhaotian/llava-llama-2-13b-chat-lightning-preview', 'vis_save_path': './vis_output', 'precision': 'bf16', 'image_size': 1024, 'model_max_length': 1536, 'lora_r': 8, 'vision_tower': 'openai/clip-vit-large-patch14', 'load_in_8bit': False, 'load_in_4bit': False, 'dataset': 'sem_seg||refer_seg||vqa||reason_seg', 'sample_rates': '9,3,3,1', 'sem_seg_data': 'ade20k||cocostuff||pascal_part||paco_lvis||mapillary', 'refer_seg_data': 'refclef||refcoco||refcoco+||refcocog', 'wandb': False, 'wandb_project_name': 'plum-training', 'vqa_data': 'llava_instruct_150k', 'reason_seg_data': 'ReasonSeg|train', 'val_dataset': 'ReasonSeg|val', 'dataset_dir': '/shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset', 'log_base_dir': './runs', 'exp_name': 'plum-13b_kld_4_dice_1', 'epochs': 10, 'steps_per_epoch': 500, 'batch_size': 1, 'grad_accumulation_steps': 10, 'val_batch_size': 1, 'workers': 4, 'lr': 0.0003, 'ce_loss_weight': 1.0, 'dice_loss_weight': 1.0, 'bce_loss_weight': 2.0, 'kld_loss_weight': 4.0, 'kld_sigma': 1.0, 'seg_cls_loss_weight': 0.5, 'use_teacher_ref': True, 'lora_alpha': 16, 'lora_dropout': 0.05, 'lora_target_modules': 'q_proj,v_proj', 'explanatory': 0.1, 'beta1': 0.9, 'beta2': 0.95, 'num_classes_per_sample': 5, 'exclude_val': False, 'no_eval': False, 'eval_only': False, 'vision_pretrained': '/shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/weights/sam_vit_h_4b8939.pth', 'out_dim': 256, 'resume': '', 'print_freq': 1, 'start_epoch': 0, 'gradient_checkpointing': True, 'train_mask_decoder': True, 'use_mm_start_end': True, 'auto_resume': False, 'conv_type': 'llava_v1', 'log_dir': './runs/plum-13b_kld_4_dice_1'}
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_init.py:init():614] starting backend
+2025-03-03 00:01:02,119 INFO    MainThread:616870 [wandb_init.py:init():618] setting up manager
+2025-03-03 00:01:02,121 INFO    MainThread:616870 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-03 00:01:02,122 INFO    MainThread:616870 [wandb_init.py:init():624] backend started and connected
+2025-03-03 00:01:02,124 INFO    MainThread:616870 [wandb_init.py:init():716] updated telemetry
+2025-03-03 00:01:02,132 INFO    MainThread:616870 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2025-03-03 00:01:02,331 INFO    MainThread:616870 [wandb_run.py:_on_init():2254] communicating current version
+2025-03-03 00:01:02,368 INFO    MainThread:616870 [wandb_run.py:_on_init():2263] got version response upgrade_message: "wandb version 0.19.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-03-03 00:01:02,368 INFO    MainThread:616870 [wandb_init.py:init():800] starting run threads in backend
+2025-03-03 00:01:04,232 WARNING MainThread:616870 [wandb_init.py:init():1188] interrupted
+Traceback (most recent call last):
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1166, in init
+    run = wi.init()
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 811, in init
+    run_start_result = run_start_handle.wait(timeout=30)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

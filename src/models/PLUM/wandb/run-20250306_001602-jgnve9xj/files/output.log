@@ -1,0 +1,21 @@
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+Traceback (most recent call last):
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 668, in <module>
+    main(sys.argv[1:])
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 180, in main
+    model = PLUMForCausalLM.from_pretrained(
+  File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2700, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/PLUM.py", line 172, in __init__
+    self.model = PlumModel(config, **kwargs)
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/PLUM.py", line 137, in __init__
+    super(PlumModel, self).__init__(config, **kwargs)
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/PLUM.py", line 89, in __init__
+    self.initialize_plum_modules(self.config)
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/PLUM.py", line 96, in initialize_plum_modules
+    self.visual_model = build_sam_vit_h(self.vision_pretrained)
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/segment_anything/build_sam.py", line 16, in build_sam_vit_h
+    return _build_sam(
+  File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/model/segment_anything/build_sam.py", line 105, in _build_sam
+    with open(checkpoint, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'weights/sam_vit_h_4b8939.pth'

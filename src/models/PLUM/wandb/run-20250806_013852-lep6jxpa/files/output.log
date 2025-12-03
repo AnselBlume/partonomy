@@ -1,0 +1,714 @@
+
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/transformer.py:306: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [04:49<00:00, 96.38s/it]
+Some weights of PLUMForCausalLM were not initialized from the model checkpoint at liuhaotian/llava-llama-2-13b-chat-lightning-preview and are newly initialized: ['model.visual_model.image_encoder.blocks.13.mlp.lin1.bias', 'model.visual_model.mask_decoder.mask_tokens.weight', 'model.visual_model.image_encoder.blocks.25.norm1.weight', 'model.visual_model.image_encoder.blocks.5.attn.proj.weight', 'model.visual_model.image_encoder.blocks.16.mlp.lin1.bias', 'model.visual_model.prompt_encoder.point_embeddings.3.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias', 'model.visual_model.image_encoder.blocks.23.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.16.attn.proj.weight', 'model.visual_model.image_encoder.blocks.0.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.25.attn.qkv.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.weight', 'model.visual_model.image_encoder.blocks.28.attn.proj.bias', 'model.visual_model.image_encoder.blocks.12.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.1.norm1.bias', 'model.visual_model.image_encoder.blocks.28.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.4.attn.proj.weight', 'model.visual_model.image_encoder.blocks.18.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.27.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.28.mlp.lin1.bias', 'model.visual_model.image_encoder.neck.1.weight', 'model.visual_model.image_encoder.blocks.2.attn.qkv.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.bias', 'model.visual_model.image_encoder.blocks.0.attn.proj.bias', 'model.visual_model.image_encoder.blocks.7.attn.proj.bias', 'model.visual_model.image_encoder.blocks.13.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.14.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.12.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.11.attn.proj.bias', 'model.visual_model.image_encoder.blocks.4.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.14.norm1.bias', 'model.text_hidden_fcs.0.0.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.weight', 'model.visual_model.image_encoder.blocks.4.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.18.norm1.weight', 'model.visual_model.image_encoder.blocks.26.mlp.lin1.bias', 'model.visual_model.prompt_encoder.point_embeddings.0.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight', 'model.visual_model.image_encoder.blocks.10.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.15.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.1.attn.proj.weight', 'model.visual_model.image_encoder.blocks.18.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.13.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.0.norm1.bias', 'model.visual_model.image_encoder.blocks.8.attn.rel_pos_h', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.bias', 'model.visual_model.image_encoder.blocks.15.norm2.weight', 'model.visual_model.image_encoder.neck.0.weight', 'model.visual_model.mask_decoder.transformer.layers.0.norm3.weight', 'model.visual_model.image_encoder.blocks.17.mlp.lin1.bias', 'model.visual_model.mask_decoder.output_upscaling.3.weight', 'model.visual_model.image_encoder.blocks.4.norm1.weight', 'model.visual_model.image_encoder.blocks.25.norm1.bias', 'model.visual_model.image_encoder.blocks.31.norm1.weight', 'model.visual_model.image_encoder.blocks.1.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.18.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.2.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.22.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.5.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.6.norm1.weight', 'model.visual_model.image_encoder.blocks.7.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.30.norm1.weight', 'model.visual_model.image_encoder.blocks.17.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.25.mlp.lin2.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias', 'model.visual_model.image_encoder.blocks.0.norm2.weight', 'model.visual_model.prompt_encoder.mask_downscaling.4.bias', 'model.visual_model.image_encoder.blocks.0.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight', 'model.visual_model.image_encoder.blocks.2.norm1.weight', 'model.visual_model.image_encoder.blocks.5.attn.proj.bias', 'model.visual_model.image_encoder.blocks.19.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.9.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias', 'model.visual_model.image_encoder.blocks.6.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.11.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.22.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.2.attn.proj.weight', 'model.visual_model.prompt_encoder.not_a_point_embed.weight', 'model.visual_model.image_encoder.blocks.5.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.0.attn.proj.weight', 'model.visual_model.image_encoder.blocks.18.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.1.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.22.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.17.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight', 'model.visual_model.image_encoder.blocks.16.norm1.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias', 'model.visual_model.image_encoder.blocks.11.norm1.weight', 'model.visual_model.prompt_encoder.mask_downscaling.1.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias', 'model.visual_model.image_encoder.blocks.14.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.bias', 'model.visual_model.image_encoder.blocks.24.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.20.attn.proj.bias', 'model.visual_model.image_encoder.blocks.18.attn.qkv.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight', 'model.visual_model.image_encoder.blocks.8.norm1.bias', 'model.visual_model.mask_decoder.output_upscaling.1.bias', 'model.visual_model.image_encoder.blocks.9.norm1.weight', 'model.visual_model.image_encoder.blocks.10.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.30.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.22.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.8.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.21.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.23.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.21.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.22.attn.proj.bias', 'model.visual_model.image_encoder.blocks.16.norm2.weight', 'model.visual_model.image_encoder.blocks.30.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.6.attn.proj.bias', 'model.visual_model.image_encoder.blocks.2.norm2.bias', 'model.visual_model.image_encoder.blocks.12.norm2.weight', 'model.visual_model.image_encoder.blocks.10.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.4.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.5.norm1.bias', 'model.visual_model.image_encoder.blocks.23.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.7.attn.qkv.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias', 'model.visual_model.image_encoder.blocks.2.attn.proj.bias', 'model.visual_model.image_encoder.blocks.22.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.4.attn.qkv.bias', 'model.visual_model.prompt_encoder.point_embeddings.1.weight', 'model.visual_model.image_encoder.blocks.11.norm1.bias', 'model.visual_model.image_encoder.blocks.26.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.8.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight', 'model.visual_model.mask_decoder.iou_token.weight', 'model.visual_model.image_encoder.blocks.14.attn.proj.weight', 'model.visual_model.image_encoder.blocks.29.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.16.norm2.bias', 'model.visual_model.image_encoder.blocks.20.attn.proj.weight', 'model.visual_model.image_encoder.blocks.15.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.21.norm1.bias', 'model.visual_model.image_encoder.blocks.24.norm2.bias', 'model.text_hidden_fcs.0.0.weight', 'model.visual_model.image_encoder.blocks.31.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.5.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.18.norm2.bias', 'model.visual_model.image_encoder.blocks.31.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.14.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.21.mlp.lin1.bias', 'model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.norm4.weight', 'model.visual_model.image_encoder.neck.3.bias', 'model.visual_model.image_encoder.blocks.14.norm2.bias', 'model.visual_model.image_encoder.blocks.15.attn.proj.bias', 'model.visual_model.image_encoder.blocks.31.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.6.norm2.bias', 'model.visual_model.image_encoder.blocks.17.attn.proj.weight', 'model.visual_model.image_encoder.blocks.3.norm1.weight', 'model.visual_model.image_encoder.blocks.31.attn.proj.bias', 'model.visual_model.image_encoder.blocks.29.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.0.norm2.bias', 'model.visual_model.image_encoder.blocks.30.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.layers.1.norm1.weight', 'model.visual_model.image_encoder.blocks.16.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.weight', 'bio_encoder.encoder.layers.0.linear1.bias', 'model.visual_model.image_encoder.blocks.24.attn.rel_pos_w', 'model.visual_model.prompt_encoder.no_mask_embed.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.weight', 'model.visual_model.image_encoder.blocks.20.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.19.norm1.weight', 'model.visual_model.image_encoder.blocks.26.norm1.bias', 'model.visual_model.image_encoder.blocks.10.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.22.norm2.weight', 'model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.9.mlp.lin1.weight', 'model.visual_model.prompt_encoder.mask_downscaling.4.weight', 'model.visual_model.image_encoder.blocks.4.norm2.bias', 'model.visual_model.image_encoder.blocks.22.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.bias', 'model.visual_model.image_encoder.blocks.8.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.2.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.29.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.6.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.17.norm1.bias', 'model.visual_model.image_encoder.blocks.25.attn.rel_pos_h', 'model.visual_model.mask_decoder.iou_prediction_head.layers.1.weight', 'model.visual_model.image_encoder.blocks.0.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.30.attn.proj.weight', 'model.visual_model.image_encoder.blocks.17.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.10.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.3.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.26.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.17.norm1.weight', 'model.visual_model.mask_decoder.transformer.layers.0.norm2.weight', 'model.visual_model.image_encoder.blocks.13.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.29.norm2.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.weight', 'model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.24.mlp.lin2.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.bias', 'model.visual_model.image_encoder.blocks.23.norm2.bias', 'model.visual_model.image_encoder.blocks.25.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.norm4.bias', 'model.visual_model.image_encoder.blocks.19.mlp.lin1.bias', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.weight', 'model.visual_model.image_encoder.blocks.30.norm2.weight', 'model.visual_model.image_encoder.blocks.22.norm2.bias', 'model.visual_model.image_encoder.blocks.19.norm1.bias', 'model.visual_model.image_encoder.blocks.5.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.9.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight', 'model.visual_model.image_encoder.blocks.10.attn.proj.weight', 'bio_encoder.encoder.layers.0.linear1.weight', 'model.visual_model.image_encoder.blocks.19.attn.rel_pos_w', 'model.visual_model.mask_decoder.output_upscaling.3.bias', 'model.visual_model.image_encoder.blocks.29.attn.proj.bias', 'model.visual_model.image_encoder.blocks.11.norm2.weight', 'model.visual_model.image_encoder.blocks.4.norm2.weight', 'model.visual_model.image_encoder.blocks.9.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.bias', 'model.visual_model.image_encoder.blocks.23.attn.qkv.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.bias', 'model.visual_model.image_encoder.blocks.8.mlp.lin2.weight', 'model.visual_model.mask_decoder.output_upscaling.0.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight', 'model.visual_model.image_encoder.blocks.19.attn.proj.bias', 'model.visual_model.image_encoder.blocks.10.mlp.lin2.bias', 'bio_encoder.encoder.layers.0.self_attn.in_proj_weight', 'model.visual_model.image_encoder.blocks.18.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.6.attn.proj.weight', 'model.visual_model.image_encoder.blocks.11.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.12.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.norm1.weight', 'model.visual_model.image_encoder.blocks.27.norm1.weight', 'model.visual_model.image_encoder.blocks.31.norm2.weight', 'model.visual_model.image_encoder.blocks.26.attn.proj.weight', 'model.visual_model.image_encoder.blocks.12.attn.proj.bias', 'model.visual_model.image_encoder.blocks.14.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.20.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.1.norm1.weight', 'model.visual_model.image_encoder.blocks.15.attn.proj.weight', 'model.visual_model.image_encoder.blocks.25.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.5.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.25.norm2.weight', 'model.visual_model.image_encoder.blocks.20.norm2.bias', 'model.visual_model.image_encoder.blocks.16.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.12.attn.rel_pos_h', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.weight', 'model.visual_model.image_encoder.blocks.10.attn.proj.bias', 'model.visual_model.image_encoder.blocks.28.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.21.attn.proj.weight', 'model.visual_model.image_encoder.blocks.19.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.6.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.28.norm1.bias', 'model.visual_model.image_encoder.blocks.21.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.bias', 'model.visual_model.image_encoder.blocks.6.mlp.lin2.weight', 'model.visual_model.mask_decoder.transformer.norm_final_attn.weight', 'model.visual_model.image_encoder.blocks.31.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.28.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.15.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.27.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.2.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.9.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.9.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.20.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.27.norm2.bias', 'model.visual_model.image_encoder.neck.1.bias', 'model.visual_model.image_encoder.blocks.11.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.16.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.19.attn.rel_pos_h', 'model.visual_model.prompt_encoder.mask_downscaling.1.bias', 'model.visual_model.image_encoder.blocks.6.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.20.attn.rel_pos_w', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.weight', 'model.visual_model.image_encoder.blocks.9.attn.qkv.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight', 'model.visual_model.image_encoder.blocks.1.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.31.attn.proj.weight', 'model.visual_model.image_encoder.blocks.17.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.18.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.16.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.22.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.22.attn.proj.weight', 'model.visual_model.image_encoder.blocks.19.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.weight', 'model.visual_model.image_encoder.blocks.11.mlp.lin2.weight', 'model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.bias', 'model.visual_model.mask_decoder.transformer.layers.0.norm2.bias', 'model.visual_model.mask_decoder.iou_prediction_head.layers.0.bias', 'model.visual_model.image_encoder.blocks.11.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.0.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.26.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.10.norm1.weight', 'model.visual_model.image_encoder.blocks.0.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.14.norm2.weight', 'model.visual_model.image_encoder.blocks.31.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.8.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.18.attn.proj.bias', 'model.visual_model.image_encoder.blocks.23.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight', 'model.visual_model.image_encoder.blocks.23.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.3.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.2.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.29.attn.proj.weight', 'model.visual_model.image_encoder.blocks.11.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.weight', 'model.visual_model.image_encoder.blocks.10.norm1.bias', 'model.visual_model.image_encoder.blocks.12.norm2.bias', 'model.visual_model.image_encoder.blocks.3.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.9.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.12.norm1.weight', 'model.visual_model.image_encoder.blocks.10.attn.qkv.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.bias', 'model.visual_model.image_encoder.blocks.6.norm2.weight', 'model.visual_model.image_encoder.blocks.31.mlp.lin2.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.weight', 'model.visual_model.prompt_encoder.mask_downscaling.3.weight', 'model.visual_model.image_encoder.blocks.22.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.1.norm2.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias', 'model.visual_model.image_encoder.blocks.7.norm1.weight', 'model.visual_model.image_encoder.blocks.17.attn.qkv.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight', 'model.visual_model.image_encoder.blocks.25.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight', 'model.visual_model.image_encoder.blocks.6.norm1.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.norm3.weight', 'model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.bias', 'bio_encoder.encoder.layers.0.norm2.bias', 'model.visual_model.image_encoder.blocks.7.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.29.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.3.norm2.weight', 'model.visual_model.image_encoder.neck.2.weight', 'model.visual_model.image_encoder.blocks.30.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.18.attn.proj.weight', 'model.visual_model.image_encoder.blocks.27.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.9.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.0.norm3.bias', 'model.visual_model.image_encoder.blocks.2.mlp.lin2.weight', 'model.visual_model.image_encoder.pos_embed', 'model.visual_model.image_encoder.blocks.13.attn.proj.bias', 'model.visual_model.image_encoder.blocks.9.norm1.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias', 'model.visual_model.image_encoder.blocks.13.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.21.norm2.weight', 'model.visual_model.image_encoder.blocks.13.norm1.bias', 'model.visual_model.image_encoder.blocks.9.norm2.weight', 'model.visual_model.image_encoder.patch_embed.proj.bias', 'model.visual_model.image_encoder.blocks.2.norm1.bias', 'model.visual_model.image_encoder.blocks.12.norm1.bias', 'model.visual_model.image_encoder.blocks.3.norm1.bias', 'model.visual_model.image_encoder.blocks.3.attn.proj.bias', 'model.visual_model.image_encoder.blocks.23.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.29.attn.rel_pos_w', 'bio_encoder.encoder.layers.0.self_attn.in_proj_bias', 'model.visual_model.image_encoder.blocks.20.norm1.bias', 'model.visual_model.image_encoder.blocks.1.mlp.lin1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.weight', 'model.visual_model.image_encoder.blocks.27.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.weight', 'model.visual_model.image_encoder.blocks.11.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.3.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.13.attn.rel_pos_h', 'model.visual_model.prompt_encoder.mask_downscaling.3.bias', 'model.visual_model.mask_decoder.transformer.layers.1.norm4.weight', 'model.visual_model.image_encoder.blocks.20.attn.rel_pos_h', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.weight', 'model.visual_model.image_encoder.blocks.29.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.20.mlp.lin2.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.weight', 'model.visual_model.image_encoder.blocks.30.norm1.bias', 'model.visual_model.image_encoder.blocks.3.attn.proj.weight', 'model.visual_model.image_encoder.blocks.8.attn.qkv.bias', 'model.visual_model.prompt_encoder.pe_layer.positional_encoding_gaussian_matrix', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.weight', 'model.visual_model.image_encoder.blocks.31.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.1.attn.proj.bias', 'model.visual_model.image_encoder.blocks.7.attn.proj.weight', 'model.visual_model.image_encoder.blocks.29.norm1.bias', 'model.visual_model.image_encoder.blocks.31.norm2.bias', 'model.visual_model.image_encoder.blocks.30.norm2.bias', 'model.visual_model.image_encoder.blocks.8.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.bias', 'model.visual_model.image_encoder.blocks.19.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.1.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.15.mlp.lin1.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.bias', 'model.visual_model.image_encoder.blocks.21.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.15.norm1.weight', 'model.visual_model.image_encoder.blocks.7.norm1.bias', 'model.visual_model.image_encoder.blocks.26.norm2.bias', 'model.visual_model.image_encoder.blocks.14.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.21.mlp.lin1.weight', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.bias', 'model.visual_model.image_encoder.blocks.2.norm2.weight', 'model.visual_model.image_encoder.blocks.20.norm2.weight', 'model.visual_model.image_encoder.blocks.7.norm2.bias', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.weight', 'model.visual_model.image_encoder.blocks.2.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight', 'model.visual_model.image_encoder.blocks.15.attn.rel_pos_h', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.bias', 'model.token_to_mask_fcs.0.2.bias', 'model.visual_model.image_encoder.blocks.20.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.5.norm2.bias', 'model.visual_model.image_encoder.blocks.26.attn.proj.bias', 'model.visual_model.mask_decoder.iou_prediction_head.layers.1.bias', 'model.visual_model.image_encoder.blocks.4.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.9.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.24.norm2.weight', 'model.visual_model.image_encoder.blocks.12.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.30.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.14.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.1.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.8.norm2.bias', 'model.token_to_mask_fcs.0.0.bias', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.bias', 'model.visual_model.image_encoder.blocks.3.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.13.attn.proj.weight', 'model.visual_model.image_encoder.blocks.0.norm1.weight', 'model.visual_model.image_encoder.blocks.28.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.19.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.norm2.weight', 'model.visual_model.mask_decoder.output_upscaling.0.bias', 'model.visual_model.image_encoder.blocks.10.norm2.weight', 'model.visual_model.image_encoder.blocks.15.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.17.attn.proj.bias', 'model.visual_model.image_encoder.blocks.5.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.27.attn.qkv.weight', 'bio_encoder.encoder.layers.0.norm1.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.weight', 'model.visual_model.image_encoder.blocks.7.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.18.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.19.norm2.weight', 'model.visual_model.image_encoder.blocks.13.norm2.bias', 'model.visual_model.image_encoder.blocks.1.norm2.bias', 'model.visual_model.image_encoder.blocks.16.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.22.norm1.bias', 'model.visual_model.image_encoder.blocks.8.norm2.weight', 'model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.12.mlp.lin1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.norm2.bias', 'model.visual_model.image_encoder.blocks.3.norm2.bias', 'model.visual_model.image_encoder.blocks.6.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.17.norm2.weight', 'model.visual_model.image_encoder.blocks.20.norm1.weight', 'model.visual_model.image_encoder.blocks.30.attn.proj.bias', 'model.visual_model.image_encoder.blocks.10.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.1.mlp.lin2.bias', 'model.visual_model.image_encoder.neck.3.weight', 'model.visual_model.image_encoder.blocks.24.norm1.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias', 'model.visual_model.mask_decoder.transformer.layers.1.norm3.bias', 'model.visual_model.image_encoder.blocks.7.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.29.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias', 'model.visual_model.image_encoder.blocks.10.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias', 'model.visual_model.image_encoder.blocks.15.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.0.norm1.bias', 'model.visual_model.mask_decoder.iou_prediction_head.layers.0.weight', 'model.visual_model.image_encoder.blocks.17.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.28.norm2.bias', 'model.visual_model.image_encoder.blocks.15.norm2.bias', 'model.visual_model.image_encoder.blocks.22.norm1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias', 'model.visual_model.image_encoder.blocks.14.norm1.weight', 'model.visual_model.image_encoder.blocks.20.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.28.norm2.weight', 'model.visual_model.image_encoder.blocks.17.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.27.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.27.mlp.lin2.weight', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.bias', 'model.visual_model.image_encoder.blocks.26.norm2.weight', 'model.visual_model.image_encoder.blocks.24.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.26.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.15.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.27.norm1.bias', 'model.visual_model.image_encoder.blocks.30.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.4.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.25.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.3.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.5.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.23.norm1.bias', 'model.visual_model.image_encoder.blocks.26.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.13.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.23.mlp.lin1.bias', 'model.text_hidden_fcs.0.2.bias', 'model.visual_model.image_encoder.blocks.21.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.19.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.26.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.16.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.23.norm1.weight', 'model.visual_model.image_encoder.blocks.24.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.25.attn.proj.bias', 'model.text_hidden_fcs.0.2.weight', 'model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.weight', 'model.visual_model.prompt_encoder.mask_downscaling.6.bias', 'model.visual_model.image_encoder.blocks.9.attn.qkv.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight', 'model.visual_model.image_encoder.blocks.25.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.17.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.5.attn.rel_pos_w', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.weight', 'model.visual_model.prompt_encoder.mask_downscaling.0.bias', 'model.visual_model.image_encoder.blocks.11.attn.proj.weight', 'model.visual_model.mask_decoder.output_upscaling.1.weight', 'model.visual_model.image_encoder.blocks.29.mlp.lin1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight', 'model.visual_model.image_encoder.blocks.0.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.24.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.bias', 'model.visual_model.image_encoder.blocks.30.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.1.norm1.bias', 'model.visual_model.image_encoder.blocks.6.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.30.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.3.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.12.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.4.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.1.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.11.mlp.lin1.bias', 'bio_encoder.encoder.layers.0.norm2.weight', 'model.token_to_mask_fcs.0.2.weight', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.weight', 'model.visual_model.image_encoder.blocks.24.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.28.mlp.lin2.weight', 'bio_encoder.encoder.layers.0.linear2.bias', 'model.visual_model.image_encoder.blocks.0.attn.qkv.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.bias', 'model.visual_model.image_encoder.blocks.26.norm1.weight', 'model.visual_model.image_encoder.blocks.13.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.14.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.27.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.28.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.31.norm1.bias', 'model.visual_model.image_encoder.blocks.2.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.21.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.8.norm1.weight', 'model.visual_model.image_encoder.blocks.18.norm1.bias', 'model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.24.norm1.weight', 'model.visual_model.image_encoder.blocks.18.norm2.weight', 'model.visual_model.mask_decoder.transformer.norm_final_attn.bias', 'model.visual_model.image_encoder.blocks.25.norm2.bias', 'model.visual_model.image_encoder.blocks.27.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.21.norm2.bias', 'model.visual_model.image_encoder.blocks.31.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.28.attn.proj.weight', 'model.visual_model.prompt_encoder.mask_downscaling.6.weight', 'model.visual_model.image_encoder.blocks.12.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.23.attn.proj.bias', 'model.visual_model.image_encoder.blocks.19.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.11.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.12.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.weight', 'bio_encoder.encoder.layers.0.norm1.bias', 'model.visual_model.image_encoder.blocks.14.mlp.lin2.bias', 'model.visual_model.image_encoder.patch_embed.proj.weight', 'model.visual_model.mask_decoder.iou_prediction_head.layers.2.weight', 'model.visual_model.image_encoder.blocks.23.attn.proj.weight', 'model.visual_model.image_encoder.blocks.23.norm2.weight', 'model.visual_model.image_encoder.blocks.27.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.0.norm4.bias', 'model.visual_model.image_encoder.blocks.15.norm1.bias', 'model.visual_model.image_encoder.blocks.21.norm1.weight', 'model.visual_model.image_encoder.blocks.8.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.27.norm2.weight', 'bio_encoder.encoder.layers.0.self_attn.out_proj.weight', 'model.token_to_mask_fcs.0.0.weight', 'model.visual_model.image_encoder.blocks.25.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.bias', 'model.visual_model.image_encoder.blocks.7.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.29.norm2.weight', 'model.visual_model.prompt_encoder.point_embeddings.2.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.weight', 'model.visual_model.image_encoder.blocks.6.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.16.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.7.norm2.weight', 'model.visual_model.image_encoder.blocks.5.norm2.weight', 'model.visual_model.image_encoder.blocks.24.attn.rel_pos_h', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.bias', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.bias', 'model.visual_model.image_encoder.blocks.8.attn.qkv.weight', 'model.visual_model.prompt_encoder.mask_downscaling.0.weight', 'model.visual_model.image_encoder.blocks.13.norm1.weight', 'model.visual_model.image_encoder.blocks.24.attn.proj.weight', 'model.visual_model.image_encoder.blocks.0.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.14.mlp.lin1.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight', 'model.visual_model.image_encoder.blocks.24.mlp.lin1.bias', 'bio_encoder.encoder.layers.0.linear2.weight', 'model.visual_model.image_encoder.blocks.7.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.5.norm1.weight', 'model.visual_model.image_encoder.blocks.21.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.4.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.16.norm1.weight', 'model.visual_model.image_encoder.blocks.28.norm1.weight', 'model.visual_model.image_encoder.blocks.26.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.29.norm1.weight', 'model.visual_model.image_encoder.blocks.3.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.28.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.4.norm1.bias', 'model.visual_model.image_encoder.blocks.4.attn.proj.bias', 'model.visual_model.image_encoder.blocks.7.attn.rel_pos_w', 'model.visual_model.mask_decoder.iou_prediction_head.layers.2.bias', 'model.visual_model.image_encoder.blocks.13.norm2.weight', 'model.visual_model.image_encoder.blocks.16.mlp.lin1.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+trainable params: 6,553,600 || all params: 14,151,578,931 || trainable%: 0.0463100268313092
+>> model.config.train_mask_prompt_encoder:  True
+n:  base_model.model.model.embed_tokens.weight p.shape:  torch.Size([32002, 5120])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.0.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.1.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.2.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.3.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.not_a_point_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.0.weight p.shape:  torch.Size([4, 1, 2, 2])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.0.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.1.weight p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.1.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.3.weight p.shape:  torch.Size([16, 4, 2, 2])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.3.bias p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.4.weight p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.4.bias p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.6.weight p.shape:  torch.Size([256, 16, 1, 1])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.6.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.prompt_encoder.no_mask_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_token.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.mask_tokens.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.weight p.shape:  torch.Size([256, 64, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.weight p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.weight p.shape:  torch.Size([64, 32, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.text_hidden_fcs.0.0.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.model.text_hidden_fcs.0.0.bias p.shape:  torch.Size([5120])
+n:  base_model.model.model.text_hidden_fcs.0.2.weight p.shape:  torch.Size([256, 5120])
+n:  base_model.model.model.text_hidden_fcs.0.2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.token_to_mask_fcs.0.0.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.model.token_to_mask_fcs.0.0.bias p.shape:  torch.Size([5120])
+n:  base_model.model.model.token_to_mask_fcs.0.2.weight p.shape:  torch.Size([3, 5120])
+n:  base_model.model.model.token_to_mask_fcs.0.2.bias p.shape:  torch.Size([3])
+n:  base_model.model.lm_head.weight p.shape:  torch.Size([32002, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_weight p.shape:  torch.Size([15360, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_bias p.shape:  torch.Size([15360])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.weight p.shape:  torch.Size([2048, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.weight p.shape:  torch.Size([5120, 2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.weight p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.weight p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.bias p.shape:  torch.Size([5120])
+ade20k:  20210
+cocostuff:  118287
+loading annotations into memory...
+Done (t=0.74s)
+creating index...
+index created!
+pascal_part:  4366
+loading annotations into memory...
+Done (t=11.04s)
+creating index...
+index created!
+paco_lvis:  45790
+mapillary:  18000
+loading dataset refclef into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refclef/refs(unc).p
+creating index...
+index created.
+DONE (t=7.44s)
+dataset refclef (refs unc) (train split) has 17978 images and 99523 annotations.
+loading dataset refcoco into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco/refs(unc).p
+creating index...
+index created.
+DONE (t=8.81s)
+dataset refcoco (refs unc) (train split) has 16994 images and 196771 annotations.
+loading dataset refcoco+ into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco+/refs(unc).p
+creating index...
+index created.
+DONE (t=10.84s)
+dataset refcoco+ (refs unc) (train split) has 16992 images and 196737 annotations.
+loading dataset refcocog into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcocog/refs(umd).p
+creating index...
+index created.
+DONE (t=9.79s)
+dataset refcocog (refs umd) (train split) has 21899 images and 208960 annotations.
+vqa_data:  157712
+number of reason_seg samples:  239
+len(self.img_to_explanation):  239
+Training with 60000 examples.
+Validating with 200 examples.
+[2025-08-06 01:49:41,775] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.9.5, git-hash=unknown, git-branch=unknown
+[2025-08-06 01:49:41,775] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2025-08-06 01:49:41,775] [INFO] [comm.py:594:init_distributed] cdb=None
+[2025-08-06 01:49:41,776] [INFO] [comm.py:625:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2025-08-06 01:50:04,172] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+Using /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+Loading extension module fused_adam...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/ops/adam/fused_adam.py:96: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/tensor/python_tensor.cpp:78.)
+  self._dummy_overflow_buf = get_accelerator().IntTensor([0])
+Time to load fused_adam op: 1.6742827892303467 seconds
+[2025-08-06 01:50:06,539] [INFO] [logging.py:96:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+[2025-08-06 01:50:06,736] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = FusedAdam
+[2025-08-06 01:50:06,736] [INFO] [utils.py:54:is_zero_supported_optimizer] Checking ZeRO support for optimizer=FusedAdam type=<class 'deepspeed.ops.adam.fused_adam.FusedAdam'>
+[2025-08-06 01:50:06,736] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 2 optimizer
+[2025-08-06 01:50:06,736] [INFO] [stage_1_and_2.py:133:__init__] Reduce bucket size 500000000
+[2025-08-06 01:50:06,736] [INFO] [stage_1_and_2.py:134:__init__] Allgather bucket size 500000000
+[2025-08-06 01:50:06,737] [INFO] [stage_1_and_2.py:135:__init__] CPU Offload: False
+[2025-08-06 01:50:06,737] [INFO] [stage_1_and_2.py:136:__init__] Round robin gradient partitioning: False
+Rank: 0 partition count [2] and sizes[(258980634, False)]
+[2025-08-06 01:50:15,033] [INFO] [utils.py:785:see_memory_usage] Before initializing optimizer states
+[2025-08-06 01:50:15,034] [INFO] [utils.py:786:see_memory_usage] MA 27.52 GB         Max_MA 28.0 GB         CA 28.14 GB         Max_CA 28 GB
+[2025-08-06 01:50:15,034] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 109.01 GB, percent = 10.8%
+[2025-08-06 01:50:20,061] [INFO] [utils.py:785:see_memory_usage] After initializing optimizer states
+[2025-08-06 01:50:20,062] [INFO] [utils.py:786:see_memory_usage] MA 29.45 GB         Max_MA 30.42 GB         CA 31.04 GB         Max_CA 31 GB
+[2025-08-06 01:50:20,062] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 110.58 GB, percent = 11.0%
+[2025-08-06 01:50:20,063] [INFO] [stage_1_and_2.py:488:__init__] optimizer state initialized
+[2025-08-06 01:50:24,692] [INFO] [utils.py:785:see_memory_usage] After initializing ZeRO optimizer
+[2025-08-06 01:50:24,693] [INFO] [utils.py:786:see_memory_usage] MA 29.45 GB         Max_MA 29.45 GB         CA 31.04 GB         Max_CA 31 GB
+[2025-08-06 01:50:24,693] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 110.78 GB, percent = 11.0%
+[2025-08-06 01:50:24,699] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = adamw
+[2025-08-06 01:50:24,700] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2025-08-06 01:50:24,700] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x7f07da9b7100>
+[2025-08-06 01:50:24,700] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0003], mom=[(0.9, 0.95)]
+[2025-08-06 01:50:24,703] [INFO] [config.py:960:print] DeepSpeedEngine configuration:
+[2025-08-06 01:50:24,704] [INFO] [config.py:964:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2025-08-06 01:50:24,704] [INFO] [config.py:964:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-08-06 01:50:24,704] [INFO] [config.py:964:print]   amp_enabled .................. False
+[2025-08-06 01:50:24,704] [INFO] [config.py:964:print]   amp_params ................... False
+[2025-08-06 01:50:24,704] [INFO] [config.py:964:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-08-06 01:50:24,704] [INFO] [config.py:964:print]   bfloat16_enabled ............. True
+[2025-08-06 01:50:24,704] [INFO] [config.py:964:print]   checkpoint_parallel_write_pipeline  False
+[2025-08-06 01:50:24,704] [INFO] [config.py:964:print]   checkpoint_tag_validation_enabled  True
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   checkpoint_tag_validation_fail  False
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f07da9b7c40>
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   communication_data_type ...... None
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   curriculum_enabled_legacy .... False
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   curriculum_params_legacy ..... False
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   data_efficiency_enabled ...... False
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   dataloader_drop_last ......... False
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   disable_allgather ............ False
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   dump_state ................... False
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   dynamic_loss_scale_args ...... None
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   eigenvalue_enabled ........... False
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   eigenvalue_gas_boundary_resolution  1
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   eigenvalue_layer_num ......... 0
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   eigenvalue_max_iter .......... 100
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   eigenvalue_stability ......... 1e-06
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   eigenvalue_tol ............... 0.01
+[2025-08-06 01:50:24,705] [INFO] [config.py:964:print]   eigenvalue_verbose ........... False
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   elasticity_enabled ........... False
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   fp16_auto_cast ............... None
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   fp16_enabled ................. False
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   fp16_master_weights_and_gradients  False
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   global_rank .................. 0
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   grad_accum_dtype ............. None
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   gradient_accumulation_steps .. 10
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   gradient_clipping ............ 1.0
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   gradient_predivide_factor .... 1.0
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   initial_dynamic_scale ........ 1
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   load_universal_checkpoint .... False
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   loss_scale ................... 1.0
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   memory_breakdown ............. False
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   mics_hierarchial_params_gather  False
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   mics_shard_size .............. -1
+[2025-08-06 01:50:24,706] [INFO] [config.py:964:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   optimizer_legacy_fusion ...... False
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   optimizer_name ............... adamw
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   optimizer_params ............. {'lr': 0.0003, 'weight_decay': 0.0, 'betas': (0.9, 0.95)}
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   pld_enabled .................. False
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   pld_params ................... False
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   prescale_gradients ........... False
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   scheduler_name ............... WarmupDecayLR
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   scheduler_params ............. {'total_num_steps': 12500, 'warmup_min_lr': 0, 'warmup_max_lr': 0.0003, 'warmup_num_steps': 100, 'warmup_type': 'linear'}
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   sparse_attention ............. None
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   sparse_gradients_enabled ..... False
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   steps_per_print .............. 10
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   train_batch_size ............. 120
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   train_micro_batch_size_per_gpu  6
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   use_node_local_storage ....... False
+[2025-08-06 01:50:24,707] [INFO] [config.py:964:print]   wall_clock_breakdown ......... False
+[2025-08-06 01:50:24,708] [INFO] [config.py:964:print]   world_size ................... 2
+[2025-08-06 01:50:24,708] [INFO] [config.py:964:print]   zero_allow_untested_optimizer  False
+[2025-08-06 01:50:24,708] [INFO] [config.py:964:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True
+[2025-08-06 01:50:24,708] [INFO] [config.py:964:print]   zero_enabled ................. True
+[2025-08-06 01:50:24,708] [INFO] [config.py:964:print]   zero_force_ds_cpu_optimizer .. True
+[2025-08-06 01:50:24,708] [INFO] [config.py:964:print]   zero_optimization_stage ...... 2
+[2025-08-06 01:50:24,708] [INFO] [config.py:950:print_user_config]   json = {
+    "train_micro_batch_size_per_gpu": 6,
+    "gradient_accumulation_steps": 10,
+    "optimizer": {
+        "type": "AdamW",
+        "params": {
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "betas": [0.9, 0.95]
+        }
+    },
+    "scheduler": {
+        "type": "WarmupDecayLR",
+        "params": {
+            "total_num_steps": 1.250000e+04,
+            "warmup_min_lr": 0,
+            "warmup_max_lr": 0.0003,
+            "warmup_num_steps": 100,
+            "warmup_type": "linear"
+        }
+    },
+    "fp16": {
+        "enabled": false
+    },
+    "bf16": {
+        "enabled": true
+    },
+    "gradient_clipping": 1.0,
+    "zero_optimization": {
+        "stage": 2,
+        "contiguous_gradients": true,
+        "overlap_comm": true,
+        "reduce_scatter": true,
+        "reduce_bucket_size": 5.000000e+08,
+        "allgather_bucket_size": 5.000000e+08
+    }
+}
+(train) >> AFTER DEEPSPEED
+>> (train) Auto-resume from:  ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_dist/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_dist_bidirbio_2048_maxlen512_epochs25_bidir_bio_train_prompt_enc_srates_9_5_5_1_ckpt_model
+>> (train) resume exists:  False
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:84.)
+  return F.conv2d(input, weight, bias, self.stride,
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:952: UserWarning: Plan failed with a CuDNNError: cuDNN error: CUDNN_STATUS_BAD_PARAM
+Exception raised from run_conv_plan at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:374 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f0b9f378897 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe1640b (0x7f0b3e7fb40b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x108f133 (0x7f0b3ea74133 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0x1091043 (0x7f0b3ea76043 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x109176b (0x7f0b3ea7676b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x1075c7d (0x7f0b3ea5ac7d in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0x107656a (0x7f0b3ea5b56a in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: at::native::cudnn_convolution_transpose(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, bool) + 0xa4 (0x7f0b3ea5b714 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: <unknown function> + 0x32f2cc2 (0x7f0b40cd7cc2 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: <unknown function> + 0x32ff147 (0x7f0b40ce4147 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: at::_ops::cudnn_convolution_transpose::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool) + 0x2fb (0x7f0b9363c2fb in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool) + 0x166d (0x7f0b92d6348d in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x2a8d27f (0x7f0b93ef127f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x2a93bdc (0x7f0b93ef7bdc in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool) + 0x344 (0x7f0b9363a0d4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long) + 0x3b8 (0x7f0b92d56868 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x2a8cb1c (0x7f0b93ef0b1c in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x2a93a48 (0x7f0b93ef7a48 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: at::_ops::convolution::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) + 0x17b (0x7f0b935f7d6b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0x41902e1 (0x7f0b955f42e1 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x4191259 (0x7f0b955f5259 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) + 0x2d4 (0x7f0b93638ed4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: <unknown function> + 0x164a2e0 (0x7f0b92aae2e0 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #23: at::native::conv_transpose2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, c10::ArrayRef<c10::SymInt>) + 0x125 (0x7f0b92d5bb05 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #24: <unknown function> + 0x2c879c9 (0x7f0b940eb9c9 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #25: <unknown function> + 0x2c87b03 (0x7f0b940ebb03 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #26: at::_ops::conv_transpose2d_input::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, c10::ArrayRef<c10::SymInt>) + 0x2cb (0x7f0b9399509b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #27: <unknown function> + 0x61476f (0x7f0b9e41c76f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #28: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x4fc697]
+frame #29: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #30: _PyEval_EvalFrameDefault + 0x53d6 (0x4f2376 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #31: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #32: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #33: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #34: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #35: _PyObject_FastCallDictTstate + 0xcd (0x4f561d in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #36: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #37: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #38: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #39: _PyEval_EvalFrameDefault + 0x4dde (0x4f1d7e in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #40: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #41: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #42: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #43: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #44: _PyObject_FastCallDictTstate + 0xcd (0x4f561d in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #45: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #46: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #47: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #48: _PyEval_EvalFrameDefault + 0x53d6 (0x4f2376 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #49: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #50: _PyEval_EvalFrameDefault + 0x13b3 (0x4ee353 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #51: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #52: PyObject_Call + 0xb8 (0x508858 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #53: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #54: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #55: PyObject_Call + 0xb8 (0x508858 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #56: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #57: _PyFunction_Vectorcall + 0x6f (0x4fcadf in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #58: _PyObject_FastCallDictTstate + 0x17d (0x4f56cd in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #59: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #60: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #61: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #62: _PyEval_EvalFrameDefault + 0x5757 (0x4f26f7 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #63: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+ (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:921.)
+  return F.conv_transpose2d(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:952: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv_transpose2d(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with a CuDNNError: cuDNN error: CUDNN_STATUS_BAD_PARAM
+Exception raised from run_conv_plan at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:374 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f0b9f378897 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe1640b (0x7f0b3e7fb40b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x108f133 (0x7f0b3ea74133 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0x1091043 (0x7f0b3ea76043 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x10915bb (0x7f0b3ea765bb in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x1074062 (0x7f0b3ea59062 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0x107527f (0x7f0b3ea5a27f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0x1078184 (0x7f0b3ea5d184 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: at::native::convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, std::array<bool, 3ul>) + 0x1872 (0x7f0b92d661e2 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x32f8375 (0x7f0b40cdd375 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: <unknown function> + 0x3300422 (0x7f0b40ce5422 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: at::_ops::convolution_backward::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, std::array<bool, 3ul>) + 0x26b (0x7f0b93c3510b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x45578f3 (0x7f0b959bb8f3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x45594a3 (0x7f0b959bd4a3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::convolution_backward::call(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, std::array<bool, 3ul>) + 0x3a3 (0x7f0b93c5b7c3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x164a4b1 (0x7f0b92aae4b1 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: torch::autograd::generated::ConvolutionBackward0::apply(std::vector<at::Tensor, std::allocator<at::Tensor> >&&) + 0x300 (0x7f0b954cd290 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4dcc3ab (0x7f0b962303ab in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: torch::autograd::Engine::evaluate_function(std::shared_ptr<torch::autograd::GraphTask>&, torch::autograd::Node*, torch::autograd::InputBuffer&, std::shared_ptr<torch::autograd::ReadyQueue> const&) + 0x1526 (0x7f0b9622a4a6 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: torch::autograd::Engine::thread_main(std::shared_ptr<torch::autograd::GraphTask> const&) + 0x698 (0x7f0b9622b108 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: torch::autograd::Engine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x13f (0x7f0b9622203f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: torch::autograd::python::PythonEngine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x5c (0x7f0b9e630e1c in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #22: <unknown function> + 0xdbbf4 (0x7f0bb2b7bbf4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/../../libstdc++.so.6)
+frame #23: <unknown function> + 0x94ac3 (0x7f0bb40dcac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #24: <unknown function> + 0x126850 (0x7f0bb416e850 in /lib/x86_64-linux-gnu/libc.so.6)
+ (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:921.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Epoch: [0][  1/500]	Time 102.563 (110.570)	Loss 1.2748 (1.3430)	CeLoss 0.2402 (0.2414)	SegCLSLoss 0.1147 (0.1161)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1360 (0.1615)	MaskBCELoss 0.0469 (0.0704)	MaskDICELoss 0.0890 (0.0911)
+Epoch: [0][  2/500]	Time 73.856 (73.854)	Loss 1.2815 (1.3485)	CeLoss 0.2314 (0.2507)	SegCLSLoss 0.1133 (0.1156)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1344 (0.1600)	MaskBCELoss 0.0416 (0.0690)	MaskDICELoss 0.0928 (0.0911)
+Epoch: [0][  3/500]	Time 74.222 (74.224)	Loss 1.3958 (1.3419)	CeLoss 0.3164 (0.2602)	SegCLSLoss 0.1187 (0.1156)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1461 (0.1460)	MaskBCELoss 0.0548 (0.0529)	MaskDICELoss 0.0912 (0.0931)
+Epoch: [0][  4/500]	Time 74.481 (74.481)	Loss 1.5196 (1.3561)	CeLoss 0.4004 (0.2707)	SegCLSLoss 0.1196 (0.1169)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1636 (0.1539)	MaskBCELoss 0.0711 (0.0632)	MaskDICELoss 0.0925 (0.0906)
+Epoch: [0][  5/500]	Time 71.795 (71.795)	Loss 1.4804 (1.3359)	CeLoss 0.3633 (0.2399)	SegCLSLoss 0.1196 (0.1159)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1649 (0.1588)	MaskBCELoss 0.0731 (0.0677)	MaskDICELoss 0.0918 (0.0911)
+Epoch: [0][  6/500]	Time 76.357 (76.357)	Loss 1.3820 (1.3316)	CeLoss 0.3223 (0.2331)	SegCLSLoss 0.1143 (0.1150)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1432 (0.1575)	MaskBCELoss 0.0523 (0.0653)	MaskDICELoss 0.0909 (0.0922)
+Epoch: [0][  7/500]	Time 73.918 (73.917)	Loss 1.3765 (1.3349)	CeLoss 0.2832 (0.2467)	SegCLSLoss 0.1133 (0.1159)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1500 (0.1574)	MaskBCELoss 0.0555 (0.0672)	MaskDICELoss 0.0945 (0.0902)
+Epoch: [0][  8/500]	Time 74.108 (74.108)	Loss 1.3673 (1.3655)	CeLoss 0.2695 (0.2634)	SegCLSLoss 0.1162 (0.1162)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1408 (0.1569)	MaskBCELoss 0.0437 (0.0642)	MaskDICELoss 0.0971 (0.0927)
+Epoch: [0][  9/500]	Time 73.864 (73.861)	Loss 1.3376 (1.3311)	CeLoss 0.1816 (0.2439)	SegCLSLoss 0.1133 (0.1155)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1720 (0.1517)	MaskBCELoss 0.0742 (0.0596)	MaskDICELoss 0.0979 (0.0921)
+Epoch: [0][ 10/500]	Time 77.245 (77.241)	Loss 1.3143 (1.3448)	CeLoss 0.2930 (0.2337)	SegCLSLoss 0.1147 (0.1153)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1413 (0.1661)	MaskBCELoss 0.0568 (0.0747)	MaskDICELoss 0.0845 (0.0913)
+Epoch: [0][ 11/500]	Time 74.226 (74.232)	Loss 1.2239 (1.1595)	CeLoss 0.2832 (0.2189)	SegCLSLoss 0.0640 (0.0629)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1373 (0.1316)	MaskBCELoss 0.0478 (0.0397)	MaskDICELoss 0.0895 (0.0919)
+Epoch: [0][ 12/500]	Time 74.441 (74.440)	Loss 1.2199 (1.2096)	CeLoss 0.2471 (0.2557)	SegCLSLoss 0.0654 (0.0622)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1380 (0.1402)	MaskBCELoss 0.0437 (0.0486)	MaskDICELoss 0.0943 (0.0916)
+Epoch: [0][ 13/500]	Time 74.155 (74.155)	Loss 1.1281 (1.2370)	CeLoss 0.2080 (0.2860)	SegCLSLoss 0.0645 (0.0655)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1265 (0.1366)	MaskBCELoss 0.0368 (0.0454)	MaskDICELoss 0.0896 (0.0912)
+Epoch: [0][ 14/500]	Time 75.323 (75.322)	Loss 1.4335 (1.2076)	CeLoss 0.4258 (0.2509)	SegCLSLoss 0.0688 (0.0651)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1549 (0.1352)	MaskBCELoss 0.0614 (0.0425)	MaskDICELoss 0.0935 (0.0927)
+Epoch: [0][ 15/500]	Time 72.309 (72.309)	Loss 1.1724 (1.2158)	CeLoss 0.1914 (0.2663)	SegCLSLoss 0.0610 (0.0639)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1373 (0.1371)	MaskBCELoss 0.0397 (0.0459)	MaskDICELoss 0.0976 (0.0912)
+Epoch: [0][ 16/500]	Time 75.885 (75.883)	Loss 1.2783 (1.2344)	CeLoss 0.2949 (0.2694)	SegCLSLoss 0.0649 (0.0647)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1520 (0.1390)	MaskBCELoss 0.0605 (0.0460)	MaskDICELoss 0.0915 (0.0930)
+Epoch: [0][ 17/500]	Time 76.155 (76.157)	Loss 1.3837 (1.2415)	CeLoss 0.4160 (0.2814)	SegCLSLoss 0.0698 (0.0635)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1402 (0.1379)	MaskBCELoss 0.0490 (0.0450)	MaskDICELoss 0.0912 (0.0929)
+Epoch: [0][ 18/500]	Time 76.630 (76.630)	Loss 1.1774 (1.2014)	CeLoss 0.2061 (0.2483)	SegCLSLoss 0.0591 (0.0630)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1439 (0.1387)	MaskBCELoss 0.0497 (0.0472)	MaskDICELoss 0.0941 (0.0915)
+Epoch: [0][ 19/500]	Time 72.825 (72.825)	Loss 1.1279 (1.1935)	CeLoss 0.2295 (0.2406)	SegCLSLoss 0.0635 (0.0632)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1477 (0.1397)	MaskBCELoss 0.0684 (0.0486)	MaskDICELoss 0.0794 (0.0912)
+Epoch: [0][ 20/500]	Time 77.538 (77.538)	Loss 1.1179 (1.2055)	CeLoss 0.2129 (0.2382)	SegCLSLoss 0.0586 (0.0627)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1281 (0.1416)	MaskBCELoss 0.0395 (0.0484)	MaskDICELoss 0.0887 (0.0932)
+Epoch: [0][ 21/500]	Time 81.023 (81.023)	Loss 1.0935 (1.0906)	CeLoss 0.2129 (0.2313)	SegCLSLoss 0.0356 (0.0301)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1304 (0.1315)	MaskBCELoss 0.0391 (0.0421)	MaskDICELoss 0.0914 (0.0894)
+Epoch: [0][ 22/500]	Time 74.652 (74.651)	Loss 1.0996 (1.0857)	CeLoss 0.2031 (0.2142)	SegCLSLoss 0.0267 (0.0322)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1614 (0.1332)	MaskBCELoss 0.0746 (0.0430)	MaskDICELoss 0.0868 (0.0901)
+Epoch: [0][ 23/500]	Time 73.054 (73.054)	Loss 0.9733 (1.1214)	CeLoss 0.1709 (0.2501)	SegCLSLoss 0.0215 (0.0330)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1206 (0.1311)	MaskBCELoss 0.0343 (0.0406)	MaskDICELoss 0.0863 (0.0905)
+Epoch: [0][ 24/500]	Time 76.542 (76.542)	Loss 1.2003 (1.1245)	CeLoss 0.3398 (0.2483)	SegCLSLoss 0.0315 (0.0337)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1374 (0.1356)	MaskBCELoss 0.0503 (0.0460)	MaskDICELoss 0.0871 (0.0896)
+Epoch: [0][ 25/500]	Time 77.343 (77.343)	Loss 1.1666 (1.0916)	CeLoss 0.2852 (0.2121)	SegCLSLoss 0.0300 (0.0316)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1437 (0.1316)	MaskBCELoss 0.0545 (0.0394)	MaskDICELoss 0.0892 (0.0922)
+Epoch: [0][ 26/500]	Time 81.516 (81.516)	Loss 1.1600 (1.1167)	CeLoss 0.2832 (0.2380)	SegCLSLoss 0.0231 (0.0332)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1290 (0.1346)	MaskBCELoss 0.0333 (0.0441)	MaskDICELoss 0.0957 (0.0905)
+Epoch: [0][ 27/500]	Time 74.497 (74.496)	Loss 1.1227 (1.1116)	CeLoss 0.2734 (0.2407)	SegCLSLoss 0.0280 (0.0292)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1282 (0.1324)	MaskBCELoss 0.0388 (0.0411)	MaskDICELoss 0.0894 (0.0913)
+Epoch: [0][ 28/500]	Time 73.968 (73.969)	Loss 1.2399 (1.0996)	CeLoss 0.3574 (0.2318)	SegCLSLoss 0.0356 (0.0320)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1254 (0.1294)	MaskBCELoss 0.0319 (0.0386)	MaskDICELoss 0.0935 (0.0908)
+Epoch: [0][ 29/500]	Time 75.002 (74.999)	Loss 1.0426 (1.0858)	CeLoss 0.1650 (0.2177)	SegCLSLoss 0.0435 (0.0293)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1168 (0.1327)	MaskBCELoss 0.0238 (0.0420)	MaskDICELoss 0.0929 (0.0907)
+Epoch: [0][ 30/500]	Time 74.632 (74.634)	Loss 1.0905 (1.0730)	CeLoss 0.2891 (0.2116)	SegCLSLoss 0.0258 (0.0302)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1327 (0.1337)	MaskBCELoss 0.0520 (0.0447)	MaskDICELoss 0.0807 (0.0890)
+Epoch: [0][ 31/500]	Time 73.558 (73.556)	Loss 1.1105 (1.1309)	CeLoss 0.2109 (0.2147)	SegCLSLoss 0.0503 (0.0614)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1296 (0.1351)	MaskBCELoss 0.0398 (0.0479)	MaskDICELoss 0.0898 (0.0872)
+Epoch: [0][ 32/500]	Time 77.892 (77.892)	Loss 1.1932 (1.1224)	CeLoss 0.2402 (0.2271)	SegCLSLoss 0.0542 (0.0537)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1378 (0.1372)	MaskBCELoss 0.0433 (0.0516)	MaskDICELoss 0.0946 (0.0855)
+Epoch: [0][ 33/500]	Time 74.814 (74.814)	Loss 1.1363 (1.1191)	CeLoss 0.2344 (0.2227)	SegCLSLoss 0.0703 (0.0563)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1258 (0.1329)	MaskBCELoss 0.0408 (0.0466)	MaskDICELoss 0.0850 (0.0863)
+Epoch: [0][ 34/500]	Time 74.393 (74.392)	Loss 1.1064 (1.1442)	CeLoss 0.1562 (0.2220)	SegCLSLoss 0.0461 (0.0624)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1521 (0.1353)	MaskBCELoss 0.0598 (0.0475)	MaskDICELoss 0.0923 (0.0878)
+Epoch: [0][ 35/500]	Time 75.257 (75.254)	Loss 1.2198 (1.1570)	CeLoss 0.2812 (0.2364)	SegCLSLoss 0.0527 (0.0587)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1402 (0.1352)	MaskBCELoss 0.0482 (0.0464)	MaskDICELoss 0.0920 (0.0888)
+Epoch: [0][ 36/500]	Time 80.544 (80.546)	Loss 1.1104 (1.1422)	CeLoss 0.1270 (0.2165)	SegCLSLoss 0.0581 (0.0610)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1394 (0.1341)	MaskBCELoss 0.0414 (0.0449)	MaskDICELoss 0.0980 (0.0892)
+Epoch: [0][ 37/500]	Time 79.661 (79.655)	Loss 1.1483 (1.1299)	CeLoss 0.2637 (0.2207)	SegCLSLoss 0.0547 (0.0631)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1349 (0.1340)	MaskBCELoss 0.0507 (0.0481)	MaskDICELoss 0.0842 (0.0859)
+Epoch: [0][ 38/500]	Time 79.074 (79.077)	Loss 1.1743 (1.0982)	CeLoss 0.2930 (0.2054)	SegCLSLoss 0.0618 (0.0575)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1320 (0.1340)	MaskBCELoss 0.0495 (0.0491)	MaskDICELoss 0.0825 (0.0849)
+Epoch: [0][ 39/500]	Time 75.059 (75.061)	Loss 1.1180 (1.1329)	CeLoss 0.2578 (0.2237)	SegCLSLoss 0.0500 (0.0594)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1392 (0.1359)	MaskBCELoss 0.0588 (0.0495)	MaskDICELoss 0.0803 (0.0864)
+Epoch: [0][ 40/500]	Time 75.066 (75.067)	Loss 1.1575 (1.1728)	CeLoss 0.2480 (0.2439)	SegCLSLoss 0.0574 (0.0608)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1314 (0.1361)	MaskBCELoss 0.0427 (0.0470)	MaskDICELoss 0.0887 (0.0892)
+Epoch: [0][ 41/500]	Time 73.960 (73.959)	Loss 0.9958 (1.0987)	CeLoss 0.2188 (0.2293)	SegCLSLoss 0.0254 (0.0470)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1185 (0.1256)	MaskBCELoss 0.0368 (0.0381)	MaskDICELoss 0.0817 (0.0874)
+Epoch: [0][ 42/500]	Time 74.937 (74.937)	Loss 1.1621 (1.1025)	CeLoss 0.2373 (0.2180)	SegCLSLoss 0.0410 (0.0488)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1388 (0.1262)	MaskBCELoss 0.0445 (0.0372)	MaskDICELoss 0.0943 (0.0890)
+Epoch: [0][ 43/500]	Time 74.220 (74.218)	Loss 1.0420 (1.0956)	CeLoss 0.2158 (0.2136)	SegCLSLoss 0.0442 (0.0516)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1181 (0.1257)	MaskBCELoss 0.0343 (0.0379)	MaskDICELoss 0.0838 (0.0878)
+Epoch: [0][ 44/500]	Time 74.821 (74.822)	Loss 1.0551 (1.0841)	CeLoss 0.1836 (0.2066)	SegCLSLoss 0.0354 (0.0502)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1276 (0.1271)	MaskBCELoss 0.0368 (0.0399)	MaskDICELoss 0.0909 (0.0872)
+Epoch: [0][ 45/500]	Time 77.244 (77.244)	Loss 1.0997 (1.0622)	CeLoss 0.2539 (0.2085)	SegCLSLoss 0.0679 (0.0491)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1164 (0.1240)	MaskBCELoss 0.0370 (0.0394)	MaskDICELoss 0.0794 (0.0845)
+Epoch: [0][ 46/500]	Time 81.565 (81.564)	Loss 1.0955 (1.0782)	CeLoss 0.1973 (0.1929)	SegCLSLoss 0.0674 (0.0469)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1202 (0.1252)	MaskBCELoss 0.0332 (0.0350)	MaskDICELoss 0.0870 (0.0902)
+Epoch: [0][ 47/500]	Time 74.420 (74.418)	Loss 0.9230 (1.1072)	CeLoss 0.1484 (0.2476)	SegCLSLoss 0.0422 (0.0473)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1241 (0.1265)	MaskBCELoss 0.0504 (0.0412)	MaskDICELoss 0.0737 (0.0853)
+Epoch: [0][ 48/500]	Time 74.066 (74.067)	Loss 1.2085 (1.0931)	CeLoss 0.2637 (0.2200)	SegCLSLoss 0.0513 (0.0517)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1378 (0.1240)	MaskBCELoss 0.0433 (0.0371)	MaskDICELoss 0.0945 (0.0869)
+Epoch: [0][ 49/500]	Time 75.276 (75.276)	Loss 1.0097 (1.0392)	CeLoss 0.1699 (0.1760)	SegCLSLoss 0.0344 (0.0440)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1224 (0.1245)	MaskBCELoss 0.0347 (0.0368)	MaskDICELoss 0.0877 (0.0877)
+Epoch: [0][ 50/500]	Time 74.383 (74.384)	Loss 1.1202 (1.0847)	CeLoss 0.2402 (0.2145)	SegCLSLoss 0.0562 (0.0510)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1228 (0.1226)	MaskBCELoss 0.0359 (0.0354)	MaskDICELoss 0.0869 (0.0872)
+Epoch: [0][ 51/500]	Time 76.899 (76.897)	Loss 0.9636 (1.0206)	CeLoss 0.1367 (0.1937)	SegCLSLoss 0.0203 (0.0229)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1204 (0.1239)	MaskBCELoss 0.0295 (0.0350)	MaskDICELoss 0.0909 (0.0889)
+Epoch: [0][ 52/500]	Time 76.605 (76.605)	Loss 1.1543 (1.0482)	CeLoss 0.2793 (0.2068)	SegCLSLoss 0.0291 (0.0238)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1396 (0.1278)	MaskBCELoss 0.0500 (0.0381)	MaskDICELoss 0.0896 (0.0897)
+Epoch: [0][ 53/500]	Time 71.988 (71.988)	Loss 1.0001 (1.0295)	CeLoss 0.1738 (0.1806)	SegCLSLoss 0.0225 (0.0216)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1398 (0.1344)	MaskBCELoss 0.0562 (0.0449)	MaskDICELoss 0.0836 (0.0895)
+Epoch: [0][ 54/500]	Time 79.112 (79.111)	Loss 1.0375 (1.0218)	CeLoss 0.1777 (0.1932)	SegCLSLoss 0.0186 (0.0225)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1387 (0.1275)	MaskBCELoss 0.0480 (0.0394)	MaskDICELoss 0.0907 (0.0881)
+Epoch: [0][ 55/500]	Time 81.693 (81.684)	Loss 1.0230 (1.0220)	CeLoss 0.2080 (0.2002)	SegCLSLoss 0.0251 (0.0252)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1044 (0.1240)	MaskBCELoss 0.0117 (0.0368)	MaskDICELoss 0.0927 (0.0872)
+Epoch: [0][ 56/500]	Time 80.066 (80.066)	Loss 1.0796 (1.0305)	CeLoss 0.2598 (0.1956)	SegCLSLoss 0.0299 (0.0229)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1156 (0.1223)	MaskBCELoss 0.0273 (0.0315)	MaskDICELoss 0.0883 (0.0908)
+Epoch: [0][ 57/500]	Time 90.046 (90.050)	Loss 1.0446 (1.0081)	CeLoss 0.1943 (0.1851)	SegCLSLoss 0.0208 (0.0224)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1286 (0.1237)	MaskBCELoss 0.0366 (0.0352)	MaskDICELoss 0.0919 (0.0884)
+Epoch: [0][ 58/500]	Time 80.860 (80.864)	Loss 0.9303 (0.9849)	CeLoss 0.1787 (0.1807)	SegCLSLoss 0.0223 (0.0228)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1047 (0.1186)	MaskBCELoss 0.0218 (0.0318)	MaskDICELoss 0.0829 (0.0869)
+Epoch: [0][ 59/500]	Time 74.131 (74.131)	Loss 0.9613 (1.0245)	CeLoss 0.1504 (0.2033)	SegCLSLoss 0.0187 (0.0241)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1349 (0.1231)	MaskBCELoss 0.0510 (0.0353)	MaskDICELoss 0.0839 (0.0878)
+Epoch: [0][ 60/500]	Time 73.493 (73.494)	Loss 1.0770 (1.0122)	CeLoss 0.2500 (0.1788)	SegCLSLoss 0.0332 (0.0228)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1211 (0.1279)	MaskBCELoss 0.0346 (0.0392)	MaskDICELoss 0.0865 (0.0887)
+Epoch: [0][ 61/500]	Time 80.647 (80.645)	Loss 1.0969 (1.0558)	CeLoss 0.1680 (0.1611)	SegCLSLoss 0.0645 (0.0659)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1323 (0.1252)	MaskBCELoss 0.0431 (0.0398)	MaskDICELoss 0.0892 (0.0854)
+Epoch: [0][ 62/500]	Time 74.983 (74.983)	Loss 1.1649 (1.0601)	CeLoss 0.2344 (0.1675)	SegCLSLoss 0.0796 (0.0672)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1208 (0.1209)	MaskBCELoss 0.0325 (0.0348)	MaskDICELoss 0.0883 (0.0861)
+Epoch: [0][ 63/500]	Time 74.185 (74.180)	Loss 1.1103 (1.0587)	CeLoss 0.1670 (0.1693)	SegCLSLoss 0.0659 (0.0671)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1186 (0.1187)	MaskBCELoss 0.0231 (0.0323)	MaskDICELoss 0.0955 (0.0863)
+Epoch: [0][ 64/500]	Time 73.929 (73.933)	Loss 0.9661 (1.0644)	CeLoss 0.1387 (0.1700)	SegCLSLoss 0.0645 (0.0694)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1172 (0.1241)	MaskBCELoss 0.0398 (0.0395)	MaskDICELoss 0.0774 (0.0846)
+Epoch: [0][ 65/500]	Time 74.298 (74.297)	Loss 1.0281 (1.0757)	CeLoss 0.1797 (0.1727)	SegCLSLoss 0.0625 (0.0685)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1228 (0.1261)	MaskBCELoss 0.0431 (0.0405)	MaskDICELoss 0.0796 (0.0856)
+Epoch: [0][ 66/500]	Time 74.215 (74.215)	Loss 1.1378 (1.0727)	CeLoss 0.1738 (0.1680)	SegCLSLoss 0.0618 (0.0658)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1391 (0.1259)	MaskBCELoss 0.0453 (0.0390)	MaskDICELoss 0.0938 (0.0869)
+Epoch: [0][ 67/500]	Time 75.486 (75.485)	Loss 1.0619 (1.0473)	CeLoss 0.1553 (0.1581)	SegCLSLoss 0.0625 (0.0641)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1412 (0.1247)	MaskBCELoss 0.0581 (0.0394)	MaskDICELoss 0.0830 (0.0853)
+Epoch: [0][ 68/500]	Time 72.870 (72.870)	Loss 1.0876 (1.0601)	CeLoss 0.2061 (0.1693)	SegCLSLoss 0.0752 (0.0669)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1146 (0.1219)	MaskBCELoss 0.0310 (0.0364)	MaskDICELoss 0.0837 (0.0855)
+Epoch: [0][ 69/500]	Time 74.350 (74.349)	Loss 1.0265 (1.0738)	CeLoss 0.1221 (0.1626)	SegCLSLoss 0.0654 (0.0669)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1288 (0.1250)	MaskBCELoss 0.0428 (0.0372)	MaskDICELoss 0.0860 (0.0879)
+Epoch: [0][ 70/500]	Time 76.024 (76.025)	Loss 1.1534 (1.0639)	CeLoss 0.1885 (0.1646)	SegCLSLoss 0.0732 (0.0672)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1466 (0.1218)	MaskBCELoss 0.0589 (0.0350)	MaskDICELoss 0.0876 (0.0869)
+Epoch: [0][ 71/500]	Time 80.993 (80.991)	Loss 1.0662 (1.0232)	CeLoss 0.1040 (0.1409)	SegCLSLoss 0.1133 (0.0688)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1132 (0.1265)	MaskBCELoss 0.0285 (0.0446)	MaskDICELoss 0.0847 (0.0820)
+Epoch: [0][ 72/500]	Time 74.034 (74.034)	Loss 1.0560 (1.0601)	CeLoss 0.1660 (0.1525)	SegCLSLoss 0.0845 (0.0758)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1282 (0.1279)	MaskBCELoss 0.0507 (0.0446)	MaskDICELoss 0.0775 (0.0833)
+Epoch: [0][ 73/500]	Time 74.936 (74.935)	Loss 1.0817 (1.0683)	CeLoss 0.1494 (0.1385)	SegCLSLoss 0.0593 (0.0759)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1384 (0.1275)	MaskBCELoss 0.0490 (0.0404)	MaskDICELoss 0.0894 (0.0871)
+Epoch: [0][ 74/500]	Time 74.346 (74.346)	Loss 1.1661 (1.0518)	CeLoss 0.1426 (0.1415)	SegCLSLoss 0.0850 (0.0735)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1429 (0.1280)	MaskBCELoss 0.0482 (0.0434)	MaskDICELoss 0.0946 (0.0846)
+Epoch: [0][ 75/500]	Time 74.232 (74.232)	Loss 0.9646 (1.0362)	CeLoss 0.1328 (0.1389)	SegCLSLoss 0.1045 (0.0707)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1110 (0.1279)	MaskBCELoss 0.0443 (0.0446)	MaskDICELoss 0.0667 (0.0833)
+Epoch: [0][ 76/500]	Time 81.314 (81.314)	Loss 1.0731 (1.0394)	CeLoss 0.1182 (0.1345)	SegCLSLoss 0.1104 (0.0804)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1391 (0.1251)	MaskBCELoss 0.0628 (0.0427)	MaskDICELoss 0.0762 (0.0823)
+Epoch: [0][ 77/500]	Time 71.126 (71.123)	Loss 1.1660 (1.0227)	CeLoss 0.1187 (0.1403)	SegCLSLoss 0.1348 (0.0688)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1217 (0.1261)	MaskBCELoss 0.0328 (0.0440)	MaskDICELoss 0.0889 (0.0821)
+Epoch: [0][ 78/500]	Time 76.492 (76.493)	Loss 1.0094 (1.0533)	CeLoss 0.1582 (0.1459)	SegCLSLoss 0.0747 (0.0686)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1190 (0.1302)	MaskBCELoss 0.0414 (0.0452)	MaskDICELoss 0.0775 (0.0850)
+Epoch: [0][ 79/500]	Time 71.983 (71.982)	Loss 1.0589 (1.0354)	CeLoss 0.1387 (0.1369)	SegCLSLoss 0.0625 (0.0608)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1402 (0.1275)	MaskBCELoss 0.0542 (0.0405)	MaskDICELoss 0.0860 (0.0870)
+Epoch: [0][ 80/500]	Time 74.878 (74.880)	Loss 1.0269 (1.0543)	CeLoss 0.1562 (0.1373)	SegCLSLoss 0.0674 (0.0797)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1226 (0.1264)	MaskBCELoss 0.0407 (0.0423)	MaskDICELoss 0.0818 (0.0842)
+Epoch: [0][ 81/500]	Time 77.082 (77.079)	Loss 1.0115 (1.0397)	CeLoss 0.1348 (0.1234)	SegCLSLoss 0.0386 (0.0805)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1202 (0.1203)	MaskBCELoss 0.0271 (0.0346)	MaskDICELoss 0.0931 (0.0858)
+Epoch: [0][ 82/500]	Time 76.009 (76.010)	Loss 0.9626 (1.0381)	CeLoss 0.0996 (0.1233)	SegCLSLoss 0.0752 (0.0826)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1047 (0.1201)	MaskBCELoss 0.0209 (0.0353)	MaskDICELoss 0.0839 (0.0849)
+Epoch: [0][ 83/500]	Time 89.481 (89.478)	Loss 1.0031 (1.0306)	CeLoss 0.1187 (0.1217)	SegCLSLoss 0.0574 (0.0681)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1337 (0.1271)	MaskBCELoss 0.0501 (0.0407)	MaskDICELoss 0.0836 (0.0864)
+Epoch: [0][ 84/500]	Time 111.076 (111.079)	Loss 1.1079 (1.0280)	CeLoss 0.1118 (0.1188)	SegCLSLoss 0.0923 (0.0785)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1395 (0.1241)	MaskBCELoss 0.0509 (0.0401)	MaskDICELoss 0.0887 (0.0840)
+Epoch: [0][ 85/500]	Time 93.588 (93.587)	Loss 0.9896 (1.0133)	CeLoss 0.0986 (0.1193)	SegCLSLoss 0.0601 (0.0738)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1167 (0.1195)	MaskBCELoss 0.0272 (0.0349)	MaskDICELoss 0.0896 (0.0846)
+Epoch: [0][ 86/500]	Time 80.355 (80.352)	Loss 1.0412 (1.0102)	CeLoss 0.0918 (0.1172)	SegCLSLoss 0.0791 (0.0854)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1598 (0.1192)	MaskBCELoss 0.0812 (0.0386)	MaskDICELoss 0.0786 (0.0806)
+Epoch: [0][ 87/500]	Time 74.637 (74.639)	Loss 1.0210 (1.0800)	CeLoss 0.1211 (0.1209)	SegCLSLoss 0.0488 (0.0929)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1206 (0.1229)	MaskBCELoss 0.0271 (0.0350)	MaskDICELoss 0.0935 (0.0879)
+Epoch: [0][ 88/500]	Time 88.496 (88.498)	Loss 1.0397 (1.0061)	CeLoss 0.1436 (0.1295)	SegCLSLoss 0.0942 (0.0673)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1186 (0.1218)	MaskBCELoss 0.0401 (0.0387)	MaskDICELoss 0.0785 (0.0831)
+Epoch: [0][ 89/500]	Time 88.719 (88.716)	Loss 1.0976 (1.0200)	CeLoss 0.1084 (0.1175)	SegCLSLoss 0.1025 (0.0694)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1110 (0.1252)	MaskBCELoss 0.0172 (0.0397)	MaskDICELoss 0.0938 (0.0855)
+Epoch: [0][ 90/500]	Time 85.931 (85.932)	Loss 0.9701 (1.0128)	CeLoss 0.1338 (0.1193)	SegCLSLoss 0.0649 (0.0719)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1133 (0.1197)	MaskBCELoss 0.0331 (0.0346)	MaskDICELoss 0.0802 (0.0851)
+Epoch: [0][ 91/500]	Time 76.558 (76.554)	Loss 0.9452 (0.9119)	CeLoss 0.1133 (0.1090)	SegCLSLoss 0.0214 (0.0251)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1268 (0.1229)	MaskBCELoss 0.0376 (0.0384)	MaskDICELoss 0.0892 (0.0845)
+Epoch: [0][ 92/500]	Time 93.292 (93.287)	Loss 0.9602 (0.8990)	CeLoss 0.1162 (0.1102)	SegCLSLoss 0.0222 (0.0265)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1229 (0.1199)	MaskBCELoss 0.0306 (0.0372)	MaskDICELoss 0.0923 (0.0827)
+Epoch: [0][ 93/500]	Time 87.311 (87.276)	Loss 0.8568 (0.9228)	CeLoss 0.0962 (0.1124)	SegCLSLoss 0.0330 (0.0314)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1143 (0.1216)	MaskBCELoss 0.0367 (0.0375)	MaskDICELoss 0.0776 (0.0841)
+Epoch: [0][ 94/500]	Time 88.136 (88.177)	Loss 0.9703 (0.9076)	CeLoss 0.1270 (0.1113)	SegCLSLoss 0.0221 (0.0267)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1329 (0.1187)	MaskBCELoss 0.0439 (0.0345)	MaskDICELoss 0.0890 (0.0842)
+Epoch: [0][ 95/500]	Time 77.350 (77.349)	Loss 0.9399 (0.9265)	CeLoss 0.1030 (0.1110)	SegCLSLoss 0.0107 (0.0274)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1402 (0.1228)	MaskBCELoss 0.0510 (0.0369)	MaskDICELoss 0.0892 (0.0859)
+Epoch: [0][ 96/500]	Time 81.526 (81.527)	Loss 0.8787 (0.9018)	CeLoss 0.1235 (0.1101)	SegCLSLoss 0.0299 (0.0321)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1124 (0.1172)	MaskBCELoss 0.0339 (0.0350)	MaskDICELoss 0.0785 (0.0822)
+Epoch: [0][ 97/500]	Time 73.391 (73.391)	Loss 0.9592 (0.9065)	CeLoss 0.0986 (0.1116)	SegCLSLoss 0.0204 (0.0251)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1372 (0.1195)	MaskBCELoss 0.0462 (0.0352)	MaskDICELoss 0.0910 (0.0843)
+Epoch: [0][ 98/500]	Time 85.451 (85.451)	Loss 0.8666 (0.9244)	CeLoss 0.1006 (0.1096)	SegCLSLoss 0.0178 (0.0259)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1201 (0.1200)	MaskBCELoss 0.0383 (0.0328)	MaskDICELoss 0.0818 (0.0872)
+Epoch: [0][ 99/500]	Time 81.912 (81.911)	Loss 0.9766 (0.9267)	CeLoss 0.1025 (0.1135)	SegCLSLoss 0.0437 (0.0293)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1296 (0.1204)	MaskBCELoss 0.0417 (0.0348)	MaskDICELoss 0.0879 (0.0856)
+[2025-08-06 04:00:12,783] [INFO] [logging.py:96:log_dist] [Rank 0] step=10, skipped=0, lr=[0.0002998306451612903], mom=[(0.9, 0.95)]
+[2025-08-06 04:00:13,723] [INFO] [timer.py:215:stop] epoch=0/micro_step=100/global_step=10, RunningAvgSamplesPerSec=1.4986514248097924, CurrSamplesPerSec=1.3849309668363095, MemAllocated=32.15GB, MaxMemAllocated=48.49GB
+Epoch: [0][100/500]	Time 83.743 (83.280)	Loss 0.7760 (0.9167)	CeLoss 0.0957 (0.1116)	SegCLSLoss 0.0150 (0.0258)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1041 (0.1215)	MaskBCELoss 0.0304 (0.0365)	MaskDICELoss 0.0737 (0.0851)
+Epoch: [0][101/500]	Time 95.298 (95.754)	Loss 0.7796 (0.8534)	CeLoss 0.1045 (0.1022)	SegCLSLoss 0.0199 (0.0151)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0949 (0.1142)	MaskBCELoss 0.0207 (0.0322)	MaskDICELoss 0.0742 (0.0821)
+Epoch: [0][102/500]	Time 88.802 (88.807)	Loss 0.8688 (0.8655)	CeLoss 0.1006 (0.1007)	SegCLSLoss 0.0129 (0.0149)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1337 (0.1205)	MaskBCELoss 0.0546 (0.0382)	MaskDICELoss 0.0791 (0.0823)
+Epoch: [0][103/500]	Time 73.305 (73.304)	Loss 0.9144 (0.8572)	CeLoss 0.1211 (0.1060)	SegCLSLoss 0.0146 (0.0149)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1307 (0.1206)	MaskBCELoss 0.0468 (0.0405)	MaskDICELoss 0.0838 (0.0800)
+Epoch: [0][104/500]	Time 74.307 (74.308)	Loss 0.9407 (0.8934)	CeLoss 0.1040 (0.1005)	SegCLSLoss 0.0122 (0.0139)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1392 (0.1237)	MaskBCELoss 0.0502 (0.0373)	MaskDICELoss 0.0890 (0.0863)
+Epoch: [0][105/500]	Time 70.931 (70.931)	Loss 0.8366 (0.8921)	CeLoss 0.0859 (0.1081)	SegCLSLoss 0.0102 (0.0132)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1088 (0.1246)	MaskBCELoss 0.0233 (0.0398)	MaskDICELoss 0.0855 (0.0848)
+Epoch: [0][106/500]	Time 73.793 (73.792)	Loss 0.8856 (0.8859)	CeLoss 0.0894 (0.1027)	SegCLSLoss 0.0151 (0.0134)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1345 (0.1239)	MaskBCELoss 0.0517 (0.0392)	MaskDICELoss 0.0828 (0.0848)
+Epoch: [0][107/500]	Time 83.314 (83.313)	Loss 0.9479 (0.8821)	CeLoss 0.1162 (0.1045)	SegCLSLoss 0.0096 (0.0147)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1385 (0.1194)	MaskBCELoss 0.0494 (0.0345)	MaskDICELoss 0.0891 (0.0849)
+Epoch: [0][108/500]	Time 74.171 (74.168)	Loss 0.8183 (0.8819)	CeLoss 0.1108 (0.1087)	SegCLSLoss 0.0140 (0.0139)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1095 (0.1179)	MaskBCELoss 0.0328 (0.0330)	MaskDICELoss 0.0767 (0.0849)
+Epoch: [0][109/500]	Time 78.089 (78.089)	Loss 0.9484 (0.8796)	CeLoss 0.1182 (0.1090)	SegCLSLoss 0.0117 (0.0133)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1161 (0.1228)	MaskBCELoss 0.0203 (0.0397)	MaskDICELoss 0.0958 (0.0831)
+Epoch: [0][110/500]	Time 76.439 (76.444)	Loss 0.8394 (0.8702)	CeLoss 0.1157 (0.1099)	SegCLSLoss 0.0112 (0.0133)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1140 (0.1188)	MaskBCELoss 0.0352 (0.0361)	MaskDICELoss 0.0788 (0.0827)
+Epoch: [0][111/500]	Time 73.932 (73.930)	Loss 0.7578 (0.8608)	CeLoss 0.1133 (0.0991)	SegCLSLoss 0.0153 (0.0166)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1061 (0.1161)	MaskBCELoss 0.0391 (0.0334)	MaskDICELoss 0.0670 (0.0827)
+Epoch: [0][112/500]	Time 73.201 (73.201)	Loss 0.8394 (0.8531)	CeLoss 0.0791 (0.1047)	SegCLSLoss 0.0240 (0.0166)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1154 (0.1149)	MaskBCELoss 0.0352 (0.0340)	MaskDICELoss 0.0802 (0.0809)
+Epoch: [0][113/500]	Time 74.551 (74.550)	Loss 0.9438 (0.8718)	CeLoss 0.1309 (0.1052)	SegCLSLoss 0.0140 (0.0162)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1222 (0.1204)	MaskBCELoss 0.0322 (0.0382)	MaskDICELoss 0.0900 (0.0822)
+Epoch: [0][114/500]	Time 72.322 (72.322)	Loss 0.9741 (0.8899)	CeLoss 0.1279 (0.0987)	SegCLSLoss 0.0142 (0.0179)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1290 (0.1233)	MaskBCELoss 0.0356 (0.0385)	MaskDICELoss 0.0933 (0.0848)
+Epoch: [0][115/500]	Time 75.944 (75.944)	Loss 0.8944 (0.8722)	CeLoss 0.1133 (0.1055)	SegCLSLoss 0.0118 (0.0166)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1408 (0.1184)	MaskBCELoss 0.0614 (0.0356)	MaskDICELoss 0.0794 (0.0828)
+Epoch: [0][116/500]	Time 89.726 (89.726)	Loss 0.7334 (0.8479)	CeLoss 0.0908 (0.1019)	SegCLSLoss 0.0164 (0.0163)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1043 (0.1163)	MaskBCELoss 0.0374 (0.0362)	MaskDICELoss 0.0669 (0.0801)
+Epoch: [0][117/500]	Time 93.671 (93.674)	Loss 0.9614 (0.8460)	CeLoss 0.0981 (0.1028)	SegCLSLoss 0.0159 (0.0171)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1188 (0.1183)	MaskBCELoss 0.0197 (0.0395)	MaskDICELoss 0.0990 (0.0788)
+Epoch: [0][118/500]	Time 95.733 (95.724)	Loss 0.7578 (0.8728)	CeLoss 0.1157 (0.0996)	SegCLSLoss 0.0140 (0.0164)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0989 (0.1213)	MaskBCELoss 0.0296 (0.0383)	MaskDICELoss 0.0694 (0.0830)
+Epoch: [0][119/500]	Time 78.955 (78.959)	Loss 0.9468 (0.8339)	CeLoss 0.1240 (0.1024)	SegCLSLoss 0.0167 (0.0157)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1298 (0.1118)	MaskBCELoss 0.0415 (0.0323)	MaskDICELoss 0.0882 (0.0795)
+Epoch: [0][120/500]	Time 75.754 (75.755)	Loss 0.8499 (0.8684)	CeLoss 0.1045 (0.1047)	SegCLSLoss 0.0148 (0.0166)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1164 (0.1169)	MaskBCELoss 0.0360 (0.0341)	MaskDICELoss 0.0805 (0.0828)
+Epoch: [0][121/500]	Time 74.231 (74.229)	Loss 0.8390 (0.8646)	CeLoss 0.1025 (0.0962)	SegCLSLoss 0.0154 (0.0141)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1199 (0.1192)	MaskBCELoss 0.0422 (0.0356)	MaskDICELoss 0.0777 (0.0836)
+Epoch: [0][122/500]	Time 81.277 (81.277)	Loss 0.8476 (0.8667)	CeLoss 0.0869 (0.0943)	SegCLSLoss 0.0151 (0.0131)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1126 (0.1176)	MaskBCELoss 0.0283 (0.0325)	MaskDICELoss 0.0842 (0.0851)
+Epoch: [0][123/500]	Time 73.384 (73.384)	Loss 0.8511 (0.8521)	CeLoss 0.1079 (0.0989)	SegCLSLoss 0.0120 (0.0127)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1231 (0.1154)	MaskBCELoss 0.0443 (0.0325)	MaskDICELoss 0.0788 (0.0829)
+Epoch: [0][124/500]	Time 73.368 (73.368)	Loss 0.8588 (0.8554)	CeLoss 0.0972 (0.0984)	SegCLSLoss 0.0143 (0.0141)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1080 (0.1153)	MaskBCELoss 0.0218 (0.0323)	MaskDICELoss 0.0862 (0.0830)
+Epoch: [0][125/500]	Time 72.793 (72.792)	Loss 0.8942 (0.8656)	CeLoss 0.0918 (0.0937)	SegCLSLoss 0.0121 (0.0142)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1295 (0.1195)	MaskBCELoss 0.0431 (0.0355)	MaskDICELoss 0.0865 (0.0841)
+Epoch: [0][126/500]	Time 75.208 (75.207)	Loss 0.7073 (0.8668)	CeLoss 0.1064 (0.0998)	SegCLSLoss 0.0159 (0.0147)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0912 (0.1169)	MaskBCELoss 0.0267 (0.0330)	MaskDICELoss 0.0645 (0.0840)
+Epoch: [0][127/500]	Time 72.922 (72.919)	Loss 0.7744 (0.8470)	CeLoss 0.1069 (0.0938)	SegCLSLoss 0.0135 (0.0127)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1045 (0.1148)	MaskBCELoss 0.0327 (0.0317)	MaskDICELoss 0.0718 (0.0831)
+Epoch: [0][128/500]	Time 74.758 (74.745)	Loss 0.8834 (0.8622)	CeLoss 0.0908 (0.1002)	SegCLSLoss 0.0127 (0.0143)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1223 (0.1207)	MaskBCELoss 0.0352 (0.0387)	MaskDICELoss 0.0871 (0.0820)
+Epoch: [0][129/500]	Time 80.992 (81.005)	Loss 0.8918 (0.8627)	CeLoss 0.0977 (0.0916)	SegCLSLoss 0.0135 (0.0135)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1119 (0.1155)	MaskBCELoss 0.0214 (0.0300)	MaskDICELoss 0.0905 (0.0855)
+Epoch: [0][130/500]	Time 80.817 (80.818)	Loss 0.9257 (0.8607)	CeLoss 0.1064 (0.0954)	SegCLSLoss 0.0099 (0.0131)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1210 (0.1202)	MaskBCELoss 0.0282 (0.0371)	MaskDICELoss 0.0929 (0.0831)
+Epoch: [0][131/500]	Time 73.409 (73.407)	Loss 0.8726 (0.8309)	CeLoss 0.0962 (0.0952)	SegCLSLoss 0.0134 (0.0099)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1459 (0.1215)	MaskBCELoss 0.0695 (0.0427)	MaskDICELoss 0.0764 (0.0788)
+Epoch: [0][132/500]	Time 86.651 (86.651)	Loss 0.9116 (0.8711)	CeLoss 0.1162 (0.0909)	SegCLSLoss 0.0095 (0.0096)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1302 (0.1265)	MaskBCELoss 0.0442 (0.0418)	MaskDICELoss 0.0860 (0.0847)
+Epoch: [0][133/500]	Time 74.458 (74.666)	Loss 0.7932 (0.8236)	CeLoss 0.0752 (0.0863)	SegCLSLoss 0.0071 (0.0099)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1208 (0.1217)	MaskBCELoss 0.0439 (0.0427)	MaskDICELoss 0.0770 (0.0790)
+Epoch: [0][134/500]	Time 81.895 (81.685)	Loss 0.9102 (0.8537)	CeLoss 0.1084 (0.0906)	SegCLSLoss 0.0075 (0.0095)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1253 (0.1241)	MaskBCELoss 0.0360 (0.0415)	MaskDICELoss 0.0893 (0.0827)
+Epoch: [0][135/500]	Time 73.045 (73.046)	Loss 0.8260 (0.8395)	CeLoss 0.1084 (0.0872)	SegCLSLoss 0.0091 (0.0105)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1187 (0.1231)	MaskBCELoss 0.0417 (0.0422)	MaskDICELoss 0.0770 (0.0809)
+Epoch: [0][136/500]	Time 82.584 (82.584)	Loss 0.7785 (0.8539)	CeLoss 0.0825 (0.0865)	SegCLSLoss 0.0089 (0.0096)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1166 (0.1257)	MaskBCELoss 0.0423 (0.0429)	MaskDICELoss 0.0742 (0.0828)
+Epoch: [0][137/500]	Time 74.190 (74.190)	Loss 0.8180 (0.8218)	CeLoss 0.0732 (0.0902)	SegCLSLoss 0.0125 (0.0099)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1245 (0.1196)	MaskBCELoss 0.0461 (0.0408)	MaskDICELoss 0.0784 (0.0788)
+Epoch: [0][138/500]	Time 78.423 (78.423)	Loss 0.8732 (0.8493)	CeLoss 0.0947 (0.0961)	SegCLSLoss 0.0088 (0.0100)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1310 (0.1231)	MaskBCELoss 0.0479 (0.0420)	MaskDICELoss 0.0831 (0.0811)
+Epoch: [0][139/500]	Time 80.978 (80.977)	Loss 0.6998 (0.8377)	CeLoss 0.1299 (0.0942)	SegCLSLoss 0.0082 (0.0095)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1019 (0.1223)	MaskBCELoss 0.0437 (0.0424)	MaskDICELoss 0.0583 (0.0800)
+Epoch: [0][140/500]	Time 88.555 (88.556)	Loss 0.8688 (0.8365)	CeLoss 0.1006 (0.0945)	SegCLSLoss 0.0092 (0.0095)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1205 (0.1229)	MaskBCELoss 0.0357 (0.0433)	MaskDICELoss 0.0848 (0.0796)
+Epoch: [0][141/500]	Time 80.765 (80.763)	Loss 0.8380 (0.8308)	CeLoss 0.0903 (0.0864)	SegCLSLoss 0.0078 (0.0078)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1182 (0.1157)	MaskBCELoss 0.0355 (0.0329)	MaskDICELoss 0.0827 (0.0829)
+Epoch: [0][142/500]	Time 83.971 (83.971)	Loss 0.8407 (0.8288)	CeLoss 0.0898 (0.0808)	SegCLSLoss 0.0055 (0.0080)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1127 (0.1147)	MaskBCELoss 0.0270 (0.0309)	MaskDICELoss 0.0857 (0.0838)
+Epoch: [0][143/500]	Time 74.274 (74.274)	Loss 0.7330 (0.8326)	CeLoss 0.0894 (0.0875)	SegCLSLoss 0.0053 (0.0080)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1079 (0.1148)	MaskBCELoss 0.0383 (0.0316)	MaskDICELoss 0.0695 (0.0832)
+Epoch: [0][144/500]	Time 78.216 (78.216)	Loss 0.8498 (0.7940)	CeLoss 0.0806 (0.0803)	SegCLSLoss 0.0135 (0.0087)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1126 (0.1101)	MaskBCELoss 0.0265 (0.0307)	MaskDICELoss 0.0861 (0.0794)
+Epoch: [0][145/500]	Time 92.053 (92.057)	Loss 0.9980 (0.8299)	CeLoss 0.1357 (0.0912)	SegCLSLoss 0.0088 (0.0083)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1512 (0.1141)	MaskBCELoss 0.0607 (0.0318)	MaskDICELoss 0.0904 (0.0823)
+Epoch: [0][146/500]	Time 80.722 (80.717)	Loss 0.7364 (0.8063)	CeLoss 0.1069 (0.0837)	SegCLSLoss 0.0096 (0.0078)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0941 (0.1108)	MaskBCELoss 0.0238 (0.0298)	MaskDICELoss 0.0703 (0.0809)
+Epoch: [0][147/500]	Time 86.345 (86.344)	Loss 0.7544 (0.8284)	CeLoss 0.0605 (0.0891)	SegCLSLoss 0.0101 (0.0074)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1010 (0.1131)	MaskBCELoss 0.0223 (0.0301)	MaskDICELoss 0.0786 (0.0830)
+Epoch: [0][148/500]	Time 76.044 (76.044)	Loss 0.8755 (0.8432)	CeLoss 0.0747 (0.0820)	SegCLSLoss 0.0089 (0.0089)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1226 (0.1170)	MaskBCELoss 0.0329 (0.0321)	MaskDICELoss 0.0897 (0.0849)
+Epoch: [0][149/500]	Time 80.568 (80.568)	Loss 0.8343 (0.8325)	CeLoss 0.0713 (0.0833)	SegCLSLoss 0.0056 (0.0085)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1149 (0.1127)	MaskBCELoss 0.0280 (0.0283)	MaskDICELoss 0.0870 (0.0845)
+Epoch: [0][150/500]	Time 85.050 (85.051)	Loss 0.8436 (0.8325)	CeLoss 0.0840 (0.0885)	SegCLSLoss 0.0082 (0.0070)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1041 (0.1156)	MaskBCELoss 0.0150 (0.0325)	MaskDICELoss 0.0891 (0.0831)
+Epoch: [0][151/500]	Time 77.712 (77.707)	Loss 0.8860 (0.8365)	CeLoss 0.0620 (0.0826)	SegCLSLoss 0.0114 (0.0078)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1163 (0.1195)	MaskBCELoss 0.0216 (0.0362)	MaskDICELoss 0.0947 (0.0832)
+Epoch: [0][152/500]	Time 81.306 (81.309)	Loss 0.7863 (0.8280)	CeLoss 0.0503 (0.0814)	SegCLSLoss 0.0126 (0.0089)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1143 (0.1183)	MaskBCELoss 0.0340 (0.0363)	MaskDICELoss 0.0803 (0.0820)
+Epoch: [0][153/500]	Time 73.864 (73.862)	Loss 0.6660 (0.8286)	CeLoss 0.0962 (0.0879)	SegCLSLoss 0.0060 (0.0071)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0967 (0.1194)	MaskBCELoss 0.0360 (0.0382)	MaskDICELoss 0.0608 (0.0813)
+Epoch: [0][154/500]	Time 74.152 (74.152)	Loss 0.8360 (0.8390)	CeLoss 0.0718 (0.0839)	SegCLSLoss 0.0087 (0.0076)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1178 (0.1203)	MaskBCELoss 0.0326 (0.0370)	MaskDICELoss 0.0852 (0.0832)
+Epoch: [0][155/500]	Time 74.121 (74.120)	Loss 0.9040 (0.8146)	CeLoss 0.1006 (0.0820)	SegCLSLoss 0.0065 (0.0075)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1220 (0.1184)	MaskBCELoss 0.0311 (0.0382)	MaskDICELoss 0.0910 (0.0802)
+Epoch: [0][156/500]	Time 81.085 (81.086)	Loss 0.8374 (0.8075)	CeLoss 0.0806 (0.0758)	SegCLSLoss 0.0063 (0.0082)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1207 (0.1168)	MaskBCELoss 0.0368 (0.0366)	MaskDICELoss 0.0838 (0.0802)
+Epoch: [0][157/500]	Time 73.630 (73.629)	Loss 0.8661 (0.8117)	CeLoss 0.0947 (0.0847)	SegCLSLoss 0.0073 (0.0073)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1239 (0.1175)	MaskBCELoss 0.0390 (0.0379)	MaskDICELoss 0.0848 (0.0796)
+Epoch: [0][158/500]	Time 74.116 (74.115)	Loss 0.8402 (0.8009)	CeLoss 0.0791 (0.0813)	SegCLSLoss 0.0127 (0.0091)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1192 (0.1158)	MaskBCELoss 0.0364 (0.0375)	MaskDICELoss 0.0828 (0.0783)
+Epoch: [0][159/500]	Time 73.896 (73.896)	Loss 0.9522 (0.8304)	CeLoss 0.1396 (0.0857)	SegCLSLoss 0.0075 (0.0078)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1060 (0.1193)	MaskBCELoss 0.0084 (0.0376)	MaskDICELoss 0.0976 (0.0817)
+Epoch: [0][160/500]	Time 73.603 (73.605)	Loss 0.9063 (0.8111)	CeLoss 0.0850 (0.0843)	SegCLSLoss 0.0076 (0.0081)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1238 (0.1179)	MaskBCELoss 0.0307 (0.0387)	MaskDICELoss 0.0931 (0.0792)
+Epoch: [0][161/500]	Time 73.927 (73.925)	Loss 0.7461 (0.8220)	CeLoss 0.0684 (0.0844)	SegCLSLoss 0.0065 (0.0061)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1218 (0.1181)	MaskBCELoss 0.0516 (0.0365)	MaskDICELoss 0.0702 (0.0815)
+Epoch: [0][162/500]	Time 72.797 (72.797)	Loss 0.8502 (0.8401)	CeLoss 0.0698 (0.0857)	SegCLSLoss 0.0055 (0.0050)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1163 (0.1196)	MaskBCELoss 0.0269 (0.0354)	MaskDICELoss 0.0895 (0.0842)
+Epoch: [0][163/500]	Time 74.725 (74.724)	Loss 0.7748 (0.8223)	CeLoss 0.0527 (0.0829)	SegCLSLoss 0.0082 (0.0059)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1105 (0.1146)	MaskBCELoss 0.0298 (0.0316)	MaskDICELoss 0.0808 (0.0831)
+Epoch: [0][164/500]	Time 74.129 (74.128)	Loss 0.7683 (0.8041)	CeLoss 0.0757 (0.0830)	SegCLSLoss 0.0066 (0.0055)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0990 (0.1134)	MaskBCELoss 0.0187 (0.0328)	MaskDICELoss 0.0802 (0.0805)
+Epoch: [0][165/500]	Time 80.391 (80.392)	Loss 0.7863 (0.8131)	CeLoss 0.0610 (0.0773)	SegCLSLoss 0.0042 (0.0062)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1092 (0.1132)	MaskBCELoss 0.0262 (0.0303)	MaskDICELoss 0.0831 (0.0828)
+Epoch: [0][166/500]	Time 72.009 (72.008)	Loss 0.8044 (0.8070)	CeLoss 0.0535 (0.0789)	SegCLSLoss 0.0064 (0.0057)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1229 (0.1160)	MaskBCELoss 0.0409 (0.0352)	MaskDICELoss 0.0820 (0.0808)
+Epoch: [0][167/500]	Time 82.108 (82.108)	Loss 0.7085 (0.7861)	CeLoss 0.0640 (0.0698)	SegCLSLoss 0.0053 (0.0077)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1014 (0.1146)	MaskBCELoss 0.0295 (0.0359)	MaskDICELoss 0.0719 (0.0786)
+Epoch: [0][168/500]	Time 75.166 (75.166)	Loss 0.8588 (0.7960)	CeLoss 0.0845 (0.0834)	SegCLSLoss 0.0054 (0.0063)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1156 (0.1106)	MaskBCELoss 0.0269 (0.0308)	MaskDICELoss 0.0887 (0.0798)
+Epoch: [0][169/500]	Time 81.221 (81.211)	Loss 0.8461 (0.7963)	CeLoss 0.0728 (0.0713)	SegCLSLoss 0.0058 (0.0065)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1167 (0.1130)	MaskBCELoss 0.0287 (0.0320)	MaskDICELoss 0.0881 (0.0810)
+Epoch: [0][170/500]	Time 94.636 (94.647)	Loss 0.7727 (0.7971)	CeLoss 0.1172 (0.0766)	SegCLSLoss 0.0056 (0.0077)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1087 (0.1109)	MaskBCELoss 0.0374 (0.0304)	MaskDICELoss 0.0712 (0.0805)
+Epoch: [0][171/500]	Time 102.251 (102.249)	Loss 0.7978 (0.7912)	CeLoss 0.0806 (0.0799)	SegCLSLoss 0.0057 (0.0059)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0995 (0.1070)	MaskBCELoss 0.0149 (0.0261)	MaskDICELoss 0.0845 (0.0809)
+Epoch: [0][172/500]	Time 83.189 (83.188)	Loss 0.7350 (0.7675)	CeLoss 0.0981 (0.0755)	SegCLSLoss 0.0058 (0.0058)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0988 (0.1082)	MaskBCELoss 0.0275 (0.0308)	MaskDICELoss 0.0713 (0.0774)
+Epoch: [0][173/500]	Time 76.362 (76.361)	Loss 0.7395 (0.7946)	CeLoss 0.0713 (0.0767)	SegCLSLoss 0.0041 (0.0054)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1089 (0.1118)	MaskBCELoss 0.0352 (0.0312)	MaskDICELoss 0.0737 (0.0806)
+Epoch: [0][174/500]	Time 78.754 (78.754)	Loss 0.7901 (0.7865)	CeLoss 0.0977 (0.0795)	SegCLSLoss 0.0052 (0.0051)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1007 (0.1092)	MaskBCELoss 0.0206 (0.0295)	MaskDICELoss 0.0801 (0.0797)
+Epoch: [0][175/500]	Time 76.035 (76.029)	Loss 0.7159 (0.7895)	CeLoss 0.0684 (0.0803)	SegCLSLoss 0.0050 (0.0053)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0993 (0.1078)	MaskBCELoss 0.0261 (0.0273)	MaskDICELoss 0.0731 (0.0805)
+Epoch: [0][176/500]	Time 94.380 (94.384)	Loss 0.8236 (0.7967)	CeLoss 0.0674 (0.0759)	SegCLSLoss 0.0058 (0.0057)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1151 (0.1096)	MaskBCELoss 0.0293 (0.0279)	MaskDICELoss 0.0858 (0.0817)
+Epoch: [0][177/500]	Time 81.203 (81.203)	Loss 0.7625 (0.7824)	CeLoss 0.0723 (0.0741)	SegCLSLoss 0.0037 (0.0055)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1029 (0.1101)	MaskBCELoss 0.0235 (0.0306)	MaskDICELoss 0.0795 (0.0795)
+Epoch: [0][178/500]	Time 83.707 (83.706)	Loss 0.7482 (0.8162)	CeLoss 0.0830 (0.0809)	SegCLSLoss 0.0067 (0.0055)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1035 (0.1142)	MaskBCELoss 0.0293 (0.0315)	MaskDICELoss 0.0741 (0.0826)
+Epoch: [0][179/500]	Time 77.903 (77.902)	Loss 0.8763 (0.8177)	CeLoss 0.0967 (0.0775)	SegCLSLoss 0.0070 (0.0060)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1223 (0.1136)	MaskBCELoss 0.0356 (0.0302)	MaskDICELoss 0.0868 (0.0835)
+Epoch: [0][180/500]	Time 73.225 (73.227)	Loss 0.8589 (0.8056)	CeLoss 0.1069 (0.0889)	SegCLSLoss 0.0043 (0.0053)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1068 (0.1106)	MaskBCELoss 0.0186 (0.0298)	MaskDICELoss 0.0883 (0.0808)
+Epoch: [0][181/500]	Time 73.585 (73.584)	Loss 0.8209 (0.7916)	CeLoss 0.1196 (0.0833)	SegCLSLoss 0.0051 (0.0058)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1234 (0.1144)	MaskBCELoss 0.0494 (0.0365)	MaskDICELoss 0.0741 (0.0780)
+Epoch: [0][182/500]	Time 73.152 (73.151)	Loss 0.8618 (0.7882)	CeLoss 0.0728 (0.0908)	SegCLSLoss 0.0056 (0.0053)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1169 (0.1124)	MaskBCELoss 0.0262 (0.0355)	MaskDICELoss 0.0907 (0.0770)
+Epoch: [0][183/500]	Time 73.545 (73.545)	Loss 0.8447 (0.8095)	CeLoss 0.0708 (0.0833)	SegCLSLoss 0.0055 (0.0057)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1261 (0.1172)	MaskBCELoss 0.0409 (0.0372)	MaskDICELoss 0.0852 (0.0800)
+Epoch: [0][184/500]	Time 73.504 (73.504)	Loss 0.8228 (0.7984)	CeLoss 0.0620 (0.0838)	SegCLSLoss 0.0049 (0.0056)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1210 (0.1152)	MaskBCELoss 0.0362 (0.0364)	MaskDICELoss 0.0848 (0.0788)
+Epoch: [0][185/500]	Time 73.595 (73.595)	Loss 0.8172 (0.7575)	CeLoss 0.0781 (0.0785)	SegCLSLoss 0.0057 (0.0056)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1240 (0.1131)	MaskBCELoss 0.0440 (0.0394)	MaskDICELoss 0.0800 (0.0736)
+Epoch: [0][186/500]	Time 80.639 (80.639)	Loss 0.7888 (0.7574)	CeLoss 0.1118 (0.0798)	SegCLSLoss 0.0045 (0.0058)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1026 (0.1069)	MaskBCELoss 0.0254 (0.0315)	MaskDICELoss 0.0772 (0.0754)
+Epoch: [0][187/500]	Time 74.504 (74.503)	Loss 0.9112 (0.7962)	CeLoss 0.0986 (0.0776)	SegCLSLoss 0.0045 (0.0053)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1403 (0.1155)	MaskBCELoss 0.0532 (0.0360)	MaskDICELoss 0.0871 (0.0795)
+Epoch: [0][188/500]	Time 73.128 (73.128)	Loss 0.7518 (0.7768)	CeLoss 0.0713 (0.0790)	SegCLSLoss 0.0047 (0.0062)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1137 (0.1108)	MaskBCELoss 0.0398 (0.0334)	MaskDICELoss 0.0739 (0.0773)
+Epoch: [0][189/500]	Time 74.718 (74.717)	Loss 0.7446 (0.7827)	CeLoss 0.0786 (0.0757)	SegCLSLoss 0.0054 (0.0058)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1153 (0.1110)	MaskBCELoss 0.0445 (0.0321)	MaskDICELoss 0.0708 (0.0789)
+Epoch: [0][190/500]	Time 80.504 (80.506)	Loss 0.6944 (0.7724)	CeLoss 0.0815 (0.0796)	SegCLSLoss 0.0056 (0.0058)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1041 (0.1094)	MaskBCELoss 0.0386 (0.0324)	MaskDICELoss 0.0655 (0.0771)
+Epoch: [0][191/500]	Time 81.468 (81.465)	Loss 0.8004 (0.7889)	CeLoss 0.1182 (0.0819)	SegCLSLoss 0.0052 (0.0047)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1132 (0.1141)	MaskBCELoss 0.0389 (0.0358)	MaskDICELoss 0.0743 (0.0782)
+Epoch: [0][192/500]	Time 78.803 (78.804)	Loss 0.8169 (0.7647)	CeLoss 0.0649 (0.0740)	SegCLSLoss 0.0063 (0.0057)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1193 (0.1089)	MaskBCELoss 0.0358 (0.0320)	MaskDICELoss 0.0835 (0.0769)
+Epoch: [0][193/500]	Time 75.444 (75.442)	Loss 0.7978 (0.7495)	CeLoss 0.1084 (0.0735)	SegCLSLoss 0.0049 (0.0052)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1056 (0.1065)	MaskBCELoss 0.0276 (0.0311)	MaskDICELoss 0.0780 (0.0754)
+Epoch: [0][194/500]	Time 80.959 (80.961)	Loss 0.8055 (0.7733)	CeLoss 0.0613 (0.0724)	SegCLSLoss 0.0045 (0.0049)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1319 (0.1115)	MaskBCELoss 0.0534 (0.0336)	MaskDICELoss 0.0785 (0.0780)
+Epoch: [0][195/500]	Time 78.336 (78.336)	Loss 0.7899 (0.7895)	CeLoss 0.0393 (0.0717)	SegCLSLoss 0.0072 (0.0051)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1135 (0.1096)	MaskBCELoss 0.0286 (0.0282)	MaskDICELoss 0.0849 (0.0814)
+Epoch: [0][196/500]	Time 76.566 (76.565)	Loss 0.8814 (0.7843)	CeLoss 0.0811 (0.0805)	SegCLSLoss 0.0043 (0.0052)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1160 (0.1084)	MaskBCELoss 0.0226 (0.0289)	MaskDICELoss 0.0933 (0.0795)
+Epoch: [0][197/500]	Time 84.733 (84.733)	Loss 0.8396 (0.7863)	CeLoss 0.0850 (0.0792)	SegCLSLoss 0.0048 (0.0052)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1146 (0.1114)	MaskBCELoss 0.0287 (0.0325)	MaskDICELoss 0.0860 (0.0790)
+Epoch: [0][198/500]	Time 85.434 (85.433)	Loss 0.7426 (0.7815)	CeLoss 0.0859 (0.0805)	SegCLSLoss 0.0046 (0.0050)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1137 (0.1137)	MaskBCELoss 0.0437 (0.0364)	MaskDICELoss 0.0700 (0.0773)
+Epoch: [0][199/500]	Time 81.002 (81.001)	Loss 0.8094 (0.7727)	CeLoss 0.0513 (0.0739)	SegCLSLoss 0.0044 (0.0051)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1117 (0.1115)	MaskBCELoss 0.0241 (0.0339)	MaskDICELoss 0.0877 (0.0776)
+[2025-08-06 06:11:29,775] [INFO] [logging.py:96:log_dist] [Rank 0] step=20, skipped=0, lr=[0.00029716935483870964], mom=[(0.9, 0.95)]
+[2025-08-06 06:11:29,786] [INFO] [timer.py:215:stop] epoch=0/micro_step=200/global_step=20, RunningAvgSamplesPerSec=1.5238974224263422, CurrSamplesPerSec=1.517087870930571, MemAllocated=34.24GB, MaxMemAllocated=48.53GB
+Epoch: [0][200/500]	Time 72.653 (72.654)	Loss 0.7038 (0.7458)	CeLoss 0.0742 (0.0786)	SegCLSLoss 0.0041 (0.0047)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0952 (0.1059)	MaskBCELoss 0.0233 (0.0316)	MaskDICELoss 0.0718 (0.0744)
+Epoch: [0][201/500]	Time 74.051 (74.048)	Loss 0.7407 (0.7757)	CeLoss 0.0732 (0.0778)	SegCLSLoss 0.0030 (0.0042)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1083 (0.1066)	MaskBCELoss 0.0341 (0.0272)	MaskDICELoss 0.0742 (0.0794)
+Epoch: [0][202/500]	Time 74.242 (74.243)	Loss 0.7397 (0.7645)	CeLoss 0.0757 (0.0734)	SegCLSLoss 0.0063 (0.0042)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1044 (0.1046)	MaskBCELoss 0.0307 (0.0257)	MaskDICELoss 0.0738 (0.0789)
+Epoch: [0][203/500]	Time 80.289 (80.291)	Loss 0.7453 (0.7879)	CeLoss 0.1045 (0.0747)	SegCLSLoss 0.0041 (0.0042)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0978 (0.1081)	MaskBCELoss 0.0249 (0.0266)	MaskDICELoss 0.0729 (0.0814)
+Epoch: [0][204/500]	Time 74.647 (74.644)	Loss 0.7694 (0.7526)	CeLoss 0.0845 (0.0722)	SegCLSLoss 0.0062 (0.0044)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1044 (0.1088)	MaskBCELoss 0.0271 (0.0331)	MaskDICELoss 0.0773 (0.0757)
+Epoch: [0][205/500]	Time 81.577 (81.576)	Loss 0.7227 (0.7875)	CeLoss 0.0752 (0.0812)	SegCLSLoss 0.0042 (0.0041)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0969 (0.1071)	MaskBCELoss 0.0226 (0.0264)	MaskDICELoss 0.0743 (0.0807)

@@ -1,0 +1,869 @@
+
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/transformer.py:306: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:16<00:00,  5.50s/it]
+Some weights of PLUMForCausalLM were not initialized from the model checkpoint at liuhaotian/llava-llama-2-13b-chat-lightning-preview and are newly initialized: ['bio_encoder.encoder.layers.0.norm1.bias', 'bio_encoder.encoder.layers.0.linear1.bias', 'bio_encoder.encoder.layers.0.norm1.weight', 'bio_encoder.encoder.layers.0.self_attn.in_proj_bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.bias', 'bio_encoder.encoder.layers.0.self_attn.in_proj_weight', 'bio_encoder.encoder.layers.0.self_attn.out_proj.weight', 'bio_encoder.encoder.layers.0.linear1.weight', 'bio_encoder.encoder.layers.0.norm2.weight', 'bio_encoder.encoder.layers.0.linear2.weight', 'bio_encoder.encoder.layers.0.linear2.bias', 'bio_encoder.encoder.layers.0.norm2.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+trainable params: 6,553,600 || all params: 14,151,578,931 || trainable%: 0.0463100268313092
+>> model.config.train_mask_prompt_encoder:  True
+n:  base_model.model.model.embed_tokens.weight p.shape:  torch.Size([32002, 5120])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.0.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.1.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.2.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.3.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.not_a_point_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.0.weight p.shape:  torch.Size([4, 1, 2, 2])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.0.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.1.weight p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.1.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.3.weight p.shape:  torch.Size([16, 4, 2, 2])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.3.bias p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.4.weight p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.4.bias p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.6.weight p.shape:  torch.Size([256, 16, 1, 1])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.6.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.prompt_encoder.no_mask_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_token.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.mask_tokens.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.weight p.shape:  torch.Size([256, 64, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.weight p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.weight p.shape:  torch.Size([64, 32, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.text_hidden_fcs.0.0.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.model.text_hidden_fcs.0.0.bias p.shape:  torch.Size([5120])
+n:  base_model.model.model.text_hidden_fcs.0.2.weight p.shape:  torch.Size([256, 5120])
+n:  base_model.model.model.text_hidden_fcs.0.2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.token_to_mask_fcs.0.0.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.model.token_to_mask_fcs.0.0.bias p.shape:  torch.Size([5120])
+n:  base_model.model.model.token_to_mask_fcs.0.2.weight p.shape:  torch.Size([3, 5120])
+n:  base_model.model.model.token_to_mask_fcs.0.2.bias p.shape:  torch.Size([3])
+n:  base_model.model.lm_head.weight p.shape:  torch.Size([32002, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_weight p.shape:  torch.Size([15360, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_bias p.shape:  torch.Size([15360])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.weight p.shape:  torch.Size([2048, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.weight p.shape:  torch.Size([5120, 2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.weight p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.weight p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.bias p.shape:  torch.Size([5120])
+ade20k:  20210
+cocostuff:  118287
+loading annotations into memory...
+Done (t=0.60s)
+creating index...
+index created!
+pascal_part:  4366
+loading annotations into memory...
+Done (t=8.19s)
+creating index...
+index created!
+paco_lvis:  45790
+mapillary:  18000
+loading dataset refclef into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refclef/refs(unc).p
+creating index...
+index created.
+DONE (t=2.79s)
+dataset refclef (refs unc) (train split) has 17978 images and 99523 annotations.
+loading dataset refcoco into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco/refs(unc).p
+creating index...
+index created.
+DONE (t=5.63s)
+dataset refcoco (refs unc) (train split) has 16994 images and 196771 annotations.
+loading dataset refcoco+ into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco+/refs(unc).p
+creating index...
+index created.
+DONE (t=6.44s)
+dataset refcoco+ (refs unc) (train split) has 16992 images and 196737 annotations.
+loading dataset refcocog into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcocog/refs(umd).p
+creating index...
+index created.
+DONE (t=3.40s)
+dataset refcocog (refs umd) (train split) has 21899 images and 208960 annotations.
+vqa_data:  157712
+number of reason_seg samples:  239
+len(self.img_to_explanation):  239
+Training with 30000 examples.
+Validating with 200 examples.
+[2025-05-06 16:06:25,730] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.9.5, git-hash=unknown, git-branch=unknown
+[2025-05-06 16:06:25,730] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2025-05-06 16:06:25,730] [INFO] [comm.py:594:init_distributed] cdb=None
+[2025-05-06 16:06:25,730] [INFO] [comm.py:625:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2025-05-06 16:06:40,812] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+Using /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118/fused_adam/build.ninja...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/utils/cpp_extension.py:1967: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation.
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Building extension module fused_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Time to load fused_adam op: 0.6194009780883789 seconds
+[2025-05-06 16:06:45,931] [INFO] [logging.py:96:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+[2025-05-06 16:06:46,172] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = FusedAdam
+[2025-05-06 16:06:46,172] [INFO] [utils.py:54:is_zero_supported_optimizer] Checking ZeRO support for optimizer=FusedAdam type=<class 'deepspeed.ops.adam.fused_adam.FusedAdam'>
+[2025-05-06 16:06:46,172] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 2 optimizer
+[2025-05-06 16:06:46,172] [INFO] [stage_1_and_2.py:133:__init__] Reduce bucket size 500000000
+[2025-05-06 16:06:46,172] [INFO] [stage_1_and_2.py:134:__init__] Allgather bucket size 500000000
+[2025-05-06 16:06:46,172] [INFO] [stage_1_and_2.py:135:__init__] CPU Offload: False
+[2025-05-06 16:06:46,173] [INFO] [stage_1_and_2.py:136:__init__] Round robin gradient partitioning: False
+Rank: 0 partition count [1] and sizes[(517961268, False)]
+Loading extension module fused_adam...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/ops/adam/fused_adam.py:96: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/tensor/python_tensor.cpp:78.)
+  self._dummy_overflow_buf = get_accelerator().IntTensor([0])
+[2025-05-06 16:06:49,832] [INFO] [utils.py:785:see_memory_usage] Before initializing optimizer states
+[2025-05-06 16:06:49,833] [INFO] [utils.py:786:see_memory_usage] MA 28.49 GB         Max_MA 29.45 GB         CA 29.59 GB         Max_CA 30 GB
+[2025-05-06 16:06:49,834] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 265.39 GB, percent = 26.3%
+[2025-05-06 16:06:52,940] [INFO] [utils.py:785:see_memory_usage] After initializing optimizer states
+[2025-05-06 16:06:52,941] [INFO] [utils.py:786:see_memory_usage] MA 32.35 GB         Max_MA 34.28 GB         CA 35.38 GB         Max_CA 35 GB
+[2025-05-06 16:06:52,941] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 265.79 GB, percent = 26.4%
+[2025-05-06 16:06:52,941] [INFO] [stage_1_and_2.py:488:__init__] optimizer state initialized
+[2025-05-06 16:06:55,998] [INFO] [utils.py:785:see_memory_usage] After initializing ZeRO optimizer
+[2025-05-06 16:06:55,999] [INFO] [utils.py:786:see_memory_usage] MA 32.35 GB         Max_MA 32.35 GB         CA 35.38 GB         Max_CA 35 GB
+[2025-05-06 16:06:55,999] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 265.85 GB, percent = 26.4%
+[2025-05-06 16:06:56,005] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = adamw
+[2025-05-06 16:06:56,006] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2025-05-06 16:06:56,006] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x7f2253a00070>
+[2025-05-06 16:06:56,006] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0003], mom=[(0.9, 0.95)]
+[2025-05-06 16:06:56,009] [INFO] [config.py:960:print] DeepSpeedEngine configuration:
+[2025-05-06 16:06:56,009] [INFO] [config.py:964:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2025-05-06 16:06:56,009] [INFO] [config.py:964:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-05-06 16:06:56,009] [INFO] [config.py:964:print]   amp_enabled .................. False
+[2025-05-06 16:06:56,009] [INFO] [config.py:964:print]   amp_params ................... False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   bfloat16_enabled ............. True
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   checkpoint_parallel_write_pipeline  False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   checkpoint_tag_validation_enabled  True
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   checkpoint_tag_validation_fail  False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f2253a00550>
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   communication_data_type ...... None
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   curriculum_enabled_legacy .... False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   curriculum_params_legacy ..... False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   data_efficiency_enabled ...... False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   dataloader_drop_last ......... False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   disable_allgather ............ False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   dump_state ................... False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   dynamic_loss_scale_args ...... None
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   eigenvalue_enabled ........... False
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   eigenvalue_gas_boundary_resolution  1
+[2025-05-06 16:06:56,010] [INFO] [config.py:964:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   eigenvalue_layer_num ......... 0
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   eigenvalue_max_iter .......... 100
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   eigenvalue_stability ......... 1e-06
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   eigenvalue_tol ............... 0.01
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   eigenvalue_verbose ........... False
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   elasticity_enabled ........... False
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   fp16_auto_cast ............... None
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   fp16_enabled ................. False
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   fp16_master_weights_and_gradients  False
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   global_rank .................. 0
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   grad_accum_dtype ............. None
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   gradient_accumulation_steps .. 10
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   gradient_clipping ............ 1.0
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   gradient_predivide_factor .... 1.0
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   initial_dynamic_scale ........ 1
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   load_universal_checkpoint .... False
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   loss_scale ................... 1.0
+[2025-05-06 16:06:56,011] [INFO] [config.py:964:print]   memory_breakdown ............. False
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   mics_hierarchial_params_gather  False
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   mics_shard_size .............. -1
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   optimizer_legacy_fusion ...... False
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   optimizer_name ............... adamw
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   optimizer_params ............. {'lr': 0.0003, 'weight_decay': 0.0, 'betas': (0.9, 0.95)}
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   pld_enabled .................. False
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   pld_params ................... False
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   prescale_gradients ........... False
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   scheduler_name ............... WarmupDecayLR
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   scheduler_params ............. {'total_num_steps': 12500, 'warmup_min_lr': 0, 'warmup_max_lr': 0.0003, 'warmup_num_steps': 100, 'warmup_type': 'linear'}
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   sparse_attention ............. None
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   sparse_gradients_enabled ..... False
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   steps_per_print .............. 10
+[2025-05-06 16:06:56,012] [INFO] [config.py:964:print]   train_batch_size ............. 60
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   train_micro_batch_size_per_gpu  6
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   use_node_local_storage ....... False
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   wall_clock_breakdown ......... False
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   world_size ................... 1
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   zero_allow_untested_optimizer  False
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   zero_enabled ................. True
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   zero_force_ds_cpu_optimizer .. True
+[2025-05-06 16:06:56,013] [INFO] [config.py:964:print]   zero_optimization_stage ...... 2
+[2025-05-06 16:06:56,013] [INFO] [config.py:950:print_user_config]   json = {
+    "train_micro_batch_size_per_gpu": 6,
+    "gradient_accumulation_steps": 10,
+    "optimizer": {
+        "type": "AdamW",
+        "params": {
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "betas": [0.9, 0.95]
+        }
+    },
+    "scheduler": {
+        "type": "WarmupDecayLR",
+        "params": {
+            "total_num_steps": 1.250000e+04,
+            "warmup_min_lr": 0,
+            "warmup_max_lr": 0.0003,
+            "warmup_num_steps": 100,
+            "warmup_type": "linear"
+        }
+    },
+    "fp16": {
+        "enabled": false
+    },
+    "bf16": {
+        "enabled": true
+    },
+    "gradient_clipping": 1.0,
+    "zero_optimization": {
+        "stage": 2,
+        "contiguous_gradients": true,
+        "overlap_comm": true,
+        "reduce_scatter": true,
+        "reduce_bucket_size": 5.000000e+08,
+        "allgather_bucket_size": 5.000000e+08
+    }
+}
+(train) >> AFTER DEEPSPEED
+>> (train) Auto-resume from:  ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model
+>> (train) resume exists:  True
+>> (train) Loading checkpoint from:  global_step150
+>> list dir of ckpt_dir:  ['mp_rank_00_model_states.pt', 'bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt']
+[2025-05-06 16:06:56,016] [INFO] [torch_checkpoint_engine.py:27:load] [Torch] Loading checkpoint from ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model/global_step150/mp_rank_00_model_states.pt...
+[2025-05-06 16:07:54,009] [INFO] [torch_checkpoint_engine.py:29:load] [Torch] Loaded checkpoint from ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model/global_step150/mp_rank_00_model_states.pt.
+[2025-05-06 16:07:56,259] [INFO] [torch_checkpoint_engine.py:27:load] [Torch] Loading checkpoint from ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model/global_step150/mp_rank_00_model_states.pt...
+[2025-05-06 16:08:23,080] [INFO] [torch_checkpoint_engine.py:29:load] [Torch] Loaded checkpoint from ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model/global_step150/mp_rank_00_model_states.pt.
+[2025-05-06 16:08:32,215] [INFO] [torch_checkpoint_engine.py:27:load] [Torch] Loading checkpoint from ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model/global_step150/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-05-06 16:08:50,893] [INFO] [torch_checkpoint_engine.py:29:load] [Torch] Loaded checkpoint from ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model/global_step150/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-05-06 16:08:50,894] [INFO] [engine.py:2824:_get_all_zero_checkpoint_state_dicts] successfully read 1 ZeRO state_dicts for rank 0
+[2025-05-06 16:08:51,916] [INFO] [engine.py:2774:_load_zero_checkpoint] loading 1 zero partition checkpoints for rank 0
+resume training from ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_accum_10_maxlen512_epochs25_segloss_2_bce_loss_2_kld_loss_0_dice_loss_8_bidir_bio_train_prompt_enc_ckpt_model, start from epoch 4
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:84.)
+  return F.conv2d(input, weight, bias, self.stride,
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:952: UserWarning: Plan failed with a CuDNNError: cuDNN error: CUDNN_STATUS_BAD_PARAM
+Exception raised from run_conv_plan at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:374 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f28a8b78897 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe1640b (0x7f2847ffb40b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x108f133 (0x7f2848274133 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0x1091043 (0x7f2848276043 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x109176b (0x7f284827676b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x1075c7d (0x7f284825ac7d in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0x107656a (0x7f284825b56a in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: at::native::cudnn_convolution_transpose(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, bool) + 0xa4 (0x7f284825b714 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: <unknown function> + 0x32f2cc2 (0x7f284a4d7cc2 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: <unknown function> + 0x32ff147 (0x7f284a4e4147 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: at::_ops::cudnn_convolution_transpose::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool) + 0x2fb (0x7f289ce3c2fb in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool) + 0x166d (0x7f289c56348d in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x2a8d27f (0x7f289d6f127f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x2a93bdc (0x7f289d6f7bdc in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool) + 0x344 (0x7f289ce3a0d4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long) + 0x3b8 (0x7f289c556868 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x2a8cb1c (0x7f289d6f0b1c in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x2a93a48 (0x7f289d6f7a48 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: at::_ops::convolution::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) + 0x17b (0x7f289cdf7d6b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0x41902e1 (0x7f289edf42e1 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x4191259 (0x7f289edf5259 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) + 0x2d4 (0x7f289ce38ed4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: <unknown function> + 0x164a2e0 (0x7f289c2ae2e0 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #23: at::native::conv_transpose2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, c10::ArrayRef<c10::SymInt>) + 0x125 (0x7f289c55bb05 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #24: <unknown function> + 0x2c879c9 (0x7f289d8eb9c9 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #25: <unknown function> + 0x2c87b03 (0x7f289d8ebb03 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #26: at::_ops::conv_transpose2d_input::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, c10::ArrayRef<c10::SymInt>) + 0x2cb (0x7f289d19509b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #27: <unknown function> + 0x61476f (0x7f28a7c1c76f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #28: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x4fc697]
+frame #29: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #30: _PyEval_EvalFrameDefault + 0x53d6 (0x4f2376 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #31: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #32: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #33: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #34: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #35: _PyObject_FastCallDictTstate + 0xcd (0x4f561d in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #36: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #37: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #38: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #39: _PyEval_EvalFrameDefault + 0x4dde (0x4f1d7e in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #40: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #41: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #42: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #43: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #44: _PyObject_FastCallDictTstate + 0xcd (0x4f561d in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #45: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #46: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #47: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #48: _PyEval_EvalFrameDefault + 0x53d6 (0x4f2376 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #49: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #50: _PyEval_EvalFrameDefault + 0x13b3 (0x4ee353 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #51: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #52: PyObject_Call + 0xb8 (0x508858 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #53: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #54: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #55: PyObject_Call + 0xb8 (0x508858 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #56: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #57: _PyFunction_Vectorcall + 0x6f (0x4fcadf in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #58: _PyObject_FastCallDictTstate + 0x17d (0x4f56cd in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #59: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #60: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #61: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #62: _PyEval_EvalFrameDefault + 0x5757 (0x4f26f7 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #63: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+ (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:921.)
+  return F.conv_transpose2d(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:952: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv_transpose2d(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with a CuDNNError: cuDNN error: CUDNN_STATUS_BAD_PARAM
+Exception raised from run_conv_plan at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:374 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f28a8b78897 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe1640b (0x7f2847ffb40b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x108f133 (0x7f2848274133 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0x1091043 (0x7f2848276043 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x10915bb (0x7f28482765bb in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x1074062 (0x7f2848259062 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0x107527f (0x7f284825a27f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0x1078184 (0x7f284825d184 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: at::native::convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, std::array<bool, 3ul>) + 0x1872 (0x7f289c5661e2 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x32f8375 (0x7f284a4dd375 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: <unknown function> + 0x3300422 (0x7f284a4e5422 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: at::_ops::convolution_backward::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, std::array<bool, 3ul>) + 0x26b (0x7f289d43510b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x45578f3 (0x7f289f1bb8f3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x45594a3 (0x7f289f1bd4a3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::convolution_backward::call(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, std::array<bool, 3ul>) + 0x3a3 (0x7f289d45b7c3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x164a4b1 (0x7f289c2ae4b1 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: torch::autograd::generated::ConvolutionBackward0::apply(std::vector<at::Tensor, std::allocator<at::Tensor> >&&) + 0x300 (0x7f289eccd290 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4dcc3ab (0x7f289fa303ab in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: torch::autograd::Engine::evaluate_function(std::shared_ptr<torch::autograd::GraphTask>&, torch::autograd::Node*, torch::autograd::InputBuffer&, std::shared_ptr<torch::autograd::ReadyQueue> const&) + 0x1526 (0x7f289fa2a4a6 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: torch::autograd::Engine::thread_main(std::shared_ptr<torch::autograd::GraphTask> const&) + 0x698 (0x7f289fa2b108 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: torch::autograd::Engine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x13f (0x7f289fa2203f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: torch::autograd::python::PythonEngine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x5c (0x7f28a7e30e1c in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #22: <unknown function> + 0xdbbf4 (0x7f28bc143bf4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/../../libstdc++.so.6)
+frame #23: <unknown function> + 0x94ac3 (0x7f28bd6a4ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #24: <unknown function> + 0x126850 (0x7f28bd736850 in /lib/x86_64-linux-gnu/libc.so.6)
+ (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:921.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Epoch: [4][2001/500]	Time 46.118 (46.118)	Loss 0.5831 (0.4811)	CeLoss 0.0391 (0.0507)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0809 (0.0686)	MaskBCELoss 0.0172 (0.0197)	MaskDICELoss 0.0637 (0.0489)
+Epoch: [4][2002/500]	Time 39.478 (39.478)	Loss 0.4026 (0.4708)	CeLoss 0.0566 (0.0593)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0524 (0.0652)	MaskBCELoss 0.0122 (0.0184)	MaskDICELoss 0.0402 (0.0468)
+Epoch: [4][2003/500]	Time 42.594 (42.594)	Loss 0.6016 (0.5013)	CeLoss 0.0264 (0.0434)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0889 (0.0682)	MaskBCELoss 0.0227 (0.0146)	MaskDICELoss 0.0662 (0.0536)
+Epoch: [4][2004/500]	Time 40.840 (40.840)	Loss 0.3895 (0.5060)	CeLoss 0.0386 (0.0468)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0560 (0.0695)	MaskBCELoss 0.0161 (0.0161)	MaskDICELoss 0.0399 (0.0534)
+Epoch: [4][2005/500]	Time 40.199 (40.199)	Loss 0.4225 (0.4146)	CeLoss 0.0435 (0.0432)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0559 (0.0581)	MaskBCELoss 0.0114 (0.0156)	MaskDICELoss 0.0445 (0.0425)
+Epoch: [4][2006/500]	Time 38.601 (38.601)	Loss 0.4607 (0.4854)	CeLoss 0.0281 (0.0550)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0687 (0.0687)	MaskBCELoss 0.0196 (0.0199)	MaskDICELoss 0.0492 (0.0488)
+Epoch: [4][2007/500]	Time 38.564 (38.564)	Loss 0.3603 (0.4688)	CeLoss 0.0811 (0.0630)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0561 (0.0655)	MaskBCELoss 0.0282 (0.0197)	MaskDICELoss 0.0278 (0.0458)
+Epoch: [4][2008/500]	Time 43.719 (43.719)	Loss 0.4065 (0.4761)	CeLoss 0.0312 (0.0432)	SegCLSLoss 0.0003 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0525 (0.0636)	MaskBCELoss 0.0076 (0.0127)	MaskDICELoss 0.0449 (0.0509)
+Epoch: [4][2009/500]	Time 42.517 (42.517)	Loss 0.5380 (0.5239)	CeLoss 0.0371 (0.0568)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0789 (0.0714)	MaskBCELoss 0.0218 (0.0173)	MaskDICELoss 0.0572 (0.0540)
+Epoch: [4][2010/500]	Time 40.438 (40.438)	Loss 0.4176 (0.4282)	CeLoss 0.0801 (0.0590)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0496 (0.0550)	MaskBCELoss 0.0099 (0.0118)	MaskDICELoss 0.0397 (0.0432)
+Epoch: [4][2011/500]	Time 39.104 (39.104)	Loss 0.5278 (0.4554)	CeLoss 0.0593 (0.0574)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0699 (0.0623)	MaskBCELoss 0.0151 (0.0167)	MaskDICELoss 0.0548 (0.0456)
+Epoch: [4][2012/500]	Time 40.708 (40.708)	Loss 0.6774 (0.5505)	CeLoss 0.0830 (0.0598)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1034 (0.0737)	MaskBCELoss 0.0388 (0.0165)	MaskDICELoss 0.0646 (0.0572)
+Epoch: [4][2013/500]	Time 39.508 (39.508)	Loss 0.4809 (0.5145)	CeLoss 0.0240 (0.0541)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0678 (0.0697)	MaskBCELoss 0.0142 (0.0162)	MaskDICELoss 0.0536 (0.0535)
+Epoch: [4][2014/500]	Time 40.255 (40.255)	Loss 0.6015 (0.4741)	CeLoss 0.0630 (0.0502)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1453 (0.0726)	MaskBCELoss 0.1040 (0.0261)	MaskDICELoss 0.0413 (0.0465)
+Epoch: [4][2015/500]	Time 39.570 (39.570)	Loss 0.5008 (0.4774)	CeLoss 0.0747 (0.0612)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0724 (0.0665)	MaskBCELoss 0.0255 (0.0194)	MaskDICELoss 0.0469 (0.0472)
+Epoch: [4][2016/500]	Time 39.902 (39.902)	Loss 0.4029 (0.4635)	CeLoss 0.0684 (0.0651)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0586 (0.0624)	MaskBCELoss 0.0224 (0.0167)	MaskDICELoss 0.0362 (0.0456)
+Epoch: [4][2017/500]	Time 41.942 (41.942)	Loss 0.5743 (0.5110)	CeLoss 0.0591 (0.0432)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0827 (0.0737)	MaskBCELoss 0.0245 (0.0203)	MaskDICELoss 0.0583 (0.0534)
+Epoch: [4][2018/500]	Time 40.661 (40.661)	Loss 0.6038 (0.5209)	CeLoss 0.0679 (0.0493)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0749 (0.0685)	MaskBCELoss 0.0106 (0.0128)	MaskDICELoss 0.0643 (0.0557)
+Epoch: [4][2019/500]	Time 38.111 (38.111)	Loss 0.3558 (0.4711)	CeLoss 0.0796 (0.0488)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0440 (0.0642)	MaskBCELoss 0.0126 (0.0152)	MaskDICELoss 0.0314 (0.0490)
+Epoch: [4][2020/500]	Time 41.350 (41.350)	Loss 0.3730 (0.4379)	CeLoss 0.0281 (0.0532)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0557 (0.0616)	MaskBCELoss 0.0168 (0.0180)	MaskDICELoss 0.0389 (0.0436)
+Epoch: [4][2021/500]	Time 38.416 (38.416)	Loss 0.5290 (0.4444)	CeLoss 0.0664 (0.0595)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0711 (0.0603)	MaskBCELoss 0.0176 (0.0162)	MaskDICELoss 0.0534 (0.0441)
+Epoch: [4][2022/500]	Time 39.831 (39.831)	Loss 0.3835 (0.4860)	CeLoss 0.0728 (0.0524)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0450 (0.0635)	MaskBCELoss 0.0082 (0.0125)	MaskDICELoss 0.0368 (0.0511)
+Epoch: [4][2023/500]	Time 42.363 (42.363)	Loss 0.5508 (0.5271)	CeLoss 0.0513 (0.0462)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0736 (0.0725)	MaskBCELoss 0.0148 (0.0165)	MaskDICELoss 0.0587 (0.0560)
+Epoch: [4][2024/500]	Time 38.841 (38.841)	Loss 0.5748 (0.5151)	CeLoss 0.0264 (0.0517)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0789 (0.0695)	MaskBCELoss 0.0139 (0.0154)	MaskDICELoss 0.0651 (0.0541)
+Epoch: [4][2025/500]	Time 40.927 (40.927)	Loss 0.5128 (0.4653)	CeLoss 0.0640 (0.0592)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0728 (0.0622)	MaskBCELoss 0.0223 (0.0153)	MaskDICELoss 0.0505 (0.0470)
+Epoch: [4][2026/500]	Time 40.325 (40.325)	Loss 0.4888 (0.4971)	CeLoss 0.0396 (0.0579)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0658 (0.0689)	MaskBCELoss 0.0128 (0.0186)	MaskDICELoss 0.0530 (0.0502)
+Epoch: [4][2027/500]	Time 39.805 (39.805)	Loss 0.6117 (0.5206)	CeLoss 0.0498 (0.0545)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0789 (0.0728)	MaskBCELoss 0.0116 (0.0194)	MaskDICELoss 0.0673 (0.0534)
+Epoch: [4][2028/500]	Time 37.792 (37.792)	Loss 0.5602 (0.4647)	CeLoss 0.0491 (0.0578)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0785 (0.0625)	MaskBCELoss 0.0195 (0.0155)	MaskDICELoss 0.0590 (0.0470)
+Epoch: [4][2029/500]	Time 37.551 (37.551)	Loss 0.3390 (0.4600)	CeLoss 0.0233 (0.0497)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0467 (0.0614)	MaskBCELoss 0.0096 (0.0134)	MaskDICELoss 0.0371 (0.0479)
+Epoch: [4][2030/500]	Time 38.322 (38.322)	Loss 0.4233 (0.4797)	CeLoss 0.0679 (0.0640)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0467 (0.0614)	MaskBCELoss 0.0030 (0.0125)	MaskDICELoss 0.0437 (0.0488)
+Epoch: [4][2031/500]	Time 40.937 (40.937)	Loss 0.5737 (0.5158)	CeLoss 0.0554 (0.0475)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0824 (0.0712)	MaskBCELoss 0.0234 (0.0169)	MaskDICELoss 0.0589 (0.0543)
+Epoch: [4][2032/500]	Time 42.316 (42.316)	Loss 0.3954 (0.4447)	CeLoss 0.0811 (0.0624)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0553 (0.0606)	MaskBCELoss 0.0213 (0.0171)	MaskDICELoss 0.0340 (0.0435)
+Epoch: [4][2033/500]	Time 41.412 (41.412)	Loss 0.4737 (0.4386)	CeLoss 0.0449 (0.0586)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0682 (0.0612)	MaskBCELoss 0.0195 (0.0183)	MaskDICELoss 0.0487 (0.0429)
+Epoch: [4][2034/500]	Time 40.191 (40.191)	Loss 0.4482 (0.5004)	CeLoss 0.0649 (0.0576)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0582 (0.0664)	MaskBCELoss 0.0137 (0.0148)	MaskDICELoss 0.0445 (0.0517)
+Epoch: [4][2035/500]	Time 39.025 (39.025)	Loss 0.3856 (0.4829)	CeLoss 0.0306 (0.0551)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0523 (0.0674)	MaskBCELoss 0.0106 (0.0185)	MaskDICELoss 0.0417 (0.0488)
+Epoch: [4][2036/500]	Time 39.175 (39.175)	Loss 0.3287 (0.4987)	CeLoss 0.0776 (0.0598)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0398 (0.0690)	MaskBCELoss 0.0112 (0.0188)	MaskDICELoss 0.0286 (0.0501)
+Epoch: [4][2037/500]	Time 38.713 (38.713)	Loss 0.4341 (0.4798)	CeLoss 0.0540 (0.0544)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0604 (0.0634)	MaskBCELoss 0.0171 (0.0136)	MaskDICELoss 0.0432 (0.0498)
+Epoch: [4][2038/500]	Time 40.993 (40.993)	Loss 0.6099 (0.4894)	CeLoss 0.0574 (0.0478)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0762 (0.0674)	MaskBCELoss 0.0095 (0.0163)	MaskDICELoss 0.0667 (0.0511)
+Epoch: [4][2039/500]	Time 40.113 (40.113)	Loss 0.3783 (0.4367)	CeLoss 0.0571 (0.0606)	SegCLSLoss 0.0002 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0588 (0.0601)	MaskBCELoss 0.0249 (0.0175)	MaskDICELoss 0.0339 (0.0426)
+Epoch: [4][2040/500]	Time 41.136 (41.136)	Loss 0.5594 (0.5151)	CeLoss 0.0767 (0.0573)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0682 (0.0689)	MaskBCELoss 0.0105 (0.0156)	MaskDICELoss 0.0577 (0.0533)
+Epoch: [4][2041/500]	Time 39.414 (39.414)	Loss 0.5023 (0.5071)	CeLoss 0.0559 (0.0672)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0787 (0.0657)	MaskBCELoss 0.0305 (0.0142)	MaskDICELoss 0.0482 (0.0514)
+Epoch: [4][2042/500]	Time 40.975 (40.975)	Loss 0.6142 (0.5114)	CeLoss 0.0640 (0.0553)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0797 (0.0726)	MaskBCELoss 0.0146 (0.0208)	MaskDICELoss 0.0651 (0.0518)
+Epoch: [4][2043/500]	Time 41.096 (41.096)	Loss 0.5287 (0.5062)	CeLoss 0.0280 (0.0608)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0806 (0.0675)	MaskBCELoss 0.0240 (0.0158)	MaskDICELoss 0.0566 (0.0517)
+Epoch: [4][2044/500]	Time 38.811 (38.811)	Loss 0.5844 (0.4609)	CeLoss 0.0447 (0.0625)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0750 (0.0637)	MaskBCELoss 0.0100 (0.0185)	MaskDICELoss 0.0649 (0.0452)
+Epoch: [4][2045/500]	Time 40.551 (40.551)	Loss 0.4965 (0.4935)	CeLoss 0.0503 (0.0479)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0690 (0.0697)	MaskBCELoss 0.0176 (0.0187)	MaskDICELoss 0.0514 (0.0510)
+Epoch: [4][2046/500]	Time 37.138 (37.138)	Loss 0.5282 (0.4737)	CeLoss 0.0913 (0.0583)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0623 (0.0642)	MaskBCELoss 0.0102 (0.0164)	MaskDICELoss 0.0520 (0.0478)
+Epoch: [4][2047/500]	Time 39.135 (39.135)	Loss 0.4707 (0.4573)	CeLoss 0.0591 (0.0597)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0556 (0.0626)	MaskBCELoss 0.0055 (0.0172)	MaskDICELoss 0.0501 (0.0454)
+Epoch: [4][2048/500]	Time 39.435 (39.435)	Loss 0.3510 (0.5062)	CeLoss 0.0444 (0.0581)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0437 (0.0692)	MaskBCELoss 0.0071 (0.0176)	MaskDICELoss 0.0366 (0.0516)
+Epoch: [4][2049/500]	Time 37.480 (37.480)	Loss 0.5673 (0.5112)	CeLoss 0.0776 (0.0654)	SegCLSLoss 0.0004 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0850 (0.0688)	MaskBCELoss 0.0319 (0.0175)	MaskDICELoss 0.0531 (0.0513)
+Epoch: [4][2050/500]	Time 41.339 (41.339)	Loss 0.5028 (0.5021)	CeLoss 0.0559 (0.0488)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0715 (0.0680)	MaskBCELoss 0.0209 (0.0152)	MaskDICELoss 0.0506 (0.0529)
+Epoch: [4][2051/500]	Time 39.026 (39.026)	Loss 0.7883 (0.4887)	CeLoss 0.0386 (0.0469)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1198 (0.0689)	MaskBCELoss 0.0348 (0.0183)	MaskDICELoss 0.0850 (0.0507)
+Epoch: [4][2052/500]	Time 40.044 (40.044)	Loss 0.4492 (0.5547)	CeLoss 0.0635 (0.0570)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0521 (0.0760)	MaskBCELoss 0.0052 (0.0183)	MaskDICELoss 0.0469 (0.0576)
+Epoch: [4][2053/500]	Time 41.202 (41.202)	Loss 0.4778 (0.4843)	CeLoss 0.0281 (0.0439)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0653 (0.0646)	MaskBCELoss 0.0121 (0.0127)	MaskDICELoss 0.0532 (0.0519)
+Epoch: [4][2054/500]	Time 40.991 (40.991)	Loss 0.3453 (0.5380)	CeLoss 0.0354 (0.0588)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0515 (0.0721)	MaskBCELoss 0.0170 (0.0163)	MaskDICELoss 0.0345 (0.0558)
+Epoch: [4][2055/500]	Time 39.751 (39.751)	Loss 0.4605 (0.4576)	CeLoss 0.0703 (0.0534)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0647 (0.0643)	MaskBCELoss 0.0213 (0.0183)	MaskDICELoss 0.0435 (0.0459)
+Epoch: [4][2056/500]	Time 39.434 (39.434)	Loss 0.5297 (0.5033)	CeLoss 0.0674 (0.0588)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0702 (0.0674)	MaskBCELoss 0.0166 (0.0158)	MaskDICELoss 0.0537 (0.0516)
+Epoch: [4][2057/500]	Time 38.206 (38.206)	Loss 0.5228 (0.5472)	CeLoss 0.0703 (0.0686)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0623 (0.0742)	MaskBCELoss 0.0077 (0.0192)	MaskDICELoss 0.0546 (0.0550)
+Epoch: [4][2058/500]	Time 40.402 (40.402)	Loss 0.4360 (0.4647)	CeLoss 0.0503 (0.0450)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0599 (0.0637)	MaskBCELoss 0.0156 (0.0150)	MaskDICELoss 0.0443 (0.0487)
+Epoch: [4][2059/500]	Time 39.741 (39.741)	Loss 0.4756 (0.5318)	CeLoss 0.0649 (0.0641)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0557 (0.0716)	MaskBCELoss 0.0058 (0.0175)	MaskDICELoss 0.0499 (0.0541)
+Epoch: [4][2060/500]	Time 40.972 (40.972)	Loss 0.5371 (0.4972)	CeLoss 0.0293 (0.0460)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0789 (0.0706)	MaskBCELoss 0.0206 (0.0190)	MaskDICELoss 0.0583 (0.0516)
+Epoch: [4][2061/500]	Time 38.620 (38.620)	Loss 0.4586 (0.4894)	CeLoss 0.0610 (0.0573)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0588 (0.0677)	MaskBCELoss 0.0121 (0.0182)	MaskDICELoss 0.0467 (0.0494)
+Epoch: [4][2062/500]	Time 43.526 (43.526)	Loss 0.4083 (0.4999)	CeLoss 0.0566 (0.0574)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0596 (0.0671)	MaskBCELoss 0.0208 (0.0157)	MaskDICELoss 0.0387 (0.0514)
+Epoch: [4][2063/500]	Time 38.892 (38.892)	Loss 0.5972 (0.4921)	CeLoss 0.0396 (0.0572)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0836 (0.0640)	MaskBCELoss 0.0185 (0.0128)	MaskDICELoss 0.0651 (0.0512)
+Epoch: [4][2064/500]	Time 38.214 (38.214)	Loss 0.5327 (0.4900)	CeLoss 0.0874 (0.0537)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0623 (0.0721)	MaskBCELoss 0.0088 (0.0234)	MaskDICELoss 0.0534 (0.0487)
+Epoch: [4][2065/500]	Time 39.261 (39.261)	Loss 0.4297 (0.5155)	CeLoss 0.0245 (0.0674)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0725 (0.0701)	MaskBCELoss 0.0292 (0.0187)	MaskDICELoss 0.0433 (0.0513)
+Epoch: [4][2066/500]	Time 40.003 (40.003)	Loss 0.4131 (0.5048)	CeLoss 0.0493 (0.0522)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0583 (0.0698)	MaskBCELoss 0.0171 (0.0176)	MaskDICELoss 0.0412 (0.0522)
+Epoch: [4][2067/500]	Time 38.137 (38.137)	Loss 0.5590 (0.4609)	CeLoss 0.0635 (0.0650)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0705 (0.0591)	MaskBCELoss 0.0115 (0.0129)	MaskDICELoss 0.0591 (0.0463)
+Epoch: [4][2068/500]	Time 38.996 (38.996)	Loss 0.7815 (0.5495)	CeLoss 0.0977 (0.0556)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0871 (0.0756)	MaskBCELoss 0.0021 (0.0184)	MaskDICELoss 0.0850 (0.0571)
+Epoch: [4][2069/500]	Time 41.386 (41.386)	Loss 0.5295 (0.5447)	CeLoss 0.0688 (0.0644)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0638 (0.0689)	MaskBCELoss 0.0083 (0.0119)	MaskDICELoss 0.0555 (0.0571)
+Epoch: [4][2070/500]	Time 39.278 (39.278)	Loss 0.5012 (0.4909)	CeLoss 0.0322 (0.0667)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0765 (0.0663)	MaskBCELoss 0.0238 (0.0177)	MaskDICELoss 0.0527 (0.0486)
+Epoch: [4][2071/500]	Time 36.818 (36.818)	Loss 0.4049 (0.5551)	CeLoss 0.0776 (0.0644)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0496 (0.0757)	MaskBCELoss 0.0116 (0.0191)	MaskDICELoss 0.0380 (0.0566)
+Epoch: [4][2072/500]	Time 39.749 (39.749)	Loss 0.4719 (0.4893)	CeLoss 0.0498 (0.0527)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0618 (0.0701)	MaskBCELoss 0.0120 (0.0207)	MaskDICELoss 0.0497 (0.0494)
+Epoch: [4][2073/500]	Time 41.197 (41.197)	Loss 0.4992 (0.4971)	CeLoss 0.0659 (0.0615)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0620 (0.0673)	MaskBCELoss 0.0105 (0.0171)	MaskDICELoss 0.0515 (0.0502)
+Epoch: [4][2074/500]	Time 38.920 (38.920)	Loss 0.4803 (0.5512)	CeLoss 0.0249 (0.0700)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0711 (0.0732)	MaskBCELoss 0.0189 (0.0174)	MaskDICELoss 0.0522 (0.0558)
+Epoch: [4][2075/500]	Time 38.262 (38.262)	Loss 0.4660 (0.5585)	CeLoss 0.0889 (0.0701)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0634 (0.0742)	MaskBCELoss 0.0217 (0.0175)	MaskDICELoss 0.0417 (0.0567)
+Epoch: [4][2076/500]	Time 38.816 (38.816)	Loss 0.4149 (0.4705)	CeLoss 0.0679 (0.0646)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0494 (0.0599)	MaskBCELoss 0.0081 (0.0123)	MaskDICELoss 0.0413 (0.0477)
+Epoch: [4][2077/500]	Time 40.509 (40.509)	Loss 0.3214 (0.5176)	CeLoss 0.0273 (0.0568)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0522 (0.0726)	MaskBCELoss 0.0207 (0.0200)	MaskDICELoss 0.0316 (0.0526)
+Epoch: [4][2078/500]	Time 41.475 (41.475)	Loss 0.3801 (0.4224)	CeLoss 0.0270 (0.0518)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0516 (0.0574)	MaskBCELoss 0.0099 (0.0148)	MaskDICELoss 0.0417 (0.0426)
+Epoch: [4][2079/500]	Time 39.875 (39.875)	Loss 0.5724 (0.5503)	CeLoss 0.0762 (0.0537)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0815 (0.0779)	MaskBCELoss 0.0260 (0.0211)	MaskDICELoss 0.0555 (0.0568)
+Epoch: [4][2080/500]	Time 37.743 (37.743)	Loss 0.5863 (0.5496)	CeLoss 0.0801 (0.0535)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0944 (0.0734)	MaskBCELoss 0.0415 (0.0152)	MaskDICELoss 0.0529 (0.0582)
+Epoch: [4][2081/500]	Time 39.368 (39.368)	Loss 0.5940 (0.5269)	CeLoss 0.0527 (0.0581)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0833 (0.0719)	MaskBCELoss 0.0208 (0.0178)	MaskDICELoss 0.0624 (0.0542)
+Epoch: [4][2082/500]	Time 42.111 (42.111)	Loss 0.3801 (0.5170)	CeLoss 0.0300 (0.0438)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0554 (0.0733)	MaskBCELoss 0.0156 (0.0189)	MaskDICELoss 0.0399 (0.0544)
+Epoch: [4][2083/500]	Time 40.259 (40.259)	Loss 0.6354 (0.4512)	CeLoss 0.0300 (0.0579)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0881 (0.0614)	MaskBCELoss 0.0166 (0.0164)	MaskDICELoss 0.0715 (0.0451)
+Epoch: [4][2084/500]	Time 38.892 (38.892)	Loss 0.4887 (0.4262)	CeLoss 0.0771 (0.0549)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0708 (0.0563)	MaskBCELoss 0.0259 (0.0132)	MaskDICELoss 0.0450 (0.0431)
+Epoch: [4][2085/500]	Time 40.938 (40.938)	Loss 0.2301 (0.4407)	CeLoss 0.1001 (0.0541)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0254 (0.0655)	MaskBCELoss 0.0122 (0.0230)	MaskDICELoss 0.0132 (0.0426)
+Epoch: [4][2086/500]	Time 40.808 (40.808)	Loss 0.3250 (0.5086)	CeLoss 0.0371 (0.0549)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0425 (0.0678)	MaskBCELoss 0.0086 (0.0148)	MaskDICELoss 0.0338 (0.0530)
+Epoch: [4][2087/500]	Time 37.027 (37.027)	Loss 0.2583 (0.3959)	CeLoss 0.0437 (0.0596)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0403 (0.0549)	MaskBCELoss 0.0180 (0.0172)	MaskDICELoss 0.0223 (0.0378)
+Epoch: [4][2088/500]	Time 40.832 (40.832)	Loss 0.5858 (0.4900)	CeLoss 0.0635 (0.0587)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0759 (0.0700)	MaskBCELoss 0.0141 (0.0214)	MaskDICELoss 0.0618 (0.0486)
+Epoch: [4][2089/500]	Time 36.903 (36.903)	Loss 0.1761 (0.4874)	CeLoss 0.0542 (0.0516)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0242 (0.0685)	MaskBCELoss 0.0120 (0.0187)	MaskDICELoss 0.0122 (0.0498)
+Epoch: [4][2090/500]	Time 35.763 (35.763)	Loss 0.5480 (0.5026)	CeLoss 0.0493 (0.0725)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0688 (0.0655)	MaskBCELoss 0.0086 (0.0157)	MaskDICELoss 0.0602 (0.0498)
+Epoch: [4][2091/500]	Time 36.582 (36.582)	Loss 0.2473 (0.4250)	CeLoss 0.0464 (0.0632)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0312 (0.0556)	MaskBCELoss 0.0081 (0.0138)	MaskDICELoss 0.0231 (0.0418)
+Epoch: [4][2092/500]	Time 40.484 (40.484)	Loss 0.6442 (0.5225)	CeLoss 0.0240 (0.0561)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0974 (0.0707)	MaskBCELoss 0.0265 (0.0166)	MaskDICELoss 0.0709 (0.0542)
+Epoch: [4][2093/500]	Time 40.293 (40.293)	Loss 0.3969 (0.4357)	CeLoss 0.0444 (0.0674)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0559 (0.0616)	MaskBCELoss 0.0157 (0.0207)	MaskDICELoss 0.0401 (0.0408)
+Epoch: [4][2094/500]	Time 39.223 (39.223)	Loss 0.3964 (0.4514)	CeLoss 0.0591 (0.0616)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0532 (0.0635)	MaskBCELoss 0.0148 (0.0197)	MaskDICELoss 0.0385 (0.0438)
+Epoch: [4][2095/500]	Time 37.035 (37.035)	Loss 0.5529 (0.4752)	CeLoss 0.0256 (0.0613)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0773 (0.0664)	MaskBCELoss 0.0151 (0.0196)	MaskDICELoss 0.0621 (0.0468)
+Epoch: [4][2096/500]	Time 40.454 (40.454)	Loss 0.6319 (0.4813)	CeLoss 0.0581 (0.0575)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0876 (0.0658)	MaskBCELoss 0.0212 (0.0171)	MaskDICELoss 0.0664 (0.0487)
+Epoch: [4][2097/500]	Time 41.110 (41.110)	Loss 0.5327 (0.5548)	CeLoss 0.0610 (0.0509)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0747 (0.0774)	MaskBCELoss 0.0210 (0.0192)	MaskDICELoss 0.0537 (0.0582)
+Epoch: [4][2098/500]	Time 38.023 (38.023)	Loss 0.4315 (0.4578)	CeLoss 0.0474 (0.0551)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0672 (0.0606)	MaskBCELoss 0.0255 (0.0137)	MaskDICELoss 0.0416 (0.0469)
+Epoch: [4][2099/500]	Time 40.879 (40.879)	Loss 0.3681 (0.4438)	CeLoss 0.0559 (0.0516)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0587 (0.0652)	MaskBCELoss 0.0262 (0.0215)	MaskDICELoss 0.0325 (0.0436)
+[2025-05-06 17:15:18,510] [INFO] [logging.py:96:log_dist] [Rank 0] step=160, skipped=0, lr=[0.0002599838709677419], mom=[(0.9, 0.95)]
+[2025-05-06 17:15:18,519] [INFO] [timer.py:215:stop] epoch=0/micro_step=100/global_step=10, RunningAvgSamplesPerSec=1.5256860447963192, CurrSamplesPerSec=1.4530585337885558, MemAllocated=38.16GB, MaxMemAllocated=51.13GB
+Epoch: [4][2100/500]	Time 41.055 (41.055)	Loss 0.4479 (0.5048)	CeLoss 0.0396 (0.0583)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0593 (0.0683)	MaskBCELoss 0.0110 (0.0167)	MaskDICELoss 0.0483 (0.0516)
+Epoch: [4][2101/500]	Time 39.473 (39.473)	Loss 0.7109 (0.5113)	CeLoss 0.0908 (0.0497)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0872 (0.0737)	MaskBCELoss 0.0130 (0.0213)	MaskDICELoss 0.0742 (0.0523)
+Epoch: [4][2102/500]	Time 41.159 (41.159)	Loss 0.6027 (0.5411)	CeLoss 0.0566 (0.0454)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0789 (0.0747)	MaskBCELoss 0.0142 (0.0170)	MaskDICELoss 0.0647 (0.0577)
+Epoch: [4][2103/500]	Time 40.023 (40.023)	Loss 0.4205 (0.4873)	CeLoss 0.0476 (0.0533)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0602 (0.0674)	MaskBCELoss 0.0181 (0.0176)	MaskDICELoss 0.0421 (0.0499)
+Epoch: [4][2104/500]	Time 39.113 (39.113)	Loss 0.6631 (0.5202)	CeLoss 0.0286 (0.0585)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1229 (0.0704)	MaskBCELoss 0.0581 (0.0168)	MaskDICELoss 0.0648 (0.0535)
+Epoch: [4][2105/500]	Time 36.769 (36.769)	Loss 0.6176 (0.4743)	CeLoss 0.0483 (0.0665)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0795 (0.0633)	MaskBCELoss 0.0111 (0.0165)	MaskDICELoss 0.0684 (0.0469)
+Epoch: [4][2106/500]	Time 38.210 (38.210)	Loss 0.5132 (0.4364)	CeLoss 0.0762 (0.0516)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0844 (0.0624)	MaskBCELoss 0.0397 (0.0191)	MaskDICELoss 0.0447 (0.0433)
+Epoch: [4][2107/500]	Time 41.487 (41.487)	Loss 0.5747 (0.4381)	CeLoss 0.0422 (0.0474)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0882 (0.0616)	MaskBCELoss 0.0288 (0.0170)	MaskDICELoss 0.0594 (0.0446)
+Epoch: [4][2108/500]	Time 42.110 (42.110)	Loss 0.5200 (0.4868)	CeLoss 0.0376 (0.0594)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0641 (0.0640)	MaskBCELoss 0.0051 (0.0141)	MaskDICELoss 0.0590 (0.0499)
+Epoch: [4][2109/500]	Time 37.783 (37.783)	Loss 0.4224 (0.5279)	CeLoss 0.0352 (0.0614)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0540 (0.0700)	MaskBCELoss 0.0074 (0.0155)	MaskDICELoss 0.0466 (0.0544)
+Epoch: [4][2110/500]	Time 39.894 (39.894)	Loss 0.5239 (0.4583)	CeLoss 0.0688 (0.0559)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0617 (0.0602)	MaskBCELoss 0.0064 (0.0132)	MaskDICELoss 0.0553 (0.0470)
+Epoch: [4][2111/500]	Time 40.553 (40.553)	Loss 0.2857 (0.4732)	CeLoss 0.0535 (0.0555)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0541 (0.0648)	MaskBCELoss 0.0335 (0.0169)	MaskDICELoss 0.0207 (0.0480)
+Epoch: [4][2112/500]	Time 40.818 (40.818)	Loss 0.7794 (0.5285)	CeLoss 0.0679 (0.0617)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0964 (0.0691)	MaskBCELoss 0.0100 (0.0144)	MaskDICELoss 0.0864 (0.0548)
+Epoch: [4][2113/500]	Time 40.729 (40.729)	Loss 0.4747 (0.4906)	CeLoss 0.0305 (0.0490)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0643 (0.0671)	MaskBCELoss 0.0117 (0.0158)	MaskDICELoss 0.0526 (0.0512)
+Epoch: [4][2114/500]	Time 38.656 (38.656)	Loss 0.2601 (0.4678)	CeLoss 0.0625 (0.0620)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0347 (0.0698)	MaskBCELoss 0.0133 (0.0254)	MaskDICELoss 0.0214 (0.0444)
+Epoch: [4][2115/500]	Time 37.568 (37.568)	Loss 0.6095 (0.4523)	CeLoss 0.0273 (0.0532)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0945 (0.0665)	MaskBCELoss 0.0290 (0.0221)	MaskDICELoss 0.0655 (0.0444)
+Epoch: [4][2116/500]	Time 40.760 (40.760)	Loss 0.4752 (0.4837)	CeLoss 0.0277 (0.0422)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0628 (0.0665)	MaskBCELoss 0.0091 (0.0151)	MaskDICELoss 0.0537 (0.0514)
+Epoch: [4][2117/500]	Time 40.227 (40.227)	Loss 0.3321 (0.4174)	CeLoss 0.0791 (0.0641)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0400 (0.0542)	MaskBCELoss 0.0111 (0.0133)	MaskDICELoss 0.0289 (0.0408)
+Epoch: [4][2118/500]	Time 41.258 (41.258)	Loss 0.4026 (0.3827)	CeLoss 0.0903 (0.0527)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0524 (0.0616)	MaskBCELoss 0.0178 (0.0271)	MaskDICELoss 0.0346 (0.0345)
+Epoch: [4][2119/500]	Time 38.536 (38.536)	Loss 0.5415 (0.5514)	CeLoss 0.0728 (0.0642)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0782 (0.0752)	MaskBCELoss 0.0261 (0.0190)	MaskDICELoss 0.0521 (0.0561)
+Epoch: [4][2120/500]	Time 40.319 (40.319)	Loss 0.5655 (0.5411)	CeLoss 0.0820 (0.0519)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0679 (0.0732)	MaskBCELoss 0.0099 (0.0160)	MaskDICELoss 0.0580 (0.0571)
+Epoch: [4][2121/500]	Time 41.153 (41.153)	Loss 0.5351 (0.4835)	CeLoss 0.0356 (0.0669)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0743 (0.0647)	MaskBCELoss 0.0159 (0.0168)	MaskDICELoss 0.0584 (0.0479)
+Epoch: [4][2122/500]	Time 39.643 (39.643)	Loss 0.4742 (0.5578)	CeLoss 0.0664 (0.0619)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0641 (0.0750)	MaskBCELoss 0.0175 (0.0173)	MaskDICELoss 0.0466 (0.0577)
+Epoch: [4][2123/500]	Time 39.701 (39.701)	Loss 0.3340 (0.4508)	CeLoss 0.0303 (0.0517)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0447 (0.0604)	MaskBCELoss 0.0090 (0.0140)	MaskDICELoss 0.0357 (0.0464)
+Epoch: [4][2124/500]	Time 39.296 (39.296)	Loss 0.5788 (0.5116)	CeLoss 0.0273 (0.0554)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0755 (0.0696)	MaskBCELoss 0.0088 (0.0167)	MaskDICELoss 0.0667 (0.0528)
+Epoch: [4][2125/500]	Time 40.214 (40.214)	Loss 0.4759 (0.5039)	CeLoss 0.0327 (0.0606)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0723 (0.0743)	MaskBCELoss 0.0225 (0.0252)	MaskDICELoss 0.0498 (0.0491)
+Epoch: [4][2126/500]	Time 40.573 (40.573)	Loss 0.4926 (0.5302)	CeLoss 0.0481 (0.0551)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0684 (0.0687)	MaskBCELoss 0.0171 (0.0124)	MaskDICELoss 0.0513 (0.0563)
+Epoch: [4][2127/500]	Time 42.063 (42.063)	Loss 0.6059 (0.5660)	CeLoss 0.0542 (0.0466)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0737 (0.0775)	MaskBCELoss 0.0064 (0.0168)	MaskDICELoss 0.0674 (0.0607)
+Epoch: [4][2128/500]	Time 37.676 (37.676)	Loss 0.4259 (0.5018)	CeLoss 0.0264 (0.0542)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0657 (0.0731)	MaskBCELoss 0.0211 (0.0228)	MaskDICELoss 0.0447 (0.0502)
+Epoch: [4][2129/500]	Time 40.926 (40.926)	Loss 0.2959 (0.5287)	CeLoss 0.0747 (0.0563)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0432 (0.0736)	MaskBCELoss 0.0207 (0.0194)	MaskDICELoss 0.0225 (0.0542)
+Epoch: [4][2130/500]	Time 43.435 (43.435)	Loss 0.5106 (0.4926)	CeLoss 0.0635 (0.0562)	SegCLSLoss 0.0000 (0.0002)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0685 (0.0647)	MaskBCELoss 0.0169 (0.0136)	MaskDICELoss 0.0517 (0.0511)
+Epoch: [4][2131/500]	Time 40.560 (40.560)	Loss 0.5504 (0.4841)	CeLoss 0.0889 (0.0642)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0639 (0.0628)	MaskBCELoss 0.0083 (0.0137)	MaskDICELoss 0.0556 (0.0491)
+Epoch: [4][2132/500]	Time 41.989 (41.989)	Loss 0.3486 (0.4324)	CeLoss 0.0454 (0.0609)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0460 (0.0599)	MaskBCELoss 0.0109 (0.0179)	MaskDICELoss 0.0352 (0.0420)
+Epoch: [4][2133/500]	Time 39.209 (39.209)	Loss 0.5269 (0.5199)	CeLoss 0.0220 (0.0571)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0813 (0.0711)	MaskBCELoss 0.0243 (0.0176)	MaskDICELoss 0.0570 (0.0534)
+Epoch: [4][2134/500]	Time 40.554 (40.554)	Loss 0.5442 (0.4784)	CeLoss 0.0757 (0.0554)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0690 (0.0652)	MaskBCELoss 0.0139 (0.0165)	MaskDICELoss 0.0551 (0.0487)
+Epoch: [4][2135/500]	Time 39.126 (39.126)	Loss 0.5680 (0.4505)	CeLoss 0.0654 (0.0552)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0732 (0.0588)	MaskBCELoss 0.0138 (0.0125)	MaskDICELoss 0.0593 (0.0463)
+Epoch: [4][2136/500]	Time 41.782 (41.782)	Loss 0.6592 (0.4537)	CeLoss 0.0703 (0.0566)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0953 (0.0650)	MaskBCELoss 0.0289 (0.0205)	MaskDICELoss 0.0664 (0.0445)
+Epoch: [4][2137/500]	Time 41.122 (41.122)	Loss 0.3907 (0.4787)	CeLoss 0.0674 (0.0464)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0432 (0.0660)	MaskBCELoss 0.0037 (0.0159)	MaskDICELoss 0.0395 (0.0501)
+Epoch: [4][2138/500]	Time 43.361 (43.361)	Loss 0.4898 (0.5077)	CeLoss 0.0598 (0.0627)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0810 (0.0672)	MaskBCELoss 0.0364 (0.0155)	MaskDICELoss 0.0447 (0.0517)
+Epoch: [4][2139/500]	Time 41.636 (41.636)	Loss 0.4382 (0.5279)	CeLoss 0.0664 (0.0611)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0548 (0.0755)	MaskBCELoss 0.0110 (0.0229)	MaskDICELoss 0.0437 (0.0526)
+Epoch: [4][2140/500]	Time 35.884 (35.884)	Loss 0.5151 (0.4786)	CeLoss 0.0571 (0.0533)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0659 (0.0701)	MaskBCELoss 0.0115 (0.0227)	MaskDICELoss 0.0544 (0.0475)
+Epoch: [4][2141/500]	Time 37.855 (37.855)	Loss 0.6986 (0.5199)	CeLoss 0.0664 (0.0719)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0946 (0.0666)	MaskBCELoss 0.0208 (0.0142)	MaskDICELoss 0.0738 (0.0525)
+Epoch: [4][2142/500]	Time 42.805 (42.805)	Loss 0.5466 (0.5018)	CeLoss 0.0479 (0.0502)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0687 (0.0702)	MaskBCELoss 0.0084 (0.0183)	MaskDICELoss 0.0602 (0.0519)
+Epoch: [4][2143/500]	Time 42.570 (42.570)	Loss 0.3747 (0.4526)	CeLoss 0.0527 (0.0565)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0462 (0.0609)	MaskBCELoss 0.0079 (0.0152)	MaskDICELoss 0.0383 (0.0457)
+Epoch: [4][2144/500]	Time 37.610 (37.610)	Loss 0.4703 (0.4818)	CeLoss 0.0267 (0.0466)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0726 (0.0733)	MaskBCELoss 0.0229 (0.0252)	MaskDICELoss 0.0497 (0.0481)
+Epoch: [4][2145/500]	Time 40.468 (40.468)	Loss 0.3881 (0.4851)	CeLoss 0.0674 (0.0596)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0509 (0.0650)	MaskBCELoss 0.0145 (0.0157)	MaskDICELoss 0.0364 (0.0493)
+Epoch: [4][2146/500]	Time 39.633 (39.633)	Loss 0.6144 (0.4683)	CeLoss 0.0791 (0.0620)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0834 (0.0660)	MaskBCELoss 0.0220 (0.0203)	MaskDICELoss 0.0614 (0.0457)
+Epoch: [4][2147/500]	Time 37.225 (37.225)	Loss 0.4756 (0.4809)	CeLoss 0.0618 (0.0598)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0652 (0.0633)	MaskBCELoss 0.0179 (0.0143)	MaskDICELoss 0.0473 (0.0491)
+Epoch: [4][2148/500]	Time 39.561 (39.561)	Loss 0.5394 (0.5214)	CeLoss 0.0277 (0.0638)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0759 (0.0727)	MaskBCELoss 0.0160 (0.0206)	MaskDICELoss 0.0600 (0.0520)
+Epoch: [4][2149/500]	Time 41.778 (41.778)	Loss 0.5376 (0.5569)	CeLoss 0.0879 (0.0622)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0609 (0.0743)	MaskBCELoss 0.0062 (0.0167)	MaskDICELoss 0.0547 (0.0577)
+Epoch: [4][2150/500]	Time 39.174 (39.174)	Loss 0.4609 (0.5205)	CeLoss 0.0415 (0.0648)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0663 (0.0717)	MaskBCELoss 0.0185 (0.0197)	MaskDICELoss 0.0478 (0.0520)
+Epoch: [4][2151/500]	Time 40.537 (40.537)	Loss 0.7018 (0.5156)	CeLoss 0.0801 (0.0676)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1083 (0.0684)	MaskBCELoss 0.0408 (0.0165)	MaskDICELoss 0.0675 (0.0519)
+Epoch: [4][2152/500]	Time 37.502 (37.502)	Loss 0.5421 (0.4795)	CeLoss 0.0513 (0.0570)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0725 (0.0633)	MaskBCELoss 0.0148 (0.0140)	MaskDICELoss 0.0577 (0.0493)
+Epoch: [4][2153/500]	Time 40.454 (40.454)	Loss 0.7062 (0.5199)	CeLoss 0.0889 (0.0619)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0974 (0.0697)	MaskBCELoss 0.0269 (0.0166)	MaskDICELoss 0.0705 (0.0531)
+Epoch: [4][2154/500]	Time 38.770 (38.770)	Loss 0.5776 (0.4906)	CeLoss 0.0698 (0.0367)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0671 (0.0689)	MaskBCELoss 0.0049 (0.0162)	MaskDICELoss 0.0622 (0.0527)
+Epoch: [4][2155/500]	Time 37.297 (37.297)	Loss 0.3019 (0.4694)	CeLoss 0.0347 (0.0623)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0430 (0.0666)	MaskBCELoss 0.0127 (0.0209)	MaskDICELoss 0.0302 (0.0457)
+Epoch: [4][2156/500]	Time 43.571 (43.571)	Loss 0.4549 (0.5322)	CeLoss 0.0464 (0.0632)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0643 (0.0723)	MaskBCELoss 0.0177 (0.0182)	MaskDICELoss 0.0467 (0.0541)
+Epoch: [4][2157/500]	Time 42.746 (42.746)	Loss 0.4557 (0.4832)	CeLoss 0.0261 (0.0445)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0627 (0.0670)	MaskBCELoss 0.0120 (0.0162)	MaskDICELoss 0.0507 (0.0508)
+Epoch: [4][2158/500]	Time 40.244 (40.244)	Loss 0.4963 (0.4895)	CeLoss 0.0908 (0.0661)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0606 (0.0642)	MaskBCELoss 0.0132 (0.0150)	MaskDICELoss 0.0473 (0.0492)
+Epoch: [4][2159/500]	Time 43.125 (43.125)	Loss 0.4984 (0.4758)	CeLoss 0.0693 (0.0450)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0667 (0.0663)	MaskBCELoss 0.0174 (0.0166)	MaskDICELoss 0.0493 (0.0497)
+Epoch: [4][2160/500]	Time 41.127 (41.127)	Loss 0.4315 (0.4631)	CeLoss 0.0586 (0.0498)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0590 (0.0636)	MaskBCELoss 0.0166 (0.0160)	MaskDICELoss 0.0425 (0.0476)
+Epoch: [4][2161/500]	Time 41.417 (41.417)	Loss 0.1944 (0.4211)	CeLoss 0.0309 (0.0548)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0263 (0.0577)	MaskBCELoss 0.0078 (0.0159)	MaskDICELoss 0.0185 (0.0418)
+Epoch: [4][2162/500]	Time 39.520 (39.520)	Loss 0.2772 (0.4110)	CeLoss 0.0486 (0.0455)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0396 (0.0581)	MaskBCELoss 0.0147 (0.0166)	MaskDICELoss 0.0249 (0.0415)
+Epoch: [4][2163/500]	Time 40.470 (40.470)	Loss 0.4437 (0.5023)	CeLoss 0.0698 (0.0547)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0692 (0.0805)	MaskBCELoss 0.0299 (0.0327)	MaskDICELoss 0.0392 (0.0478)
+Epoch: [4][2164/500]	Time 38.092 (38.092)	Loss 0.5043 (0.4840)	CeLoss 0.0267 (0.0514)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0706 (0.0657)	MaskBCELoss 0.0145 (0.0155)	MaskDICELoss 0.0560 (0.0502)
+Epoch: [4][2165/500]	Time 39.812 (39.812)	Loss 0.4505 (0.4824)	CeLoss 0.0508 (0.0565)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0572 (0.0626)	MaskBCELoss 0.0097 (0.0126)	MaskDICELoss 0.0475 (0.0501)
+Epoch: [4][2166/500]	Time 41.477 (41.477)	Loss 0.6843 (0.5375)	CeLoss 0.0654 (0.0577)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0816 (0.0707)	MaskBCELoss 0.0056 (0.0143)	MaskDICELoss 0.0760 (0.0564)
+Epoch: [4][2167/500]	Time 38.411 (38.411)	Loss 0.4784 (0.5318)	CeLoss 0.0708 (0.0683)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0555 (0.0677)	MaskBCELoss 0.0060 (0.0131)	MaskDICELoss 0.0495 (0.0547)
+Epoch: [4][2168/500]	Time 43.275 (43.275)	Loss 0.5213 (0.5042)	CeLoss 0.0559 (0.0579)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0720 (0.0713)	MaskBCELoss 0.0185 (0.0206)	MaskDICELoss 0.0536 (0.0506)
+Epoch: [4][2169/500]	Time 37.220 (37.220)	Loss 0.6120 (0.4986)	CeLoss 0.1221 (0.0595)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0843 (0.0654)	MaskBCELoss 0.0307 (0.0140)	MaskDICELoss 0.0536 (0.0514)
+Epoch: [4][2170/500]	Time 41.733 (41.733)	Loss 0.5143 (0.4542)	CeLoss 0.0500 (0.0642)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0668 (0.0590)	MaskBCELoss 0.0117 (0.0136)	MaskDICELoss 0.0551 (0.0453)
+Epoch: [4][2171/500]	Time 40.192 (40.192)	Loss 0.3250 (0.4695)	CeLoss 0.0713 (0.0665)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0470 (0.0598)	MaskBCELoss 0.0204 (0.0125)	MaskDICELoss 0.0266 (0.0472)
+Epoch: [4][2172/500]	Time 41.176 (41.176)	Loss 0.4782 (0.5248)	CeLoss 0.0552 (0.0506)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0755 (0.0738)	MaskBCELoss 0.0301 (0.0193)	MaskDICELoss 0.0454 (0.0544)
+Epoch: [4][2173/500]	Time 37.126 (37.126)	Loss 0.5176 (0.3889)	CeLoss 0.0264 (0.0514)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0814 (0.0524)	MaskBCELoss 0.0266 (0.0136)	MaskDICELoss 0.0547 (0.0388)
+Epoch: [4][2174/500]	Time 41.614 (41.614)	Loss 0.4680 (0.4454)	CeLoss 0.0781 (0.0577)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0642 (0.0579)	MaskBCELoss 0.0206 (0.0126)	MaskDICELoss 0.0436 (0.0453)
+Epoch: [4][2175/500]	Time 36.108 (36.108)	Loss 0.6075 (0.4552)	CeLoss 0.0830 (0.0658)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0952 (0.0629)	MaskBCELoss 0.0395 (0.0190)	MaskDICELoss 0.0557 (0.0439)
+Epoch: [4][2176/500]	Time 41.664 (41.664)	Loss 0.6173 (0.5266)	CeLoss 0.0620 (0.0601)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0884 (0.0708)	MaskBCELoss 0.0254 (0.0167)	MaskDICELoss 0.0631 (0.0541)
+Epoch: [4][2177/500]	Time 40.944 (40.944)	Loss 0.6630 (0.5073)	CeLoss 0.0630 (0.0458)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0858 (0.0702)	MaskBCELoss 0.0144 (0.0167)	MaskDICELoss 0.0714 (0.0535)
+Epoch: [4][2178/500]	Time 40.781 (40.781)	Loss 0.5456 (0.4685)	CeLoss 0.0679 (0.0495)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0675 (0.0659)	MaskBCELoss 0.0104 (0.0180)	MaskDICELoss 0.0571 (0.0479)
+Epoch: [4][2179/500]	Time 42.186 (42.186)	Loss 0.5800 (0.5202)	CeLoss 0.0605 (0.0660)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0929 (0.0729)	MaskBCELoss 0.0374 (0.0215)	MaskDICELoss 0.0555 (0.0514)
+Epoch: [4][2180/500]	Time 40.075 (40.075)	Loss 0.6070 (0.5160)	CeLoss 0.0427 (0.0548)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1554 (0.0810)	MaskBCELoss 0.1132 (0.0311)	MaskDICELoss 0.0422 (0.0499)
+Epoch: [4][2181/500]	Time 38.607 (38.607)	Loss 0.4719 (0.5451)	CeLoss 0.0850 (0.0596)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0569 (0.0735)	MaskBCELoss 0.0114 (0.0171)	MaskDICELoss 0.0455 (0.0564)
+Epoch: [4][2182/500]	Time 42.204 (42.204)	Loss 0.3844 (0.4666)	CeLoss 0.0281 (0.0496)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0538 (0.0606)	MaskBCELoss 0.0123 (0.0114)	MaskDICELoss 0.0414 (0.0493)
+Epoch: [4][2183/500]	Time 37.750 (37.750)	Loss 0.5493 (0.4213)	CeLoss 0.0610 (0.0602)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0769 (0.0578)	MaskBCELoss 0.0211 (0.0169)	MaskDICELoss 0.0558 (0.0409)
+Epoch: [4][2184/500]	Time 42.652 (42.652)	Loss 0.5824 (0.4914)	CeLoss 0.0322 (0.0486)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0784 (0.0691)	MaskBCELoss 0.0128 (0.0184)	MaskDICELoss 0.0656 (0.0507)
+Epoch: [4][2185/500]	Time 42.071 (42.071)	Loss 0.5192 (0.4858)	CeLoss 0.0693 (0.0547)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0627 (0.0634)	MaskBCELoss 0.0085 (0.0126)	MaskDICELoss 0.0541 (0.0507)
+Epoch: [4][2186/500]	Time 43.828 (43.828)	Loss 0.4961 (0.5049)	CeLoss 0.0277 (0.0513)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0751 (0.0680)	MaskBCELoss 0.0221 (0.0150)	MaskDICELoss 0.0530 (0.0529)
+Epoch: [4][2187/500]	Time 40.868 (40.868)	Loss 0.6927 (0.5076)	CeLoss 0.0605 (0.0563)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0927 (0.0728)	MaskBCELoss 0.0182 (0.0219)	MaskDICELoss 0.0745 (0.0509)
+Epoch: [4][2188/500]	Time 42.290 (42.290)	Loss 0.4134 (0.4965)	CeLoss 0.0654 (0.0573)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0580 (0.0690)	MaskBCELoss 0.0193 (0.0188)	MaskDICELoss 0.0386 (0.0502)
+Epoch: [4][2189/500]	Time 40.786 (40.786)	Loss 0.4028 (0.4932)	CeLoss 0.0684 (0.0612)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0530 (0.0645)	MaskBCELoss 0.0149 (0.0141)	MaskDICELoss 0.0381 (0.0505)
+Epoch: [4][2190/500]	Time 38.017 (38.017)	Loss 0.6602 (0.5652)	CeLoss 0.0708 (0.0560)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0814 (0.0806)	MaskBCELoss 0.0103 (0.0227)	MaskDICELoss 0.0711 (0.0580)
+Epoch: [4][2191/500]	Time 38.456 (38.456)	Loss 0.4611 (0.4878)	CeLoss 0.0791 (0.0682)	SegCLSLoss 0.0002 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0593 (0.0648)	MaskBCELoss 0.0156 (0.0165)	MaskDICELoss 0.0438 (0.0483)
+Epoch: [4][2192/500]	Time 38.621 (38.621)	Loss 0.4478 (0.4518)	CeLoss 0.0513 (0.0534)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0665 (0.0653)	MaskBCELoss 0.0226 (0.0207)	MaskDICELoss 0.0439 (0.0446)
+Epoch: [4][2193/500]	Time 40.282 (40.282)	Loss 0.5776 (0.4555)	CeLoss 0.0679 (0.0600)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0759 (0.0599)	MaskBCELoss 0.0163 (0.0140)	MaskDICELoss 0.0596 (0.0459)
+Epoch: [4][2194/500]	Time 40.137 (40.137)	Loss 0.5327 (0.4904)	CeLoss 0.0618 (0.0651)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0699 (0.0659)	MaskBCELoss 0.0147 (0.0170)	MaskDICELoss 0.0552 (0.0489)
+Epoch: [4][2195/500]	Time 41.453 (41.453)	Loss 0.2661 (0.5369)	CeLoss 0.0427 (0.0580)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0395 (0.0745)	MaskBCELoss 0.0155 (0.0195)	MaskDICELoss 0.0240 (0.0550)
+Epoch: [4][2196/500]	Time 37.491 (37.491)	Loss 0.4573 (0.3720)	CeLoss 0.0815 (0.0572)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0625 (0.0527)	MaskBCELoss 0.0208 (0.0178)	MaskDICELoss 0.0418 (0.0349)
+Epoch: [4][2197/500]	Time 39.840 (39.840)	Loss 0.4984 (0.5287)	CeLoss 0.0591 (0.0615)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0660 (0.0791)	MaskBCELoss 0.0148 (0.0277)	MaskDICELoss 0.0512 (0.0515)
+Epoch: [4][2198/500]	Time 42.182 (42.182)	Loss 0.2911 (0.4256)	CeLoss 0.0474 (0.0496)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0363 (0.0563)	MaskBCELoss 0.0078 (0.0124)	MaskDICELoss 0.0285 (0.0439)
+Epoch: [4][2199/500]	Time 39.646 (39.646)	Loss 0.5464 (0.5583)	CeLoss 0.0732 (0.0458)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0787 (0.0764)	MaskBCELoss 0.0262 (0.0165)	MaskDICELoss 0.0526 (0.0599)
+[2025-05-06 18:22:19,238] [INFO] [logging.py:96:log_dist] [Rank 0] step=170, skipped=0, lr=[0.0002573225806451613], mom=[(0.9, 0.95)]
+[2025-05-06 18:22:19,247] [INFO] [timer.py:215:stop] epoch=0/micro_step=200/global_step=20, RunningAvgSamplesPerSec=1.4970430253814975, CurrSamplesPerSec=1.5477152046591536, MemAllocated=38.14GB, MaxMemAllocated=51.13GB
+Epoch: [4][2200/500]	Time 40.849 (40.849)	Loss 0.4863 (0.5248)	CeLoss 0.0376 (0.0533)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0676 (0.0762)	MaskBCELoss 0.0153 (0.0231)	MaskDICELoss 0.0523 (0.0532)
+Epoch: [4][2201/500]	Time 38.967 (38.967)	Loss 0.4757 (0.4637)	CeLoss 0.0713 (0.0553)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0622 (0.0620)	MaskBCELoss 0.0155 (0.0146)	MaskDICELoss 0.0466 (0.0474)
+Epoch: [4][2202/500]	Time 40.630 (40.630)	Loss 0.4233 (0.4841)	CeLoss 0.0295 (0.0452)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0642 (0.0697)	MaskBCELoss 0.0199 (0.0198)	MaskDICELoss 0.0442 (0.0499)
+Epoch: [4][2203/500]	Time 41.388 (41.388)	Loss 0.5408 (0.5077)	CeLoss 0.0378 (0.0582)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0804 (0.0687)	MaskBCELoss 0.0234 (0.0166)	MaskDICELoss 0.0570 (0.0520)
+Epoch: [4][2204/500]	Time 38.213 (38.213)	Loss 0.5178 (0.5304)	CeLoss 0.0586 (0.0602)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0759 (0.0759)	MaskBCELoss 0.0247 (0.0228)	MaskDICELoss 0.0512 (0.0531)
+Epoch: [4][2205/500]	Time 40.576 (40.576)	Loss 0.5462 (0.4930)	CeLoss 0.0801 (0.0498)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0667 (0.0679)	MaskBCELoss 0.0113 (0.0166)	MaskDICELoss 0.0554 (0.0512)
+Epoch: [4][2206/500]	Time 41.761 (41.761)	Loss 0.5715 (0.5190)	CeLoss 0.0430 (0.0585)	SegCLSLoss 0.0000 (0.0002)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0725 (0.0676)	MaskBCELoss 0.0086 (0.0134)	MaskDICELoss 0.0639 (0.0542)
+Epoch: [4][2207/500]	Time 40.352 (40.352)	Loss 0.4999 (0.5401)	CeLoss 0.0598 (0.0695)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0625 (0.0714)	MaskBCELoss 0.0100 (0.0168)	MaskDICELoss 0.0525 (0.0546)
+Epoch: [4][2208/500]	Time 41.230 (41.230)	Loss 0.3843 (0.4153)	CeLoss 0.0566 (0.0557)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0477 (0.0560)	MaskBCELoss 0.0090 (0.0147)	MaskDICELoss 0.0387 (0.0413)
+Epoch: [4][2209/500]	Time 39.394 (39.394)	Loss 0.5113 (0.5044)	CeLoss 0.0830 (0.0577)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0706 (0.0668)	MaskBCELoss 0.0227 (0.0146)	MaskDICELoss 0.0479 (0.0522)
+Epoch: [4][2210/500]	Time 40.168 (40.168)	Loss 0.6987 (0.5641)	CeLoss 0.0815 (0.0649)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0820 (0.0802)	MaskBCELoss 0.0065 (0.0237)	MaskDICELoss 0.0755 (0.0565)
+Epoch: [4][2211/500]	Time 42.326 (42.326)	Loss 0.5251 (0.4467)	CeLoss 0.0723 (0.0493)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0697 (0.0630)	MaskBCELoss 0.0174 (0.0178)	MaskDICELoss 0.0522 (0.0452)
+Epoch: [4][2212/500]	Time 42.531 (42.531)	Loss 0.3204 (0.4349)	CeLoss 0.0496 (0.0477)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0456 (0.0609)	MaskBCELoss 0.0157 (0.0167)	MaskDICELoss 0.0299 (0.0442)
+Epoch: [4][2213/500]	Time 41.241 (41.241)	Loss 0.4557 (0.4306)	CeLoss 0.0369 (0.0554)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0552 (0.0559)	MaskBCELoss 0.0039 (0.0120)	MaskDICELoss 0.0514 (0.0439)
+Epoch: [4][2214/500]	Time 42.514 (42.514)	Loss 0.6987 (0.4467)	CeLoss 0.0635 (0.0499)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0903 (0.0592)	MaskBCELoss 0.0145 (0.0128)	MaskDICELoss 0.0758 (0.0464)
+Epoch: [4][2215/500]	Time 40.332 (40.332)	Loss 0.3246 (0.4561)	CeLoss 0.0522 (0.0500)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0439 (0.0610)	MaskBCELoss 0.0131 (0.0137)	MaskDICELoss 0.0308 (0.0473)
+Epoch: [4][2216/500]	Time 37.680 (37.680)	Loss 0.4786 (0.4941)	CeLoss 0.0630 (0.0687)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0683 (0.0672)	MaskBCELoss 0.0218 (0.0188)	MaskDICELoss 0.0465 (0.0485)
+Epoch: [4][2217/500]	Time 43.966 (43.966)	Loss 0.6560 (0.5063)	CeLoss 0.0498 (0.0569)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0830 (0.0664)	MaskBCELoss 0.0097 (0.0137)	MaskDICELoss 0.0734 (0.0528)
+Epoch: [4][2218/500]	Time 38.489 (38.489)	Loss 0.5888 (0.5193)	CeLoss 0.0356 (0.0592)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0824 (0.0712)	MaskBCELoss 0.0177 (0.0183)	MaskDICELoss 0.0647 (0.0529)
+Epoch: [4][2219/500]	Time 42.354 (42.354)	Loss 0.5290 (0.5152)	CeLoss 0.0287 (0.0437)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0795 (0.0722)	MaskBCELoss 0.0227 (0.0176)	MaskDICELoss 0.0569 (0.0545)
+Epoch: [4][2220/500]	Time 39.999 (39.999)	Loss 0.5659 (0.5167)	CeLoss 0.0649 (0.0531)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0715 (0.0665)	MaskBCELoss 0.0119 (0.0114)	MaskDICELoss 0.0597 (0.0551)
+Epoch: [4][2221/500]	Time 40.158 (40.158)	Loss 0.4428 (0.5109)	CeLoss 0.0762 (0.0590)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0626 (0.0694)	MaskBCELoss 0.0224 (0.0173)	MaskDICELoss 0.0402 (0.0522)
+Epoch: [4][2222/500]	Time 41.899 (41.899)	Loss 0.3898 (0.4779)	CeLoss 0.0605 (0.0587)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0488 (0.0674)	MaskBCELoss 0.0102 (0.0200)	MaskDICELoss 0.0386 (0.0474)
+Epoch: [4][2223/500]	Time 38.649 (38.649)	Loss 0.5823 (0.4926)	CeLoss 0.0698 (0.0680)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0692 (0.0626)	MaskBCELoss 0.0069 (0.0127)	MaskDICELoss 0.0623 (0.0499)
+Epoch: [4][2224/500]	Time 38.896 (38.896)	Loss 0.4975 (0.4567)	CeLoss 0.0791 (0.0506)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0605 (0.0625)	MaskBCELoss 0.0110 (0.0156)	MaskDICELoss 0.0495 (0.0469)
+Epoch: [4][2225/500]	Time 40.862 (40.862)	Loss 0.3911 (0.5042)	CeLoss 0.0237 (0.0451)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0579 (0.0693)	MaskBCELoss 0.0160 (0.0158)	MaskDICELoss 0.0419 (0.0534)
+Epoch: [4][2226/500]	Time 41.817 (41.817)	Loss 0.5408 (0.5118)	CeLoss 0.0684 (0.0513)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0710 (0.0735)	MaskBCELoss 0.0160 (0.0213)	MaskDICELoss 0.0551 (0.0522)
+Epoch: [4][2227/500]	Time 35.056 (35.056)	Loss 0.3627 (0.4733)	CeLoss 0.0327 (0.0567)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0465 (0.0647)	MaskBCELoss 0.0070 (0.0169)	MaskDICELoss 0.0395 (0.0479)
+Epoch: [4][2228/500]	Time 41.938 (41.938)	Loss 0.5499 (0.4661)	CeLoss 0.0322 (0.0627)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0841 (0.0635)	MaskBCELoss 0.0258 (0.0174)	MaskDICELoss 0.0583 (0.0461)
+Epoch: [4][2229/500]	Time 36.312 (36.312)	Loss 0.6595 (0.4721)	CeLoss 0.0801 (0.0523)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0873 (0.0623)	MaskBCELoss 0.0198 (0.0131)	MaskDICELoss 0.0675 (0.0492)
+Epoch: [4][2230/500]	Time 39.678 (39.678)	Loss 0.5967 (0.5265)	CeLoss 0.0664 (0.0521)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0792 (0.0718)	MaskBCELoss 0.0173 (0.0166)	MaskDICELoss 0.0620 (0.0551)
+Epoch: [4][2231/500]	Time 38.639 (38.639)	Loss 0.4046 (0.4524)	CeLoss 0.0840 (0.0592)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0527 (0.0607)	MaskBCELoss 0.0168 (0.0154)	MaskDICELoss 0.0359 (0.0453)
+Epoch: [4][2232/500]	Time 40.739 (40.739)	Loss 0.4777 (0.4547)	CeLoss 0.0248 (0.0412)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0776 (0.0632)	MaskBCELoss 0.0279 (0.0154)	MaskDICELoss 0.0496 (0.0478)
+Epoch: [4][2233/500]	Time 40.674 (40.674)	Loss 0.2900 (0.4867)	CeLoss 0.0471 (0.0601)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0402 (0.0686)	MaskBCELoss 0.0131 (0.0203)	MaskDICELoss 0.0271 (0.0482)
+Epoch: [4][2234/500]	Time 36.614 (36.614)	Loss 0.4005 (0.4981)	CeLoss 0.0260 (0.0621)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0738 (0.0721)	MaskBCELoss 0.0359 (0.0234)	MaskDICELoss 0.0378 (0.0486)
+Epoch: [4][2235/500]	Time 43.307 (43.307)	Loss 0.6936 (0.5067)	CeLoss 0.0454 (0.0566)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0931 (0.0703)	MaskBCELoss 0.0160 (0.0187)	MaskDICELoss 0.0770 (0.0516)
+Epoch: [4][2236/500]	Time 41.885 (41.885)	Loss 0.4150 (0.4383)	CeLoss 0.0464 (0.0575)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0617 (0.0587)	MaskBCELoss 0.0209 (0.0148)	MaskDICELoss 0.0409 (0.0439)
+Epoch: [4][2237/500]	Time 41.690 (41.690)	Loss 0.5578 (0.5311)	CeLoss 0.0444 (0.0532)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0735 (0.0707)	MaskBCELoss 0.0124 (0.0146)	MaskDICELoss 0.0610 (0.0561)
+Epoch: [4][2238/500]	Time 35.345 (35.345)	Loss 0.4412 (0.4487)	CeLoss 0.0767 (0.0666)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0554 (0.0570)	MaskBCELoss 0.0131 (0.0123)	MaskDICELoss 0.0423 (0.0447)
+Epoch: [4][2239/500]	Time 42.410 (42.410)	Loss 0.4280 (0.4921)	CeLoss 0.0496 (0.0663)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0617 (0.0641)	MaskBCELoss 0.0191 (0.0146)	MaskDICELoss 0.0425 (0.0496)
+Epoch: [4][2240/500]	Time 37.874 (37.874)	Loss 0.4385 (0.5169)	CeLoss 0.0679 (0.0627)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0538 (0.0697)	MaskBCELoss 0.0099 (0.0173)	MaskDICELoss 0.0438 (0.0525)
+Epoch: [4][2241/500]	Time 41.251 (41.251)	Loss 0.3848 (0.4510)	CeLoss 0.0342 (0.0435)	SegCLSLoss 0.0000 (0.0002)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0543 (0.0649)	MaskBCELoss 0.0140 (0.0186)	MaskDICELoss 0.0403 (0.0462)
+Epoch: [4][2242/500]	Time 39.552 (39.552)	Loss 0.4970 (0.4302)	CeLoss 0.0610 (0.0537)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0668 (0.0580)	MaskBCELoss 0.0164 (0.0145)	MaskDICELoss 0.0504 (0.0434)
+Epoch: [4][2243/500]	Time 38.878 (38.878)	Loss 0.4075 (0.4727)	CeLoss 0.0349 (0.0557)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0559 (0.0658)	MaskBCELoss 0.0124 (0.0183)	MaskDICELoss 0.0435 (0.0475)
+Epoch: [4][2244/500]	Time 39.566 (39.566)	Loss 0.2985 (0.4956)	CeLoss 0.0211 (0.0541)	SegCLSLoss 0.0001 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0455 (0.0710)	MaskBCELoss 0.0145 (0.0211)	MaskDICELoss 0.0310 (0.0499)
+Epoch: [4][2245/500]	Time 42.464 (42.464)	Loss 0.4439 (0.5692)	CeLoss 0.0508 (0.0524)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0571 (0.0802)	MaskBCELoss 0.0106 (0.0208)	MaskDICELoss 0.0465 (0.0594)
+Epoch: [4][2246/500]	Time 36.358 (36.358)	Loss 0.6098 (0.4780)	CeLoss 0.0542 (0.0646)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0965 (0.0672)	MaskBCELoss 0.0361 (0.0207)	MaskDICELoss 0.0604 (0.0465)
+Epoch: [4][2247/500]	Time 39.480 (39.480)	Loss 0.2299 (0.5612)	CeLoss 0.0981 (0.0648)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0257 (0.0764)	MaskBCELoss 0.0123 (0.0191)	MaskDICELoss 0.0134 (0.0573)
+Epoch: [4][2248/500]	Time 38.730 (38.730)	Loss 0.5927 (0.4643)	CeLoss 0.0908 (0.0455)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0875 (0.0655)	MaskBCELoss 0.0330 (0.0176)	MaskDICELoss 0.0545 (0.0480)
+Epoch: [4][2249/500]	Time 38.921 (38.921)	Loss 0.6778 (0.5673)	CeLoss 0.0732 (0.0581)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0909 (0.0776)	MaskBCELoss 0.0204 (0.0186)	MaskDICELoss 0.0705 (0.0590)
+Epoch: [4][2250/500]	Time 39.649 (39.649)	Loss 0.4858 (0.5068)	CeLoss 0.0559 (0.0551)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0738 (0.0689)	MaskBCELoss 0.0267 (0.0166)	MaskDICELoss 0.0471 (0.0523)
+Epoch: [4][2251/500]	Time 40.599 (40.599)	Loss 0.4782 (0.4832)	CeLoss 0.0952 (0.0518)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0610 (0.0683)	MaskBCELoss 0.0176 (0.0192)	MaskDICELoss 0.0435 (0.0491)
+Epoch: [4][2252/500]	Time 42.105 (42.105)	Loss 0.4831 (0.4937)	CeLoss 0.0471 (0.0502)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0623 (0.0652)	MaskBCELoss 0.0104 (0.0131)	MaskDICELoss 0.0519 (0.0522)
+Epoch: [4][2253/500]	Time 39.432 (39.432)	Loss 0.3811 (0.4965)	CeLoss 0.0444 (0.0600)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0608 (0.0694)	MaskBCELoss 0.0250 (0.0198)	MaskDICELoss 0.0358 (0.0496)
+Epoch: [4][2254/500]	Time 43.333 (43.333)	Loss 0.4717 (0.4290)	CeLoss 0.0299 (0.0379)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0620 (0.0619)	MaskBCELoss 0.0090 (0.0173)	MaskDICELoss 0.0530 (0.0446)
+Epoch: [4][2255/500]	Time 41.378 (41.378)	Loss 0.6298 (0.5221)	CeLoss 0.0801 (0.0526)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0894 (0.0724)	MaskBCELoss 0.0276 (0.0184)	MaskDICELoss 0.0618 (0.0541)
+Epoch: [4][2256/500]	Time 39.324 (39.324)	Loss 0.4688 (0.4735)	CeLoss 0.0483 (0.0509)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0650 (0.0671)	MaskBCELoss 0.0166 (0.0190)	MaskDICELoss 0.0484 (0.0481)
+Epoch: [4][2257/500]	Time 38.559 (38.559)	Loss 0.5899 (0.4812)	CeLoss 0.0306 (0.0570)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0826 (0.0658)	MaskBCELoss 0.0169 (0.0171)	MaskDICELoss 0.0657 (0.0487)
+Epoch: [4][2258/500]	Time 41.556 (41.556)	Loss 0.4285 (0.4246)	CeLoss 0.0801 (0.0453)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0606 (0.0611)	MaskBCELoss 0.0228 (0.0182)	MaskDICELoss 0.0379 (0.0429)
+Epoch: [4][2259/500]	Time 38.124 (38.124)	Loss 0.5984 (0.5271)	CeLoss 0.1001 (0.0641)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0770 (0.0721)	MaskBCELoss 0.0196 (0.0190)	MaskDICELoss 0.0574 (0.0531)
+Epoch: [4][2260/500]	Time 41.393 (41.393)	Loss 0.5387 (0.5180)	CeLoss 0.0598 (0.0569)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0667 (0.0702)	MaskBCELoss 0.0090 (0.0168)	MaskDICELoss 0.0576 (0.0534)
+Epoch: [4][2261/500]	Time 40.666 (40.666)	Loss 0.6186 (0.4466)	CeLoss 0.0693 (0.0557)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0826 (0.0608)	MaskBCELoss 0.0186 (0.0159)	MaskDICELoss 0.0640 (0.0449)
+Epoch: [4][2262/500]	Time 40.531 (40.531)	Loss 0.4213 (0.4922)	CeLoss 0.0771 (0.0562)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0536 (0.0667)	MaskBCELoss 0.0141 (0.0162)	MaskDICELoss 0.0395 (0.0504)
+Epoch: [4][2263/500]	Time 38.711 (38.711)	Loss 0.5543 (0.4685)	CeLoss 0.0688 (0.0472)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0665 (0.0638)	MaskBCELoss 0.0078 (0.0148)	MaskDICELoss 0.0587 (0.0490)
+Epoch: [4][2264/500]	Time 40.674 (40.674)	Loss 0.4262 (0.4657)	CeLoss 0.0266 (0.0495)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0659 (0.0659)	MaskBCELoss 0.0213 (0.0185)	MaskDICELoss 0.0446 (0.0474)
+Epoch: [4][2265/500]	Time 41.675 (41.675)	Loss 0.5426 (0.4891)	CeLoss 0.0850 (0.0558)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0745 (0.0656)	MaskBCELoss 0.0231 (0.0153)	MaskDICELoss 0.0514 (0.0503)
+Epoch: [4][2266/500]	Time 39.375 (39.375)	Loss 0.3446 (0.4537)	CeLoss 0.1006 (0.0626)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0385 (0.0605)	MaskBCELoss 0.0107 (0.0155)	MaskDICELoss 0.0278 (0.0450)
+Epoch: [4][2267/500]	Time 37.462 (37.462)	Loss 0.3397 (0.4661)	CeLoss 0.0520 (0.0562)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0465 (0.0610)	MaskBCELoss 0.0140 (0.0130)	MaskDICELoss 0.0325 (0.0480)
+Epoch: [4][2268/500]	Time 40.613 (40.613)	Loss 0.4775 (0.4633)	CeLoss 0.0237 (0.0481)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0636 (0.0671)	MaskBCELoss 0.0092 (0.0203)	MaskDICELoss 0.0544 (0.0468)
+Epoch: [4][2269/500]	Time 39.784 (39.784)	Loss 0.4530 (0.5178)	CeLoss 0.0286 (0.0482)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0614 (0.0718)	MaskBCELoss 0.0111 (0.0174)	MaskDICELoss 0.0503 (0.0543)
+Epoch: [4][2270/500]	Time 39.609 (39.609)	Loss 0.4530 (0.4244)	CeLoss 0.0295 (0.0529)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0636 (0.0567)	MaskBCELoss 0.0142 (0.0137)	MaskDICELoss 0.0494 (0.0430)
+Epoch: [4][2271/500]	Time 39.665 (39.665)	Loss 0.5196 (0.4767)	CeLoss 0.0952 (0.0613)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0833 (0.0661)	MaskBCELoss 0.0403 (0.0189)	MaskDICELoss 0.0429 (0.0472)
+Epoch: [4][2272/500]	Time 42.111 (42.111)	Loss 0.5946 (0.5389)	CeLoss 0.0315 (0.0603)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0792 (0.0715)	MaskBCELoss 0.0117 (0.0155)	MaskDICELoss 0.0675 (0.0559)
+Epoch: [4][2273/500]	Time 42.284 (42.284)	Loss 0.5162 (0.4776)	CeLoss 0.0496 (0.0501)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0638 (0.0659)	MaskBCELoss 0.0073 (0.0167)	MaskDICELoss 0.0565 (0.0493)
+Epoch: [4][2274/500]	Time 37.879 (37.879)	Loss 0.3017 (0.4761)	CeLoss 0.0297 (0.0623)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0421 (0.0620)	MaskBCELoss 0.0108 (0.0137)	MaskDICELoss 0.0313 (0.0483)
+Epoch: [4][2275/500]	Time 38.121 (38.121)	Loss 0.5175 (0.4634)	CeLoss 0.0654 (0.0508)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0700 (0.0648)	MaskBCELoss 0.0180 (0.0176)	MaskDICELoss 0.0520 (0.0472)
+Epoch: [4][2276/500]	Time 42.867 (42.867)	Loss 0.4005 (0.5124)	CeLoss 0.0425 (0.0538)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0493 (0.0720)	MaskBCELoss 0.0060 (0.0195)	MaskDICELoss 0.0433 (0.0524)
+Epoch: [4][2277/500]	Time 40.450 (40.450)	Loss 0.4693 (0.4776)	CeLoss 0.0854 (0.0545)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0547 (0.0666)	MaskBCELoss 0.0090 (0.0183)	MaskDICELoss 0.0457 (0.0483)
+Epoch: [4][2278/500]	Time 40.728 (40.728)	Loss 0.4098 (0.4535)	CeLoss 0.0593 (0.0613)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0923 (0.0664)	MaskBCELoss 0.0647 (0.0232)	MaskDICELoss 0.0276 (0.0432)
+Epoch: [4][2279/500]	Time 42.976 (42.976)	Loss 0.4904 (0.4738)	CeLoss 0.0297 (0.0494)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0648 (0.0656)	MaskBCELoss 0.0096 (0.0167)	MaskDICELoss 0.0552 (0.0489)
+Epoch: [4][2280/500]	Time 35.522 (35.522)	Loss 0.4396 (0.4341)	CeLoss 0.0540 (0.0550)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0736 (0.0606)	MaskBCELoss 0.0338 (0.0176)	MaskDICELoss 0.0398 (0.0430)
+Epoch: [4][2281/500]	Time 38.938 (38.938)	Loss 0.4132 (0.5021)	CeLoss 0.0349 (0.0517)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0617 (0.0674)	MaskBCELoss 0.0193 (0.0148)	MaskDICELoss 0.0425 (0.0526)
+Epoch: [4][2282/500]	Time 41.405 (41.405)	Loss 0.6047 (0.4921)	CeLoss 0.0718 (0.0561)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0725 (0.0660)	MaskBCELoss 0.0079 (0.0153)	MaskDICELoss 0.0646 (0.0507)
+Epoch: [4][2283/500]	Time 41.339 (41.339)	Loss 0.4819 (0.5186)	CeLoss 0.0598 (0.0544)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0641 (0.0690)	MaskBCELoss 0.0150 (0.0146)	MaskDICELoss 0.0490 (0.0544)
+Epoch: [4][2284/500]	Time 40.488 (40.488)	Loss 0.3925 (0.4639)	CeLoss 0.0381 (0.0506)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0674 (0.0689)	MaskBCELoss 0.0308 (0.0230)	MaskDICELoss 0.0366 (0.0459)
+Epoch: [4][2285/500]	Time 38.903 (38.903)	Loss 0.5803 (0.5748)	CeLoss 0.0566 (0.0648)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0717 (0.0720)	MaskBCELoss 0.0083 (0.0110)	MaskDICELoss 0.0634 (0.0610)
+Epoch: [4][2286/500]	Time 41.050 (41.050)	Loss 0.4466 (0.5205)	CeLoss 0.0454 (0.0419)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0562 (0.0704)	MaskBCELoss 0.0080 (0.0141)	MaskDICELoss 0.0482 (0.0563)
+Epoch: [4][2287/500]	Time 40.425 (40.425)	Loss 0.3820 (0.5084)	CeLoss 0.0405 (0.0564)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0597 (0.0698)	MaskBCELoss 0.0226 (0.0177)	MaskDICELoss 0.0370 (0.0521)
+Epoch: [4][2288/500]	Time 40.571 (40.571)	Loss 0.4496 (0.4071)	CeLoss 0.0449 (0.0512)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0575 (0.0538)	MaskBCELoss 0.0092 (0.0124)	MaskDICELoss 0.0483 (0.0414)
+Epoch: [4][2289/500]	Time 37.913 (37.913)	Loss 0.5715 (0.4866)	CeLoss 0.0737 (0.0630)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0824 (0.0682)	MaskBCELoss 0.0270 (0.0204)	MaskDICELoss 0.0555 (0.0479)
+Epoch: [4][2290/500]	Time 38.809 (38.809)	Loss 0.7274 (0.4787)	CeLoss 0.0435 (0.0511)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0895 (0.0644)	MaskBCELoss 0.0053 (0.0146)	MaskDICELoss 0.0842 (0.0498)
+Epoch: [4][2291/500]	Time 41.220 (41.220)	Loss 0.3583 (0.5037)	CeLoss 0.0430 (0.0478)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0519 (0.0710)	MaskBCELoss 0.0166 (0.0187)	MaskDICELoss 0.0353 (0.0523)
+Epoch: [4][2292/500]	Time 40.772 (40.772)	Loss 0.7139 (0.5276)	CeLoss 0.0801 (0.0644)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0862 (0.0704)	MaskBCELoss 0.0093 (0.0167)	MaskDICELoss 0.0769 (0.0537)
+Epoch: [4][2293/500]	Time 35.484 (35.484)	Loss 0.4442 (0.4455)	CeLoss 0.0889 (0.0724)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0560 (0.0605)	MaskBCELoss 0.0155 (0.0185)	MaskDICELoss 0.0405 (0.0420)
+Epoch: [4][2294/500]	Time 37.682 (37.682)	Loss 0.4267 (0.4386)	CeLoss 0.0605 (0.0606)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0585 (0.0627)	MaskBCELoss 0.0170 (0.0206)	MaskDICELoss 0.0415 (0.0421)
+Epoch: [4][2295/500]	Time 37.091 (37.091)	Loss 0.2991 (0.4914)	CeLoss 0.0286 (0.0532)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0404 (0.0670)	MaskBCELoss 0.0088 (0.0163)	MaskDICELoss 0.0316 (0.0507)
+Epoch: [4][2296/500]	Time 40.013 (40.013)	Loss 0.4788 (0.5023)	CeLoss 0.0747 (0.0596)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0686 (0.0661)	MaskBCELoss 0.0240 (0.0144)	MaskDICELoss 0.0445 (0.0517)
+Epoch: [4][2297/500]	Time 39.423 (39.423)	Loss 0.6197 (0.4652)	CeLoss 0.0806 (0.0644)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0748 (0.0592)	MaskBCELoss 0.0099 (0.0121)	MaskDICELoss 0.0649 (0.0471)
+Epoch: [4][2298/500]	Time 38.579 (38.579)	Loss 0.4853 (0.5296)	CeLoss 0.0464 (0.0556)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0787 (0.0735)	MaskBCELoss 0.0318 (0.0191)	MaskDICELoss 0.0469 (0.0545)
+Epoch: [4][2299/500]	Time 40.915 (40.915)	Loss 0.5441 (0.5022)	CeLoss 0.0737 (0.0534)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0786 (0.0719)	MaskBCELoss 0.0264 (0.0210)	MaskDICELoss 0.0522 (0.0508)
+[2025-05-06 19:28:58,437] [INFO] [logging.py:96:log_dist] [Rank 0] step=180, skipped=0, lr=[0.00025466129032258064], mom=[(0.9, 0.95)]
+[2025-05-06 19:28:58,443] [INFO] [timer.py:215:stop] epoch=0/micro_step=300/global_step=30, RunningAvgSamplesPerSec=1.484944820002737, CurrSamplesPerSec=1.4793555795967703, MemAllocated=37.65GB, MaxMemAllocated=51.13GB
+Epoch: [4][2300/500]	Time 37.271 (37.271)	Loss 0.3705 (0.4659)	CeLoss 0.0359 (0.0627)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0682 (0.0641)	MaskBCELoss 0.0351 (0.0183)	MaskDICELoss 0.0330 (0.0458)
+Epoch: [4][2301/500]	Time 37.130 (37.130)	Loss 0.5040 (0.4704)	CeLoss 0.0859 (0.0587)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0615 (0.0637)	MaskBCELoss 0.0123 (0.0164)	MaskDICELoss 0.0492 (0.0473)
+Epoch: [4][2302/500]	Time 41.651 (41.651)	Loss 0.6288 (0.4951)	CeLoss 0.0889 (0.0587)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0800 (0.0726)	MaskBCELoss 0.0167 (0.0241)	MaskDICELoss 0.0633 (0.0485)
+Epoch: [4][2303/500]	Time 36.494 (36.494)	Loss 0.4246 (0.4746)	CeLoss 0.0251 (0.0666)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0563 (0.0618)	MaskBCELoss 0.0084 (0.0145)	MaskDICELoss 0.0478 (0.0474)
+Epoch: [4][2304/500]	Time 40.853 (40.853)	Loss 0.4722 (0.4999)	CeLoss 0.0620 (0.0463)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0567 (0.0709)	MaskBCELoss 0.0073 (0.0189)	MaskDICELoss 0.0494 (0.0520)
+Epoch: [4][2305/500]	Time 42.618 (42.618)	Loss 0.3579 (0.4032)	CeLoss 0.0618 (0.0415)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0490 (0.0556)	MaskBCELoss 0.0160 (0.0138)	MaskDICELoss 0.0330 (0.0418)
+Epoch: [4][2306/500]	Time 38.541 (38.541)	Loss 0.5602 (0.4691)	CeLoss 0.1045 (0.0670)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0719 (0.0627)	MaskBCELoss 0.0199 (0.0166)	MaskDICELoss 0.0520 (0.0461)
+Epoch: [4][2307/500]	Time 40.348 (40.348)	Loss 0.5844 (0.4570)	CeLoss 0.0300 (0.0465)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0741 (0.0595)	MaskBCELoss 0.0063 (0.0110)	MaskDICELoss 0.0677 (0.0486)
+Epoch: [4][2308/500]	Time 40.615 (40.615)	Loss 0.6203 (0.5487)	CeLoss 0.0776 (0.0667)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0751 (0.0744)	MaskBCELoss 0.0097 (0.0189)	MaskDICELoss 0.0654 (0.0555)
+Epoch: [4][2309/500]	Time 38.221 (38.221)	Loss 0.5026 (0.5516)	CeLoss 0.0610 (0.0521)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0641 (0.0750)	MaskBCELoss 0.0119 (0.0168)	MaskDICELoss 0.0522 (0.0582)
+Epoch: [4][2310/500]	Time 42.299 (42.299)	Loss 0.1935 (0.4537)	CeLoss 0.0815 (0.0534)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0181 (0.0615)	MaskBCELoss 0.0055 (0.0153)	MaskDICELoss 0.0126 (0.0462)
+Epoch: [4][2311/500]	Time 37.443 (37.443)	Loss 0.5904 (0.5316)	CeLoss 0.0845 (0.0597)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0646 (0.0675)	MaskBCELoss 0.0018 (0.0113)	MaskDICELoss 0.0628 (0.0562)
+Epoch: [4][2312/500]	Time 40.046 (40.046)	Loss 0.5576 (0.5025)	CeLoss 0.0466 (0.0555)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0734 (0.0674)	MaskBCELoss 0.0127 (0.0154)	MaskDICELoss 0.0607 (0.0520)
+Epoch: [4][2313/500]	Time 40.574 (40.574)	Loss 0.6840 (0.4784)	CeLoss 0.1064 (0.0661)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0902 (0.0628)	MaskBCELoss 0.0239 (0.0150)	MaskDICELoss 0.0662 (0.0478)
+Epoch: [4][2314/500]	Time 40.602 (40.602)	Loss 0.5258 (0.4621)	CeLoss 0.0737 (0.0575)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0609 (0.0645)	MaskBCELoss 0.0058 (0.0186)	MaskDICELoss 0.0550 (0.0459)
+Epoch: [4][2315/500]	Time 39.495 (39.495)	Loss 0.5226 (0.4490)	CeLoss 0.0757 (0.0490)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0624 (0.0596)	MaskBCELoss 0.0088 (0.0128)	MaskDICELoss 0.0537 (0.0468)
+Epoch: [4][2316/500]	Time 37.669 (37.669)	Loss 0.4022 (0.4241)	CeLoss 0.0243 (0.0553)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0532 (0.0567)	MaskBCELoss 0.0080 (0.0141)	MaskDICELoss 0.0452 (0.0426)
+Epoch: [4][2317/500]	Time 36.798 (36.798)	Loss 0.6341 (0.5412)	CeLoss 0.0693 (0.0641)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0759 (0.0737)	MaskBCELoss 0.0071 (0.0187)	MaskDICELoss 0.0688 (0.0550)
+Epoch: [4][2318/500]	Time 39.445 (39.445)	Loss 0.4040 (0.4292)	CeLoss 0.0732 (0.0571)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0563 (0.0582)	MaskBCELoss 0.0199 (0.0156)	MaskDICELoss 0.0363 (0.0426)
+Epoch: [4][2319/500]	Time 38.957 (38.957)	Loss 0.4190 (0.5266)	CeLoss 0.0693 (0.0729)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0606 (0.0678)	MaskBCELoss 0.0224 (0.0148)	MaskDICELoss 0.0381 (0.0530)
+Epoch: [4][2320/500]	Time 39.298 (39.298)	Loss 0.3815 (0.4849)	CeLoss 0.0684 (0.0488)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0497 (0.0695)	MaskBCELoss 0.0141 (0.0200)	MaskDICELoss 0.0356 (0.0495)
+Epoch: [4][2321/500]	Time 41.940 (41.940)	Loss 0.5957 (0.4696)	CeLoss 0.0723 (0.0514)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0800 (0.0669)	MaskBCELoss 0.0194 (0.0195)	MaskDICELoss 0.0606 (0.0474)
+Epoch: [4][2322/500]	Time 41.334 (41.334)	Loss 0.4429 (0.4039)	CeLoss 0.0520 (0.0509)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0529 (0.0569)	MaskBCELoss 0.0054 (0.0170)	MaskDICELoss 0.0475 (0.0399)
+Epoch: [4][2323/500]	Time 40.032 (40.032)	Loss 0.3552 (0.4730)	CeLoss 0.0361 (0.0627)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0614 (0.0641)	MaskBCELoss 0.0287 (0.0170)	MaskDICELoss 0.0327 (0.0470)
+Epoch: [4][2324/500]	Time 38.918 (38.918)	Loss 0.5188 (0.4272)	CeLoss 0.0752 (0.0681)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0659 (0.0582)	MaskBCELoss 0.0140 (0.0178)	MaskDICELoss 0.0519 (0.0404)
+Epoch: [4][2325/500]	Time 39.413 (39.413)	Loss 0.1859 (0.4336)	CeLoss 0.0337 (0.0520)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0263 (0.0616)	MaskBCELoss 0.0096 (0.0186)	MaskDICELoss 0.0166 (0.0431)
+Epoch: [4][2326/500]	Time 40.601 (40.601)	Loss 0.6035 (0.5022)	CeLoss 0.0386 (0.0520)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1042 (0.0717)	MaskBCELoss 0.0448 (0.0206)	MaskDICELoss 0.0594 (0.0511)
+Epoch: [4][2327/500]	Time 40.536 (40.536)	Loss 0.5119 (0.5312)	CeLoss 0.0376 (0.0520)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0675 (0.0710)	MaskBCELoss 0.0110 (0.0148)	MaskDICELoss 0.0565 (0.0562)
+Epoch: [4][2328/500]	Time 40.166 (40.166)	Loss 0.2839 (0.4173)	CeLoss 0.0493 (0.0377)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0440 (0.0604)	MaskBCELoss 0.0196 (0.0173)	MaskDICELoss 0.0244 (0.0431)
+Epoch: [4][2329/500]	Time 38.330 (38.330)	Loss 0.4848 (0.4587)	CeLoss 0.0957 (0.0522)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0618 (0.0644)	MaskBCELoss 0.0175 (0.0182)	MaskDICELoss 0.0443 (0.0463)
+Epoch: [4][2330/500]	Time 39.174 (39.174)	Loss 0.5805 (0.4258)	CeLoss 0.0356 (0.0426)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0818 (0.0579)	MaskBCELoss 0.0183 (0.0133)	MaskDICELoss 0.0635 (0.0446)
+Epoch: [4][2331/500]	Time 38.864 (38.864)	Loss 0.5286 (0.5108)	CeLoss 0.0698 (0.0496)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0734 (0.0714)	MaskBCELoss 0.0214 (0.0184)	MaskDICELoss 0.0520 (0.0530)
+Epoch: [4][2332/500]	Time 40.387 (40.387)	Loss 0.4149 (0.4212)	CeLoss 0.0708 (0.0591)	SegCLSLoss 0.0000 (0.0001)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0555 (0.0569)	MaskBCELoss 0.0167 (0.0155)	MaskDICELoss 0.0388 (0.0414)
+Epoch: [4][2333/500]	Time 38.679 (38.679)	Loss 0.6389 (0.5058)	CeLoss 0.0457 (0.0536)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0853 (0.0655)	MaskBCELoss 0.0149 (0.0119)	MaskDICELoss 0.0704 (0.0535)
+Epoch: [4][2334/500]	Time 37.097 (37.097)	Loss 0.3918 (0.5587)	CeLoss 0.0310 (0.0580)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0543 (0.0765)	MaskBCELoss 0.0123 (0.0185)	MaskDICELoss 0.0420 (0.0580)
+Epoch: [4][2335/500]	Time 38.679 (38.679)	Loss 0.4147 (0.4824)	CeLoss 0.0286 (0.0456)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0577 (0.0640)	MaskBCELoss 0.0126 (0.0125)	MaskDICELoss 0.0451 (0.0515)
+Epoch: [4][2336/500]	Time 41.870 (41.870)	Loss 0.4495 (0.5270)	CeLoss 0.0713 (0.0655)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0769 (0.0709)	MaskBCELoss 0.0395 (0.0177)	MaskDICELoss 0.0374 (0.0533)
+Epoch: [4][2337/500]	Time 40.306 (40.306)	Loss 0.3680 (0.4167)	CeLoss 0.0223 (0.0438)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0563 (0.0570)	MaskBCELoss 0.0175 (0.0138)	MaskDICELoss 0.0388 (0.0432)
+Epoch: [4][2338/500]	Time 41.207 (41.207)	Loss 0.4928 (0.4882)	CeLoss 0.0289 (0.0368)	SegCLSLoss 0.0000 (0.0000)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0771 (0.0716)	MaskBCELoss 0.0254 (0.0202)	MaskDICELoss 0.0516 (0.0514)

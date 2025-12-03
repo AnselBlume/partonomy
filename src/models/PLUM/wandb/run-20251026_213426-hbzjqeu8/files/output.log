@@ -1,0 +1,615 @@
+/home/jk100/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/transformer.py:306: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:15<00:00,  5.20s/it]
+Some weights of PLUMForCausalLM were not initialized from the model checkpoint at liuhaotian/llava-llama-2-13b-chat-lightning-preview and are newly initialized: ['model.visual_model.image_encoder.blocks.23.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias', 'model.visual_model.image_encoder.blocks.31.mlp.lin2.bias', 'model.token_to_mask_fcs.0.0.bias', 'model.visual_model.image_encoder.blocks.13.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.22.attn.rel_pos_w', 'bio_encoder.encoder.layers.0.self_attn.out_proj.weight', 'bio_encoder.encoder.layers.0.self_attn.in_proj_weight', 'model.visual_model.image_encoder.blocks.26.attn.qkv.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.weight', 'model.visual_model.image_encoder.blocks.1.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.22.attn.rel_pos_h', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.bias', 'model.visual_model.image_encoder.blocks.5.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.24.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.18.attn.proj.bias', 'mask_pooler.prompt_encoder.mask_downscaling.6.weight', 'model.visual_model.image_encoder.blocks.28.mlp.lin1.weight', 'model.visual_model.image_encoder.neck.2.weight', 'model.visual_model.image_encoder.blocks.8.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.28.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.2.norm1.weight', 'model.visual_model.image_encoder.blocks.25.attn.qkv.weight', 'model.token_to_mask_fcs.0.0.weight', 'model.visual_model.image_encoder.blocks.14.norm1.weight', 'model.visual_model.image_encoder.blocks.3.norm2.weight', 'model.visual_model.prompt_encoder.point_embeddings.3.weight', 'bio_encoder.encoder.layers.0.self_attn.in_proj_bias', 'model.visual_model.image_encoder.blocks.12.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias', 'model.visual_model.prompt_encoder.mask_downscaling.0.weight', 'model.visual_model.image_encoder.blocks.18.mlp.lin1.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.bias', 'mask_pooler.prompt_encoder.mask_downscaling.0.weight', 'model.visual_model.image_encoder.blocks.25.mlp.lin1.bias', 'model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.27.mlp.lin1.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.bias', 'model.visual_model.image_encoder.blocks.3.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.29.norm1.bias', 'model.visual_model.image_encoder.blocks.26.norm2.bias', 'model.visual_model.image_encoder.blocks.11.norm1.weight', 'model.visual_model.mask_decoder.iou_token.weight', 'model.visual_model.image_encoder.blocks.14.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.0.norm2.bias', 'model.visual_model.image_encoder.blocks.28.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.7.mlp.lin1.weight', 'bio_encoder.encoder.layers.0.self_attn.out_proj.bias', 'model.visual_model.image_encoder.blocks.23.mlp.lin1.weight', 'bio_encoder.encoder.layers.0.linear1.bias', 'model.visual_model.image_encoder.blocks.17.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.29.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.norm3.weight', 'model.visual_model.image_encoder.blocks.29.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.26.attn.proj.weight', 'model.visual_model.image_encoder.blocks.2.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.6.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.18.mlp.lin2.bias', 'model.visual_model.image_encoder.patch_embed.proj.weight', 'model.visual_model.image_encoder.blocks.5.mlp.lin1.bias', 'mask_pooler.prompt_encoder.mask_downscaling.3.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias', 'model.visual_model.image_encoder.blocks.10.norm1.weight', 'model.visual_model.image_encoder.blocks.28.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.21.norm1.bias', 'model.visual_model.image_encoder.blocks.25.attn.proj.bias', 'mask_pooler.prompt_encoder.point_embeddings.0.weight', 'model.visual_model.image_encoder.blocks.2.attn.proj.weight', 'model.visual_model.image_encoder.blocks.17.attn.proj.bias', 'model.visual_model.image_encoder.blocks.9.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.8.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.11.norm1.bias', 'model.visual_model.image_encoder.blocks.20.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.30.norm2.bias', 'model.visual_model.image_encoder.blocks.19.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.30.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.7.attn.rel_pos_w', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.bias', 'bio_encoder.encoder.layers.0.linear2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.norm3.weight', 'model.visual_model.image_encoder.blocks.28.norm2.weight', 'model.visual_model.image_encoder.blocks.11.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.27.norm2.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.bias', 'model.visual_model.image_encoder.blocks.10.norm2.weight', 'model.visual_model.image_encoder.blocks.20.attn.proj.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.weight', 'model.visual_model.image_encoder.neck.0.weight', 'model.visual_model.image_encoder.blocks.25.norm1.bias', 'model.visual_model.image_encoder.blocks.2.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.29.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.14.mlp.lin2.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.weight', 'model.visual_model.image_encoder.blocks.4.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.8.attn.proj.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.weight', 'model.visual_model.image_encoder.blocks.13.norm2.bias', 'mask_pooler.prompt_encoder.point_embeddings.2.weight', 'model.visual_model.image_encoder.blocks.21.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.3.norm1.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.weight', 'model.visual_model.image_encoder.blocks.4.norm1.bias', 'model.visual_model.image_encoder.blocks.7.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.19.attn.rel_pos_w', 'model.visual_model.mask_decoder.output_upscaling.3.bias', 'model.visual_model.image_encoder.blocks.27.mlp.lin1.weight', 'model.token_to_mask_fcs.0.2.weight', 'model.visual_model.image_encoder.blocks.12.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.31.norm1.weight', 'model.visual_model.image_encoder.blocks.17.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.14.mlp.lin1.weight', 'model.visual_model.prompt_encoder.mask_downscaling.3.bias', 'model.visual_model.image_encoder.blocks.14.norm1.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.bias', 'model.visual_model.image_encoder.blocks.27.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.31.norm2.weight', 'model.visual_model.image_encoder.blocks.23.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.9.attn.proj.bias', 'model.visual_model.image_encoder.blocks.1.norm1.weight', 'model.visual_model.image_encoder.blocks.11.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.weight', 'model.visual_model.image_encoder.blocks.1.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.4.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.0.norm2.weight', 'model.visual_model.image_encoder.blocks.6.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.2.attn.qkv.weight', 'model.visual_model.prompt_encoder.pe_layer.positional_encoding_gaussian_matrix', 'model.visual_model.image_encoder.blocks.10.norm2.bias', 'model.visual_model.image_encoder.blocks.31.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.20.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias', 'model.visual_model.image_encoder.blocks.0.norm2.bias', 'model.visual_model.image_encoder.blocks.0.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.23.norm2.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.weight', 'mask_pooler.prompt_encoder.mask_downscaling.6.bias', 'model.visual_model.image_encoder.blocks.2.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.10.norm1.bias', 'model.visual_model.image_encoder.blocks.0.attn.proj.bias', 'model.visual_model.image_encoder.blocks.4.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.24.attn.proj.bias', 'mask_pooler.mask_modulator.projections.0.weight', 'model.visual_model.image_encoder.blocks.19.attn.proj.bias', 'model.text_hidden_fcs.0.0.weight', 'bio_encoder.encoder.layers.0.norm1.weight', 'model.visual_model.image_encoder.blocks.21.attn.proj.bias', 'model.visual_model.image_encoder.blocks.24.mlp.lin2.weight', 'mask_pooler.mask_modulator.projections.1.weight', 'model.visual_model.image_encoder.blocks.11.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.4.norm1.weight', 'model.visual_model.image_encoder.blocks.4.norm2.weight', 'model.visual_model.image_encoder.blocks.18.attn.proj.weight', 'model.text_hidden_fcs.0.2.weight', 'model.visual_model.image_encoder.blocks.31.norm1.bias', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.bias', 'model.visual_model.image_encoder.blocks.5.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.18.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.30.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.30.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.17.norm1.bias', 'model.visual_model.image_encoder.blocks.6.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.1.norm2.bias', 'model.visual_model.image_encoder.blocks.9.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.29.attn.proj.bias', 'model.visual_model.image_encoder.blocks.13.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias', 'model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight', 'model.visual_model.prompt_encoder.mask_downscaling.1.bias', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.weight', 'model.visual_model.mask_decoder.output_upscaling.0.bias', 'model.visual_model.image_encoder.blocks.13.norm1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.bias', 'model.visual_model.image_encoder.blocks.16.norm2.bias', 'model.visual_model.image_encoder.blocks.6.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.14.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias', 'model.visual_model.image_encoder.blocks.27.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.29.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.29.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.12.norm1.weight', 'model.visual_model.image_encoder.pos_embed', 'model.visual_model.image_encoder.blocks.4.norm2.bias', 'model.visual_model.image_encoder.blocks.28.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight', 'model.visual_model.image_encoder.blocks.17.norm2.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.weight', 'model.visual_model.image_encoder.blocks.16.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.27.norm1.weight', 'model.visual_model.image_encoder.blocks.30.norm2.weight', 'model.visual_model.image_encoder.blocks.2.norm2.bias', 'model.visual_model.image_encoder.blocks.20.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.29.norm2.weight', 'model.visual_model.image_encoder.blocks.18.mlp.lin2.weight', 'model.text_hidden_fcs.0.2.bias', 'model.visual_model.image_encoder.blocks.7.norm1.weight', 'model.visual_model.image_encoder.blocks.16.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.15.norm2.weight', 'model.visual_model.image_encoder.blocks.21.norm1.weight', 'model.visual_model.image_encoder.blocks.13.norm1.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.bias', 'model.visual_model.image_encoder.blocks.23.norm1.weight', 'model.visual_model.image_encoder.blocks.15.norm1.weight', 'mask_pooler.block2.0.4.bias', 'model.visual_model.image_encoder.blocks.6.norm2.weight', 'model.visual_model.prompt_encoder.point_embeddings.2.weight', 'model.visual_model.image_encoder.blocks.19.norm2.weight', 'model.visual_model.image_encoder.blocks.26.attn.rel_pos_h', 'model.visual_model.mask_decoder.iou_prediction_head.layers.0.weight', 'mask_pooler.prompt_encoder.mask_downscaling.3.bias', 'model.visual_model.image_encoder.blocks.13.attn.qkv.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.bias', 'model.visual_model.mask_decoder.transformer.norm_final_attn.bias', 'model.visual_model.image_encoder.blocks.8.attn.proj.bias', 'model.visual_model.image_encoder.blocks.24.attn.qkv.weight', 'model.visual_model.mask_decoder.mask_tokens.weight', 'model.visual_model.image_encoder.blocks.27.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.1.attn.rel_pos_h', 'model.visual_model.image_encoder.patch_embed.proj.bias', 'model.visual_model.image_encoder.blocks.16.norm1.weight', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.bias', 'mask_pooler.attn.out_proj.weight', 'model.visual_model.image_encoder.blocks.31.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.7.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight', 'mask_pooler.prompt_encoder.mask_downscaling.4.bias', 'model.visual_model.image_encoder.blocks.5.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.0.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.16.attn.proj.bias', 'model.visual_model.image_encoder.blocks.3.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.weight', 'model.visual_model.image_encoder.blocks.11.attn.proj.bias', 'model.visual_model.image_encoder.blocks.10.attn.proj.bias', 'model.visual_model.image_encoder.blocks.30.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.norm2.bias', 'model.visual_model.image_encoder.blocks.1.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.19.norm1.weight', 'model.visual_model.image_encoder.blocks.18.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.24.mlp.lin1.weight', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.weight', 'mask_pooler.prompt_encoder.no_mask_embed.weight', 'model.visual_model.image_encoder.blocks.19.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias', 'model.visual_model.image_encoder.blocks.7.norm1.bias', 'model.visual_model.prompt_encoder.point_embeddings.1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight', 'model.visual_model.image_encoder.blocks.3.norm2.bias', 'model.visual_model.image_encoder.blocks.15.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.6.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.weight', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.bias', 'model.visual_model.image_encoder.blocks.10.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.0.norm1.weight', 'model.visual_model.image_encoder.blocks.5.norm2.bias', 'model.visual_model.image_encoder.blocks.12.norm1.bias', 'model.visual_model.image_encoder.blocks.19.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.21.norm2.bias', 'model.visual_model.image_encoder.blocks.6.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.9.norm1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight', 'model.visual_model.image_encoder.blocks.11.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.15.attn.proj.bias', 'model.visual_model.image_encoder.blocks.17.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.4.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.13.attn.proj.bias', 'model.visual_model.mask_decoder.iou_prediction_head.layers.2.bias', 'mask_pooler.prompt_encoder.mask_downscaling.1.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight', 'model.visual_model.image_encoder.blocks.0.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.26.attn.proj.bias', 'mask_pooler.prompt_encoder.mask_downscaling.1.bias', 'model.visual_model.image_encoder.blocks.28.norm1.bias', 'bio_encoder.encoder.layers.0.norm2.weight', 'model.visual_model.image_encoder.blocks.11.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.9.norm1.bias', 'model.visual_model.image_encoder.blocks.15.attn.proj.weight', 'model.visual_model.image_encoder.blocks.28.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.9.norm2.weight', 'model.visual_model.image_encoder.blocks.1.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight', 'model.visual_model.prompt_encoder.mask_downscaling.3.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.weight', 'model.visual_model.image_encoder.blocks.30.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.15.norm1.bias', 'model.visual_model.image_encoder.blocks.23.attn.proj.bias', 'model.visual_model.image_encoder.blocks.11.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.12.norm2.bias', 'mask_pooler.block2.0.3.bias', 'mask_pooler.prompt_encoder.point_embeddings.3.weight', 'model.visual_model.image_encoder.blocks.13.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.10.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.weight', 'model.visual_model.image_encoder.blocks.16.norm1.bias', 'model.visual_model.mask_decoder.output_upscaling.0.weight', 'model.visual_model.image_encoder.blocks.14.attn.proj.weight', 'model.visual_model.image_encoder.blocks.30.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.4.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.31.attn.proj.bias', 'model.visual_model.image_encoder.blocks.13.attn.proj.weight', 'model.visual_model.image_encoder.blocks.23.norm1.bias', 'model.visual_model.image_encoder.blocks.12.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.17.norm2.bias', 'model.visual_model.image_encoder.blocks.20.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.18.norm1.weight', 'model.visual_model.image_encoder.blocks.18.norm1.bias', 'model.visual_model.image_encoder.blocks.24.norm1.bias', 'model.visual_model.mask_decoder.iou_prediction_head.layers.2.weight', 'model.visual_model.mask_decoder.transformer.layers.0.norm2.weight', 'model.visual_model.image_encoder.blocks.21.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.6.norm2.bias', 'mask_pooler.block1.0.0.bias', 'model.visual_model.image_encoder.blocks.16.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.22.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.26.norm1.bias', 'model.visual_model.mask_decoder.output_upscaling.1.weight', 'model.visual_model.image_encoder.blocks.20.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.10.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.1.norm2.weight', 'model.visual_model.image_encoder.blocks.17.attn.proj.weight', 'model.visual_model.image_encoder.blocks.22.norm1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.bias', 'model.visual_model.image_encoder.blocks.6.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.5.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.30.norm1.weight', 'model.visual_model.image_encoder.blocks.24.norm2.weight', 'model.visual_model.mask_decoder.transformer.layers.0.norm4.weight', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight', 'model.visual_model.image_encoder.blocks.16.attn.qkv.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight', 'model.visual_model.image_encoder.blocks.22.norm2.weight', 'model.visual_model.image_encoder.blocks.14.mlp.lin1.bias', 'bio_encoder.encoder.layers.0.linear2.weight', 'model.visual_model.image_encoder.blocks.21.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.7.mlp.lin2.bias', 'mask_pooler.attn.out_proj.bias', 'model.visual_model.image_encoder.blocks.16.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.9.attn.proj.weight', 'model.token_to_mask_fcs.0.2.bias', 'model.visual_model.prompt_encoder.not_a_point_embed.weight', 'model.visual_model.image_encoder.blocks.20.norm2.weight', 'model.visual_model.image_encoder.blocks.1.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.5.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.6.attn.proj.bias', 'model.visual_model.image_encoder.blocks.22.norm1.bias', 'model.visual_model.image_encoder.blocks.8.norm1.weight', 'model.visual_model.image_encoder.blocks.15.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.25.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.8.norm1.bias', 'model.visual_model.image_encoder.blocks.11.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.28.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.1.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.11.norm2.weight', 'model.visual_model.image_encoder.blocks.8.norm2.weight', 'model.visual_model.image_encoder.blocks.8.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.6.norm1.weight', 'model.visual_model.image_encoder.blocks.26.attn.qkv.weight', 'model.visual_model.mask_decoder.transformer.layers.0.norm1.weight', 'model.visual_model.image_encoder.blocks.20.norm1.bias', 'model.visual_model.image_encoder.blocks.24.norm1.weight', 'model.visual_model.image_encoder.blocks.27.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.9.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.21.norm2.weight', 'model.visual_model.image_encoder.blocks.25.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.2.attn.proj.bias', 'model.visual_model.mask_decoder.transformer.layers.0.norm1.bias', 'mask_pooler.prompt_encoder.mask_downscaling.4.weight', 'model.visual_model.image_encoder.blocks.29.norm1.weight', 'model.visual_model.image_encoder.blocks.14.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.19.attn.proj.weight', 'model.visual_model.image_encoder.blocks.17.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.12.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.16.attn.rel_pos_w', 'mask_pooler.mask_modulator.projections.0.bias', 'model.visual_model.image_encoder.blocks.0.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.8.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.25.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.13.mlp.lin2.bias', 'mask_pooler.mask_modulator.projections.1.bias', 'model.visual_model.image_encoder.blocks.17.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.24.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.bias', 'bio_encoder.encoder.layers.0.norm2.bias', 'model.visual_model.image_encoder.blocks.19.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.26.norm2.weight', 'model.visual_model.prompt_encoder.mask_downscaling.1.weight', 'model.visual_model.image_encoder.blocks.5.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias', 'model.visual_model.image_encoder.blocks.0.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.4.mlp.lin2.weight', 'model.visual_model.image_encoder.neck.3.weight', 'model.visual_model.image_encoder.blocks.2.attn.qkv.bias', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.bias', 'model.visual_model.image_encoder.blocks.5.attn.proj.bias', 'model.visual_model.image_encoder.blocks.17.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.26.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.30.norm1.bias', 'model.visual_model.image_encoder.blocks.3.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.4.attn.proj.weight', 'model.visual_model.image_encoder.blocks.17.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.23.norm2.bias', 'model.visual_model.image_encoder.blocks.25.norm2.weight', 'bio_encoder.encoder.layers.0.linear1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.norm4.bias', 'mask_pooler.prompt_encoder.mask_downscaling.0.bias', 'model.visual_model.image_encoder.blocks.23.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.30.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.0.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.2.norm2.weight', 'model.visual_model.image_encoder.blocks.11.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.13.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.1.norm1.bias', 'mask_pooler.final_conv.weight', 'model.visual_model.image_encoder.blocks.25.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.18.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.8.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.24.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.weight', 'model.visual_model.image_encoder.blocks.15.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.16.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.13.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.20.attn.proj.bias', 'model.visual_model.image_encoder.blocks.26.norm1.weight', 'model.visual_model.image_encoder.blocks.8.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.weight', 'model.visual_model.image_encoder.blocks.31.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.7.attn.proj.weight', 'model.visual_model.image_encoder.blocks.30.attn.qkv.weight', 'mask_pooler.prompt_encoder.not_a_point_embed.weight', 'model.visual_model.image_encoder.blocks.23.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.10.attn.rel_pos_h', 'mask_pooler.block1.0.0.weight', 'model.visual_model.image_encoder.blocks.16.norm2.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight', 'model.visual_model.image_encoder.blocks.20.norm1.weight', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.bias', 'model.visual_model.mask_decoder.transformer.layers.1.norm3.bias', 'model.visual_model.image_encoder.blocks.25.attn.proj.weight', 'model.visual_model.image_encoder.blocks.28.norm2.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.weight', 'model.visual_model.image_encoder.blocks.25.norm1.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight', 'model.visual_model.image_encoder.blocks.31.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.weight', 'model.visual_model.mask_decoder.transformer.layers.0.norm3.bias', 'model.visual_model.image_encoder.blocks.21.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.29.attn.proj.weight', 'bio_encoder.encoder.layers.0.norm1.bias', 'model.visual_model.image_encoder.blocks.31.attn.proj.weight', 'model.visual_model.prompt_encoder.point_embeddings.0.weight', 'model.visual_model.image_encoder.neck.1.bias', 'mask_pooler.attn.in_proj_bias', 'model.visual_model.image_encoder.blocks.24.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias', 'model.visual_model.image_encoder.blocks.23.attn.proj.weight', 'model.visual_model.image_encoder.blocks.29.mlp.lin2.weight', 'model.visual_model.mask_decoder.transformer.layers.1.norm2.weight', 'mask_pooler.block2.0.4.weight', 'mask_pooler.block2.0.3.weight', 'mask_pooler.block1.0.1.bias', 'model.visual_model.prompt_encoder.mask_downscaling.0.bias', 'model.visual_model.image_encoder.blocks.5.norm1.weight', 'model.visual_model.image_encoder.blocks.27.norm2.weight', 'model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.14.norm2.bias', 'model.visual_model.image_encoder.blocks.22.attn.proj.bias', 'model.visual_model.image_encoder.blocks.21.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.25.mlp.lin2.weight', 'model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.bias', 'mask_pooler.prompt_encoder.pe_layer.positional_encoding_gaussian_matrix', 'mask_pooler.mask_modulator.projections.2.weight', 'mask_pooler.mask_modulator.projections.2.bias', 'model.visual_model.image_encoder.blocks.7.attn.proj.bias', 'model.visual_model.image_encoder.blocks.21.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.12.attn.qkv.weight', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.bias', 'mask_pooler.queries', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias', 'model.visual_model.image_encoder.blocks.1.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.23.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.2.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.27.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.19.attn.qkv.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.weight', 'mask_pooler.attn.in_proj_weight', 'model.visual_model.image_encoder.blocks.7.mlp.lin1.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.weight', 'model.visual_model.image_encoder.blocks.0.norm1.bias', 'model.visual_model.image_encoder.blocks.14.attn.proj.bias', 'model.visual_model.image_encoder.blocks.15.norm2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.weight', 'model.visual_model.image_encoder.blocks.4.mlp.lin1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.18.norm2.weight', 'model.visual_model.image_encoder.blocks.10.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias', 'model.visual_model.image_encoder.blocks.9.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.18.norm2.bias', 'model.visual_model.image_encoder.blocks.30.attn.proj.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.bias', 'model.visual_model.image_encoder.blocks.9.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.27.attn.proj.weight', 'model.visual_model.image_encoder.neck.3.bias', 'model.visual_model.image_encoder.blocks.13.mlp.lin1.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias', 'model.visual_model.image_encoder.blocks.2.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.2.norm1.bias', 'model.visual_model.mask_decoder.iou_prediction_head.layers.1.bias', 'model.visual_model.image_encoder.blocks.27.attn.proj.bias', 'model.visual_model.image_encoder.blocks.24.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.7.norm2.bias', 'model.visual_model.image_encoder.blocks.12.attn.proj.bias', 'model.visual_model.image_encoder.blocks.12.norm2.weight', 'model.visual_model.image_encoder.blocks.17.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.27.norm1.bias', 'model.visual_model.image_encoder.blocks.29.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.10.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.0.mlp.lin1.bias', 'model.visual_model.prompt_encoder.mask_downscaling.4.weight', 'model.visual_model.image_encoder.blocks.15.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.6.norm1.bias', 'model.visual_model.image_encoder.blocks.29.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.14.norm2.weight', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.weight', 'model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.norm4.weight', 'model.visual_model.image_encoder.blocks.1.attn.proj.bias', 'model.visual_model.image_encoder.blocks.3.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.7.mlp.lin2.weight', 'model.visual_model.mask_decoder.output_upscaling.1.bias', 'model.visual_model.mask_decoder.output_upscaling.3.weight', 'model.visual_model.image_encoder.blocks.19.norm2.bias', 'model.visual_model.image_encoder.blocks.19.norm1.bias', 'mask_pooler.final_conv.bias', 'model.visual_model.image_encoder.blocks.18.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.10.mlp.lin1.bias', 'model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.21.mlp.lin2.weight', 'mask_pooler.block1.0.1.weight', 'model.visual_model.image_encoder.blocks.11.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.12.mlp.lin2.weight', 'model.visual_model.mask_decoder.iou_prediction_head.layers.0.bias', 'model.visual_model.image_encoder.blocks.12.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.28.norm1.weight', 'model.visual_model.image_encoder.blocks.10.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.26.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.5.norm2.weight', 'model.visual_model.image_encoder.blocks.29.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias', 'model.visual_model.image_encoder.blocks.15.attn.rel_pos_h', 'model.visual_model.prompt_encoder.no_mask_embed.weight', 'model.visual_model.image_encoder.blocks.20.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.26.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.3.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.9.attn.rel_pos_h', 'model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.bias', 'model.visual_model.image_encoder.blocks.7.norm2.weight', 'model.visual_model.image_encoder.blocks.0.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.23.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.14.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.3.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.5.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.7.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.17.norm1.weight', 'mask_pooler.prompt_encoder.point_embeddings.1.weight', 'model.visual_model.image_encoder.blocks.19.mlp.lin2.weight', 'model.text_hidden_fcs.0.0.bias', 'model.visual_model.image_encoder.blocks.20.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.1.norm1.bias', 'model.visual_model.image_encoder.blocks.12.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.3.mlp.lin1.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias', 'model.visual_model.image_encoder.blocks.20.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.25.norm2.bias', 'model.visual_model.image_encoder.blocks.16.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.25.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.24.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.0.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.31.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.11.attn.proj.weight', 'model.visual_model.image_encoder.blocks.6.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.31.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.2.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.3.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.8.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.27.attn.qkv.weight', 'model.visual_model.prompt_encoder.mask_downscaling.4.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.bias', 'model.visual_model.image_encoder.blocks.19.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.22.attn.proj.weight', 'model.visual_model.image_encoder.blocks.22.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.8.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.22.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.30.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.28.attn.rel_pos_w', 'model.visual_model.mask_decoder.iou_prediction_head.layers.1.weight', 'model.visual_model.image_encoder.blocks.12.attn.proj.weight', 'model.visual_model.image_encoder.blocks.26.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.22.norm2.bias', 'model.visual_model.image_encoder.blocks.8.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.9.norm2.bias', 'model.visual_model.image_encoder.blocks.1.mlp.lin2.weight', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight', 'model.visual_model.image_encoder.blocks.3.attn.proj.weight', 'model.visual_model.image_encoder.blocks.21.attn.qkv.weight', 'model.visual_model.prompt_encoder.mask_downscaling.6.weight', 'model.visual_model.image_encoder.blocks.23.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.22.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.15.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.1.norm1.weight', 'model.visual_model.image_encoder.blocks.9.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.22.attn.qkv.weight', 'model.visual_model.image_encoder.blocks.13.norm2.weight', 'model.visual_model.image_encoder.blocks.5.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.21.attn.proj.weight', 'model.visual_model.mask_decoder.transformer.norm_final_attn.weight', 'model.visual_model.image_encoder.blocks.26.mlp.lin2.bias', 'model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight', 'model.visual_model.image_encoder.blocks.14.attn.qkv.bias', 'model.visual_model.image_encoder.blocks.6.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.3.norm1.bias', 'model.visual_model.image_encoder.blocks.4.attn.proj.bias', 'model.visual_model.image_encoder.blocks.9.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.10.attn.rel_pos_w', 'model.visual_model.image_encoder.blocks.20.mlp.lin2.weight', 'model.visual_model.image_encoder.blocks.28.mlp.lin1.bias', 'model.visual_model.prompt_encoder.mask_downscaling.6.bias', 'model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.bias', 'model.visual_model.image_encoder.blocks.5.norm1.bias', 'model.visual_model.mask_decoder.transformer.layers.0.norm4.bias', 'model.visual_model.image_encoder.blocks.16.attn.proj.weight', 'model.visual_model.image_encoder.blocks.31.norm2.bias', 'model.visual_model.image_encoder.blocks.28.attn.proj.weight', 'model.visual_model.image_encoder.blocks.15.mlp.lin1.weight', 'model.visual_model.image_encoder.blocks.3.mlp.lin2.bias', 'model.visual_model.image_encoder.blocks.24.attn.rel_pos_h', 'model.visual_model.image_encoder.neck.1.weight', 'model.visual_model.image_encoder.blocks.31.attn.rel_pos_w', 'model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.bias', 'model.visual_model.image_encoder.blocks.4.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.18.attn.rel_pos_h', 'model.visual_model.image_encoder.blocks.15.mlp.lin1.bias', 'model.visual_model.image_encoder.blocks.22.attn.qkv.bias', 'model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+trainable params: 6,553,600 || all params: 14,153,038,759 || trainable%: 0.04630525014165263
+>> model.config.train_mask_prompt_encoder:  True
+n:  base_model.model.model.embed_tokens.weight p.shape:  torch.Size([32002, 5120])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.0.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.1.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.2.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.3.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.not_a_point_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.0.weight p.shape:  torch.Size([4, 1, 2, 2])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.0.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.1.weight p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.1.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.3.weight p.shape:  torch.Size([16, 4, 2, 2])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.3.bias p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.4.weight p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.4.bias p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.6.weight p.shape:  torch.Size([256, 16, 1, 1])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.6.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.prompt_encoder.no_mask_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_token.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.mask_tokens.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.weight p.shape:  torch.Size([256, 64, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.weight p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.weight p.shape:  torch.Size([64, 32, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.text_hidden_fcs.0.0.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.model.text_hidden_fcs.0.0.bias p.shape:  torch.Size([5120])
+n:  base_model.model.model.text_hidden_fcs.0.2.weight p.shape:  torch.Size([256, 5120])
+n:  base_model.model.model.text_hidden_fcs.0.2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.token_to_mask_fcs.0.0.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.model.token_to_mask_fcs.0.0.bias p.shape:  torch.Size([5120])
+n:  base_model.model.model.token_to_mask_fcs.0.2.weight p.shape:  torch.Size([3, 5120])
+n:  base_model.model.model.token_to_mask_fcs.0.2.bias p.shape:  torch.Size([3])
+n:  base_model.model.lm_head.weight p.shape:  torch.Size([32002, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_weight p.shape:  torch.Size([15360, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_bias p.shape:  torch.Size([15360])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.weight p.shape:  torch.Size([2048, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.weight p.shape:  torch.Size([5120, 2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.weight p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.weight p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.bias p.shape:  torch.Size([5120])
+n:  base_model.model.mask_pooler.queries p.shape:  torch.Size([4096, 1, 256])
+n:  base_model.model.mask_pooler.prompt_encoder.point_embeddings.0.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.mask_pooler.prompt_encoder.point_embeddings.1.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.mask_pooler.prompt_encoder.point_embeddings.2.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.mask_pooler.prompt_encoder.point_embeddings.3.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.mask_pooler.prompt_encoder.not_a_point_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.0.weight p.shape:  torch.Size([4, 1, 2, 2])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.0.bias p.shape:  torch.Size([4])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.1.weight p.shape:  torch.Size([4])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.1.bias p.shape:  torch.Size([4])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.3.weight p.shape:  torch.Size([16, 4, 2, 2])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.3.bias p.shape:  torch.Size([16])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.4.weight p.shape:  torch.Size([16])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.4.bias p.shape:  torch.Size([16])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.6.weight p.shape:  torch.Size([256, 16, 1, 1])
+n:  base_model.model.mask_pooler.prompt_encoder.mask_downscaling.6.bias p.shape:  torch.Size([256])
+n:  base_model.model.mask_pooler.prompt_encoder.no_mask_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.mask_pooler.mask_modulator.projections.0.weight p.shape:  torch.Size([8, 256])
+n:  base_model.model.mask_pooler.mask_modulator.projections.0.bias p.shape:  torch.Size([8])
+n:  base_model.model.mask_pooler.mask_modulator.projections.1.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.mask_pooler.mask_modulator.projections.1.bias p.shape:  torch.Size([32])
+n:  base_model.model.mask_pooler.mask_modulator.projections.2.weight p.shape:  torch.Size([512, 256])
+n:  base_model.model.mask_pooler.mask_modulator.projections.2.bias p.shape:  torch.Size([512])
+n:  base_model.model.mask_pooler.attn.in_proj_weight p.shape:  torch.Size([768, 256])
+n:  base_model.model.mask_pooler.attn.in_proj_bias p.shape:  torch.Size([768])
+n:  base_model.model.mask_pooler.attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.mask_pooler.attn.out_proj.bias p.shape:  torch.Size([256])
+ade20k:  20210
+cocostuff:  118287
+loading annotations into memory...
+Done (t=0.57s)
+creating index...
+index created!
+pascal_part:  4366
+loading annotations into memory...
+Done (t=8.47s)
+creating index...
+index created!
+paco_lvis:  45790
+mapillary:  18000
+loading dataset refclef into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refclef/refs(unc).p
+creating index...
+index created.
+DONE (t=2.90s)
+dataset refclef (refs unc) (train split) has 17978 images and 99523 annotations.
+loading dataset refcoco into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco/refs(unc).p
+creating index...
+index created.
+DONE (t=3.59s)
+dataset refcoco (refs unc) (train split) has 16994 images and 196771 annotations.
+loading dataset refcoco+ into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco+/refs(unc).p
+creating index...
+index created.
+DONE (t=5.74s)
+dataset refcoco+ (refs unc) (train split) has 16992 images and 196737 annotations.
+loading dataset refcocog into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcocog/refs(umd).p
+creating index...
+index created.
+DONE (t=6.33s)
+dataset refcocog (refs umd) (train split) has 21899 images and 208960 annotations.
+llava_instruct_150k_data:  157712
+number of reason_seg samples:  239
+len(self.img_to_explanation):  239
+Training with 80000 examples.
+Validating with 200 examples.
+[2025-10-26 21:39:04,255] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.9.5, git-hash=unknown, git-branch=unknown
+[2025-10-26 21:39:04,255] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2025-10-26 21:39:04,255] [INFO] [comm.py:594:init_distributed] cdb=None
+[2025-10-26 21:39:04,256] [INFO] [comm.py:625:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2025-10-26 21:39:30,874] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+Using /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118/fused_adam/build.ninja...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/utils/cpp_extension.py:1967: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation.
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Building extension module fused_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module fused_adam...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/ops/adam/fused_adam.py:96: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/tensor/python_tensor.cpp:78.)
+  self._dummy_overflow_buf = get_accelerator().IntTensor([0])
+Time to load fused_adam op: 1.1547050476074219 seconds
+[2025-10-26 21:39:32,254] [INFO] [logging.py:96:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+[2025-10-26 21:39:32,450] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = FusedAdam
+[2025-10-26 21:39:32,450] [INFO] [utils.py:54:is_zero_supported_optimizer] Checking ZeRO support for optimizer=FusedAdam type=<class 'deepspeed.ops.adam.fused_adam.FusedAdam'>
+[2025-10-26 21:39:32,450] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 2 optimizer
+[2025-10-26 21:39:32,450] [INFO] [stage_1_and_2.py:133:__init__] Reduce bucket size 500000000
+[2025-10-26 21:39:32,450] [INFO] [stage_1_and_2.py:134:__init__] Allgather bucket size 500000000
+[2025-10-26 21:39:32,450] [INFO] [stage_1_and_2.py:135:__init__] CPU Offload: False
+[2025-10-26 21:39:32,450] [INFO] [stage_1_and_2.py:136:__init__] Round robin gradient partitioning: False
+Rank: 0 partition count [2] and sizes[(259707438, False)]
+[2025-10-26 21:39:37,151] [INFO] [utils.py:785:see_memory_usage] Before initializing optimizer states
+[2025-10-26 21:39:37,152] [INFO] [utils.py:786:see_memory_usage] MA 27.53 GB         Max_MA 28.01 GB         CA 28.15 GB         Max_CA 28 GB
+[2025-10-26 21:39:37,153] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 144.7 GB, percent = 14.4%
+[2025-10-26 21:39:40,337] [INFO] [utils.py:785:see_memory_usage] After initializing optimizer states
+[2025-10-26 21:39:40,337] [INFO] [utils.py:786:see_memory_usage] MA 29.47 GB         Max_MA 30.44 GB         CA 31.06 GB         Max_CA 31 GB
+[2025-10-26 21:39:40,338] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 144.69 GB, percent = 14.4%
+[2025-10-26 21:39:40,338] [INFO] [stage_1_and_2.py:488:__init__] optimizer state initialized
+[2025-10-26 21:39:43,401] [INFO] [utils.py:785:see_memory_usage] After initializing ZeRO optimizer
+[2025-10-26 21:39:43,402] [INFO] [utils.py:786:see_memory_usage] MA 29.47 GB         Max_MA 29.47 GB         CA 31.06 GB         Max_CA 31 GB
+[2025-10-26 21:39:43,402] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 144.77 GB, percent = 14.4%
+[2025-10-26 21:39:43,408] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = adamw
+[2025-10-26 21:39:43,408] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2025-10-26 21:39:43,409] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x7f0c5ef55510>
+[2025-10-26 21:39:43,409] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0003], mom=[(0.9, 0.95)]
+[2025-10-26 21:39:43,412] [INFO] [config.py:960:print] DeepSpeedEngine configuration:
+[2025-10-26 21:39:43,412] [INFO] [config.py:964:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2025-10-26 21:39:43,412] [INFO] [config.py:964:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-10-26 21:39:43,412] [INFO] [config.py:964:print]   amp_enabled .................. False
+[2025-10-26 21:39:43,412] [INFO] [config.py:964:print]   amp_params ................... False
+[2025-10-26 21:39:43,412] [INFO] [config.py:964:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   bfloat16_enabled ............. True
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   checkpoint_parallel_write_pipeline  False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   checkpoint_tag_validation_enabled  True
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   checkpoint_tag_validation_fail  False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f0a4c47b550>
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   communication_data_type ...... None
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   curriculum_enabled_legacy .... False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   curriculum_params_legacy ..... False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   data_efficiency_enabled ...... False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   dataloader_drop_last ......... False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   disable_allgather ............ False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   dump_state ................... False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   dynamic_loss_scale_args ...... None
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   eigenvalue_enabled ........... False
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   eigenvalue_gas_boundary_resolution  1
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   eigenvalue_layer_num ......... 0
+[2025-10-26 21:39:43,413] [INFO] [config.py:964:print]   eigenvalue_max_iter .......... 100
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   eigenvalue_stability ......... 1e-06
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   eigenvalue_tol ............... 0.01
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   eigenvalue_verbose ........... False
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   elasticity_enabled ........... False
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   fp16_auto_cast ............... None
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   fp16_enabled ................. False
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   fp16_master_weights_and_gradients  False
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   global_rank .................. 0
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   grad_accum_dtype ............. None
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   gradient_accumulation_steps .. 10
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   gradient_clipping ............ 1.0
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   gradient_predivide_factor .... 1.0
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   initial_dynamic_scale ........ 1
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   load_universal_checkpoint .... False
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   loss_scale ................... 1.0
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   memory_breakdown ............. False
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   mics_hierarchial_params_gather  False
+[2025-10-26 21:39:43,414] [INFO] [config.py:964:print]   mics_shard_size .............. -1
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   optimizer_legacy_fusion ...... False
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   optimizer_name ............... adamw
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   optimizer_params ............. {'lr': 0.0003, 'weight_decay': 0.0, 'betas': (0.9, 0.95)}
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   pld_enabled .................. False
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   pld_params ................... False
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   prescale_gradients ........... False
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   scheduler_name ............... WarmupDecayLR
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   scheduler_params ............. {'total_num_steps': 12500, 'warmup_min_lr': 0, 'warmup_max_lr': 0.0003, 'warmup_num_steps': 100, 'warmup_type': 'linear'}
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   sparse_attention ............. None
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   sparse_gradients_enabled ..... False
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   steps_per_print .............. 10
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   train_batch_size ............. 160
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   train_micro_batch_size_per_gpu  8
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   use_node_local_storage ....... False
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   wall_clock_breakdown ......... False
+[2025-10-26 21:39:43,415] [INFO] [config.py:964:print]   world_size ................... 2
+[2025-10-26 21:39:43,416] [INFO] [config.py:964:print]   zero_allow_untested_optimizer  False
+[2025-10-26 21:39:43,416] [INFO] [config.py:964:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True
+[2025-10-26 21:39:43,416] [INFO] [config.py:964:print]   zero_enabled ................. True
+[2025-10-26 21:39:43,416] [INFO] [config.py:964:print]   zero_force_ds_cpu_optimizer .. True
+[2025-10-26 21:39:43,416] [INFO] [config.py:964:print]   zero_optimization_stage ...... 2
+[2025-10-26 21:39:43,416] [INFO] [config.py:950:print_user_config]   json = {
+    "train_micro_batch_size_per_gpu": 8,
+    "gradient_accumulation_steps": 10,
+    "optimizer": {
+        "type": "AdamW",
+        "params": {
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "betas": [0.9, 0.95]
+        }
+    },
+    "scheduler": {
+        "type": "WarmupDecayLR",
+        "params": {
+            "total_num_steps": 1.250000e+04,
+            "warmup_min_lr": 0,
+            "warmup_max_lr": 0.0003,
+            "warmup_num_steps": 100,
+            "warmup_type": "linear"
+        }
+    },
+    "fp16": {
+        "enabled": false
+    },
+    "bf16": {
+        "enabled": true
+    },
+    "gradient_clipping": 1.0,
+    "zero_optimization": {
+        "stage": 2,
+        "contiguous_gradients": true,
+        "overlap_comm": true,
+        "reduce_scatter": true,
+        "reduce_bucket_size": 5.000000e+08,
+        "allgather_bucket_size": 5.000000e+08
+    },
+    "steps_per_print": 10,
+    "wall_clock_breakdown": false
+}
+(train) >> AFTER DEEPSPEED
+>> (train) Auto-resume from:  ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_10222025/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_10222025_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_srates_9_7_7_1_ckpt_model
+>> (train) resume exists:  False
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:84.)
+  return F.conv2d(input, weight, bias, self.stride,
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/utils/checkpoint.py:464: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:952: UserWarning: Plan failed with a CuDNNError: cuDNN error: CUDNN_STATUS_BAD_PARAM
+Exception raised from run_conv_plan at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:374 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f0e0f978897 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe1640b (0x7f0daedfb40b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x108f133 (0x7f0daf074133 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0x1091043 (0x7f0daf076043 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x109176b (0x7f0daf07676b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x1075c7d (0x7f0daf05ac7d in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0x107656a (0x7f0daf05b56a in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: at::native::cudnn_convolution_transpose(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, bool) + 0xa4 (0x7f0daf05b714 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: <unknown function> + 0x32f2cc2 (0x7f0db12d7cc2 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: <unknown function> + 0x32ff147 (0x7f0db12e4147 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: at::_ops::cudnn_convolution_transpose::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool) + 0x2fb (0x7f0e03c3c2fb in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool) + 0x166d (0x7f0e0336348d in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x2a8d27f (0x7f0e044f127f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x2a93bdc (0x7f0e044f7bdc in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool) + 0x344 (0x7f0e03c3a0d4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long) + 0x3b8 (0x7f0e03356868 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x2a8cb1c (0x7f0e044f0b1c in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x2a93a48 (0x7f0e044f7a48 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: at::_ops::convolution::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) + 0x17b (0x7f0e03bf7d6b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0x41902e1 (0x7f0e05bf42e1 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x4191259 (0x7f0e05bf5259 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) + 0x2d4 (0x7f0e03c38ed4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: <unknown function> + 0x164a2e0 (0x7f0e030ae2e0 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #23: at::native::conv_transpose2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, c10::ArrayRef<c10::SymInt>) + 0x125 (0x7f0e0335bb05 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #24: <unknown function> + 0x2c879c9 (0x7f0e046eb9c9 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #25: <unknown function> + 0x2c87b03 (0x7f0e046ebb03 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #26: at::_ops::conv_transpose2d_input::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, c10::ArrayRef<c10::SymInt>) + 0x2cb (0x7f0e03f9509b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #27: <unknown function> + 0x61476f (0x7f0e0ea1c76f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #28: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x4fc697]
+frame #29: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #30: _PyEval_EvalFrameDefault + 0x53d6 (0x4f2376 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #31: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #32: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #33: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #34: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #35: _PyObject_FastCallDictTstate + 0xcd (0x4f561d in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #36: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #37: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #38: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #39: _PyEval_EvalFrameDefault + 0x4dde (0x4f1d7e in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #40: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #41: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #42: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #43: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #44: _PyObject_FastCallDictTstate + 0xcd (0x4f561d in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #45: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #46: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #47: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #48: _PyEval_EvalFrameDefault + 0x53d6 (0x4f2376 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #49: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #50: _PyEval_EvalFrameDefault + 0x13b3 (0x4ee353 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #51: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #52: PyObject_Call + 0xb8 (0x508858 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #53: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #54: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #55: PyObject_Call + 0xb8 (0x508858 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #56: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #57: _PyFunction_Vectorcall + 0x6f (0x4fcadf in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #58: _PyObject_FastCallDictTstate + 0x17d (0x4f56cd in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #59: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #60: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #61: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #62: _PyEval_EvalFrameDefault + 0x5757 (0x4f26f7 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #63: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+ (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:921.)
+  return F.conv_transpose2d(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:952: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv_transpose2d(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with a CuDNNError: cuDNN error: CUDNN_STATUS_BAD_PARAM
+Exception raised from run_conv_plan at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:374 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f0e0f978897 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe1640b (0x7f0daedfb40b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x108f133 (0x7f0daf074133 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0x1091043 (0x7f0daf076043 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x10915bb (0x7f0daf0765bb in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x1074062 (0x7f0daf059062 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0x107527f (0x7f0daf05a27f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0x1078184 (0x7f0daf05d184 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: at::native::convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, std::array<bool, 3ul>) + 0x1872 (0x7f0e033661e2 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: <unknown function> + 0x32f8375 (0x7f0db12dd375 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: <unknown function> + 0x3300422 (0x7f0db12e5422 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: at::_ops::convolution_backward::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, std::array<bool, 3ul>) + 0x26b (0x7f0e0423510b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x45578f3 (0x7f0e05fbb8f3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x45594a3 (0x7f0e05fbd4a3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::convolution_backward::call(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::OptionalArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, std::array<bool, 3ul>) + 0x3a3 (0x7f0e0425b7c3 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x164a4b1 (0x7f0e030ae4b1 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: torch::autograd::generated::ConvolutionBackward0::apply(std::vector<at::Tensor, std::allocator<at::Tensor> >&&) + 0x300 (0x7f0e05acd290 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4dcc3ab (0x7f0e068303ab in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: torch::autograd::Engine::evaluate_function(std::shared_ptr<torch::autograd::GraphTask>&, torch::autograd::Node*, torch::autograd::InputBuffer&, std::shared_ptr<torch::autograd::ReadyQueue> const&) + 0x1526 (0x7f0e0682a4a6 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: torch::autograd::Engine::thread_main(std::shared_ptr<torch::autograd::GraphTask> const&) + 0x698 (0x7f0e0682b108 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: torch::autograd::Engine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x13f (0x7f0e0682203f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: torch::autograd::python::PythonEngine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x5c (0x7f0e0ec30e1c in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #22: <unknown function> + 0xdbbf4 (0x7f0e23151bf4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/../../libstdc++.so.6)
+frame #23: <unknown function> + 0x94ac3 (0x7f0e246b8ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #24: <unknown function> + 0x1268c0 (0x7f0e2474a8c0 in /lib/x86_64-linux-gnu/libc.so.6)
+ (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:921.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Epoch: [0][  1/500]	Time 91.430 (91.417)	Loss 1.2035 (1.2348)	CeLoss 0.2578 (0.2209)	SegCLSLoss 0.0830 (0.0822)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1267 (0.1452)	MaskBCELoss 0.0391 (0.0521)	MaskDICELoss 0.0875 (0.0932)
+Epoch: [0][ 11/500]	Time 88.892 (87.850)	Loss 1.2074 (1.2271)	CeLoss 0.3086 (0.2358)	SegCLSLoss 0.0469 (0.0784)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1531 (0.1414)	MaskBCELoss 0.0696 (0.0495)	MaskDICELoss 0.0835 (0.0919)
+Epoch: [0][ 21/500]	Time 91.693 (87.671)	Loss 1.0719 (1.1500)	CeLoss 0.2012 (0.2224)	SegCLSLoss 0.0248 (0.0438)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1336 (0.1497)	MaskBCELoss 0.0414 (0.0596)	MaskDICELoss 0.0922 (0.0901)
+Epoch: [0][ 31/500]	Time 82.596 (88.366)	Loss 1.0262 (1.0951)	CeLoss 0.1816 (0.2197)	SegCLSLoss 0.0295 (0.0380)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1291 (0.1313)	MaskBCELoss 0.0412 (0.0419)	MaskDICELoss 0.0879 (0.0894)
+Epoch: [0][ 41/500]	Time 90.438 (86.666)	Loss 1.0755 (1.1183)	CeLoss 0.2500 (0.2183)	SegCLSLoss 0.0356 (0.0579)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1231 (0.1305)	MaskBCELoss 0.0386 (0.0433)	MaskDICELoss 0.0846 (0.0872)
+Epoch: [0][ 51/500]	Time 89.099 (87.651)	Loss 0.9894 (1.0567)	CeLoss 0.1689 (0.1989)	SegCLSLoss 0.0227 (0.0417)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1253 (0.1229)	MaskBCELoss 0.0378 (0.0348)	MaskDICELoss 0.0875 (0.0881)
+Epoch: [0][ 61/500]	Time 91.141 (88.619)	Loss 0.9481 (0.9821)	CeLoss 0.1406 (0.1797)	SegCLSLoss 0.0193 (0.0237)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1283 (0.1212)	MaskBCELoss 0.0428 (0.0357)	MaskDICELoss 0.0854 (0.0854)
+Epoch: [0][ 71/500]	Time 83.119 (84.718)	Loss 0.8396 (0.9395)	CeLoss 0.1387 (0.1536)	SegCLSLoss 0.0435 (0.0250)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0985 (0.1204)	MaskBCELoss 0.0289 (0.0379)	MaskDICELoss 0.0696 (0.0825)
+Epoch: [0][ 81/500]	Time 79.875 (84.869)	Loss 0.9395 (0.9665)	CeLoss 0.1201 (0.1332)	SegCLSLoss 0.0219 (0.0507)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1291 (0.1207)	MaskBCELoss 0.0429 (0.0389)	MaskDICELoss 0.0862 (0.0818)
+Epoch: [0][ 91/500]	Time 83.442 (87.668)	Loss 0.9066 (0.9341)	CeLoss 0.1016 (0.1180)	SegCLSLoss 0.0305 (0.0462)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1359 (0.1201)	MaskBCELoss 0.0572 (0.0395)	MaskDICELoss 0.0787 (0.0806)
+[2025-10-27 00:05:15,298] [INFO] [logging.py:96:log_dist] [Rank 0] step=10, skipped=0, lr=[0.0002998306451612903], mom=[(0.9, 0.95)]
+[2025-10-27 00:05:15,299] [INFO] [timer.py:215:stop] epoch=0/micro_step=100/global_step=10, RunningAvgSamplesPerSec=1.8241644999646291, CurrSamplesPerSec=1.7148532575662172, MemAllocated=34.85GB, MaxMemAllocated=53.74GB
+Epoch: [0][101/500]	Time 85.755 (88.522)	Loss 0.9221 (0.9092)	CeLoss 0.1006 (0.1098)	SegCLSLoss 0.0258 (0.0431)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1115 (0.1176)	MaskBCELoss 0.0203 (0.0380)	MaskDICELoss 0.0911 (0.0796)
+Epoch: [0][111/500]	Time 87.928 (88.003)	Loss 0.8904 (0.8616)	CeLoss 0.0869 (0.1018)	SegCLSLoss 0.0317 (0.0254)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1278 (0.1139)	MaskBCELoss 0.0470 (0.0338)	MaskDICELoss 0.0808 (0.0802)
+Epoch: [0][121/500]	Time 87.648 (87.000)	Loss 0.8005 (0.8462)	CeLoss 0.1182 (0.0996)	SegCLSLoss 0.0081 (0.0214)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1073 (0.1190)	MaskBCELoss 0.0320 (0.0413)	MaskDICELoss 0.0753 (0.0777)
+Epoch: [0][131/500]	Time 88.219 (87.624)	Loss 0.7684 (0.8203)	CeLoss 0.0884 (0.0965)	SegCLSLoss 0.0139 (0.0099)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1004 (0.1128)	MaskBCELoss 0.0251 (0.0331)	MaskDICELoss 0.0753 (0.0797)
+Epoch: [0][141/500]	Time 86.555 (88.610)	Loss 0.7877 (0.7995)	CeLoss 0.0659 (0.0902)	SegCLSLoss 0.0123 (0.0103)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1032 (0.1115)	MaskBCELoss 0.0214 (0.0339)	MaskDICELoss 0.0818 (0.0776)
+Epoch: [0][151/500]	Time 90.604 (88.794)	Loss 0.7149 (0.7968)	CeLoss 0.0942 (0.0878)	SegCLSLoss 0.0067 (0.0101)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0984 (0.1118)	MaskBCELoss 0.0300 (0.0343)	MaskDICELoss 0.0684 (0.0775)
+Epoch: [0][161/500]	Time 85.673 (89.392)	Loss 0.8129 (0.7870)	CeLoss 0.1143 (0.0847)	SegCLSLoss 0.0060 (0.0077)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1359 (0.1099)	MaskBCELoss 0.0666 (0.0321)	MaskDICELoss 0.0692 (0.0778)
+Epoch: [0][171/500]	Time 95.223 (87.398)	Loss 0.6907 (0.7714)	CeLoss 0.0532 (0.0827)	SegCLSLoss 0.0067 (0.0071)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1083 (0.1074)	MaskBCELoss 0.0404 (0.0308)	MaskDICELoss 0.0679 (0.0766)
+Epoch: [0][181/500]	Time 91.691 (87.242)	Loss 0.7531 (0.7580)	CeLoss 0.0879 (0.0787)	SegCLSLoss 0.0078 (0.0074)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0931 (0.1073)	MaskBCELoss 0.0158 (0.0323)	MaskDICELoss 0.0773 (0.0750)
+Epoch: [0][191/500]	Time 83.645 (88.750)	Loss 0.7378 (0.7558)	CeLoss 0.0776 (0.0792)	SegCLSLoss 0.0063 (0.0070)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1068 (0.1061)	MaskBCELoss 0.0344 (0.0310)	MaskDICELoss 0.0723 (0.0751)
+[2025-10-27 02:32:06,090] [INFO] [logging.py:96:log_dist] [Rank 0] step=20, skipped=0, lr=[0.00029716935483870964], mom=[(0.9, 0.95)]
+[2025-10-27 02:32:06,091] [INFO] [timer.py:215:stop] epoch=0/micro_step=200/global_step=20, RunningAvgSamplesPerSec=1.8261608387694632, CurrSamplesPerSec=1.8607890299397567, MemAllocated=36.35GB, MaxMemAllocated=54.07GB
+Epoch: [0][201/500]	Time 90.330 (88.723)	Loss 0.5888 (0.7438)	CeLoss 0.0610 (0.0767)	SegCLSLoss 0.0059 (0.0062)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0855 (0.1068)	MaskBCELoss 0.0280 (0.0333)	MaskDICELoss 0.0575 (0.0735)
+Epoch: [0][211/500]	Time 89.943 (88.810)	Loss 0.7430 (0.7425)	CeLoss 0.0806 (0.0756)	SegCLSLoss 0.0046 (0.0053)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1063 (0.1051)	MaskBCELoss 0.0329 (0.0308)	MaskDICELoss 0.0734 (0.0743)
+Epoch: [0][221/500]	Time 91.000 (88.054)	Loss 0.6931 (0.7294)	CeLoss 0.0334 (0.0746)	SegCLSLoss 0.0081 (0.0050)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1029 (0.1023)	MaskBCELoss 0.0299 (0.0289)	MaskDICELoss 0.0730 (0.0734)
+Epoch: [0][231/500]	Time 83.035 (84.752)	Loss 0.6595 (0.7315)	CeLoss 0.0432 (0.0752)	SegCLSLoss 0.0054 (0.0051)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0965 (0.1020)	MaskBCELoss 0.0277 (0.0284)	MaskDICELoss 0.0688 (0.0736)
+Epoch: [0][241/500]	Time 86.057 (86.340)	Loss 0.6947 (0.7172)	CeLoss 0.0757 (0.0723)	SegCLSLoss 0.0045 (0.0048)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0977 (0.1018)	MaskBCELoss 0.0286 (0.0298)	MaskDICELoss 0.0691 (0.0720)
+Epoch: [0][251/500]	Time 87.854 (88.344)	Loss 0.7238 (0.7071)	CeLoss 0.0591 (0.0725)	SegCLSLoss 0.0036 (0.0044)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1061 (0.1009)	MaskBCELoss 0.0319 (0.0302)	MaskDICELoss 0.0742 (0.0707)
+Epoch: [0][261/500]	Time 88.186 (88.133)	Loss 0.7144 (0.7054)	CeLoss 0.0515 (0.0697)	SegCLSLoss 0.0050 (0.0043)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1284 (0.0995)	MaskBCELoss 0.0624 (0.0281)	MaskDICELoss 0.0660 (0.0714)
+Epoch: [0][271/500]	Time 90.001 (87.885)	Loss 0.7613 (0.7114)	CeLoss 0.0742 (0.0714)	SegCLSLoss 0.0038 (0.0040)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0987 (0.1046)	MaskBCELoss 0.0183 (0.0341)	MaskDICELoss 0.0804 (0.0705)
+Epoch: [0][281/500]	Time 84.283 (87.505)	Loss 0.6701 (0.6918)	CeLoss 0.0771 (0.0680)	SegCLSLoss 0.0053 (0.0040)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0912 (0.0948)	MaskBCELoss 0.0245 (0.0238)	MaskDICELoss 0.0667 (0.0710)
+Epoch: [0][291/500]	Time 86.697 (86.313)	Loss 0.7110 (0.6758)	CeLoss 0.0654 (0.0704)	SegCLSLoss 0.0035 (0.0038)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1078 (0.0933)	MaskBCELoss 0.0373 (0.0247)	MaskDICELoss 0.0705 (0.0685)
+[2025-10-27 04:57:53,290] [INFO] [logging.py:96:log_dist] [Rank 0] step=30, skipped=0, lr=[0.000294508064516129], mom=[(0.9, 0.95)]
+[2025-10-27 04:57:53,291] [INFO] [timer.py:215:stop] epoch=0/micro_step=300/global_step=30, RunningAvgSamplesPerSec=1.8277983968398055, CurrSamplesPerSec=1.8474288784757642, MemAllocated=37.95GB, MaxMemAllocated=54.4GB
+Epoch: [0][301/500]	Time 82.268 (87.777)	Loss 0.6028 (0.6744)	CeLoss 0.0649 (0.0681)	SegCLSLoss 0.0029 (0.0037)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0810 (0.0982)	MaskBCELoss 0.0193 (0.0311)	MaskDICELoss 0.0617 (0.0671)
+Epoch: [0][311/500]	Time 87.751 (86.363)	Loss 0.8491 (0.6801)	CeLoss 0.0952 (0.0695)	SegCLSLoss 0.0040 (0.0034)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1128 (0.0947)	MaskBCELoss 0.0261 (0.0256)	MaskDICELoss 0.0867 (0.0691)
+Epoch: [0][321/500]	Time 88.297 (87.051)	Loss 0.5387 (0.6708)	CeLoss 0.0762 (0.0683)	SegCLSLoss 0.0030 (0.0031)	KLLoss 0.0000 (0.0000)	MaskLoss 0.0774 (0.0931)	MaskBCELoss 0.0271 (0.0248)	MaskDICELoss 0.0503 (0.0684)
+Epoch: [0][331/500]	Time 89.479 (86.927)	Loss 0.6818 (0.6664)	CeLoss 0.0708 (0.0684)	SegCLSLoss 0.0025 (0.0027)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1066 (0.0947)	MaskBCELoss 0.0411 (0.0274)	MaskDICELoss 0.0655 (0.0672)
+Epoch: [0][341/500]	Time 84.024 (87.238)	Loss 0.8344 (0.6497)	CeLoss 0.0737 (0.0663)	SegCLSLoss 0.0020 (0.0024)	KLLoss 0.0000 (0.0000)	MaskLoss 0.1184 (0.0921)	MaskBCELoss 0.0318 (0.0264)	MaskDICELoss 0.0866 (0.0657)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 1312, in <module>
+[rank0]:     main(sys.argv[1:])
+[rank0]:   File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 773, in main
+[rank0]:     train_iter = train(
+[rank0]:   File "/shared/nas2/jk100/partonomy_private/src/models/PLUM/plum_train_ds.py", line 922, in train
+[rank0]:     model.backward(loss)
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/utils/nvtx.py", line 15, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1861, in backward
+[rank0]:     self.optimizer.backward(loss, retain_graph=retain_graph)
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 1900, in backward
+[rank0]:     self.loss_scaler.backward(loss.float(), retain_graph=retain_graph)
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/runtime/fp16/loss_scaler.py", line 63, in backward
+[rank0]:     scaled_loss.backward(retain_graph=retain_graph)
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/_tensor.py", line 525, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/__init__.py", line 267, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 809, in reduce_partition_and_remove_grads
+[rank0]:     self.reduce_ready_partitions_and_remove_grads(param, i)
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 1257, in reduce_ready_partitions_and_remove_grads
+[rank0]:     self.reduce_independent_p_g_buckets_and_remove_grads(param, i)
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 835, in reduce_independent_p_g_buckets_and_remove_grads
+[rank0]:     self.reduce_ipg_grads()
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 1207, in reduce_ipg_grads
+[rank0]:     self.average_tensor(self.ipg_buffer[self.ipg_index])
+[rank0]:   File "/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 989, in average_tensor
+[rank0]:     handle.wait()
+[rank0]: torch.distributed.DistBackendError: [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=25806, OpType=REDUCE, NumelIn=6553600, NumelOut=6553600, Timeout(ms)=600000) ran for 600005 milliseconds before timing out.

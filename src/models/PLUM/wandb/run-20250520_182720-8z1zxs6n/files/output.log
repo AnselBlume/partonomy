@@ -1,0 +1,979 @@
+
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/transformer.py:306: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:18<00:00,  6.07s/it]
+Some weights of PLUMForCausalLM were not initialized from the model checkpoint at liuhaotian/llava-llama-2-13b-chat-lightning-preview and are newly initialized: ['bio_encoder.encoder.layers.0.norm2.bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.bias', 'bio_encoder.encoder.layers.0.self_attn.in_proj_bias', 'bio_encoder.encoder.layers.0.linear1.weight', 'bio_encoder.encoder.layers.0.self_attn.in_proj_weight', 'bio_encoder.encoder.layers.0.linear1.bias', 'bio_encoder.encoder.layers.0.norm2.weight', 'bio_encoder.encoder.layers.0.norm1.weight', 'bio_encoder.encoder.layers.0.linear2.weight', 'bio_encoder.encoder.layers.0.linear2.bias', 'bio_encoder.encoder.layers.0.self_attn.out_proj.weight', 'bio_encoder.encoder.layers.0.norm1.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+trainable params: 6,553,600 || all params: 14,151,578,931 || trainable%: 0.0463100268313092
+>> model.config.train_mask_prompt_encoder:  True
+n:  base_model.model.model.embed_tokens.weight p.shape:  torch.Size([32002, 5120])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.0.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.1.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.2.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.point_embeddings.3.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.not_a_point_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.0.weight p.shape:  torch.Size([4, 1, 2, 2])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.0.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.1.weight p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.1.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.3.weight p.shape:  torch.Size([16, 4, 2, 2])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.3.bias p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.4.weight p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.4.bias p.shape:  torch.Size([16])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.6.weight p.shape:  torch.Size([256, 16, 1, 1])
+n:  base_model.model.model.visual_model.prompt_encoder.mask_downscaling.6.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.prompt_encoder.no_mask_embed.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.0.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.q_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.k_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.v_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.self_attn.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.weight p.shape:  torch.Size([2048, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.weight p.shape:  torch.Size([256, 2048])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.mlp.lin2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm3.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.norm4.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.layers.1.cross_attn_image_to_token.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.q_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.k_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.weight p.shape:  torch.Size([128, 256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.v_proj.bias p.shape:  torch.Size([128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.weight p.shape:  torch.Size([256, 128])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.final_attn_token_to_image.out_proj.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.weight p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.transformer.norm_final_attn.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_token.weight p.shape:  torch.Size([1, 256])
+n:  base_model.model.model.visual_model.mask_decoder.mask_tokens.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.weight p.shape:  torch.Size([256, 64, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.0.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.weight p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.1.bias p.shape:  torch.Size([64])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.weight p.shape:  torch.Size([64, 32, 2, 2])
+n:  base_model.model.model.visual_model.mask_decoder.output_upscaling.3.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.0.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.1.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.2.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.weight p.shape:  torch.Size([32, 256])
+n:  base_model.model.model.visual_model.mask_decoder.output_hypernetworks_mlps.3.layers.2.bias p.shape:  torch.Size([32])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.0.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.weight p.shape:  torch.Size([256, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.1.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.weight p.shape:  torch.Size([4, 256])
+n:  base_model.model.model.visual_model.mask_decoder.iou_prediction_head.layers.2.bias p.shape:  torch.Size([4])
+n:  base_model.model.model.text_hidden_fcs.0.0.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.model.text_hidden_fcs.0.0.bias p.shape:  torch.Size([5120])
+n:  base_model.model.model.text_hidden_fcs.0.2.weight p.shape:  torch.Size([256, 5120])
+n:  base_model.model.model.text_hidden_fcs.0.2.bias p.shape:  torch.Size([256])
+n:  base_model.model.model.token_to_mask_fcs.0.0.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.model.token_to_mask_fcs.0.0.bias p.shape:  torch.Size([5120])
+n:  base_model.model.model.token_to_mask_fcs.0.2.weight p.shape:  torch.Size([3, 5120])
+n:  base_model.model.model.token_to_mask_fcs.0.2.bias p.shape:  torch.Size([3])
+n:  base_model.model.lm_head.weight p.shape:  torch.Size([32002, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_weight p.shape:  torch.Size([15360, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.in_proj_bias p.shape:  torch.Size([15360])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.weight p.shape:  torch.Size([5120, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.self_attn.out_proj.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.weight p.shape:  torch.Size([2048, 5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear1.bias p.shape:  torch.Size([2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.weight p.shape:  torch.Size([5120, 2048])
+n:  base_model.model.bio_encoder.encoder.layers.0.linear2.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.weight p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm1.bias p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.weight p.shape:  torch.Size([5120])
+n:  base_model.model.bio_encoder.encoder.layers.0.norm2.bias p.shape:  torch.Size([5120])
+ade20k:  20210
+cocostuff:  118287
+loading annotations into memory...
+Done (t=0.57s)
+creating index...
+index created!
+pascal_part:  4366
+loading annotations into memory...
+Done (t=7.78s)
+creating index...
+index created!
+paco_lvis:  45790
+mapillary:  18000
+loading dataset refclef into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refclef/refs(unc).p
+creating index...
+index created.
+DONE (t=2.82s)
+dataset refclef (refs unc) (train split) has 17978 images and 99523 annotations.
+loading dataset refcoco into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco/refs(unc).p
+creating index...
+index created.
+DONE (t=3.52s)
+dataset refcoco (refs unc) (train split) has 16994 images and 196771 annotations.
+loading dataset refcoco+ into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcoco+/refs(unc).p
+creating index...
+index created.
+DONE (t=5.91s)
+dataset refcoco+ (refs unc) (train split) has 16992 images and 196737 annotations.
+loading dataset refcocog into memory...
+ref_file:  /shared/nas/data/m1/jk100/code/OpenAttrLibrary/LISA/dataset/refer_seg/refcocog/refs(umd).p
+creating index...
+index created.
+DONE (t=5.98s)
+dataset refcocog (refs umd) (train split) has 21899 images and 208960 annotations.
+vqa_data:  157712
+number of reason_seg samples:  239
+len(self.img_to_explanation):  239
+Training with 40000 examples.
+Validating with 200 examples.
+[2025-05-20 18:31:40,333] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.9.5, git-hash=unknown, git-branch=unknown
+[2025-05-20 18:31:40,334] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2025-05-20 18:31:40,334] [INFO] [comm.py:594:init_distributed] cdb=None
+[2025-05-20 18:31:40,334] [INFO] [comm.py:625:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Using /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /shared/nas/data/m1/jk100/.cache/torch_extensions/py310_cu118/fused_adam/build.ninja...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/utils/cpp_extension.py:1967: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation.
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Building extension module fused_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module fused_adam...
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/deepspeed/ops/adam/fused_adam.py:96: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/torch/csrc/tensor/python_tensor.cpp:78.)
+  self._dummy_overflow_buf = get_accelerator().IntTensor([0])
+[2025-05-20 18:31:59,450] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+Time to load fused_adam op: 0.4812772274017334 seconds
+[2025-05-20 18:32:00,117] [INFO] [logging.py:96:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+[2025-05-20 18:32:00,310] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = FusedAdam
+[2025-05-20 18:32:00,311] [INFO] [utils.py:54:is_zero_supported_optimizer] Checking ZeRO support for optimizer=FusedAdam type=<class 'deepspeed.ops.adam.fused_adam.FusedAdam'>
+[2025-05-20 18:32:00,311] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 2 optimizer
+[2025-05-20 18:32:00,311] [INFO] [stage_1_and_2.py:133:__init__] Reduce bucket size 500000000
+[2025-05-20 18:32:00,311] [INFO] [stage_1_and_2.py:134:__init__] Allgather bucket size 500000000
+[2025-05-20 18:32:00,311] [INFO] [stage_1_and_2.py:135:__init__] CPU Offload: False
+[2025-05-20 18:32:00,311] [INFO] [stage_1_and_2.py:136:__init__] Round robin gradient partitioning: False
+Rank: 0 partition count [1] and sizes[(519414876, False)]
+[2025-05-20 18:32:05,139] [INFO] [utils.py:785:see_memory_usage] Before initializing optimizer states
+[2025-05-20 18:32:05,140] [INFO] [utils.py:786:see_memory_usage] MA 28.49 GB         Max_MA 29.46 GB         CA 29.6 GB         Max_CA 30 GB
+[2025-05-20 18:32:05,140] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 52.78 GB, percent = 5.2%
+[2025-05-20 18:32:08,845] [INFO] [utils.py:785:see_memory_usage] After initializing optimizer states
+[2025-05-20 18:32:08,846] [INFO] [utils.py:786:see_memory_usage] MA 32.37 GB         Max_MA 34.3 GB         CA 35.41 GB         Max_CA 35 GB
+[2025-05-20 18:32:08,846] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 52.85 GB, percent = 5.2%
+[2025-05-20 18:32:08,847] [INFO] [stage_1_and_2.py:488:__init__] optimizer state initialized
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+[2025-05-20 18:32:12,879] [INFO] [utils.py:785:see_memory_usage] After initializing ZeRO optimizer
+[2025-05-20 18:32:12,880] [INFO] [utils.py:786:see_memory_usage] MA 32.37 GB         Max_MA 32.37 GB         CA 35.41 GB         Max_CA 35 GB
+[2025-05-20 18:32:12,881] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 52.8 GB, percent = 5.2%
+[2025-05-20 18:32:12,889] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = adamw
+[2025-05-20 18:32:12,889] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2025-05-20 18:32:12,890] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x7f8e326be320>
+[2025-05-20 18:32:12,890] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0003], mom=[(0.9, 0.95)]
+[2025-05-20 18:32:12,893] [INFO] [config.py:960:print] DeepSpeedEngine configuration:
+[2025-05-20 18:32:12,893] [INFO] [config.py:964:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2025-05-20 18:32:12,893] [INFO] [config.py:964:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   amp_enabled .................. False
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   amp_params ................... False
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   bfloat16_enabled ............. True
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   checkpoint_parallel_write_pipeline  False
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   checkpoint_tag_validation_enabled  True
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   checkpoint_tag_validation_fail  False
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f8cee317670>
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   communication_data_type ...... None
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   curriculum_enabled_legacy .... False
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   curriculum_params_legacy ..... False
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   data_efficiency_enabled ...... False
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   dataloader_drop_last ......... False
+[2025-05-20 18:32:12,894] [INFO] [config.py:964:print]   disable_allgather ............ False
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   dump_state ................... False
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   dynamic_loss_scale_args ...... None
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   eigenvalue_enabled ........... False
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   eigenvalue_gas_boundary_resolution  1
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   eigenvalue_layer_num ......... 0
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   eigenvalue_max_iter .......... 100
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   eigenvalue_stability ......... 1e-06
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   eigenvalue_tol ............... 0.01
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   eigenvalue_verbose ........... False
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   elasticity_enabled ........... False
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   fp16_auto_cast ............... None
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   fp16_enabled ................. False
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   fp16_master_weights_and_gradients  False
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   global_rank .................. 0
+[2025-05-20 18:32:12,895] [INFO] [config.py:964:print]   grad_accum_dtype ............. None
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   gradient_accumulation_steps .. 10
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   gradient_clipping ............ 1.0
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   gradient_predivide_factor .... 1.0
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   initial_dynamic_scale ........ 1
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   load_universal_checkpoint .... False
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   loss_scale ................... 1.0
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   memory_breakdown ............. False
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   mics_hierarchial_params_gather  False
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   mics_shard_size .............. -1
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   optimizer_legacy_fusion ...... False
+[2025-05-20 18:32:12,896] [INFO] [config.py:964:print]   optimizer_name ............... adamw
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   optimizer_params ............. {'lr': 0.0003, 'weight_decay': 0.0, 'betas': (0.9, 0.95)}
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   pld_enabled .................. False
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   pld_params ................... False
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   prescale_gradients ........... False
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   scheduler_name ............... WarmupDecayLR
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   scheduler_params ............. {'total_num_steps': 12500, 'warmup_min_lr': 0, 'warmup_max_lr': 0.0003, 'warmup_num_steps': 100, 'warmup_type': 'linear'}
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   sparse_attention ............. None
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   sparse_gradients_enabled ..... False
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   steps_per_print .............. 10
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   train_batch_size ............. 80
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   train_micro_batch_size_per_gpu  8
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   use_node_local_storage ....... False
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   wall_clock_breakdown ......... False
+[2025-05-20 18:32:12,897] [INFO] [config.py:964:print]   world_size ................... 1
+[2025-05-20 18:32:12,898] [INFO] [config.py:964:print]   zero_allow_untested_optimizer  False
+[2025-05-20 18:32:12,898] [INFO] [config.py:964:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True
+[2025-05-20 18:32:12,898] [INFO] [config.py:964:print]   zero_enabled ................. True
+[2025-05-20 18:32:12,898] [INFO] [config.py:964:print]   zero_force_ds_cpu_optimizer .. True
+[2025-05-20 18:32:12,898] [INFO] [config.py:964:print]   zero_optimization_stage ...... 2
+[2025-05-20 18:32:12,898] [INFO] [config.py:950:print_user_config]   json = {
+    "train_micro_batch_size_per_gpu": 8,
+    "gradient_accumulation_steps": 10,
+    "optimizer": {
+        "type": "AdamW",
+        "params": {
+            "lr": 0.0003,
+            "weight_decay": 0.0,
+            "betas": [0.9, 0.95]
+        }
+    },
+    "scheduler": {
+        "type": "WarmupDecayLR",
+        "params": {
+            "total_num_steps": 1.250000e+04,
+            "warmup_min_lr": 0,
+            "warmup_max_lr": 0.0003,
+            "warmup_num_steps": 100,
+            "warmup_type": "linear"
+        }
+    },
+    "fp16": {
+        "enabled": false
+    },
+    "bf16": {
+        "enabled": true
+    },
+    "gradient_clipping": 1.0,
+    "zero_optimization": {
+        "stage": 2,
+        "contiguous_gradients": true,
+        "overlap_comm": true,
+        "reduce_scatter": true,
+        "reduce_bucket_size": 5.000000e+08,
+        "allgather_bucket_size": 5.000000e+08
+    }
+}
+(train) >> AFTER DEEPSPEED
+>> (train) Auto-resume from:  ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:84.)
+  return F.conv2d(input, weight, bias, self.stride,
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:952: UserWarning: Plan failed with a CuDNNError: cuDNN error: CUDNN_STATUS_BAD_PARAM
+Exception raised from run_conv_plan at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:374 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f9324d78897 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe1640b (0x7f92c41fb40b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x108f133 (0x7f92c4474133 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0x1091043 (0x7f92c4476043 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x109176b (0x7f92c447676b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x1075c7d (0x7f92c445ac7d in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0x107656a (0x7f92c445b56a in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: at::native::cudnn_convolution_transpose(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, bool) + 0xa4 (0x7f92c445b714 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: <unknown function> + 0x32f2cc2 (0x7f92c66d7cc2 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: <unknown function> + 0x32ff147 (0x7f92c66e4147 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: at::_ops::cudnn_convolution_transpose::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool) + 0x2fb (0x7f931903c2fb in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool) + 0x166d (0x7f931876348d in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x2a8d27f (0x7f93198f127f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x2a93bdc (0x7f93198f7bdc in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool) + 0x344 (0x7f931903a0d4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long) + 0x3b8 (0x7f9318756868 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x2a8cb1c (0x7f93198f0b1c in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x2a93a48 (0x7f93198f7a48 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: at::_ops::convolution::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) + 0x17b (0x7f9318ff7d6b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0x41902e1 (0x7f931aff42e1 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x4191259 (0x7f931aff5259 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt) + 0x2d4 (0x7f9319038ed4 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: <unknown function> + 0x164a2e0 (0x7f93184ae2e0 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #23: at::native::conv_transpose2d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, c10::ArrayRef<c10::SymInt>) + 0x125 (0x7f931875bb05 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #24: <unknown function> + 0x2c879c9 (0x7f9319aeb9c9 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #25: <unknown function> + 0x2c87b03 (0x7f9319aebb03 in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #26: at::_ops::conv_transpose2d_input::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt, c10::ArrayRef<c10::SymInt>) + 0x2cb (0x7f931939509b in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #27: <unknown function> + 0x61476f (0x7f9323e1c76f in /shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #28: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x4fc697]
+frame #29: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #30: _PyEval_EvalFrameDefault + 0x53d6 (0x4f2376 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #31: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #32: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #33: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #34: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #35: _PyObject_FastCallDictTstate + 0xcd (0x4f561d in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #36: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #37: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #38: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #39: _PyEval_EvalFrameDefault + 0x4dde (0x4f1d7e in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #40: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #41: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #42: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x508006]
+frame #43: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #44: _PyObject_FastCallDictTstate + 0xcd (0x4f561d in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #45: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #46: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #47: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #48: _PyEval_EvalFrameDefault + 0x53d6 (0x4f2376 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #49: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #50: _PyEval_EvalFrameDefault + 0x13b3 (0x4ee353 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #51: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #52: PyObject_Call + 0xb8 (0x508858 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #53: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #54: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+frame #55: PyObject_Call + 0xb8 (0x508858 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #56: _PyEval_EvalFrameDefault + 0x2b79 (0x4efb19 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #57: _PyFunction_Vectorcall + 0x6f (0x4fcadf in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #58: _PyObject_FastCallDictTstate + 0x17d (0x4f56cd in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #59: _PyObject_Call_Prepend + 0x66 (0x506596 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #60: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x5cc323]
+frame #61: _PyObject_MakeTpCall + 0x25b (0x4f614b in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #62: _PyEval_EvalFrameDefault + 0x5757 (0x4f26f7 in /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python)
+frame #63: /shared/nas/data/m1/jk100/.conda/envs/llava/bin/python() [0x507eae]
+ (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:921.)
+  return F.conv_transpose2d(
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/conv.py:952: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608839953/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv_transpose2d(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌ | 198/200 [00:54<00:00,  4.97it/s]
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:55<00:00,  3.62it/s]
+[2025-05-20 18:33:12,639] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step0 is about to be saved!
+/shared/nas/data/m1/jk100/.conda/envs/llava/lib/python3.10/site-packages/torch/nn/modules/module.py:1898: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2025-05-20 18:33:25,439] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt
+[2025-05-20 18:33:25,440] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt...
+[2025-05-20 18:35:26,914] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt.
+[2025-05-20 18:35:27,541] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+[2025-05-20 18:35:41,749] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-05-20 18:35:41,766] [INFO] [engine.py:3244:_save_zero_checkpoint] zero checkpoint saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:53<00:00,  3.76it/s]
+giou: 0.0838, ciou: 0.0679 | BIO per cls acc: O=0.2475, B=0.0050, I=0.9112
+[2025-05-20 18:36:35,042] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step0 is about to be saved!
+[2025-05-20 18:36:49,158] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt
+[2025-05-20 18:36:49,159] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt...
+[2025-05-20 18:38:49,347] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt.
+[2025-05-20 18:38:49,969] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+[2025-05-20 18:39:03,610] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-05-20 18:39:03,613] [INFO] [engine.py:3244:_save_zero_checkpoint] zero checkpoint saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:52<00:00,  3.80it/s]
+giou: 0.0842, ciou: 0.0674 | BIO per cls acc: O=0.2480, B=0.0000, I=0.9062
+[2025-05-20 18:39:56,873] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step0 is about to be saved!
+[2025-05-20 18:40:10,218] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt
+[2025-05-20 18:40:10,219] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt...
+[2025-05-20 18:41:37,607] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt.
+[2025-05-20 18:41:38,267] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-05-20 18:41:52,521] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-05-20 18:41:52,523] [INFO] [engine.py:3244:_save_zero_checkpoint] zero checkpoint saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-05-20 18:41:52,524] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step0 is ready now!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:53<00:00,  3.76it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:52<00:00,  3.79it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:50<00:00,  3.99it/s]
+giou: 0.0842, ciou: 0.0674 | BIO per cls acc: O=0.2476, B=0.0000, I=0.9092
+[2025-05-20 18:44:29,066] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step0 is about to be saved!
+[2025-05-20 18:44:41,674] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt
+[2025-05-20 18:44:41,675] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt...
+[2025-05-20 18:46:08,593] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt.
+[2025-05-20 18:46:09,451] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-05-20 18:46:25,014] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-05-20 18:46:25,017] [INFO] [engine.py:3244:_save_zero_checkpoint] zero checkpoint saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-05-20 18:46:25,017] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step0 is ready now!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:50<00:00,  3.95it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:50<00:00,  3.95it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:52<00:00,  3.12it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:52<00:00,  3.81it/s]
+  6%|███████▉                                                                                                                                         | 11/200 [00:03<00:43,  4.35it/s]
+ 10%|███████████████▏                                                                                                                                 | 21/200 [00:05<00:33,  5.37it/s]
+ 14%|█████████████████████                                                                                                                            | 29/200 [00:07<00:31,  5.43it/s]
+ 19%|███████████████████████████▌                                                                                                                     | 38/200 [00:09<00:28,  5.66it/s]
+ 24%|██████████████████████████████████                                                                                                               | 47/200 [00:11<00:24,  6.26it/s]
+ 28%|███████████████████████████████████████▉                                                                                                         | 55/200 [00:13<00:26,  5.43it/s]
+ 32%|██████████████████████████████████████████████▍                                                                                                  | 64/200 [00:15<00:22,  5.92it/s]
+ 36%|████████████████████████████████████████████████████▉                                                                                            | 73/200 [00:17<00:20,  6.20it/s]
+ 41%|███████████████████████████████████████████████████████████▍                                                                                     | 82/200 [00:19<00:20,  5.77it/s]
+ 45%|█████████████████████████████████████████████████████████████████▎                                                                               | 90/200 [00:21<00:19,  5.64it/s]
+ 50%|████████████████████████████████████████████████████████████████████████                                                                        | 100/200 [00:24<00:15,  6.61it/s]
+ 54%|█████████████████████████████████████████████████████████████████████████████▊                                                                  | 108/200 [00:25<00:14,  6.47it/s]
+ 58%|███████████████████████████████████████████████████████████████████████████████████▌                                                            | 116/200 [00:27<00:15,  5.41it/s]
+ 62%|█████████████████████████████████████████████████████████████████████████████████████████▎                                                      | 124/200 [00:29<00:14,  5.38it/s]
+ 66%|███████████████████████████████████████████████████████████████████████████████████████████████▊                                                | 133/200 [00:31<00:13,  5.06it/s]
+ 70%|████████████████████████████████████████████████████████████████████████████████████████████████████                                            | 139/200 [00:33<00:13,  4.50it/s]
+ 72%|████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                       | 145/200 [00:35<00:14,  3.93it/s]
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                  | 152/200 [00:37<00:10,  4.76it/s]
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                            | 161/200 [00:39<00:06,  6.28it/s]
+ 84%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                      | 169/200 [00:41<00:05,  5.74it/s]
+ 89%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏               | 178/200 [00:43<00:03,  6.44it/s]
+ 94%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋         | 187/200 [00:45<00:02,  5.78it/s]
+ 98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍   | 195/200 [00:47<00:00,  5.95it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:49<00:00,  4.06it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:49<00:00,  4.06it/s]
+giou: 0.0856, ciou: 0.0699 | BIO per cls acc: O=0.2482, B=0.0050, I=0.9099
+[2025-05-20 18:49:48,269] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step0 is about to be saved!
+[2025-05-20 18:50:00,921] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt
+[2025-05-20 18:50:00,922] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt...
+[2025-05-20 18:51:59,564] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt.
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+[2025-05-20 18:52:13,885] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-05-20 18:52:13,887] [INFO] [engine.py:3244:_save_zero_checkpoint] zero checkpoint saved ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+  4%|█████▊                                                                                                                                            | 8/200 [00:03<01:01,  3.13it/s]
+  7%|██████████▏                                                                                                                                      | 14/200 [00:05<01:01,  3.03it/s]
+ 10%|██████████████▌                                                                                                                                  | 20/200 [00:07<00:58,  3.07it/s]
+ 14%|████████████████████▎                                                                                                                            | 28/200 [00:09<00:36,  4.77it/s]
+ 18%|██████████████████████████                                                                                                                       | 36/200 [00:11<00:35,  4.58it/s]
+ 22%|████████████████████████████████▋                                                                                                                | 45/200 [00:13<00:30,  5.10it/s]
+ 27%|███████████████████████████████████████▏                                                                                                         | 54/200 [00:15<00:29,  5.00it/s]
+ 31%|████████████████████████████████████████████▉                                                                                                    | 62/200 [00:17<00:33,  4.13it/s]
+ 36%|███████████████████████████████████████████████████▍                                                                                             | 71/200 [00:19<00:23,  5.55it/s]
+ 40%|█████████████████████████████████████████████████████████▎                                                                                       | 79/200 [00:21<00:27,  4.43it/s]
+ 44%|███████████████████████████████████████████████████████████████▊                                                                                 | 88/200 [00:23<00:19,  5.78it/s]
+ 48%|██████████████████████████████████████████████████████████████████████▎                                                                          | 97/200 [00:25<00:17,  6.04it/s]
+ 52%|███████████████████████████████████████████████████████████████████████████▌                                                                    | 105/200 [00:27<00:16,  5.75it/s]
+ 57%|██████████████████████████████████████████████████████████████████████████████████▊                                                             | 115/200 [00:29<00:13,  6.15it/s]
+ 62%|████████████████████████████████████████████████████████████████████████████████████████▌                                                       | 123/200 [00:31<00:13,  5.51it/s]
+ 66%|███████████████████████████████████████████████████████████████████████████████████████████████                                                 | 132/200 [00:33<00:10,  6.37it/s]
+ 70%|█████████████████████████████████████████████████████████████████████████████████████████████████████▌                                          | 141/200 [00:35<00:08,  6.60it/s]
+ 74%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                    | 149/200 [00:37<00:10,  4.78it/s]
+ 78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████                               | 157/200 [00:38<00:07,  5.83it/s]
+ 82%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                         | 165/200 [00:40<00:06,  5.77it/s]
+ 86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                     | 171/200 [00:42<00:07,  3.66it/s]
+ 88%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                | 177/200 [00:44<00:06,  3.70it/s]
+ 92%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊            | 183/200 [00:46<00:04,  3.59it/s]
+ 96%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌      | 191/200 [00:48<00:01,  5.42it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  2%|██▉                                                                                                                                               | 4/200 [00:01<01:02,  3.12it/s]
+  6%|████████▋                                                                                                                                        | 12/200 [00:03<00:35,  5.34it/s]
+ 10%|███████████████▏                                                                                                                                 | 21/200 [00:06<01:01,  2.92it/s]
+ 14%|█████████████████████                                                                                                                            | 29/200 [00:08<01:03,  2.67it/s]
+ 19%|███████████████████████████▌                                                                                                                     | 38/200 [00:10<00:56,  2.85it/s]
+ 23%|█████████████████████████████████▎                                                                                                               | 46/200 [00:12<00:47,  3.24it/s]
+ 27%|███████████████████████████████████████▏                                                                                                         | 54/200 [00:14<00:55,  2.61it/s]
+ 30%|██████████████████████████████████████████▊                                                                                                      | 59/200 [00:16<00:54,  2.59it/s]
+ 34%|████████████████████████████████████████████████▌                                                                                                | 67/200 [00:18<00:43,  3.08it/s]
+ 38%|███████████████████████████████████████████████████████▊                                                                                         | 77/200 [00:20<00:28,  4.33it/s]
+ 42%|█████████████████████████████████████████████████████████████▋                                                                                   | 85/200 [00:22<00:24,  4.66it/s]
+ 47%|████████████████████████████████████████████████████████████████████▏                                                                            | 94/200 [00:24<00:21,  4.91it/s]
+ 52%|██████████████████████████████████████████████████████████████████████████▏                                                                     | 103/200 [00:26<00:18,  5.39it/s]
+ 56%|████████████████████████████████████████████████████████████████████████████████▋                                                               | 112/200 [00:28<00:13,  6.33it/s]
+ 59%|████████████████████████████████████████████████████████████████████████████████████▉                                                           | 118/200 [00:30<00:22,  3.58it/s]
+ 62%|█████████████████████████████████████████████████████████████████████████████████████████▎                                                      | 124/200 [00:32<00:20,  3.80it/s]
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████▎                                                 | 131/200 [00:34<00:17,  4.03it/s]
+ 70%|████████████████████████████████████████████████████████████████████████████████████████████████████                                            | 139/200 [00:36<00:10,  5.98it/s]
+ 74%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                      | 147/200 [00:38<00:10,  5.05it/s]
+ 78%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                               | 156/200 [00:40<00:07,  5.93it/s]
+ 82%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                         | 165/200 [00:42<00:05,  6.63it/s]
+ 86%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                   | 173/200 [00:44<00:04,  5.55it/s]
+ 92%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊            | 183/200 [00:46<00:02,  6.57it/s]
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏     | 192/200 [00:48<00:01,  6.49it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:50<00:00,  4.65it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:50<00:00,  4.65it/s]
+  1%|█▍                                                                                                                                                | 2/200 [00:01<02:01,  1.63it/s]
+  6%|███████▉                                                                                                                                         | 11/200 [00:03<00:35,  5.29it/s]
+ 10%|█████████████▊                                                                                                                                   | 19/200 [00:05<00:29,  6.14it/s]
+ 14%|███████████████████▌                                                                                                                             | 27/200 [00:07<00:28,  6.01it/s]
+ 18%|██████████████████████████                                                                                                                       | 36/200 [00:09<00:33,  4.83it/s]
+ 22%|███████████████████████████████▉                                                                                                                 | 44/200 [00:11<00:33,  4.72it/s]
+ 26%|█████████████████████████████████████▋                                                                                                           | 52/200 [00:13<00:23,  6.43it/s]
+ 30%|███████████████████████████████████████████▌                                                                                                     | 60/200 [00:14<00:25,  5.41it/s]
+ 34%|██████████████████████████████████████████████████                                                                                               | 69/200 [00:17<00:49,  2.66it/s]
+ 38%|██████████████████████████████████████████████████████▍                                                                                          | 75/200 [00:19<00:55,  2.25it/s]
+ 40%|██████████████████████████████████████████████████████████                                                                                       | 80/200 [00:21<00:40,  2.97it/s]
+ 44%|███████████████████████████████████████████████████████████████                                                                                  | 87/200 [00:23<00:42,  2.68it/s]
+ 48%|████████████████████████████████████████████████████████████████████▉                                                                            | 95/200 [00:25<00:41,  2.52it/s]
+ 52%|███████████████████████████████████████████████████████████████████████████▌                                                                    | 105/200 [00:27<00:27,  3.45it/s]
+ 57%|██████████████████████████████████████████████████████████████████████████████████                                                              | 114/200 [00:29<00:23,  3.62it/s]
+ 60%|██████████████████████████████████████████████████████████████████████████████████████▍                                                         | 120/200 [00:31<00:32,  2.49it/s]
+ 64%|███████████████████████████████████████████████████████████████████████████████████████████▍                                                    | 127/200 [00:33<00:17,  4.12it/s]
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████▋                                             | 137/200 [00:35<00:11,  5.36it/s]
+ 72%|████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                       | 145/200 [00:37<00:12,  4.47it/s]
+ 76%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                 | 153/200 [00:39<00:10,  4.33it/s]
+ 81%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                           | 162/200 [00:41<00:07,  4.85it/s]
+ 86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                     | 171/200 [00:43<00:06,  4.82it/s]
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌              | 180/200 [00:45<00:03,  5.14it/s]
+ 94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████        | 189/200 [00:47<00:01,  5.62it/s]
+ 98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊  | 197/200 [00:49<00:00,  5.04it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  4%|█████                                                                                                                                             | 7/200 [00:02<00:36,  5.23it/s]
+  8%|███████████▌                                                                                                                                     | 16/200 [00:04<00:28,  6.39it/s]
+ 11%|███████████████▉                                                                                                                                 | 22/200 [00:06<00:44,  4.04it/s]
+ 14%|████████████████████▎                                                                                                                            | 28/200 [00:08<00:44,  3.90it/s]
+ 17%|████████████████████████▋                                                                                                                        | 34/200 [00:10<00:39,  4.22it/s]
+ 21%|██████████████████████████████▍                                                                                                                  | 42/200 [00:12<00:29,  5.35it/s]
+ 26%|████████████████████████████████████▉                                                                                                            | 51/200 [00:14<00:22,  6.51it/s]
+ 30%|███████████████████████████████████████████▌                                                                                                     | 60/200 [00:16<00:25,  5.44it/s]
+ 34%|█████████████████████████████████████████████████▎                                                                                               | 68/200 [00:18<00:27,  4.83it/s]
+ 38%|███████████████████████████████████████████████████████▊                                                                                         | 77/200 [00:20<00:28,  4.37it/s]
+ 42%|█████████████████████████████████████████████████████████████▋                                                                                   | 85/200 [00:22<00:25,  4.43it/s]
+ 46%|███████████████████████████████████████████████████████████████████▍                                                                             | 93/200 [00:24<00:17,  6.16it/s]
+ 51%|█████████████████████████████████████████████████████████████████████████▍                                                                      | 102/200 [00:26<00:20,  4.81it/s]
+ 55%|███████████████████████████████████████████████████████████████████████████████▏                                                                | 110/200 [00:28<00:15,  5.97it/s]
+ 59%|████████████████████████████████████████████████████████████████████████████████████▉                                                           | 118/200 [00:29<00:14,  5.79it/s]
+ 64%|███████████████████████████████████████████████████████████████████████████████████████████▍                                                    | 127/200 [00:32<00:26,  2.76it/s]
+ 68%|█████████████████████████████████████████████████████████████████████████████████████████████████▉                                              | 136/200 [00:34<00:23,  2.78it/s]
+ 72%|████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                       | 145/200 [00:36<00:19,  2.78it/s]
+ 77%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                 | 154/200 [00:38<00:11,  3.96it/s]
+ 82%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                          | 163/200 [00:40<00:08,  4.13it/s]
+ 86%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                     | 171/200 [00:42<00:08,  3.23it/s]
+ 90%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉               | 179/200 [00:44<00:06,  3.02it/s]
+ 93%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉          | 186/200 [00:46<00:05,  2.72it/s]
+ 94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████        | 189/200 [00:47<00:03,  3.58it/s]
+ 98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊  | 197/200 [00:50<00:00,  4.86it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  4%|█████                                                                                                                                             | 7/200 [00:02<00:41,  4.63it/s]
+  8%|███████████▌                                                                                                                                     | 16/200 [00:05<01:08,  2.67it/s]
+ 12%|█████████████████▍                                                                                                                               | 24/200 [00:06<00:34,  5.08it/s]
+ 17%|████████████████████████▋                                                                                                                        | 34/200 [00:09<00:48,  3.39it/s]
+ 22%|███████████████████████████████▏                                                                                                                 | 43/200 [00:11<00:39,  3.94it/s]
+ 26%|████████████████████████████████████▉                                                                                                            | 51/200 [00:13<00:44,  3.36it/s]
+ 30%|███████████████████████████████████████████▌                                                                                                     | 60/200 [00:15<00:37,  3.78it/s]
+ 34%|█████████████████████████████████████████████████▎                                                                                               | 68/200 [00:17<00:34,  3.79it/s]
+ 39%|████████████████████████████████████████████████████████▌                                                                                        | 78/200 [00:19<00:27,  4.48it/s]
+ 43%|██████████████████████████████████████████████████████████████▎                                                                                  | 86/200 [00:21<00:27,  4.21it/s]
+ 48%|████████████████████████████████████████████████████████████████████▉                                                                            | 95/200 [00:23<00:21,  4.81it/s]
+ 52%|██████████████████████████████████████████████████████████████████████████▉                                                                     | 104/200 [00:25<00:19,  4.91it/s]
+ 56%|████████████████████████████████████████████████████████████████████████████████▋                                                               | 112/200 [00:27<00:18,  4.77it/s]
+ 60%|███████████████████████████████████████████████████████████████████████████████████████                                                         | 121/200 [00:29<00:14,  5.27it/s]
+ 66%|██████████████████████████████████████████████████████████████████████████████████████████████▎                                                 | 131/200 [00:31<00:10,  6.69it/s]
+ 68%|██████████████████████████████████████████████████████████████████████████████████████████████████▋                                             | 137/200 [00:33<00:15,  4.11it/s]
+ 72%|██████████████████████████████████████████████████████████████████████████████████████████████████████▉                                         | 143/200 [00:35<00:14,  3.80it/s]
+ 74%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                    | 149/200 [00:37<00:13,  3.75it/s]
+ 79%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                              | 158/200 [00:39<00:07,  5.46it/s]
+ 84%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                       | 167/200 [00:41<00:05,  5.75it/s]
+ 88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                  | 175/200 [00:43<00:04,  5.41it/s]
+ 92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍           | 184/200 [00:45<00:02,  6.55it/s]
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏     | 192/200 [00:47<00:01,  5.68it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  2%|███▋                                                                                                                                              | 5/200 [00:01<00:47,  4.08it/s]
+  7%|██████████▏                                                                                                                                      | 14/200 [00:03<00:29,  6.25it/s]
+ 12%|████████████████▋                                                                                                                                | 23/200 [00:05<00:29,  6.10it/s]
+ 16%|███████████████████████▏                                                                                                                         | 32/200 [00:07<00:34,  4.92it/s]
+ 20%|█████████████████████████████                                                                                                                    | 40/200 [00:09<00:32,  4.97it/s]
+ 24%|██████████████████████████████████▊                                                                                                              | 48/200 [00:11<00:27,  5.49it/s]
+ 28%|████████████████████████████████████████▌                                                                                                        | 56/200 [00:13<00:25,  5.74it/s]
+ 30%|███████████████████████████████████████████▌                                                                                                     | 60/200 [00:15<00:49,  2.84it/s]
+ 34%|█████████████████████████████████████████████████▎                                                                                               | 68/200 [00:17<00:32,  4.05it/s]
+ 38%|███████████████████████████████████████████████████████▊                                                                                         | 77/200 [00:19<00:21,  5.63it/s]
+ 42%|█████████████████████████████████████████████████████████████▋                                                                                   | 85/200 [00:21<00:22,  5.18it/s]
+ 46%|█████████████████████████████████████████████████████████████████▉                                                                               | 91/200 [00:24<00:49,  2.20it/s]
+ 48%|██████████████████████████████████████████████████████████████████████▎                                                                          | 97/200 [00:26<00:45,  2.29it/s]
+ 52%|███████████████████████████████████████████████████████████████████████████▌                                                                    | 105/200 [00:28<00:30,  3.07it/s]
+ 57%|██████████████████████████████████████████████████████████████████████████████████                                                              | 114/200 [00:30<00:21,  3.94it/s]
+ 62%|████████████████████████████████████████████████████████████████████████████████████████▌                                                       | 123/200 [00:32<00:16,  4.78it/s]
+ 65%|█████████████████████████████████████████████████████████████████████████████████████████████▌                                                  | 130/200 [00:34<00:21,  3.24it/s]
+ 68%|█████████████████████████████████████████████████████████████████████████████████████████████████▏                                              | 135/200 [00:36<00:21,  3.09it/s]
+ 72%|███████████████████████████████████████████████████████████████████████████████████████████████████████▋                                        | 144/200 [00:38<00:12,  4.36it/s]
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                  | 152/200 [00:40<00:11,  4.28it/s]
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                            | 161/200 [00:42<00:08,  4.43it/s]
+ 85%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                     | 170/200 [00:44<00:06,  4.81it/s]
+ 89%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏               | 178/200 [00:46<00:04,  4.82it/s]
+ 94%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎        | 188/200 [00:48<00:01,  6.22it/s]
+ 98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████   | 196/200 [00:50<00:00,  5.02it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  0%|                                                                                                                                                          | 0/200 [00:00<?, ?it/s]
+  4%|█████                                                                                                                                             | 7/200 [00:02<00:35,  5.37it/s]
+  8%|███████████▌                                                                                                                                     | 16/200 [00:04<00:29,  6.28it/s]
+ 12%|██████████████████▏                                                                                                                              | 25/200 [00:06<00:29,  5.93it/s]
+ 17%|████████████████████████▋                                                                                                                        | 34/200 [00:08<00:28,  5.83it/s]
+ 20%|████████████████████████████▎                                                                                                                    | 39/200 [00:10<00:40,  3.99it/s]
+ 22%|████████████████████████████████▋                                                                                                                | 45/200 [00:12<00:40,  3.84it/s]
+ 26%|█████████████████████████████████████▋                                                                                                           | 52/200 [00:14<00:32,  4.57it/s]
+ 30%|███████████████████████████████████████████▌                                                                                                     | 60/200 [00:16<00:22,  6.14it/s]
+ 34%|█████████████████████████████████████████████████▎                                                                                               | 68/200 [00:18<00:23,  5.57it/s]
+ 38%|███████████████████████████████████████████████████████▊                                                                                         | 77/200 [00:20<00:19,  6.36it/s]
+ 42%|█████████████████████████████████████████████████████████████▋                                                                                   | 85/200 [00:22<00:21,  5.41it/s]
+ 47%|████████████████████████████████████████████████████████████████████▏                                                                            | 94/200 [00:24<00:19,  5.56it/s]
+ 51%|█████████████████████████████████████████████████████████████████████████▍                                                                      | 102/200 [00:25<00:16,  5.80it/s]
+ 56%|████████████████████████████████████████████████████████████████████████████████▋                                                               | 112/200 [00:28<00:15,  5.73it/s]
+ 59%|████████████████████████████████████████████████████████████████████████████████████▉                                                           | 118/200 [00:30<00:33,  2.46it/s]
+ 64%|███████████████████████████████████████████████████████████████████████████████████████████▍                                                    | 127/200 [00:32<00:12,  5.90it/s]
+ 68%|█████████████████████████████████████████████████████████████████████████████████████████████████▏                                              | 135/200 [00:34<00:10,  6.07it/s]
+ 72%|███████████████████████████████████████████████████████████████████████████████████████████████████████▋                                        | 144/200 [00:36<00:08,  6.28it/s]
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                  | 152/200 [00:38<00:08,  5.56it/s]
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                            | 160/200 [00:40<00:06,  5.73it/s]
+ 84%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                      | 169/200 [00:42<00:06,  4.64it/s]
+ 88%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                | 177/200 [00:44<00:04,  5.60it/s]
+ 93%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉          | 186/200 [00:46<00:02,  5.60it/s]
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉     | 193/200 [00:47<00:01,  4.69it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎| 199/200 [00:49<00:00,  3.94it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:51<00:00,  3.90it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:51<00:00,  3.90it/s]
+giou: 0.0862, ciou: 0.0711 | BIO per cls acc: O=0.2479, B=0.0100, I=0.9070
+[2025-05-20 18:58:10,908] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step0 is about to be saved!
+[2025-05-20 18:58:24,009] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: ./runs/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg/plum-13b_kld_0.1_focal_tversky_8_v1_0shot_w_reasonseg_bidirbio_2048_maxlen512_epochs25_bidir_bio_feedback_loop_train_prompt_enc_ckpt_model/global_step0/mp_rank_00_model_states.pt
