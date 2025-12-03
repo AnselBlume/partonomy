@@ -1,0 +1,33 @@
+use_clip: on
+model:
+  base_learning_rate: 4.5e-06
+  target: llava.model.segmentator.hipie_utils.HIPIESementator
+  params:
+    # config_file: ./llava/model/segmentator/hipie_configs/training/r50_pretrain.yaml
+    # weight: ./pretrained_weights/hipie/r50_parts.pth
+    # ANSEL
+    config_file: /shared/nas2/blume5/sp25/partonomy/partonomy_private/src/models/segllm/llava/model/segmentator/hipie_configs/training/r50_pretrain.yaml
+    weight: /shared/nas2/blume5/sp25/partonomy/partonomy_private/src/models/segllm/pretrained_weights/hipie/r50_parts.pth
+    max_rounds: 2
+    val_batch_size: 8
+    sparse_embed_L2_loss_weight: 1.0e-3
+processor: npz
+
+# data:
+#   target: main.DataModuleFromConfig
+
+#   params:
+#     batch_size: 8
+#     num_workers: 16
+#     wrap: true
+#     train:
+#       target: ldm.data.openimages.FullOpenImagesTrain
+#       params:
+#         crop_size: 256
+#     validation:
+#       target: ldm.data.openimages.FullOpenImagesValidation
+#       params:
+#         crop_size: 256
+
+ckpt: null
+# image_size: 128

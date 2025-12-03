@@ -1,0 +1,202 @@
+2025-10-21 01:17:45,031 INFO    StreamThr :606341 [internal.py:wandb_internal():85] W&B internal server running at pid: 606341, started at: 2025-10-21 01:17:45.031348
+2025-10-21 01:17:45,033 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: status
+2025-10-21 01:17:45,034 INFO    WriterThread:606341 [datastore.py:open_for_write():87] open: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/run-d75174cb.wandb
+2025-10-21 01:17:45,035 DEBUG   SenderThread:606341 [sender.py:send():379] send: header
+2025-10-21 01:17:45,046 DEBUG   SenderThread:606341 [sender.py:send():379] send: run
+2025-10-21 01:17:45,323 INFO    SenderThread:606341 [dir_watcher.py:__init__():211] watching files in: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files
+2025-10-21 01:17:45,323 INFO    SenderThread:606341 [sender.py:_start_run_threads():1188] run started: d75174cb with start time 1761027465.032362
+2025-10-21 01:17:45,330 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: check_version
+2025-10-21 01:17:45,330 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: check_version
+2025-10-21 01:17:45,412 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: run_start
+2025-10-21 01:17:45,453 DEBUG   HandlerThread:606341 [system_info.py:__init__():26] System info init
+2025-10-21 01:17:45,453 DEBUG   HandlerThread:606341 [system_info.py:__init__():41] System info init done
+2025-10-21 01:17:45,453 INFO    HandlerThread:606341 [system_monitor.py:start():194] Starting system monitor
+2025-10-21 01:17:45,454 INFO    SystemMonitor:606341 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-10-21 01:17:45,454 INFO    HandlerThread:606341 [system_monitor.py:probe():214] Collecting system info
+2025-10-21 01:17:45,454 INFO    SystemMonitor:606341 [interfaces.py:start():188] Started cpu monitoring
+2025-10-21 01:17:45,455 INFO    SystemMonitor:606341 [interfaces.py:start():188] Started disk monitoring
+2025-10-21 01:17:45,455 INFO    SystemMonitor:606341 [interfaces.py:start():188] Started gpu monitoring
+2025-10-21 01:17:45,456 INFO    SystemMonitor:606341 [interfaces.py:start():188] Started memory monitoring
+2025-10-21 01:17:45,456 INFO    SystemMonitor:606341 [interfaces.py:start():188] Started network monitoring
+2025-10-21 01:17:45,535 DEBUG   HandlerThread:606341 [system_info.py:probe():152] Probing system
+2025-10-21 01:17:45,538 DEBUG   HandlerThread:606341 [system_info.py:_probe_git():137] Probing git
+2025-10-21 01:17:45,547 DEBUG   HandlerThread:606341 [system_info.py:_probe_git():145] Probing git done
+2025-10-21 01:17:45,547 DEBUG   HandlerThread:606341 [system_info.py:probe():200] Probing system done
+2025-10-21 01:17:45,547 DEBUG   HandlerThread:606341 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-157-generic-x86_64-with-glibc2.35', 'python': '3.10.18', 'heartbeatAt': '2025-10-21T06:17:45.535979', 'startedAt': '2025-10-21T06:17:44.982669', 'docker': None, 'cuda': None, 'args': ('--local_rank=0', '--deepspeed', './scripts/deepspeed_configs/zero2.json', '--model_name_or_path', 'Marlo-Z/SegLLM/all_data_checkpoint', '--image_folder', './images_folder', '--annotation_folder', './annotations_folder', '--conversation_folder', './conversations_folder/all_data_mix_train', '--val_dataset', 'reason_seg_test.json', '--segmentation_config', './scripts/annotation_configs/train/all_data_mix_train.yaml', '--conversation_config', './scripts/conversation_configs/train/all_data_mix_train.yaml', '--output_dir', 'trained_checkpoints', '--eval_use_gt_mask_encode', 'True', '--limit_rounds', '6', '--mm_use_bbox_encode', 'True', '--lora_enable', 'False', '--split_loading', 'False', '--version', 'plain', '--mm_use_seg', 'True', '--segmentator', 'hipie', '--vision_tower', 'openai/clip-vit-large-patch14', '--mm_projector_type', 'mlp2x_gelu', '--tune_mm_mlp_adapter', 'False', '--mm_vision_select_layer', '-2', '--mm_use_im_start_end', 'False', '--mm_vision_select_feature', 'patch', '--mm_use_im_patch_token', 'False', '--bf16', 'True', '--fp16', 'False', '--tf32', 'False', '--mm_use_gen', 'True', '--num_train_epochs', '2', '--per_device_train_batch_size', '4', '--per_device_eval_batch_size', '4', '--gradient_accumulation_steps', '1', '--evaluation_strategy', 'steps', '--save_strategy', 'steps', '--save_steps', '1000', '--save_total_limit', '2', '--save_only_model', 'True', '--learning_rate', '2e-5', '--weight_decay', '0.', '--eval_steps', '1000', '--warmup_ratio', '0.03', '--lr_scheduler_type', 'cosine', '--logging_steps', '1', '--model_max_length', '2048', '--gradient_checkpointing', 'True', '--dataloader_num_workers', '4', '--lazy_preprocess', 'True', '--report_to', 'wandb', '--output_text', '--do_eval'), 'state': 'running', 'program': '/shared/nas2/jk100/partonomy_private/src/models/segllm/llava/train/train_mem_ft.py', 'codePathLocal': 'llava/train/train_mem_ft.py', 'codePath': 'src/models/segllm/llava/train/train_mem_ft.py', 'git': {'remote': 'https://github.com/AnselBlume/partonomy_private.git', 'commit': '92e1e6e87ddc89023a762caae65e6ac7785e724b'}, 'email': 'jeonghwankim123@gmail.com', 'root': '/shared/nas2/jk100/partonomy_private', 'host': 'blender13.cs.illinois.edu', 'username': 'jk100', 'executable': '/shared/nas2/blume5/lib/conda/miniconda3/envs/segllm/bin/python3', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 2141.0718984375, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2960.505, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.001, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2947.681, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2998.441, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}, {'current': 2100.0, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 428.1472702026367, 'used': 178.89187622070312}}, 'gpu': 'NVIDIA A100-SXM4-80GB', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}], 'memory': {'total': 1007.3797988891602}}
+2025-10-21 01:17:45,547 INFO    HandlerThread:606341 [system_monitor.py:probe():224] Finished collecting system info
+2025-10-21 01:17:45,547 INFO    HandlerThread:606341 [system_monitor.py:probe():227] Publishing system info
+2025-10-21 01:17:45,547 DEBUG   HandlerThread:606341 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2025-10-21 01:17:46,325 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/conda-environment.yaml
+2025-10-21 01:17:51,069 DEBUG   HandlerThread:606341 [system_info.py:_save_conda():224] Saving conda packages done
+2025-10-21 01:17:51,070 INFO    HandlerThread:606341 [system_monitor.py:probe():229] Finished publishing system info
+2025-10-21 01:17:51,080 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: status_report
+2025-10-21 01:17:51,080 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: keepalive
+2025-10-21 01:17:51,081 DEBUG   SenderThread:606341 [sender.py:send():379] send: files
+2025-10-21 01:17:51,081 INFO    SenderThread:606341 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2025-10-21 01:17:51,251 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: python_packages
+2025-10-21 01:17:51,251 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: python_packages
+2025-10-21 01:17:51,251 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: stop_status
+2025-10-21 01:17:51,252 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: internal_messages
+2025-10-21 01:17:51,252 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: stop_status
+2025-10-21 01:17:51,328 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/conda-environment.yaml
+2025-10-21 01:17:51,328 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/wandb-metadata.json
+2025-10-21 01:17:51,328 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/requirements.txt
+2025-10-21 01:17:51,359 DEBUG   SenderThread:606341 [sender.py:send():379] send: telemetry
+2025-10-21 01:17:51,359 DEBUG   SenderThread:606341 [sender.py:send():379] send: config
+2025-10-21 01:17:51,360 DEBUG   SenderThread:606341 [sender.py:send():379] send: telemetry
+2025-10-21 01:17:51,360 DEBUG   SenderThread:606341 [sender.py:send():379] send: metric
+2025-10-21 01:17:51,360 DEBUG   SenderThread:606341 [sender.py:send():379] send: telemetry
+2025-10-21 01:17:51,360 DEBUG   SenderThread:606341 [sender.py:send():379] send: metric
+2025-10-21 01:17:51,360 WARNING SenderThread:606341 [sender.py:send_metric():1405] Seen metric with glob (shouldn't happen)
+2025-10-21 01:17:51,360 DEBUG   SenderThread:606341 [sender.py:send():379] send: telemetry
+2025-10-21 01:17:51,360 DEBUG   SenderThread:606341 [sender.py:send():379] send: telemetry
+2025-10-21 01:17:51,360 DEBUG   SenderThread:606341 [sender.py:send():379] send: config
+2025-10-21 01:17:51,364 INFO    wandb-upload_0:606341 [upload_job.py:push():130] Uploaded file /tmp/tmpogqe1er7wandb/212mvi4u-wandb-metadata.json
+2025-10-21 01:17:51,614 DEBUG   SenderThread:606341 [sender.py:send():379] send: exit
+2025-10-21 01:17:51,614 INFO    SenderThread:606341 [sender.py:send_exit():586] handling exit code: 1
+2025-10-21 01:17:51,614 INFO    SenderThread:606341 [sender.py:send_exit():588] handling runtime: 6
+2025-10-21 01:17:51,616 INFO    SenderThread:606341 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2025-10-21 01:17:51,616 INFO    SenderThread:606341 [sender.py:send_exit():594] send defer
+2025-10-21 01:17:51,616 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:51,617 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 0
+2025-10-21 01:17:51,617 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:51,617 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 0
+2025-10-21 01:17:51,617 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 1
+2025-10-21 01:17:51,617 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:51,617 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 1
+2025-10-21 01:17:51,617 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:51,617 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 1
+2025-10-21 01:17:51,617 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 2
+2025-10-21 01:17:51,617 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:51,617 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 2
+2025-10-21 01:17:51,618 INFO    HandlerThread:606341 [system_monitor.py:finish():203] Stopping system monitor
+2025-10-21 01:17:51,618 DEBUG   SystemMonitor:606341 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-10-21 01:17:51,618 INFO    HandlerThread:606341 [interfaces.py:finish():200] Joined cpu monitor
+2025-10-21 01:17:51,618 DEBUG   SystemMonitor:606341 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-10-21 01:17:51,619 INFO    HandlerThread:606341 [interfaces.py:finish():200] Joined disk monitor
+2025-10-21 01:17:51,619 DEBUG   SystemMonitor:606341 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-10-21 01:17:52,329 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/wandb-summary.json
+2025-10-21 01:17:52,329 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_created():271] file/dir created: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/output.log
+2025-10-21 01:17:53,412 INFO    HandlerThread:606341 [interfaces.py:finish():200] Joined gpu monitor
+2025-10-21 01:17:53,412 INFO    HandlerThread:606341 [interfaces.py:finish():200] Joined memory monitor
+2025-10-21 01:17:53,413 INFO    HandlerThread:606341 [interfaces.py:finish():200] Joined network monitor
+2025-10-21 01:17:53,413 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: poll_exit
+2025-10-21 01:17:53,414 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:53,414 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 2
+2025-10-21 01:17:53,414 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 3
+2025-10-21 01:17:53,414 DEBUG   SenderThread:606341 [sender.py:send():379] send: stats
+2025-10-21 01:17:53,415 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: poll_exit
+2025-10-21 01:17:53,415 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:53,415 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 3
+2025-10-21 01:17:53,415 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:53,415 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 3
+2025-10-21 01:17:53,415 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 4
+2025-10-21 01:17:53,415 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:53,416 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 4
+2025-10-21 01:17:53,416 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:53,416 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 4
+2025-10-21 01:17:53,416 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 5
+2025-10-21 01:17:53,416 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:53,416 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 5
+2025-10-21 01:17:53,416 DEBUG   SenderThread:606341 [sender.py:send():379] send: summary
+2025-10-21 01:17:53,417 INFO    SenderThread:606341 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2025-10-21 01:17:53,417 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:53,417 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 5
+2025-10-21 01:17:53,417 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 6
+2025-10-21 01:17:53,417 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:53,418 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 6
+2025-10-21 01:17:53,418 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:53,418 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 6
+2025-10-21 01:17:53,421 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: status_report
+2025-10-21 01:17:53,539 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 7
+2025-10-21 01:17:53,539 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:53,539 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 7
+2025-10-21 01:17:53,539 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:53,539 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 7
+2025-10-21 01:17:53,615 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: poll_exit
+2025-10-21 01:17:54,330 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/config.yaml
+2025-10-21 01:17:54,331 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/wandb-summary.json
+2025-10-21 01:17:54,331 INFO    Thread-12 :606341 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/output.log
+2025-10-21 01:17:55,373 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 8
+2025-10-21 01:17:55,374 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: poll_exit
+2025-10-21 01:17:55,374 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:55,374 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 8
+2025-10-21 01:17:55,374 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:55,374 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 8
+2025-10-21 01:17:55,374 INFO    SenderThread:606341 [job_builder.py:build():440] Attempting to build job artifact
+2025-10-21 01:17:55,376 INFO    SenderThread:606341 [job_builder.py:_get_source_type():569] is repo sourced job
+2025-10-21 01:17:55,450 INFO    SenderThread:606341 [job_builder.py:build():545] adding wandb-job metadata file
+2025-10-21 01:17:55,458 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 9
+2025-10-21 01:17:55,458 DEBUG   SenderThread:606341 [sender.py:send():379] send: artifact
+2025-10-21 01:17:55,458 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:55,459 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 9
+2025-10-21 01:17:55,616 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: poll_exit
+2025-10-21 01:17:55,729 INFO    SenderThread:606341 [sender.py:send_artifact():1530] sent artifact job-https___github.com_AnselBlume_partonomy_private.git_src_models_segllm_llava_train_train_mem_ft.py - {'id': 'QXJ0aWZhY3Q6MjE1NjU0NTgzNA==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjc3NDIyMDQzMw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MjE1NjU0NTgzNA==', 'versionIndex': 0}}}
+2025-10-21 01:17:55,729 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:55,729 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 9
+2025-10-21 01:17:55,729 INFO    SenderThread:606341 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-10-21 01:17:56,332 INFO    SenderThread:606341 [dir_watcher.py:_on_file_modified():288] file/dir modified: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/output.log
+2025-10-21 01:17:56,332 INFO    SenderThread:606341 [dir_watcher.py:finish():388] scan: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files
+2025-10-21 01:17:56,332 INFO    SenderThread:606341 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/config.yaml config.yaml
+2025-10-21 01:17:56,332 INFO    SenderThread:606341 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/wandb-summary.json wandb-summary.json
+2025-10-21 01:17:56,333 INFO    SenderThread:606341 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/requirements.txt requirements.txt
+2025-10-21 01:17:56,336 INFO    SenderThread:606341 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/conda-environment.yaml conda-environment.yaml
+2025-10-21 01:17:56,337 INFO    SenderThread:606341 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/output.log output.log
+2025-10-21 01:17:56,339 INFO    SenderThread:606341 [dir_watcher.py:finish():402] scan save: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/wandb-metadata.json wandb-metadata.json
+2025-10-21 01:17:56,340 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 10
+2025-10-21 01:17:56,340 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: poll_exit
+2025-10-21 01:17:56,340 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:56,340 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 10
+2025-10-21 01:17:56,341 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:56,341 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 10
+2025-10-21 01:17:56,341 INFO    SenderThread:606341 [file_pusher.py:finish():169] shutting down file pusher
+2025-10-21 01:17:56,527 INFO    wandb-upload_1:606341 [upload_job.py:push():130] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/config.yaml
+2025-10-21 01:17:56,583 INFO    wandb-upload_2:606341 [upload_job.py:push():130] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/requirements.txt
+2025-10-21 01:17:56,584 INFO    wandb-upload_0:606341 [upload_job.py:push():130] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/wandb-summary.json
+2025-10-21 01:17:56,602 INFO    wandb-upload_3:606341 [upload_job.py:push():130] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/conda-environment.yaml
+2025-10-21 01:17:56,604 INFO    wandb-upload_4:606341 [upload_job.py:push():130] Uploaded file /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/files/output.log
+2025-10-21 01:17:56,617 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: poll_exit
+2025-10-21 01:17:56,617 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: poll_exit
+2025-10-21 01:17:56,804 INFO    Thread-11 (_thread_body):606341 [sender.py:transition_state():614] send defer: 11
+2025-10-21 01:17:56,804 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:56,805 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 11
+2025-10-21 01:17:56,805 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:56,805 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 11
+2025-10-21 01:17:56,805 INFO    SenderThread:606341 [file_pusher.py:join():175] waiting for file pusher
+2025-10-21 01:17:56,805 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 12
+2025-10-21 01:17:56,805 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:56,805 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 12
+2025-10-21 01:17:56,805 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:56,806 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 12
+2025-10-21 01:17:56,806 INFO    SenderThread:606341 [file_stream.py:finish():601] file stream finish called
+2025-10-21 01:17:56,885 INFO    SenderThread:606341 [file_stream.py:finish():605] file stream finish is done
+2025-10-21 01:17:56,885 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 13
+2025-10-21 01:17:56,885 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:56,885 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 13
+2025-10-21 01:17:56,885 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:56,886 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 13
+2025-10-21 01:17:56,886 INFO    SenderThread:606341 [sender.py:transition_state():614] send defer: 14
+2025-10-21 01:17:56,886 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: defer
+2025-10-21 01:17:56,886 INFO    HandlerThread:606341 [handler.py:handle_request_defer():184] handle defer: 14
+2025-10-21 01:17:56,886 DEBUG   SenderThread:606341 [sender.py:send():379] send: final
+2025-10-21 01:17:56,886 DEBUG   SenderThread:606341 [sender.py:send():379] send: footer
+2025-10-21 01:17:56,886 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: defer
+2025-10-21 01:17:56,886 INFO    SenderThread:606341 [sender.py:send_request_defer():610] handle sender defer: 14
+2025-10-21 01:17:56,886 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: poll_exit
+2025-10-21 01:17:56,887 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: poll_exit
+2025-10-21 01:17:56,887 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: server_info
+2025-10-21 01:17:56,887 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: poll_exit
+2025-10-21 01:17:56,887 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: server_info
+2025-10-21 01:17:56,888 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: get_summary
+2025-10-21 01:17:56,889 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: sampled_history
+2025-10-21 01:17:56,889 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: internal_messages
+2025-10-21 01:17:56,915 DEBUG   SenderThread:606341 [sender.py:send_request():406] send_request: poll_exit
+2025-10-21 01:17:56,915 INFO    MainThread:606341 [wandb_run.py:_footer_history_summary_info():3991] rendering history
+2025-10-21 01:17:56,916 INFO    MainThread:606341 [wandb_run.py:_footer_history_summary_info():4023] rendering summary
+2025-10-21 01:17:56,916 INFO    MainThread:606341 [wandb_run.py:_footer_sync_info():3950] logging synced files
+2025-10-21 01:17:56,916 DEBUG   HandlerThread:606341 [handler.py:handle_request():158] handle_request: shutdown
+2025-10-21 01:17:56,916 INFO    HandlerThread:606341 [handler.py:finish():882] shutting down handler
+2025-10-21 01:17:57,887 INFO    WriterThread:606341 [datastore.py:close():296] close: /shared/nas2/jk100/partonomy_private/src/models/segllm/wandb/run-20251021_011744-d75174cb/run-d75174cb.wandb
+2025-10-21 01:17:57,915 INFO    SenderThread:606341 [sender.py:finish():1608] shutting down sender
+2025-10-21 01:17:57,916 INFO    SenderThread:606341 [file_pusher.py:finish():169] shutting down file pusher
+2025-10-21 01:17:57,916 INFO    SenderThread:606341 [file_pusher.py:join():175] waiting for file pusher
