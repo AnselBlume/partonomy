@@ -33,19 +33,21 @@ To address architectural limitations in existing segmentation-enabled LMMs—suc
 ## 🧩 Repository Structure
 ```
 .
+├── src
+│   ├── models
+│        ├── PLUM  # Our model code
+│        ├── groundingLMM  # GLaMM
+│        ├── LISA
+│        ├── PixelLM
+│        ├── segllm
 ├── scripts/
 │   ├── run_train_plum_0shot.sh       # Pretraining script
 │   ├── run_train_plum_ft.sh          # Fine-tuning script
 │   ├── run_validate_partonomy.sh     # Partonomy benchmark evaluation
-│   └── run_validate_seg.sh           # Referring expression segmentation eval
 │
 ├── utils/
 │   ├── explanatory_seg_dataset.py    # Dataset loading & preprocessing
 │   └── explanatory_dataset.py        # Data collation utilities
-│
-├── validate_partonomy.py             # Evaluation logic
-├── requirements.txt                  # Dependencies
-└── LICENSE                           # License text (Apache 2.0)
 ```
 
 ---
@@ -60,9 +62,83 @@ conda activate partonomy
 
 ### 2. Dataset Setup
 
-To prepare the PARTONOMY dataset:
+To prepare the PARTONOMY dataset follow the steps down below:
 
-1. Download images and segmentation masks from the provided dataset links (coming soon).
+## Installation
+```
+pip install -r requirements.txt
+pip install flash-attn --no-build-isolation
+```
+
+## Training
+### Training Data Preparation
+The training data consists of 4 types of data:
+
+1. Semantic segmentation datasets: [ADE20K](http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip), [COCO-Stuff](http://calvin.inf.ed.ac.uk/wp-content/uploads/data/cocostuffdataset/stuffthingmaps_trainval2017.zip), [Mapillary](https://www.mapillary.com/dataset/vistas), [PACO-LVIS](https://github.com/facebookresearch/paco/tree/main#dataset-setup), [PASCAL-Part](https://github.com/facebookresearch/VLPart/tree/main/datasets#pascal-part), [COCO Images](http://images.cocodataset.org/zips/train2017.zip)
+
+    Note: For COCO-Stuff, we use the annotation file stuffthingmaps_trainval2017.zip. We only use the PACO-LVIS part in PACO. COCO Images should be put into the `dataset/coco/` directory.
+
+3. Referring segmentation datasets: [refCOCO](https://web.archive.org/web/20220413011718/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco.zip), [refCOCO+](https://web.archive.org/web/20220413011656/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco+.zip), [refCOCOg](https://web.archive.org/web/20220413012904/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcocog.zip), [refCLEF](https://web.archive.org/web/20220413011817/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refclef.zip) ([saiapr_tc-12](https://web.archive.org/web/20220515000000/http://bvisionweb1.cs.unc.edu/licheng/referit/data/images/saiapr_tc-12.zip)) 
+
+    Note: the original links of refCOCO series data are down, and we update them with new ones. If the download speed is super slow or unstable, we also provide a [OneDrive link](https://mycuhk-my.sharepoint.com/:f:/g/personal/1155154502_link_cuhk_edu_hk/Em5yELVBvfREodKC94nOFLoBLro_LPxsOxNV44PHRWgLcA?e=zQPjsc) to download. **You must also follow the rules that the original datasets require.**
+
+4. Visual Question Answering dataset: [LLaVA-Instruct-150k](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_instruct_150k.json)
+
+5. Reasoning segmentation dataset: [ReasonSeg](https://github.com/dvlab-research/LISA#dataset)
+
+Download them from the above links, and organize them as follows.
+
+```
+├── dataset
+│   ├── ade20k
+│   │   ├── annotations
+│   │   └── images
+│   ├── coco
+│   │   └── train2017
+│   │       ├── 000000000009.jpg
+│   │       └── ...
+│   ├── cocostuff
+│   │   └── train2017
+│   │       ├── 000000000009.png
+│   │       └── ...
+│   ├── llava_dataset
+│   │   └── llava_instruct_150k.json
+│   ├── mapillary
+│   │   ├── config_v2.0.json
+│   │   ├── testing
+│   │   ├── training
+│   │   └── validation
+│   ├── reason_seg
+│   │   └── ReasonSeg
+│   │       ├── train
+│   │       ├── val
+│   │       └── explanatory
+│   ├── refer_seg
+│   │   ├── images
+│   │   |   ├── saiapr_tc-12 
+│   │   |   └── mscoco
+│   │   |       └── images
+│   │   |           └── train2014
+│   │   ├── refclef
+│   │   ├── refcoco
+│   │   ├── refcoco+
+│   │   └── refcocog
+│   └── vlpart
+│       ├── paco
+│       │   └── annotations
+│       └── pascal_part
+│           ├── train.json
+│           └── VOCdevkit
+│   └── partimagenet
+```
+
+### Pre-trained weights
+
+#### LLaVA
+To train LISA-7B or 13B, you need to follow the [instruction](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md) to merge the LLaVA delta weights. Typically, we use the final weights `LLaVA-Lightning-7B-v1-1` and `LLaVA-13B-v1-1` merged from `liuhaotian/LLaVA-Lightning-7B-delta-v1-1` and `liuhaotian/LLaVA-13b-delta-v1-1`, respectively. For Llama2, we can directly use the LLaVA full weights `liuhaotian/llava-llama-2-13b-chat-lightning-preview`.
+
+#### SAM ViT-H weights
+Download SAM ViT-H pre-trained weights from the [link](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth).
 
 ### 3. Pretraining PLUM
 
