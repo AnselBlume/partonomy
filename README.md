@@ -1,7 +1,7 @@
 # PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding
 
 **PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding**
-\[*NeurIPS 2025 Spotlight*\🎖️]
+\[*NeurIPS 2025 Spotlight*🎖️\]
 
 *(\* co-first author)* 
 [Ansel Blume*](https://anselblume.github.io/), [Jeonghwan Kim*](https://wjdghks950.github.io/), [Hyeonjeong Ha](https://hyeonjeongha.github.io/),  
