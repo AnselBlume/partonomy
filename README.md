@@ -72,7 +72,7 @@ To prepare the PARTONOMY dataset follow the steps down below:
 ### Training Data Preparation
 The training data consists of 4 types of data:
 
-1. Semantic segmentation datasets: [ADE20K](http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip), [COCO-Stuff](http://calvin.inf.ed.ac.uk/wp-content/uploads/data/cocostuffdataset/stuffthingmaps_trainval2017.zip), [Mapillary](https://www.mapillary.com/dataset/vistas), [PACO-LVIS](https://github.com/facebookresearch/paco/tree/main#dataset-setup), [PASCAL-Part](https://github.com/facebookresearch/VLPart/tree/main/datasets#pascal-part), [COCO Images](http://images.cocodataset.org/zips/train2017.zip)
+1. Semantic segmentation datasets: [ADE20K](http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip), [COCO-Stuff](http://calvin.inf.ed.ac.uk/wp-content/uploads/data/cocostuffdataset/stuffthingmaps_trainval2017.zip), [Mapillary](https://www.mapillary.com/dataset/vistas), [PACO-LVIS](https://github.com/facebookresearch/paco/tree/main#dataset-setup), [PASCAL-Part](https://github.com/facebookresearch/VLPart/tree/main/datasets#pascal-part), [COCO Images](http://images.cocodataset.org/zips/train2017.zip), [PartImageNet](https://huggingface.co/datasets/turkeyju/PartImageNet/blob/main/PartImageNet_Seg.zip)
 
     Note: For COCO-Stuff, we use the annotation file stuffthingmaps_trainval2017.zip. We only use the PACO-LVIS part in PACO. COCO Images should be put into the `dataset/coco/` directory.
 
@@ -87,7 +87,7 @@ The training data consists of 4 types of data:
 Download them from the above links, and organize them as follows.
 
 ```
-├── dataset
+├── dataset  # put the `dataset` directory in the same directory as `weights`
 │   ├── ade20k
 │   │   ├── annotations
 │   │   └── images
@@ -121,22 +121,26 @@ Download them from the above links, and organize them as follows.
 │   │   ├── refcoco
 │   │   ├── refcoco+
 │   │   └── refcocog
-│   └── vlpart
-│       ├── paco
-│       │   └── annotations
-│       └── pascal_part
-│           ├── train.json
-│           └── VOCdevkit
+│   ├── vlpart
+│   │    ├── paco
+│   │    │   └── annotations
+│   │    └── pascal_part
+│   │        ├── train.json
+│   │        └── VOCdevkit
 │   └── partimagenet
+│   │    ├── descriptor.yaml
+│   │    ├── graph.yaml
+│   │    ├── PartImageNet
+│   │    ├── partimagenet_qa_pairs.json
 ```
 
 ### Pre-trained weights
 
-#### LLaVA
+#### LLaVA-13B
 To train PLUM-13B, you need to follow the [instruction](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md) to merge the LLaVA delta weights. For Llama2, we can directly use the LLaVA full weights `liuhaotian/llava-llama-2-13b-chat-lightning-preview`.
 
 #### SAM ViT-H weights
-Download SAM ViT-H pre-trained weights from the [link](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth).
+Download SAM ViT-H pre-trained weights from the [link](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth). Put the SAM-ViT-H pre-trained weights in the `weights` directory (*the `weights` dir should be in the same directory as the above `dataset` directory*)
 
 ### 3. Pretraining PLUM
 
@@ -173,11 +177,13 @@ chmod +x scripts/run_validate_seg.sh
 If you use this work, please cite:
 
 ```bibtex
-@article{blume-kim-2025partonomy,
-  title={PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding},
-  author={Blume*, Ansel and Kim*, Jeonghwan and Ha, Hyeonjeong and Chatikyan, Elen and Jin, Xiaomeng and Nguyen, Khanh Duy and Peng, Nanyun and Chang, Kai-Wei and Hoiem, Derek and Ji, Heng},
-  journal={https://arxiv.org/abs/2505.20759v3},
-  year={2025}
+@inproceedings{
+  blume-kim-2025-partonomy,
+  title={{PARTONOMY}: Large Multimodal Models with Part-Level Visual Understanding},
+  author={Ansel Blume and Jeonghwan Kim and Hyeonjeong Ha and Elen Chatikyan and Xiaomeng Jin and Khanh Duy Nguyen and Nanyun Peng and Kai-Wei Chang and Derek Hoiem and Heng Ji},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025},
+  url={https://openreview.net/forum?id=yjLew3Nd7z}
 }
 ```
 
