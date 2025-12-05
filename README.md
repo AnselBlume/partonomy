@@ -59,17 +59,12 @@ To address architectural limitations in existing segmentation-enabled LMMs—suc
 cd src/models/PLUM
 conda env create -f environment.yml
 conda activate partonomy
-````
+pip install flash-attn --no-build-isolation
+```
 
 ### 2. Dataset Setup
 
 To prepare the PARTONOMY dataset follow the steps down below:
-
-## Installation
-```
-pip install -r requirements.txt
-pip install flash-attn --no-build-isolation
-```
 
 ## Training
 ### Training Data Preparation
@@ -136,7 +131,7 @@ Download them from the above links, and organize them as follows.
 ### Pre-trained weights
 
 #### LLaVA
-To train LISA-7B or 13B, you need to follow the [instruction](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md) to merge the LLaVA delta weights. Typically, we use the final weights `LLaVA-Lightning-7B-v1-1` and `LLaVA-13B-v1-1` merged from `liuhaotian/LLaVA-Lightning-7B-delta-v1-1` and `liuhaotian/LLaVA-13b-delta-v1-1`, respectively. For Llama2, we can directly use the LLaVA full weights `liuhaotian/llava-llama-2-13b-chat-lightning-preview`.
+To train PLUM-13B, you need to follow the [instruction](https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md) to merge the LLaVA delta weights. For Llama2, we can directly use the LLaVA full weights `liuhaotian/llava-llama-2-13b-chat-lightning-preview`.
 
 #### SAM ViT-H weights
 Download SAM ViT-H pre-trained weights from the [link](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth).
@@ -186,7 +181,7 @@ If you use this work, please cite:
 
 ---
 
-# 🪪 License
+# License
 
 Copyright 2025
 
