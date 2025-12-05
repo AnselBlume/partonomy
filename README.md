@@ -45,10 +45,10 @@ To address architectural limitations in existing segmentation-enabled LMMs—suc
               ├── utils/
               │   ├── explanatory_seg_dataset.py    # Dataset loading & preprocessing
               │   └── explanatory_dataset.py        # Data collation utilities
-│        ├── groundingLMM
-│        ├── LISA
-│        ├── PixelLM
-│        ├── segllm
+         ├── groundingLMM
+         ├── LISA
+         ├── PixelLM
+         ├── segllm
 ```
 `groundingLMM`, `LISA`, `PixelLM`, and `segllm` follow the same directory structure.
 
