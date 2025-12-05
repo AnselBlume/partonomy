@@ -163,13 +163,6 @@ chmod +x scripts/run_validate_partonomy.sh
 ./scripts/run_validate_partonomy.sh
 ```
 
-### 6. Evaluation – Referring Expression Segmentation
-
-```bash
-chmod +x scripts/run_validate_seg.sh
-./scripts/run_validate_seg.sh
-```
-
 ---
 
 ## 🧠 Citation
