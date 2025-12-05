@@ -1,29 +1,29 @@
 # PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding
 
-**PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding**  
-*(\* co-first author)*  
+**PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding**
+*NeurIPS 2025 Spotlight*
+*(\* co-first author)* 
 [Ansel Blume*](https://anselblume.github.io/), [Jeonghwan Kim*](https://wjdghks950.github.io/), [Hyeonjeong Ha](https://hyeonjeongha.github.io/),  
 [Elen Chatikyan](https://www.linkedin.com/in/elenchatikyan/), [Xiaomeng Jin](https://scholar.google.com/citations?user=Jd_tsuEAAAAJ&hl=en),  
 [Khanh Duy Nguyen](https://scholar.google.com/citations?user=2RGZO6IAAAAJ&hl=en), [Nanyun Peng](https://violetpeng.github.io/),  
 [Kai-Wei Chang](https://web.cs.ucla.edu/~kwchang/), [Derek Hoiem](https://dhoiem.cs.illinois.edu/), [Heng Ji](https://blender.cs.illinois.edu/hengji.html)
 
 📄 **Paper:** [arXiv:2505.20759](https://arxiv.org/abs/2505.20759)
-
-* Code and dataset will be released soon!
+📄 **Dataset** [PARTONOMY-Core](https://huggingface.co/datasets/partonomy/partonomy-core)
 
 ---
 
 ## 🧭 Overview
-In this work, we introduce **PARTONOMY**, a large-scale benchmark for **pixel-level part grounding**, and **PLUM**, a segmentation-enabled Large Multimodal Model (LMM) designed for part-level visual understanding.
+In this work, we introduce **PARTONOMY**, a large-scale training dataset and benchmark for **pixel-level part grounding**, and **PLUM**, a segmentation-enabled Large Multimodal Model (LMM) designed for part-level visual understanding.
 
-**PARTONOMY** provides 862 part labels and 534 object labels, offering rich hierarchical structure for evaluating models’ fine-grained reasoning capabilities. Unlike existing datasets that only ask models to recognize coarse parts, PARTONOMY focuses on *specialized concepts* (e.g., “agricultural airplane”) and challenges models to:
+**PARTONOMY** provides 862 part labels and 534 object labels, offering rich hierarchical structure for evaluating models’ fine-grained reasoning capabilities. Unlike existing datasets that only ask models to recognize coarse, general parts (e.g., wheels), PARTONOMY focuses on *specialized concepts* (e.g., “agricultural airplane”) and challenge models to:
 
 - Compare objects at the **part level**
 - Reason about **part-whole relationships**
-- Justify textual predictions with **visual segmentations**
+- Justify textual predictions in the pixel space with **visual segmentations**
 
 To address architectural limitations in existing segmentation-enabled LMMs—such as reliance on `<SEG>` tokens unseen during pretraining and discarding previous segmentations—we propose **PLUM**, a novel LMM that:
-- Uses **span tagging** instead of segmentation tokens, avoiding distribution shift.  
+- Uses **span tagging** instead of segmentation tokens, avoiding distribution shift. 
 - Conditions on **previous predictions** in a feedback loop for iterative reasoning.
 
 **PLUM** outperforms existing segmentation-enabled LMMs on reasoning segmentation, VQA, and visual hallucination benchmarks. When fine-tuned on our Explanatory Part Segmentation task, it performs competitively with models trained on much larger segmentation datasets.
@@ -36,19 +36,19 @@ To address architectural limitations in existing segmentation-enabled LMMs—suc
 ├── src
 │   ├── models
 │        ├── PLUM  # Our model code
-│        ├── groundingLMM  # GLaMM
+              ├── scripts/
+              │   ├── run_train_plum_0shot.sh       # Pretraining script
+              │   ├── run_train_plum_ft.sh          # Fine-tuning script
+              │   ├── run_validate_partonomy.sh     # Partonomy benchmark evaluation
+              ├── utils/
+              │   ├── explanatory_seg_dataset.py    # Dataset loading & preprocessing
+              │   └── explanatory_dataset.py        # Data collation utilities
+│        ├── groundingLMM
 │        ├── LISA
 │        ├── PixelLM
 │        ├── segllm
-├── scripts/
-│   ├── run_train_plum_0shot.sh       # Pretraining script
-│   ├── run_train_plum_ft.sh          # Fine-tuning script
-│   ├── run_validate_partonomy.sh     # Partonomy benchmark evaluation
-│
-├── utils/
-│   ├── explanatory_seg_dataset.py    # Dataset loading & preprocessing
-│   └── explanatory_dataset.py        # Data collation utilities
 ```
+`groundingLMM`, `LISA`, `PixelLM`, and `segllm` follow the same directory structure.
 
 ---
 
@@ -56,7 +56,8 @@ To address architectural limitations in existing segmentation-enabled LMMs—suc
 
 ### 1. Environment Setup
 ```bash
-conda create --name partonomy --file requirements.txt
+cd src/models/PLUM
+conda env create -f environment.yml
 conda activate partonomy
 ````
 
