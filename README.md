@@ -1,7 +1,7 @@
 # PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding
 
 **PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding**
-\[*NeurIPS 2025 Spotlight*🎖️\]
+\[**NeurIPS 2025 Spotlight**🎖️\]
 
 *(\* co-first author)* 
 [Ansel Blume*](https://anselblume.github.io/), [Jeonghwan Kim*](https://wjdghks950.github.io/), [Hyeonjeong Ha](https://hyeonjeongha.github.io/),  
@@ -10,8 +10,8 @@
 [Kai-Wei Chang](https://web.cs.ucla.edu/~kwchang/), [Derek Hoiem](https://dhoiem.cs.illinois.edu/), [Heng Ji](https://blender.cs.illinois.edu/hengji.html)
 
 📄 **Paper:** [arXiv:2505.20759](https://arxiv.org/abs/2505.20759)
-
-📄 **Dataset** [PARTONOMY-Core](https://huggingface.co/datasets/partonomy/partonomy-core)
+🤖 **Pre-trained PLUM Weight:** [HF:wjdghks950/plum-13b-pretrained](https://huggingface.co/wjdghks950/plum-13b-pretrained)
+💽 **Dataset** [PARTONOMY-Core](https://huggingface.co/datasets/partonomy/partonomy-core)
 
 ---
 
