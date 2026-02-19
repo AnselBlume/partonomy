@@ -8,10 +8,11 @@
 [Khanh Duy Nguyen](https://scholar.google.com/citations?user=2RGZO6IAAAAJ&hl=en), [Nanyun Peng](https://violetpeng.github.io/),  
 [Kai-Wei Chang](https://web.cs.ucla.edu/~kwchang/), [Derek Hoiem](https://dhoiem.cs.illinois.edu/), [Heng Ji](https://blender.cs.illinois.edu/hengji.html)
 
-📄 **Paper:** [arXiv:2505.20759](https://arxiv.org/abs/2505.20759) \
+📄 **Paper:** [arXiv:2505.20759](https://arxiv.org/abs/2505.20759)
 
 🤖 **Pre-trained PLUM Weight:** [HF:wjdghks950/plum-13b-pretrained](https://huggingface.co/wjdghks950/plum-13b-pretrained) 
-💽 **Dataset** [PARTONOMY-Core](https://huggingface.co/datasets/partonomy/partonomy-core) \
+
+💽 **Dataset** [PARTONOMY-Core](https://huggingface.co/datasets/partonomy/partonomy-core)
 
 ---
 
