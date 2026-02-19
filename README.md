@@ -1,6 +1,5 @@
 # PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding
 
-**PARTONOMY: Large Multimodal Models with Part-Level Visual Understanding**
 \[**NeurIPS 2025 Spotlight**🎖️\]
 
 *(\* co-first author)* 
